@@ -1,0 +1,173 @@
+<style>
+    /* ============================================================================== */
+    /*             ** STYLES for the OC Soccer Night Section **                       */
+    /* ============================================================================== */
+
+    /* ----- Main container for the event section ----- */
+    #event-feature-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* ----- Section title ----- */
+    #event-feature-card .section-title {
+        color: #ffffff !important;
+        margin: 0;
+        padding: 20px 25px;
+        font-size: 1.8em;
+        background-color: #dd5823; /* OC Soccer orange */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* ----- Content area ----- */
+    #event-feature-card .info-card-content {
+        padding: 25px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #222;
+    }
+
+    /* ----- Subheadings inside the card ----- */
+    .subhead {
+        font-weight: 800;
+        color: #003366; /* AYSO Blue */
+        margin: 22px 0 8px;
+        font-size: 1.15em;
+        text-transform: uppercase;
+    }
+
+    /* ----- Callouts / boxes ----- */
+    .callout {
+        background: #fff3e0; /* Light orange for excitement */
+        border-left: 5px solid #dd5823;
+        border-radius: 0 10px 10px 0;
+        padding: 15px;
+        margin: 15px 0 20px;
+        font-size: 1.05em;
+    }
+    
+    .contact-box {
+        background: #f7fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin: 14px 0;
+    }
+
+    /* ----- Flyer Image Preview ----- */
+    .flyer-image-preview {
+        max-width: 100%;
+        max-height: 500px;
+        height: auto;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        display: block;
+        margin: 10px 0;
+    }
+    .flyer-image-preview:hover {
+        transform: scale(1.03);
+        border-color: #dd5823;
+    }
+
+    /* ----- Download Button ----- */
+    .download-button {
+        display: inline-block;
+        background-color: #003366; /* AYSO Blue */
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 14px 24px;
+        border-radius: 8px;
+        margin-top: 14px;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+    .download-button:hover, .download-button:focus {
+        background-color: #002244;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    /* ----- Utility ----- */
+    .screen-only { display: block; }
+    .highlight-text { color: #dd5823; font-weight: bold; }
+
+    /* ----- Print rules ----- */
+    @media print {
+        .screen-only { display: none !important; }
+        #event-feature-card { box-shadow: none; border: none; }
+        .callout { background: none; border: 1px solid #000; }
+    }
+</style>
+
+<!-- ============================================================================== -->
+<!-- ================== START: OC Soccer Night Feature Section ===================== -->
+<!-- ============================================================================== -->
+
+<div id="event-feature-card">
+    <h2 class="section-title">⚽ OC Soccer Night Fundraiser!</h2>
+
+    <div class="info-card-content">
+        <section id="instructions-block">
+            
+            <p style="font-size: 1.2em; margin-bottom: 5px;"><strong>Cypress AYSO 154 — Fundraiser Night</strong></p>
+            <p><strong>Saturday, October 17, 2026 • 7:00 PM</strong><br>
+               Location: Championship Stadium, Irvine<br>
+               Tickets are just <strong>$10 each</strong> (50% off regular ticket prices!). A portion of each ticket sale goes directly to support Region 154.</p>
+
+            <div class="callout">
+                <strong>🔥 Bring the Team! Bring the Family! Bring the Fun!</strong><br>
+                Download the flyer (PDF) below, print it, and turn it in with your payment to secure your spot.
+            </div>
+
+            <p>Experience professional soccer in Orange County and visit the interactive Fan Zone featuring lawn games, a balloon artist, face painting, food vendors, and craft beers! <strong>Special experience for Cypress 154 players:</strong> The single team that sells the most tickets will earn the ultimate prize—a scrimmage on the field at halftime!</p>
+
+            <p class="subhead">Key Notes</p>
+            <ul>
+                <li>Tickets are strictly limited to the <span class="highlight-text">first 100 tickets sold!</span> Act fast!</li>
+                <li>Payments accepted by cash or check.</li>
+            </ul>
+
+            <p class="subhead">How to Purchase</p>
+            <ol>
+                <li><strong>Team Parents:</strong> Collect cash or checks from families to make a group payment (Purchase as a team before Oct 10).</li>
+                <li>Request and coordinate your ticket pickup with Troy Baron or a Board Volunteer at <strong>youthrefprogram154@gmail.com</strong> (please copy your Division Director).</li>
+                <li>Pay in person using the QR code provided at the pickup location. You will receive a digital receipt.</li>
+                <li>Tickets will be distributed at Lexington Junior High School on Saturday, October 10 (time TBD).</li>
+            </ol>
+
+            <p class="subhead">Beerfest Upgrade (Optional)</p>
+            <p>Upgrade your ticket to the Beerfest event for $35 more (purchased directly through OC Soccer with a coupon code). Enjoy a 5:00 PM entrance and unlimited beer! <em>*All attendees must purchase an AYSO 154 $10 Fundraiser Ticket to participate.</em></p>
+
+            <div class="contact-box"><strong>Questions &amp; Coordination:</strong> Email youthrefprogram154@gmail.com (copy your Division Director).</div>
+
+            <p class="screen-only" style="color: #666;"><em>Note: Include your Team &amp; Age Division when coordinating with the Board/Division Director. (This note will not print.)</em></p>
+
+            <!-- Promo/download block -->
+            <div class="promo-block" style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.1em; font-weight: bold;">Click the image to preview, or hit the button below to download!</p>
+                <a href="/Portals/14837/docs/2026/OC Soccer AYSO 154 2026.pdf" target="_blank">
+                    <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/OC Soccer Night Screenshot.png" alt="OC Soccer Night Flyer Preview" class="flyer-image-preview" style="margin: 0 auto;">
+                </a>
+                <a href="/Portals/14837/docs/2026/OC Soccer AYSO 154 2026.pdf" target="_blank" class="download-button">
+                    📥 Download Flyer (PDF)
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- ============================================================================== -->
+<!-- =================== END: OC Soccer Night Feature Section ====================== -->
+<!-- ============================================================================== -->
