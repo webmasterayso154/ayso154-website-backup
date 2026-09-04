@@ -1,0 +1,3615 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_REF_03_YOUTH
+CMS Status:  Hidden / Inactive (Public-Ready Review Candidate)
+Audience:    [aud:referees] [aud:volunteers] [aud:parents]
+Content:     [type:registration] [type:event] [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      None
+Notes:       Primary guide for Cypress AYSO Region 154 youth referees (ages 12-17) and their parents or guardians, covering registration, youth compliance, training, supported assignments, and referee protection.
+================================================================================
+-->
+
+<!--
+===============================================================================
+CYPRESS AYSO REGION 154 — REFEREE WEBSITE REDESIGN
+===============================================================================
+
+PROJECT RELEASE:
+REF-RD-0.5.0-NAV-SYNC
+
+SHARED DESIGN SYSTEM:
+DS-1.1.0
+
+SHARED NAVIGATION MODULE:
+REF-NAV-1.0.0
+
+PAGE:
+DRAFT_REF_03_YOUTH
+
+PUBLIC PAGE NAME:
+Youth Referees
+
+PAGE VERSION:
+1.2.0
+
+STATUS:
+PUBLIC-READY REVIEW CANDIDATE — PENDING REFEREE ADMINISTRATOR APPROVAL
+
+LAST UPDATED:
+July 17, 2026
+
+CONTENT OWNER:
+Regional Referee Administrator — Vince
+
+WEB IMPLEMENTATION:
+Bryan
+
+SPORTSCONNECT TAB ID:
+976488
+
+CURRENT PAGE URL:
+https://www.ayso154cypress.org/Default.aspx?tabid=976488
+
+===============================================================================
+PURPOSE
+===============================================================================
+
+This page is the primary guide for Cypress AYSO Region 154 youth referees and
+their parents or guardians.
+
+The page is designed to:
+
+- Welcome prospective youth referees ages 12–17.
+- Explain the benefits of youth refereeing.
+- Explain the separate youth-volunteer registration process.
+- Clarify which requirements apply to youth volunteers.
+- Direct families to Regional Referee training.
+- Explain parent and guardian responsibilities.
+- Explain supported, age-appropriate assignments.
+- Promote mentoring and gradual referee development.
+- Explain youth-referee protection and zero-tolerance expectations.
+- Connect families to every other redesigned referee page.
+- Allow visitors to navigate long sections without relying on the browser
+  Back button or SportsConnect dropdown menu.
+
+===============================================================================
+NAVIGATION MODEL
+===============================================================================
+
+This page uses four coordinated navigation layers:
+
+1. SPORTSCONNECT PUBLIC MENU
+   Configured through SportsConnect after the redesign is approved.
+
+2. SHARED REFEREE RESOURCES NAVIGATION
+   Appears near the top of all seven public referee pages.
+   Uses the same seven links in the same order.
+   Highlights "Youth Referees — Current Page."
+
+3. LOCAL PAGE NAVIGATION
+   "Explore This Page" links to the major sections on this page.
+
+4. SEQUENCE NAVIGATION
+   Appears near the bottom.
+   Previous: Become a Referee
+   Current: Youth Referees
+   Next: Training & Events
+
+===============================================================================
+SHARED REFEREE PAGE SEQUENCE
+===============================================================================
+
+01 — Referee Central
+02 — Become a Referee
+03 — Youth Referees
+04 — Training & Events
+05 — Game Day Tools
+06 — Rules & Learning
+07 — Advancement & Paid Refereeing
+
+===============================================================================
+CONTENT OWNERSHIP
+===============================================================================
+
+THIS PAGE OWNS:
+
+- Youth-referee orientation.
+- Parent and guardian registration guidance.
+- Youth-specific volunteer requirements.
+- Youth-referee protection and support information.
+- Parent responsibilities before, during and after assignments.
+- The youth mentoring and development pathway.
+
+THIS PAGE DOES NOT OWN:
+
+- Current course dates and locations.
+- MatchTrak competition names or seasonal schedules.
+- Seasonal referee-point totals.
+- Adult volunteer-compliance procedures.
+- Complete game-day procedures.
+- Detailed division rules.
+- AYSO badge-upgrade requirements.
+- Cal South, U.S. Soccer or NOCRA onboarding.
+
+Those subjects are maintained on the linked source pages.
+
+===============================================================================
+SPORTSCONNECT REQUIREMENTS
+===============================================================================
+
+- HTML and CSS are included together in this single code block.
+- No JavaScript is used.
+- No external fonts, icon libraries, frameworks or dependencies are used.
+- All navigation and controls use text only.
+- CSS is scoped through the "r154-youth" wrapper.
+- Custom rows are used instead of unordered lists to avoid duplicate
+  SportsConnect bullet markers.
+- Important link colors use !important because SportsConnect may override
+  normal and visited-link colors.
+- Region 154 links open in the same browser tab.
+- External AYSO links open in a new browser tab.
+- The current page uses text and aria-current="page".
+- The layout is mobile responsive.
+- No sticky navigation is used.
+- Search-engine indexing remains disabled until publication approval.
+
+===============================================================================
+CANONICAL REFEREE PAGE URL REGISTRY
+===============================================================================
+
+Referee Redesign Review Hub:
+https://www.ayso154cypress.org/Default.aspx?tabid=976482
+
+01 — Referee Central:
+https://www.ayso154cypress.org/Default.aspx?tabid=976485
+
+02 — Become a Referee:
+https://www.ayso154cypress.org/Default.aspx?tabid=976487
+
+03 — Youth Referees:
+https://www.ayso154cypress.org/Default.aspx?tabid=976488
+
+04 — Training & Events:
+https://www.ayso154cypress.org/Default.aspx?tabid=976489
+
+05 — Game Day Tools:
+https://www.ayso154cypress.org/Default.aspx?tabid=976490
+
+06 — Rules & Learning:
+https://www.ayso154cypress.org/Default.aspx?tabid=976492
+
+07 — Advancement & Paid Refereeing:
+https://www.ayso154cypress.org/Default.aspx?tabid=976493
+
+===============================================================================
+VERSION HISTORY
+===============================================================================
+
+1.2.0 — 2026-07-17 — Bryan
+
+- Advanced the project to REF-RD-0.5.0-NAV-SYNC.
+- Advanced the shared design system to DS-1.1.0.
+- Added shared navigation module REF-NAV-1.0.0.
+- Added the same seven-page navigation used throughout the redesign.
+- Added "Youth Referees — Current Page" with aria-current="page".
+- Added a dedicated local page-menu anchor.
+- Added Back to Youth Referees Menu links after major sections.
+- Added Previous, Current and Next sequence navigation.
+- Standardized internal and external link behavior.
+- Improved navigation accessibility and mobile touch targets.
+- Preserved youth registration, training, mentoring and protection content.
+- Preserved text-only controls and no JavaScript.
+
+1.1.0 — 2026-07-17 — Bryan
+
+- Converted the sandbox concept into a public-facing youth and parent guide.
+- Added parent-led youth volunteer registration.
+- Added the unique youth-email requirement.
+- Added warnings against creating duplicate returning-volunteer profiles.
+- Added youth training and compliance guidance.
+- Added age-appropriate assignment and mentoring guidance.
+- Added youth-referee protection and parent responsibilities.
+- Avoided publishing unconfirmed MatchTrak schedules and point totals.
+- Preserved mobile responsiveness, text-only controls and no JavaScript.
+
+1.0.0 — 2026-07-17 — Bryan
+
+- Created the initial Youth Referees sandbox concept.
+- Added youth eligibility, registration and training sections.
+- Added parent guidance, mentoring and youth protection.
+- Established the initial scoped HTML/CSS design.
+
+===============================================================================
+-->
+
+
+<style>
+/* ==========================================================================
+   1. PAGE VARIABLES
+   ========================================================================== */
+
+.r154-youth {
+    --r154-navy-dark: #061a40;
+    --r154-navy: #0b326f;
+    --r154-navy-medium: #164580;
+    --r154-blue-light: #eaf2fb;
+
+    --r154-red: #d71920;
+    --r154-red-dark: #ad1117;
+    --r154-red-light: #fff0f1;
+
+    --r154-yellow: #ffc72c;
+    --r154-yellow-light: #fff7d6;
+
+    --r154-white: #ffffff;
+    --r154-off-white: #f7f9fc;
+
+    --r154-gray-100: #f0f4f8;
+    --r154-gray-200: #d9e1eb;
+    --r154-gray-300: #bec9d7;
+    --r154-gray-600: #506176;
+    --r154-gray-800: #26364a;
+
+    --r154-text: #17263a;
+
+    --r154-green: #276f46;
+    --r154-green-light: #eaf7ee;
+
+    --r154-shadow-small: 0 4px 13px rgba(6, 26, 64, 0.10);
+    --r154-shadow-medium: 0 8px 25px rgba(6, 26, 64, 0.15);
+
+    --r154-radius-small: 6px;
+    --r154-radius-medium: 10px;
+    --r154-radius-large: 14px;
+}
+
+
+/* ==========================================================================
+   2. SCOPED RESET AND TYPOGRAPHY
+   ========================================================================== */
+
+.r154-youth,
+.r154-youth * {
+    box-sizing: border-box;
+}
+
+.r154-youth {
+    width: 100%;
+    max-width: 1120px;
+    margin: 24px auto 48px auto;
+    padding: 0 16px;
+
+    color: var(--r154-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.r154-youth h1,
+.r154-youth h2,
+.r154-youth h3,
+.r154-youth h4,
+.r154-youth p {
+    margin-top: 0;
+}
+
+.r154-youth h1,
+.r154-youth h2,
+.r154-youth h3,
+.r154-youth h4 {
+    color: var(--r154-navy-dark);
+}
+
+.r154-youth h1,
+.r154-youth h2 {
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-stretch: condensed;
+}
+
+.r154-youth a {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.r154-youth a:focus-visible {
+    outline: 4px solid var(--r154-yellow);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   3. PAGE SHELL AND SHARED SECTIONS
+   ========================================================================== */
+
+.r154-youth-shell {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-large);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-youth-section {
+    padding: 44px 38px;
+    scroll-margin-top: 20px;
+}
+
+.r154-youth-section + .r154-youth-section {
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-youth-section-alt {
+    background: var(--r154-off-white);
+}
+
+.r154-youth-section-heading {
+    max-width: 875px;
+    margin: 0 auto 28px auto;
+
+    text-align: center;
+}
+
+.r154-youth-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--r154-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.r154-youth-section-title {
+    margin-bottom: 11px;
+
+    color: var(--r154-navy-dark);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-youth-section-intro {
+    max-width: 795px;
+    margin: 0 auto;
+
+    color: var(--r154-gray-600);
+    font-size: 1.02rem;
+}
+
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+
+.r154-youth-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 52px 38px 47px 38px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--r154-navy-dark) 0%,
+            var(--r154-navy) 58%,
+            var(--r154-navy-medium) 100%
+        );
+
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-youth-hero::before {
+    position: absolute;
+    top: -190px;
+    left: -150px;
+
+    width: 395px;
+    height: 395px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.r154-youth-hero::after {
+    position: absolute;
+    right: -115px;
+    bottom: -170px;
+
+    width: 385px;
+    height: 385px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.r154-youth-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.r154-youth-brand-name {
+    margin-bottom: 8px;
+
+    color: var(--r154-white);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: clamp(1.25rem, 4vw, 1.9rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.r154-youth-hero h1 {
+    margin-bottom: 20px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(2.35rem, 7vw, 4.25rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.r154-youth-hero-description {
+    max-width: 820px;
+    margin: 0 auto 24px auto;
+
+    color: var(--r154-white);
+    font-size: clamp(1rem, 2vw, 1.16rem);
+    line-height: 1.7;
+}
+
+.r154-youth-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+
+.r154-youth-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.r154-youth-button,
+.r154-youth-button:link,
+.r154-youth-button:visited {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 17px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-button:hover,
+.r154-youth-button:active,
+.r154-youth-button:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-youth-button-secondary,
+.r154-youth-button-secondary:link,
+.r154-youth-button-secondary:visited {
+    color: var(--r154-navy) !important;
+
+    background: var(--r154-white) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-youth-button-secondary:hover,
+.r154-youth-button-secondary:active,
+.r154-youth-button-secondary:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy-dark) !important;
+    border-color: var(--r154-navy-dark) !important;
+}
+
+.r154-youth-button-red,
+.r154-youth-button-red:link,
+.r154-youth-button-red:visited {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+.r154-youth-button-red:hover,
+.r154-youth-button-red:active,
+.r154-youth-button-red:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red-dark) !important;
+    border-color: var(--r154-red-dark) !important;
+}
+
+
+/* ==========================================================================
+   6. PROTECTION NOTICE
+   ========================================================================== */
+
+.r154-youth-notice-wrap {
+    padding: 20px 26px;
+
+    background: var(--r154-white);
+}
+
+.r154-youth-notice {
+    padding: 18px 20px;
+
+    background: var(--r154-red-light);
+    border: 1px solid #efb5b8;
+    border-left: 6px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-notice-title {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #66161b;
+    font-weight: 900;
+}
+
+.r154-youth-notice p {
+    margin-bottom: 0;
+
+    color: var(--r154-text);
+    font-size: 0.94rem;
+}
+
+
+/* ==========================================================================
+   7. SHARED CROSS-PAGE REFEREE NAVIGATION
+   REF-NAV-1.0.0
+   ========================================================================== */
+
+.r154-youth-refnav {
+    padding: 29px 28px 31px 28px;
+
+    background: var(--r154-white);
+    border-top: 1px solid var(--r154-gray-200);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-youth-refnav-heading {
+    max-width: 780px;
+    margin: 0 auto 18px auto;
+
+    text-align: center;
+}
+
+.r154-youth-refnav-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.r154-youth-refnav-title {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.r154-youth-refnav-description {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-youth-refnav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-youth-refnav-link,
+.r154-youth-refnav-link:link,
+.r154-youth-refnav-link:visited {
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 12px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.84rem;
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-off-white) !important;
+    border: 2px solid var(--r154-gray-200) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-refnav-link:hover,
+.r154-youth-refnav-link:active,
+.r154-youth-refnav-link:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-youth-refnav-current,
+.r154-youth-refnav-current:link,
+.r154-youth-refnav-current:visited,
+.r154-youth-refnav-current:hover,
+.r154-youth-refnav-current:active,
+.r154-youth-refnav-current:focus {
+    color: var(--r154-white) !important;
+    cursor: default;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
+
+    transform: none;
+}
+
+
+/* ==========================================================================
+   8. LOCAL PAGE NAVIGATION
+   ========================================================================== */
+
+.r154-youth-page-nav {
+    padding: 26px 28px 29px 28px;
+    scroll-margin-top: 20px;
+
+    background: var(--r154-gray-100);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-youth-page-nav-label {
+    margin-bottom: 14px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-youth-page-nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-youth-page-nav-links a,
+.r154-youth-page-nav-links a:link,
+.r154-youth-page-nav-links a:visited {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-page-nav-links a:hover,
+.r154-youth-page-nav-links a:active,
+.r154-youth-page-nav-links a:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   9. BACK TO LOCAL PAGE MENU
+   ========================================================================== */
+
+.r154-youth-backlink-wrap {
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.r154-youth-backlink,
+.r154-youth-backlink:link,
+.r154-youth-backlink:visited {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 15px;
+
+    color: var(--r154-navy) !important;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-backlink:hover,
+.r154-youth-backlink:active,
+.r154-youth-backlink:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+
+/* ==========================================================================
+   10. GENERAL CARDS AND CUSTOM ROWS
+   ========================================================================== */
+
+.r154-youth-four-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.r154-youth-three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-youth-two-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-youth-card {
+    padding: 22px 19px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-youth-card-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-youth-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.08rem;
+    line-height: 1.25;
+}
+
+.r154-youth-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+}
+
+.r154-youth-action-list {
+    display: grid;
+    gap: 9px;
+}
+
+.r154-youth-action-row {
+    position: relative;
+
+    padding: 11px 12px 11px 31px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.9rem;
+    line-height: 1.45;
+
+    background: var(--r154-off-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 5px;
+}
+
+.r154-youth-action-row::before {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+    color: var(--r154-red);
+    content: "—";
+    font-weight: 900;
+}
+
+
+/* ==========================================================================
+   11. REGISTRATION STEPS
+   ========================================================================== */
+
+.r154-youth-steps {
+    display: grid;
+    gap: 15px;
+}
+
+.r154-youth-step {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-youth-step-number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 10px;
+
+    background: var(--r154-navy-dark);
+    border-right: 4px solid var(--r154-red);
+}
+
+.r154-youth-step-number {
+    color: var(--r154-yellow);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.r154-youth-step-content {
+    padding: 22px 24px;
+}
+
+.r154-youth-step-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-youth-step-content h3 {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.2rem;
+    line-height: 1.23;
+}
+
+.r154-youth-step-content p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.91rem;
+}
+
+.r154-youth-step-alert {
+    margin-top: 14px;
+    padding: 13px 15px;
+
+    color: #604b00;
+    font-size: 0.88rem;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-left: 5px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   12. REQUIREMENTS PANEL
+   ========================================================================== */
+
+.r154-youth-requirements-panel {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-youth-requirements-header {
+    padding: 24px 26px;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 5px solid var(--r154-yellow);
+}
+
+.r154-youth-requirements-header h3 {
+    margin-bottom: 6px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    line-height: 1.15;
+}
+
+.r154-youth-requirements-header p {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 0.94rem;
+}
+
+.r154-youth-requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.r154-youth-requirements-card {
+    padding: 25px 24px;
+}
+
+.r154-youth-requirements-card + .r154-youth-requirements-card {
+    border-left: 1px solid var(--r154-gray-200);
+}
+
+.r154-youth-requirements-card h4 {
+    margin-bottom: 13px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.18rem;
+}
+
+.r154-youth-requirements-note {
+    margin: 0 24px 24px 24px;
+    padding: 17px 19px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   13. TRAINING CARDS
+   ========================================================================== */
+
+.r154-youth-training-card {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-youth-training-header {
+    padding: 20px 22px;
+
+    background: var(--r154-navy);
+    border-bottom: 4px solid var(--r154-yellow);
+}
+
+.r154-youth-training-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-youth-training-header h3 {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 1.27rem;
+    line-height: 1.2;
+}
+
+.r154-youth-training-body {
+    padding: 23px 22px 25px 22px;
+}
+
+.r154-youth-training-body > p {
+    color: var(--r154-gray-600);
+}
+
+.r154-youth-training-best {
+    margin-top: 17px;
+    padding: 14px 15px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.88rem;
+    font-weight: 800;
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   14. ASSIGNMENT CARDS AND CHECKLIST
+   ========================================================================== */
+
+.r154-youth-assignment-card {
+    padding: 21px 17px;
+
+    text-align: center;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-bottom: 4px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-assignment-number {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-youth-assignment-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.r154-youth-assignment-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.86rem;
+}
+
+.r154-youth-assignment-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-green-light);
+    border: 1px solid #a9d2b8;
+    border-left: 6px solid var(--r154-green);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-youth-check-row {
+    position: relative;
+
+    padding: 13px 13px 13px 36px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.91rem;
+    line-height: 1.45;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 6px;
+}
+
+.r154-youth-check-row::before {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    width: 14px;
+    height: 14px;
+
+    content: "";
+
+    background: var(--r154-white);
+    border: 2px solid var(--r154-navy);
+    border-radius: 2px;
+}
+
+
+/* ==========================================================================
+   15. YOUTH PROTECTION PANEL
+   ========================================================================== */
+
+.r154-youth-protection-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px;
+
+    color: var(--r154-white);
+
+    background: var(--r154-navy-dark);
+    border-left: 7px solid var(--r154-red);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-youth-protection-panel .r154-youth-eyebrow {
+    color: #ff5360;
+}
+
+.r154-youth-protection-panel h2 {
+    margin-bottom: 15px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-youth-protection-panel p {
+    color: var(--r154-white);
+}
+
+.r154-youth-protection-highlight {
+    margin-top: 22px;
+    padding: 17px 19px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 700;
+
+    background: var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-protection-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.r154-youth-protection-step {
+    padding: 15px;
+
+    color: var(--r154-white);
+    font-size: 0.88rem;
+    line-height: 1.45;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-protection-number {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-youth-protection-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+
+/* ==========================================================================
+   16. FAQ AND RELATED LINKS
+   ========================================================================== */
+
+.r154-youth-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.r154-youth-faq-card {
+    padding: 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-faq-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.04rem;
+    line-height: 1.3;
+}
+
+.r154-youth-faq-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-youth-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-youth-related-link,
+.r154-youth-related-link:link,
+.r154-youth-related-link:visited {
+    display: flex;
+    min-height: 140px;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px;
+
+    color: var(--r154-text) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-youth-related-link:hover,
+.r154-youth-related-link:active,
+.r154-youth-related-link:focus {
+    color: var(--r154-text) !important;
+
+    border-top-color: var(--r154-red);
+    box-shadow: var(--r154-shadow-medium);
+
+    transform: translateY(-2px);
+}
+
+.r154-youth-related-title {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.03rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.r154-youth-related-description {
+    display: block;
+
+    color: var(--r154-gray-600);
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+
+/* ==========================================================================
+   17. PAGE SEQUENCE NAVIGATION
+   ========================================================================== */
+
+.r154-youth-sequence {
+    padding: 30px 28px;
+
+    background: var(--r154-gray-100);
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-youth-sequence-heading {
+    margin-bottom: 16px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-youth-sequence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.r154-youth-sequence-item,
+.r154-youth-sequence-item:link,
+.r154-youth-sequence-item:visited {
+    display: flex;
+    min-height: 62px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 14px;
+
+    color: var(--r154-navy-dark) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-sequence-item:hover,
+.r154-youth-sequence-item:active,
+.r154-youth-sequence-item:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-youth-sequence-direction {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.r154-youth-sequence-page {
+    display: block;
+
+    font-size: 0.92rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.r154-youth-sequence-current {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+
+/* ==========================================================================
+   18. FOOTER
+   ========================================================================== */
+
+.r154-youth-footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: var(--r154-navy-dark);
+    border-top: 4px solid var(--r154-yellow);
+}
+
+.r154-youth-footer-brand {
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-youth-footer p {
+    margin-bottom: 17px;
+
+    color: var(--r154-white);
+    font-size: 0.89rem;
+}
+
+.r154-youth-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r154-youth-footer a,
+.r154-youth-footer a:link,
+.r154-youth-footer a:visited {
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border: 2px solid var(--r154-yellow) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-youth-footer a:hover,
+.r154-youth-footer a:active,
+.r154-youth-footer a:focus {
+    color: var(--r154-white) !important;
+
+    background: transparent !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   19. TABLET STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 900px) {
+    .r154-youth-refnav-grid,
+    .r154-youth-page-nav-links,
+    .r154-youth-four-grid,
+    .r154-youth-protection-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-youth-three-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-youth-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================================================
+   20. MOBILE STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 640px) {
+    .r154-youth {
+        margin-top: 12px;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        font-size: 15px;
+    }
+
+    .r154-youth-shell {
+        border-radius: 9px;
+    }
+
+    .r154-youth-hero {
+        padding: 38px 20px 35px 20px;
+    }
+
+    .r154-youth-hero-actions,
+    .r154-youth-button-row,
+    .r154-youth-protection-actions,
+    .r154-youth-footer-links {
+        flex-direction: column;
+    }
+
+    .r154-youth-notice-wrap {
+        padding: 15px;
+    }
+
+    .r154-youth-refnav {
+        padding: 25px 15px;
+    }
+
+    .r154-youth-page-nav {
+        padding: 20px 15px 22px 15px;
+    }
+
+    .r154-youth-refnav-grid,
+    .r154-youth-page-nav-links,
+    .r154-youth-four-grid,
+    .r154-youth-three-grid,
+    .r154-youth-two-grid,
+    .r154-youth-requirements-grid,
+    .r154-youth-check-grid,
+    .r154-youth-protection-steps,
+    .r154-youth-faq-grid,
+    .r154-youth-related-grid,
+    .r154-youth-sequence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-youth-section {
+        padding: 35px 20px;
+    }
+
+    .r154-youth-step {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-youth-step-number-wrap {
+        min-height: 60px;
+        padding: 12px;
+
+        border-right: 0;
+        border-bottom: 4px solid var(--r154-red);
+    }
+
+    .r154-youth-step-content {
+        padding: 20px 19px;
+    }
+
+    .r154-youth-requirements-card + .r154-youth-requirements-card {
+        border-top: 1px solid var(--r154-gray-200);
+        border-left: 0;
+    }
+
+    .r154-youth-button,
+    .r154-youth-button:link,
+    .r154-youth-button:visited,
+    .r154-youth-refnav-link,
+    .r154-youth-refnav-link:link,
+    .r154-youth-refnav-link:visited,
+    .r154-youth-page-nav-links a,
+    .r154-youth-page-nav-links a:link,
+    .r154-youth-page-nav-links a:visited,
+    .r154-youth-footer a,
+    .r154-youth-footer a:link,
+    .r154-youth-footer a:visited {
+        width: 100%;
+    }
+
+    .r154-youth-protection-panel {
+        padding: 28px 22px;
+    }
+
+    .r154-youth-sequence {
+        padding: 27px 16px;
+    }
+}
+
+
+/* ==========================================================================
+   21. REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .r154-youth a {
+        transition: none;
+    }
+
+    .r154-youth-button:hover,
+    .r154-youth-related-link:hover,
+    .r154-youth-refnav-link:hover {
+        transform: none;
+    }
+}
+</style>
+
+
+<!-- ========================================================================
+     BEGIN PUBLIC-FACING YOUTH REFEREES PAGE
+     ======================================================================== -->
+
+<div class="r154-youth">
+
+    <main class="r154-youth-shell" id="region-154-youth-referees">
+
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
+
+        <header class="r154-youth-hero">
+
+            <div class="r154-youth-hero-content">
+
+                <div class="r154-youth-brand-name">
+                    Cypress AYSO Region 154
+                </div>
+
+                <h1>
+                    Youth Referees
+                </h1>
+
+                <p class="r154-youth-hero-description">
+                    Youth ages 12–17 can learn the Laws, build confidence,
+                    develop leadership skills and help provide safe, fair and
+                    positive soccer for younger players.
+                </p>
+
+                <div class="r154-youth-hero-actions">
+
+                    <a class="r154-youth-button r154-youth-button-red" href="#youth-registration">
+                        Parent Registration Steps
+                    </a>
+
+                    <a class="r154-youth-button r154-youth-button-secondary" href="#youth-training">
+                        Youth Training Path
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================================
+             YOUTH-REFEREE PROTECTION NOTICE
+             ================================================================ -->
+
+        <div class="r154-youth-notice-wrap">
+
+            <div class="r154-youth-notice">
+
+                <span class="r154-youth-notice-title">
+                    Youth referees are official members of the referee crew.
+                </span>
+
+                <p>
+                    Referee abuse is not tolerated. Coaches, parents, players
+                    and spectators must treat youth referees with patience,
+                    respect and positive support while they learn and perform
+                    their assignments.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================================
+             SHARED REFEREE RESOURCES NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-youth-refnav" aria-label="Region 154 referee resources">
+
+            <div class="r154-youth-refnav-heading">
+
+                <span class="r154-youth-refnav-label">
+                    Region 154 Referee Resources
+                </span>
+
+                <h2 class="r154-youth-refnav-title">
+                    Navigate the Referee Program
+                </h2>
+
+                <p class="r154-youth-refnav-description">
+                    Use these links from any referee page to move directly to
+                    the information you need.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-refnav-grid">
+
+                <a class="r154-youth-refnav-link" href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a class="r154-youth-refnav-link" href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a class="r154-youth-refnav-link r154-youth-refnav-current" href="/Default.aspx?tabid=976488" aria-current="page">
+                    Youth Referees — Current Page
+                </a>
+
+                <a class="r154-youth-refnav-link" href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a class="r154-youth-refnav-link" href="/Default.aspx?tabid=976490">
+                    Game Day Tools
+                </a>
+
+                <a class="r154-youth-refnav-link" href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a class="r154-youth-refnav-link" href="/Default.aspx?tabid=976493">
+                    Advancement &amp; Paid Refereeing
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             LOCAL PAGE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-youth-page-nav" id="page-menu" aria-label="Explore Youth Referees">
+
+            <div class="r154-youth-page-nav-label">
+                Explore This Page
+            </div>
+
+            <div class="r154-youth-page-nav-links">
+
+                <a href="#why-youth-referee">
+                    Why Referee?
+                </a>
+
+                <a href="#youth-eligibility">
+                    Eligibility
+                </a>
+
+                <a href="#youth-registration">
+                    Parent Registration
+                </a>
+
+                <a href="#youth-training">
+                    Training
+                </a>
+
+                <a href="#first-assignment">
+                    First Assignment
+                </a>
+
+                <a href="#youth-protection">
+                    Protection &amp; Support
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             WHY BECOME A YOUTH REFEREE
+             ================================================================ -->
+
+        <section class="r154-youth-section" id="why-youth-referee" aria-labelledby="why-youth-referee-title">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Learn, Lead and Give Back
+                </span>
+
+                <h2 class="r154-youth-section-title" id="why-youth-referee-title">
+                    Why Become a Youth Referee?
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    Youth refereeing develops skills that help on the soccer
+                    field, at school and throughout the community.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-four-grid">
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Understand Soccer
+                    </span>
+
+                    <h3>
+                        Learn the Game More Deeply
+                    </h3>
+
+                    <p>
+                        Studying the Laws and seeing matches from the referee’s
+                        perspective can help youth become smarter players and
+                        teammates.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Build Confidence
+                    </span>
+
+                    <h3>
+                        Practice Leadership
+                    </h3>
+
+                    <p>
+                        Refereeing develops communication, preparation,
+                        decision-making, responsibility and calmness under
+                        pressure.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Serve the Community
+                    </span>
+
+                    <h3>
+                        Help Younger Players
+                    </h3>
+
+                    <p>
+                        Youth referees help younger players enjoy organized,
+                        safe and fair matches while supporting the Region.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Continue Growing
+                    </span>
+
+                    <h3>
+                        Develop a Referee Path
+                    </h3>
+
+                    <p>
+                        Youth referees may gain experience, receive mentoring,
+                        advance their AYSO badge and later explore other
+                        officiating opportunities.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             ELIGIBILITY AND RESPONSIBILITIES
+             ================================================================ -->
+
+        <section class="r154-youth-section r154-youth-section-alt" id="youth-eligibility" aria-labelledby="youth-eligibility-title">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Youth, Parent and Region Working Together
+                </span>
+
+                <h2 class="r154-youth-section-title" id="youth-eligibility-title">
+                    Who Can Participate?
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    The youth referee, parent or guardian and Region referee
+                    staff each have an important role in creating a safe and
+                    successful experience.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-three-grid">
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Youth Referee
+                    </span>
+
+                    <h3>
+                        Learn and Prepare
+                    </h3>
+
+                    <div class="r154-youth-action-list">
+
+                        <div class="r154-youth-action-row">
+                            Is between 12 and 17 years old.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Wants to learn and accept constructive feedback.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Completes required safety and referee training.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Arrives prepared and asks for help when needed.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Accepts assignments approved for their experience.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Parent or Guardian
+                    </span>
+
+                    <h3>
+                        Register and Support
+                    </h3>
+
+                    <div class="r154-youth-action-list">
+
+                        <div class="r154-youth-action-row">
+                            Submits the annual Youth Volunteer Application.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Helps establish the correct youth profile and email.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Helps track training, forms and communication.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Supports transportation and safe arrival.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Reports concerns to Region referee leadership.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Region 154 Referee Staff
+                    </span>
+
+                    <h3>
+                        Train, Assign and Protect
+                    </h3>
+
+                    <div class="r154-youth-action-list">
+
+                        <div class="r154-youth-action-row">
+                            Verifies training and volunteer eligibility.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Selects age-appropriate assignments.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Provides mentoring and experienced support.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Protects youth referees from inappropriate behavior.
+                        </div>
+
+                        <div class="r154-youth-action-row">
+                            Provides a path for continued growth.
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             YOUTH REGISTRATION
+             ================================================================ -->
+
+        <section class="r154-youth-section" id="youth-registration" aria-labelledby="youth-registration-title">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    A Parent or Guardian Completes the Application
+                </span>
+
+                <h2 class="r154-youth-section-title" id="youth-registration-title">
+                    Register a Youth Referee
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    Use a desktop or laptop when possible. The parent or
+                    guardian should begin from the Region 154 SportsConnect
+                    account used for the family.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-steps">
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">1</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            Parent Account
+                        </span>
+
+                        <h3>
+                            Sign In as the Primary Account Holder
+                        </h3>
+
+                        <p>
+                            The parent or guardian signs in to the Region 154
+                            account, opens My Account and selects Volunteer.
+                        </p>
+
+                        <div class="r154-youth-step-alert">
+                            Some volunteer options may not appear when signed in
+                            as an Additional Account Holder.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">2</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            Volunteer Opportunity
+                        </span>
+
+                        <h3>
+                            Locate the Referee Volunteer Role
+                        </h3>
+
+                        <p>
+                            Select the current volunteer opportunity that
+                            includes referees. Use Show All Available
+                            Opportunities when the role does not appear
+                            immediately.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">3</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            New or Returning
+                        </span>
+
+                        <h3>
+                            Select the Correct Youth Volunteer Profile
+                        </h3>
+
+                        <p>
+                            Select a new user only when the youth has never
+                            volunteered. Select the existing youth volunteer
+                            profile when the referee is returning.
+                        </p>
+
+                        <div class="r154-youth-step-alert">
+                            Do not create a second volunteer profile for a
+                            returning youth referee.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">4</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            Youth Information
+                        </span>
+
+                        <h3>
+                            Enter the Youth Referee’s Information
+                        </h3>
+
+                        <p>
+                            Complete the form using the youth referee’s legal
+                            name and information—not the parent’s personal
+                            information.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">5</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            Unique Email
+                        </span>
+
+                        <h3>
+                            Use an Email Address Assigned to the Youth
+                        </h3>
+
+                        <p>
+                            The youth referee’s email must be different from
+                            the parent or guardian email already used in
+                            SportsConnect. The family should retain access to
+                            that inbox.
+                        </p>
+
+                        <div class="r154-youth-step-alert">
+                            Reusing the parent email may prevent the youth
+                            account and training access from being created
+                            correctly.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">6</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            Consent
+                        </span>
+
+                        <h3>
+                            Complete the Parent or Guardian Waivers
+                        </h3>
+
+                        <p>
+                            The parent or guardian reviews the application,
+                            provides the required consent and signs the youth
+                            volunteer waivers using the parent or guardian name.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-step">
+
+                    <div class="r154-youth-step-number-wrap">
+                        <span class="r154-youth-step-number">7</span>
+                    </div>
+
+                    <div class="r154-youth-step-content">
+
+                        <span class="r154-youth-step-label">
+                            Signed Form
+                        </span>
+
+                        <h3>
+                            Save the Youth Volunteer Application
+                        </h3>
+
+                        <p>
+                            Retain a signed copy containing parental consent,
+                            emergency-contact information and the applicable
+                            medical release.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-button-row">
+
+                <a class="r154-youth-button r154-youth-button-red" href="/Default.aspx?isLogin=True">
+                    Sign In to Region 154
+                </a>
+
+                <a class="r154-youth-button r154-youth-button-secondary" href="https://wiki.ayso.org/wiki/Register_a_youth_volunteer" target="_blank" rel="noopener noreferrer">
+                    Official Youth Registration Instructions
+                </a>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             YOUTH VOLUNTEER REQUIREMENTS
+             ================================================================ -->
+
+        <section class="r154-youth-section r154-youth-section-alt">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Youth Requirements Differ From Adult Requirements
+                </span>
+
+                <h2 class="r154-youth-section-title">
+                    Youth Volunteer Compliance
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    Youth referees complete the youth application and required
+                    training, but they do not complete adult screening while
+                    they are under 18.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-requirements-panel">
+
+                <div class="r154-youth-requirements-header">
+
+                    <h3>
+                        Check the Correct Requirements
+                    </h3>
+
+                    <p>
+                        Use the youth referee’s SportsConnect and AYSOU records
+                        to confirm completion.
+                    </p>
+
+                </div>
+
+
+                <div class="r154-youth-requirements-grid">
+
+                    <article class="r154-youth-requirements-card">
+
+                        <h4>
+                            Youth Referees Complete
+                        </h4>
+
+                        <div class="r154-youth-action-list">
+
+                            <div class="r154-youth-action-row">
+                                Annual Youth Volunteer Application
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Parent or guardian consent and waivers
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                AYSO Safe Haven
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                CDC Concussion Awareness
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Sudden Cardiac Arrest
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Regional Referee role training
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="r154-youth-requirements-card">
+
+                        <h4>
+                            Youth Referees Under 18 Do Not Complete
+                        </h4>
+
+                        <div class="r154-youth-action-list">
+
+                            <div class="r154-youth-action-row">
+                                Adult criminal background check
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Adult SafeSport requirement
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                California Live Scan
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Adult volunteer screening questions
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="r154-youth-requirements-note">
+
+                    <strong>
+                        Turning 18 changes the requirements.
+                    </strong>
+
+                    Before continuing as an adult referee, review and complete
+                    all adult volunteer and screening requirements assigned for
+                    the current membership year.
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             YOUTH REFEREE TRAINING
+             ================================================================ -->
+
+        <section class="r154-youth-section" id="youth-training" aria-labelledby="youth-training-title">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Complete Regional Referee Certification
+                </span>
+
+                <h2 class="r154-youth-section-title" id="youth-training-title">
+                    Youth Referee Training Options
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    Youth and adult new referees use the same Region 154
+                    Regional Referee certification pathways. Current dates and
+                    locations are maintained on Training &amp; Events.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-two-grid">
+
+                <article class="r154-youth-training-card">
+
+                    <div class="r154-youth-training-header">
+
+                        <span class="r154-youth-training-label">
+                            Option 1
+                        </span>
+
+                        <h3>
+                            Full In-Person Regional Referee Course
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-youth-training-body">
+
+                        <p>
+                            Complete entry-level instruction during one
+                            approved full-day course that includes classroom
+                            learning and practical referee activities.
+                        </p>
+
+                        <div class="r154-youth-action-list">
+
+                            <div class="r154-youth-action-row">
+                                Enroll in the full in-person Regional Referee
+                                course in AYSOU.
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Complete the prerequisites displayed.
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Attend the entire course.
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Complete the required assessment.
+                            </div>
+
+                        </div>
+
+                        <div class="r154-youth-training-best">
+                            Best for youth who prefer to complete the primary
+                            instruction in one scheduled course.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-youth-training-card">
+
+                    <div class="r154-youth-training-header">
+
+                        <span class="r154-youth-training-label">
+                            Option 2
+                        </span>
+
+                        <h3>
+                            Online Course Plus Companion Field Day
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-youth-training-body">
+
+                        <p>
+                            Complete the Regional Referee online course first,
+                            then attend an approved in-person Companion Course
+                            or Field Day.
+                        </p>
+
+                        <div class="r154-youth-action-list">
+
+                            <div class="r154-youth-action-row">
+                                Open AYSOU from the youth volunteer account.
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Complete the Regional Referee online course.
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Enroll separately in the Companion Field Day.
+                            </div>
+
+                            <div class="r154-youth-action-row">
+                                Attend the complete practical session.
+                            </div>
+
+                        </div>
+
+                        <div class="r154-youth-training-best">
+                            Best for youth who prefer to complete classroom
+                            material online before field instruction.
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-button-row">
+
+                <a class="r154-youth-button r154-youth-button-red" href="/Default.aspx?tabid=976489">
+                    View Training &amp; Events
+                </a>
+
+                <a class="r154-youth-button r154-youth-button-secondary" href="https://wiki.ayso.org/wiki/Access_to_AYSOU" target="_blank" rel="noopener noreferrer">
+                    Official AYSOU Instructions
+                </a>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FIRST ASSIGNMENT
+             ================================================================ -->
+
+        <section class="r154-youth-section r154-youth-section-alt" id="first-assignment" aria-labelledby="first-assignment-title">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Start With an Appropriate, Supported Match
+                </span>
+
+                <h2 class="r154-youth-section-title" id="first-assignment-title">
+                    From Training to the First Assignment
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    Region referee leadership should consider the youth’s age,
+                    badge, experience, confidence and mentor availability
+                    before approving an assignment.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-four-grid">
+
+                <article class="r154-youth-assignment-card">
+
+                    <span class="r154-youth-assignment-number">
+                        Next 01
+                    </span>
+
+                    <h3>
+                        Verify the Record
+                    </h3>
+
+                    <p>
+                        Confirm that the application, safety courses and
+                        Regional Referee certification appear correctly.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-assignment-card">
+
+                    <span class="r154-youth-assignment-number">
+                        Next 02
+                    </span>
+
+                    <h3>
+                        Receive Equipment
+                    </h3>
+
+                    <p>
+                        Contact the RRA for the current uniform, badge, whistle
+                        and equipment-distribution process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-assignment-card">
+
+                    <span class="r154-youth-assignment-number">
+                        Next 03
+                    </span>
+
+                    <h3>
+                        Request a Mentor
+                    </h3>
+
+                    <p>
+                        Tell referee leadership that this is an early
+                        assignment and request an experienced referee crew.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-assignment-card">
+
+                    <span class="r154-youth-assignment-number">
+                        Next 04
+                    </span>
+
+                    <h3>
+                        Accept an Approved Match
+                    </h3>
+
+                    <p>
+                        Reserve only the role and division approved for the
+                        youth’s age, experience and development plan.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-assignment-note">
+
+                <strong>
+                    There is no need to rush into difficult assignments.
+                </strong>
+
+                Many youth referees build confidence through supported
+                Assistant Referee duties and younger-division matches before
+                moving to more demanding Center Referee assignments.
+
+            </div>
+
+
+            <div class="r154-youth-button-row">
+
+                <a class="r154-youth-button" href="mailto:Cypress154RRA@gmail.com">
+                    Request Youth Referee Support
+                </a>
+
+                <a class="r154-youth-button r154-youth-button-secondary" href="/Default.aspx?tabid=976490">
+                    Review Game Day Tools
+                </a>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FIRST-ASSIGNMENT CHECKLIST
+             ================================================================ -->
+
+        <section class="r154-youth-section">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Youth and Parent Preparation
+                </span>
+
+                <h2 class="r154-youth-section-title">
+                    First-Assignment Checklist
+                </h2>
+
+            </div>
+
+
+            <div class="r154-youth-check-grid">
+
+                <div class="r154-youth-check-row">
+                    The annual Youth Volunteer Application is complete.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    A signed Youth Volunteer form is available.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    Required youth safety courses are complete.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    Regional Referee certification appears in the record.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The youth has the approved uniform and equipment.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The assignment was approved for the youth’s experience.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The youth and parent know the kickoff time and field.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    Transportation and pickup plans are confirmed.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The youth knows who will provide instructions.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The referee crew knows the youth is new.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The parent knows how to locate Region support.
+                </div>
+
+                <div class="r154-youth-check-row">
+                    The youth knows how to report inappropriate behavior.
+                </div>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             YOUTH REFEREE PROTECTION
+             ================================================================ -->
+
+        <section class="r154-youth-section r154-youth-section-alt" id="youth-protection" aria-labelledby="youth-protection-title">
+
+            <div class="r154-youth-protection-panel">
+
+                <span class="r154-youth-eyebrow">
+                    Respect the Call
+                </span>
+
+                <h2 id="youth-protection-title">
+                    Protect and Support Youth Referees
+                </h2>
+
+                <p>
+                    Youth referees are trained match officials and minors.
+                    Adults may not intimidate, confront, insult, threaten or
+                    aggressively challenge them before, during or after a
+                    match.
+                </p>
+
+                <p>
+                    Concerns about referee decisions must be handled through
+                    the approved Region process—not through an argument with a
+                    youth referee.
+                </p>
+
+                <div class="r154-youth-protection-highlight">
+
+                    A youth referee should never feel required to remain in an
+                    unsafe interaction. Move toward a trusted adult and request
+                    immediate assistance.
+
+                </div>
+
+
+                <div class="r154-youth-protection-steps">
+
+                    <div class="r154-youth-protection-step">
+
+                        <span class="r154-youth-protection-number">
+                            1. Do Not Argue
+                        </span>
+
+                        Avoid debating with a coach, player or spectator.
+
+                    </div>
+
+
+                    <div class="r154-youth-protection-step">
+
+                        <span class="r154-youth-protection-number">
+                            2. Seek Support
+                        </span>
+
+                        Notify the Center Referee or another trusted adult.
+
+                    </div>
+
+
+                    <div class="r154-youth-protection-step">
+
+                        <span class="r154-youth-protection-number">
+                            3. Move to Safety
+                        </span>
+
+                        Remain near the referee crew or Region representative.
+
+                    </div>
+
+
+                    <div class="r154-youth-protection-step">
+
+                        <span class="r154-youth-protection-number">
+                            4. Report the Event
+                        </span>
+
+                        Tell the parent and Region referee leadership.
+
+                    </div>
+
+                </div>
+
+
+                <div class="r154-youth-protection-actions">
+
+                    <a class="r154-youth-button r154-youth-button-red" href="/Default.aspx?tabid=974653">
+                        Region 154 Referee Protection
+                    </a>
+
+                    <a class="r154-youth-button" href="https://wiki.ayso.org/wiki/Category:RAP" target="_blank" rel="noopener noreferrer">
+                        Official AYSO Protection Resources
+                    </a>
+
+                    <a class="r154-youth-button r154-youth-button-secondary" href="mailto:Cypress154RRA@gmail.com">
+                        Contact the RRA
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PARENT RESPONSIBILITIES
+             ================================================================ -->
+
+        <section class="r154-youth-section">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Parents Remain an Important Part of the Program
+                </span>
+
+                <h2 class="r154-youth-section-title">
+                    Parent and Guardian Responsibilities
+                </h2>
+
+                <p class="r154-youth-section-intro">
+                    Youth refereeing should build independence while preserving
+                    appropriate adult oversight, communication and protection.
+                </p>
+
+            </div>
+
+
+            <div class="r154-youth-three-grid">
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Before the Assignment
+                    </span>
+
+                    <h3>
+                        Confirm the Details
+                    </h3>
+
+                    <p>
+                        Review the assignment, field, time, referee role,
+                        transportation, signed form, uniform and adult contact
+                        information with the youth.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        At the Field
+                    </span>
+
+                    <h3>
+                        Know Where Support Is Located
+                    </h3>
+
+                    <p>
+                        Help the youth identify the Center Referee, mentor,
+                        Field Marshal or Board representative who can provide
+                        assistance.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Communication
+                    </span>
+
+                    <h3>
+                        Maintain Safe Transparency
+                    </h3>
+
+                    <p>
+                        Adult-to-youth communications should remain transparent
+                        and include a parent or guardian when appropriate.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             YOUTH REFEREE GROWTH
+             ================================================================ -->
+
+        <section class="r154-youth-section r154-youth-section-alt">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Development Continues After Certification
+                </span>
+
+                <h2 class="r154-youth-section-title">
+                    Youth Referee Growth Path
+                </h2>
+
+            </div>
+
+
+            <div class="r154-youth-four-grid">
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Stage 01
+                    </span>
+
+                    <h3>
+                        Supported Assignments
+                    </h3>
+
+                    <p>
+                        Begin with matches and referee positions selected for
+                        the youth’s age, badge and comfort level.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Stage 02
+                    </span>
+
+                    <h3>
+                        Mentoring and Feedback
+                    </h3>
+
+                    <p>
+                        Work with experienced referees to improve signals,
+                        positioning, teamwork and decision-making.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Stage 03
+                    </span>
+
+                    <h3>
+                        More Challenging Matches
+                    </h3>
+
+                    <p>
+                        Progress gradually as confidence, knowledge, fitness
+                        and referee leadership skills improve.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-card">
+
+                    <span class="r154-youth-card-label">
+                        Stage 04
+                    </span>
+
+                    <h3>
+                        Advancement
+                    </h3>
+
+                    <p>
+                        Explore higher AYSO badges and, when eligible, the
+                        separate U.S. Soccer and paid-referee pathway.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-button-row">
+
+                <a class="r154-youth-button" href="/Default.aspx?tabid=976493">
+                    Advancement &amp; Paid Refereeing
+                </a>
+
+                <a class="r154-youth-button r154-youth-button-secondary" href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FAQ
+             ================================================================ -->
+
+        <section class="r154-youth-section">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Common Youth and Parent Questions
+                </span>
+
+                <h2 class="r154-youth-section-title">
+                    Youth Referee FAQ
+                </h2>
+
+            </div>
+
+
+            <div class="r154-youth-faq-grid">
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        How old must a Region 154 youth referee be?
+                    </h3>
+
+                    <p>
+                        The current Youth Referee Program is designed for youth
+                        ages 12–17.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        Does player registration also register the youth as a
+                        referee?
+                    </h3>
+
+                    <p>
+                        No. The parent or guardian must submit a separate Youth
+                        Volunteer Application.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        May the youth use the parent’s email address?
+                    </h3>
+
+                    <p>
+                        The youth volunteer profile requires an email different
+                        from the parent email already used in SportsConnect.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        Should a returning youth create a new account?
+                    </h3>
+
+                    <p>
+                        No. Select the existing volunteer profile so prior
+                        training and certifications remain connected.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        Does a youth referee complete a background check?
+                    </h3>
+
+                    <p>
+                        Youth volunteers under 18 do not complete the adult
+                        criminal background check or California Live Scan.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        Which referee course should the youth take?
+                    </h3>
+
+                    <p>
+                        Region 154 uses the Regional Referee pathway unless the
+                        RRA provides different instructions.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        May a youth referee select any available game?
+                    </h3>
+
+                    <p>
+                        No. Assignments should match the youth’s age,
+                        certification, experience and mentoring needs.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        Must a youth begin as the Center Referee?
+                    </h3>
+
+                    <p>
+                        No. Many youth referees begin with supported Assistant
+                        Referee assignments or younger-division matches.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        May the youth request a mentor?
+                    </h3>
+
+                    <p>
+                        Yes. The youth or parent should contact referee
+                        leadership and request an experienced crew or mentor.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        What should the youth do if an adult becomes aggressive?
+                    </h3>
+
+                    <p>
+                        Do not argue. Move toward the referee crew or another
+                        trusted adult and request immediate help.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        When will game schedules be available?
+                    </h3>
+
+                    <p>
+                        Current schedules and MatchTrak instructions will be
+                        maintained on Game Day Tools after publication.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-youth-faq-card">
+
+                    <h3>
+                        Can a youth referee continue into paid officiating?
+                    </h3>
+
+                    <p>
+                        Experienced referees may later explore higher AYSO
+                        badges and the separate U.S. Soccer pathway.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             RELATED RESOURCES
+             ================================================================ -->
+
+        <section class="r154-youth-section r154-youth-section-alt">
+
+            <div class="r154-youth-section-heading">
+
+                <span class="r154-youth-eyebrow">
+                    Continue the Youth Referee Process
+                </span>
+
+                <h2 class="r154-youth-section-title">
+                    Related Referee Resources
+                </h2>
+
+            </div>
+
+
+            <div class="r154-youth-related-grid">
+
+                <a class="r154-youth-related-link" href="https://wiki.ayso.org/wiki/Register_a_youth_volunteer" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-youth-related-title">
+                        Youth Registration
+                    </span>
+
+                    <span class="r154-youth-related-description">
+                        Review official AYSO youth-volunteer registration
+                        instructions.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-youth-related-link" href="/Default.aspx?tabid=976489">
+
+                    <span class="r154-youth-related-title">
+                        Training &amp; Events
+                    </span>
+
+                    <span class="r154-youth-related-description">
+                        Find current Regional Referee courses and registration
+                        instructions.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-youth-related-link" href="/Default.aspx?tabid=976490">
+
+                    <span class="r154-youth-related-title">
+                        Game Day Tools
+                    </span>
+
+                    <span class="r154-youth-related-description">
+                        Review assignments, check-in, uniforms, cards and
+                        reporting procedures.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-youth-related-link" href="/Default.aspx?tabid=974653">
+
+                    <span class="r154-youth-related-title">
+                        Referee Protection
+                    </span>
+
+                    <span class="r154-youth-related-description">
+                        Review Region 154 referee-abuse prevention information.
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="r154-youth-backlink-wrap">
+
+                <a class="r154-youth-backlink" href="#page-menu">
+                    Back to Youth Referees Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAGE SEQUENCE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-youth-sequence" aria-label="Referee guide page sequence">
+
+            <div class="r154-youth-sequence-heading">
+                Continue Through the Referee Guide
+            </div>
+
+            <div class="r154-youth-sequence-grid">
+
+                <a class="r154-youth-sequence-item" href="/Default.aspx?tabid=976487">
+
+                    <span class="r154-youth-sequence-direction">
+                        Previous Page
+                    </span>
+
+                    <span class="r154-youth-sequence-page">
+                        Become a Referee
+                    </span>
+
+                </a>
+
+
+                <div class="r154-youth-sequence-item r154-youth-sequence-current" aria-current="page">
+
+                    <span class="r154-youth-sequence-direction">
+                        Current Page
+                    </span>
+
+                    <span class="r154-youth-sequence-page">
+                        Youth Referees
+                    </span>
+
+                </div>
+
+
+                <a class="r154-youth-sequence-item" href="/Default.aspx?tabid=976489">
+
+                    <span class="r154-youth-sequence-direction">
+                        Next Page
+                    </span>
+
+                    <span class="r154-youth-sequence-page">
+                        Training &amp; Events
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             FOOTER
+             ================================================================ -->
+
+        <footer class="r154-youth-footer">
+
+            <div class="r154-youth-footer-brand">
+                Cypress AYSO Region 154
+            </div>
+
+            <p>
+                Helping youth build confidence, leadership and a deeper
+                understanding of soccer through supported refereeing.
+            </p>
+
+            <div class="r154-youth-footer-links">
+
+                <a href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a href="mailto:Cypress154RRA@gmail.com">
+                    Contact the RRA
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ========================================================================
+     END PUBLIC-FACING YOUTH REFEREES PAGE
+     ======================================================================== -->
