@@ -1,0 +1,3858 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_REF_07_ADVANCE
+CMS Status:  Hidden / Inactive (Public-Ready Review Candidate)
+Audience:    [aud:referees] [aud:volunteers]
+Content:     [type:policy] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      None
+Notes:       Primary development-pathway page for Cypress AYSO Region 154 referees (Advancement & Paid Refereeing), covering AYSO badge progression, mentoring, instruction, leadership, the separate U.S. Soccer/Cal South/NOCRA paid pathway, and cross-certification.
+================================================================================
+-->
+
+<!--
+===============================================================================
+CYPRESS AYSO REGION 154 — REFEREE WEBSITE REDESIGN
+===============================================================================
+
+PROJECT RELEASE:
+REF-RD-0.5.0-NAV-SYNC
+
+SHARED DESIGN SYSTEM:
+DS-1.1.0
+
+SHARED NAVIGATION MODULE:
+REF-NAV-1.0.0
+
+PAGE:
+DRAFT_REF_07_ADVANCE
+
+PUBLIC PAGE NAME:
+Advancement & Paid Refereeing
+
+PAGE VERSION:
+1.2.0
+
+STATUS:
+PUBLIC-READY REVIEW CANDIDATE — PENDING REFEREE ADMINISTRATOR APPROVAL
+
+LAST UPDATED:
+July 17, 2026
+
+CONTENT OWNER:
+Regional Referee Administrator — Vince
+
+WEB IMPLEMENTATION:
+Bryan
+
+SPORTSCONNECT TAB ID:
+976493
+
+CURRENT PAGE URL:
+https://www.ayso154cypress.org/Default.aspx?tabid=976493
+
+===============================================================================
+PURPOSE
+===============================================================================
+
+Advancement & Paid Refereeing is the primary development-pathway page for
+Cypress AYSO Region 154 referees.
+
+This page is designed to:
+
+- Encourage referees to continue developing after Regional certification.
+- Explain the AYSO referee badge progression at a high level.
+- Help referees create a development plan with the RRA and referee mentors.
+- Explain the role of experience, training, mentoring and assessment.
+- Introduce referee-instructor, assessor and leadership opportunities.
+- Clearly distinguish AYSO volunteer certification from U.S. Soccer licensing.
+- Explain the separate Cal South and NOCRA paid-referee pathway.
+- Explain that paid assignments are not automatic or guaranteed.
+- Explain AYSO and U.S. Soccer cross-certification at a high level.
+- Route referees to official current requirements rather than publishing
+  fees, course dates or standards that may change.
+- Connect users to every redesigned referee page.
+- Provide local and cross-page navigation without JavaScript.
+
+===============================================================================
+IMPORTANT PATHWAY DISTINCTION
+===============================================================================
+
+AYSO VOLUNTEER REFEREE PATH:
+
+- Regional Referee
+- Intermediate Referee
+- Advanced Referee
+- National Referee
+- Mentoring
+- Instruction
+- Assessment
+- Regional, Area and Section leadership
+
+U.S. SOCCER / CAL SOUTH / NOCRA PATH:
+
+- Separate U.S. Soccer referee license
+- Current Cal South registration and risk-management requirements
+- Current SafeSport requirements when applicable
+- Current status on the Cal South Registered Officials List
+- Membership or onboarding with a referee association such as NOCRA
+- Assignments offered through approved assignors or associations
+
+An AYSO badge does not automatically create a U.S. Soccer license.
+
+A U.S. Soccer license does not automatically complete Region 154 volunteer
+eligibility or AYSO requirements.
+
+Cross-certification may be available when the referee meets the current
+requirements of both programs.
+
+===============================================================================
+NAVIGATION MODEL
+===============================================================================
+
+This page uses four coordinated navigation layers:
+
+1. SPORTSCONNECT PUBLIC MENU
+   Configured through SportsConnect after approval.
+
+2. SHARED REFEREE RESOURCES NAVIGATION
+   Appears near the top of all seven public referee pages.
+   Uses the same seven links in the same order.
+   Highlights "Advancement & Paid Refereeing — Current Page."
+
+3. LOCAL PAGE NAVIGATION
+   "Explore This Page" links to the primary development sections.
+
+4. SEQUENCE NAVIGATION
+   Appears near the bottom.
+   Previous: Rules & Learning
+   Current: Advancement & Paid Refereeing
+   Next: Referee Central
+
+===============================================================================
+SHARED REFEREE PAGE SEQUENCE
+===============================================================================
+
+01 — Referee Central
+02 — Become a Referee
+03 — Youth Referees
+04 — Training & Events
+05 — Game Day Tools
+06 — Rules & Learning
+07 — Advancement & Paid Refereeing
+
+===============================================================================
+CONTENT OWNERSHIP
+===============================================================================
+
+THIS PAGE OWNS:
+
+- High-level AYSO referee badge progression.
+- Referee-development planning.
+- Mentoring and assessment guidance.
+- Referee instruction and leadership pathways.
+- High-level U.S. Soccer, Cal South and NOCRA pathway guidance.
+- AYSO/U.S. Soccer cross-certification routing.
+- Paid-referee readiness guidance.
+- Official advancement-resource links.
+
+THIS PAGE DOES NOT OWN:
+
+- Current Region 154 course dates.
+- MatchTrak competitions or assignment links.
+- Adult or youth volunteer registration.
+- Complete game-day procedures.
+- Annual Laws summaries.
+- Detailed certification requirements copied from national applications.
+- Current U.S. Soccer or Cal South fees.
+- Current NOCRA membership dues.
+- Specific paid-game rates.
+- Guaranteed assignments or income.
+
+Those subjects are maintained by their official source organizations or on
+their designated Region 154 pages.
+
+===============================================================================
+MAINTENANCE MODEL
+===============================================================================
+
+Review this page at least annually.
+
+CONFIRM:
+
+- AYSO badge names and current applications.
+- Current AYSO advancement requirements.
+- Current assessment and mentoring procedures.
+- Current AYSO cross-certification process.
+- Current U.S. Soccer referee pathway.
+- Current Cal South registration requirements.
+- Current SafeSport and risk-management requirements.
+- Current Cal South Registered Officials List.
+- Current NOCRA onboarding and membership instructions.
+- Public contact information.
+
+DO NOT PUBLISH WITHOUT VERIFICATION:
+
+- Exact match-count requirements.
+- Exact assessment counts.
+- Exact minimum ages.
+- Exact course names.
+- Exact fees.
+- Exact annual registration deadlines.
+- Exact paid-game rates.
+- Guaranteed assignment volume.
+- Guaranteed advancement timelines.
+
+===============================================================================
+CANONICAL REFEREE PAGE URL REGISTRY
+===============================================================================
+
+Referee Redesign Review Hub:
+https://www.ayso154cypress.org/Default.aspx?tabid=976482
+
+01 — Referee Central:
+https://www.ayso154cypress.org/Default.aspx?tabid=976485
+
+02 — Become a Referee:
+https://www.ayso154cypress.org/Default.aspx?tabid=976487
+
+03 — Youth Referees:
+https://www.ayso154cypress.org/Default.aspx?tabid=976488
+
+04 — Training & Events:
+https://www.ayso154cypress.org/Default.aspx?tabid=976489
+
+05 — Game Day Tools:
+https://www.ayso154cypress.org/Default.aspx?tabid=976490
+
+06 — Rules & Learning:
+https://www.ayso154cypress.org/Default.aspx?tabid=976492
+
+07 — Advancement & Paid Refereeing:
+https://www.ayso154cypress.org/Default.aspx?tabid=976493
+
+===============================================================================
+OFFICIAL EXTERNAL REFERENCES
+===============================================================================
+
+AYSO NATIONAL REFEREE PROGRAM:
+https://wiki.ayso.org/wiki/Category:Referee
+
+AYSO REFEREE CERTIFICATION APPLICATIONS:
+https://wiki.ayso.org/wiki/Category:Referee/Applications_for_Referee_Certification
+
+AYSO CROSS-CERTIFICATION:
+https://wiki.ayso.org/wiki/Category:Referee/CrossCertification
+
+U.S. SOCCER REFEREE PATHWAY:
+https://www.ussoccer.com/refereeing/referee
+
+U.S. SOCCER BECOME A REFEREE:
+https://www.ussoccer.com/refereeing/become-a-referee
+
+CAL SOUTH NEW REFEREES:
+https://calsouth.com/new-referees/
+
+CAL SOUTH AYSO CROSSOVER:
+https://calsouth.com/ayso-crossover/
+
+CAL SOUTH RECERTIFICATION AND UPGRADE:
+https://calsouth.com/recertification-upgrade/
+
+CAL SOUTH REGISTERED OFFICIALS LIST:
+https://calsouth.com/approved-registered-officials-list/
+
+NOCRA:
+https://www.nocra.com/
+
+NOCRA REFEREE CERTIFICATION:
+https://www.nocra.com/referee-certification.html
+
+===============================================================================
+INTERNAL APPROVAL NOTES — NOT DISPLAYED PUBLICLY
+===============================================================================
+
+Before publication, Vince should verify:
+
+AD-01 — AYSO BADGE PROGRESSION
+
+Confirm the current Region 154 process for:
+
+- Regional Referee
+- Intermediate Referee
+- Advanced Referee
+- National Referee
+
+Confirm who:
+
+- Approves an upgrade plan
+- Verifies match experience
+- Conducts observations or assessments
+- Submits certification applications
+- Confirms the badge in AYSOU
+
+AD-02 — INTERMEDIATE REFEREE
+
+Confirm:
+
+- Required course
+- Required match experience
+- Required Center Referee experience
+- Required Assistant Referee experience
+- Required assessment or observation
+- Current minimum age
+- Who approves the application
+
+AD-03 — ADVANCED AND NATIONAL REFEREE
+
+Confirm:
+
+- Region, Area and Section responsibilities
+- Match-experience requirements
+- Required assessments
+- Physical-fitness expectations
+- Service requirements
+- Instructor or assessor involvement
+- Application-routing procedures
+
+AD-04 — MENTORING
+
+Confirm:
+
+- How referees request a mentor
+- Who schedules mentored assignments
+- Whether MatchTrak identifies mentor-supported matches
+- Whether informal observations are documented
+- How feedback is communicated
+- How youth-referee development is handled
+
+AD-05 — INSTRUCTION AND ASSESSMENT
+
+Confirm current local opportunities for:
+
+- Referee Mentor
+- Referee Instructor
+- Referee Assessor or Observer
+- Assistant RRA
+- Regional Director of Referee Instruction
+- Regional Director of Referee Assessment
+- Area or Section referee service
+
+AD-06 — U.S. SOCCER / CAL SOUTH
+
+Confirm:
+
+- Current minimum age
+- Current registration process
+- Current course format
+- Current fees
+- Current background-check or risk-management requirements
+- Current SafeSport requirements
+- Current Live Scan requirements
+- Current annual recertification process
+- Current Registered Officials List procedure
+
+AD-07 — NOCRA
+
+Confirm:
+
+- Current NOCRA membership process
+- Current association dues
+- Current meeting or education requirements
+- Current assignor process
+- Current availability expectations
+- Current game types
+- Current pay practices
+- Current independent-contractor or tax language
+- Current uniform requirements
+
+AD-08 — CROSS-CERTIFICATION
+
+Confirm:
+
+- Current AYSO-to-USSF process
+- Current USSF-to-AYSO process
+- Minimum time holding the original certification
+- Documentation required
+- Which AYSO badge may be awarded
+- Whether Region, Area or Section approval is required
+- Whether additional AYSO volunteer requirements remain mandatory
+
+AD-09 — PUBLIC LANGUAGE
+
+Confirm that the page does not imply:
+
+- Automatic paid assignments
+- Guaranteed income
+- Automatic U.S. Soccer certification
+- Automatic AYSO badge advancement
+- Automatic NOCRA membership
+- Automatic eligibility based only on prior experience
+
+AD-10 — PUBLIC CONTACTS
+
+Confirm:
+
+- Cypress154RRA@gmail.com
+- Whether a Regional Director of Referee Assessment is listed
+- Whether a Regional Director of Referee Instruction is listed
+- Whether NOCRA should be contacted directly for paid assignments
+- Whether Region 154 should facilitate introductions
+
+===============================================================================
+VERSION HISTORY
+===============================================================================
+
+1.2.0 — 2026-07-17 — Bryan
+
+- Advanced the project to REF-RD-0.5.0-NAV-SYNC.
+- Advanced the shared design system to DS-1.1.0.
+- Added shared navigation module REF-NAV-1.0.0.
+- Added the same seven-page navigation used throughout the redesign.
+- Added "Advancement & Paid Refereeing — Current Page."
+- Added aria-current="page" to the active navigation state.
+- Added local Explore This Page navigation.
+- Added Back to Advancement Menu links after major sections.
+- Added Previous, Current and Next sequence navigation.
+- Established two clearly separated referee pathways.
+- Added the AYSO Regional-to-National badge progression.
+- Added a six-step referee-development plan.
+- Added mentoring, instruction, assessment and leadership opportunities.
+- Added the separate U.S. Soccer, Cal South and NOCRA pathway.
+- Added cross-certification guidance.
+- Added a paid-referee readiness checklist.
+- Added official current pathway links.
+- Avoided publishing unverified fees, rates, ages or match requirements.
+- Standardized internal and external link behavior.
+- Preserved text-only controls and no JavaScript.
+
+1.1.0 — 2026-07-17 — Bryan
+
+- Converted the initial concept into a public-review advancement page.
+- Added AYSO badge-development guidance.
+- Added mentoring and referee-leadership opportunities.
+- Added a separate paid-referee pathway.
+- Added high-level Cal South, U.S. Soccer and NOCRA guidance.
+- Added warnings that assignments and income are not guaranteed.
+- Preserved mobile responsiveness and SportsConnect compatibility.
+
+1.0.0 — 2026-07-17 — Bryan
+
+- Created the initial Advancement & Paid Refereeing sandbox concept.
+- Added badge, mentoring, leadership and paid-referee sections.
+- Established the initial scoped HTML/CSS design.
+
+===============================================================================
+-->
+
+
+<style>
+/* ==========================================================================
+   1. PAGE VARIABLES
+   ========================================================================== */
+
+.r154-advance {
+    --r154-navy-dark: #061a40;
+    --r154-navy: #0b326f;
+    --r154-navy-medium: #164580;
+    --r154-blue-light: #eaf2fb;
+
+    --r154-red: #d71920;
+    --r154-red-dark: #ad1117;
+    --r154-red-light: #fff0f1;
+
+    --r154-yellow: #ffc72c;
+    --r154-yellow-light: #fff7d6;
+
+    --r154-white: #ffffff;
+    --r154-off-white: #f7f9fc;
+
+    --r154-gray-100: #f0f4f8;
+    --r154-gray-200: #d9e1eb;
+    --r154-gray-300: #bec9d7;
+    --r154-gray-600: #506176;
+    --r154-gray-800: #26364a;
+
+    --r154-text: #17263a;
+
+    --r154-green: #276f46;
+    --r154-green-light: #eaf7ee;
+
+    --r154-purple: #644696;
+    --r154-purple-light: #f1ecf9;
+
+    --r154-orange: #a95108;
+    --r154-orange-light: #fff2e5;
+
+    --r154-shadow-small: 0 4px 13px rgba(6, 26, 64, 0.10);
+    --r154-shadow-medium: 0 8px 25px rgba(6, 26, 64, 0.15);
+
+    --r154-radius-small: 6px;
+    --r154-radius-medium: 10px;
+    --r154-radius-large: 14px;
+}
+
+
+/* ==========================================================================
+   2. SCOPED RESET AND TYPOGRAPHY
+   ========================================================================== */
+
+.r154-advance,
+.r154-advance * {
+    box-sizing: border-box;
+}
+
+.r154-advance {
+    width: 100%;
+    max-width: 1120px;
+    margin: 24px auto 48px auto;
+    padding: 0 16px;
+
+    color: var(--r154-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.r154-advance h1,
+.r154-advance h2,
+.r154-advance h3,
+.r154-advance h4,
+.r154-advance p {
+    margin-top: 0;
+}
+
+.r154-advance h1,
+.r154-advance h2,
+.r154-advance h3,
+.r154-advance h4 {
+    color: var(--r154-navy-dark);
+}
+
+.r154-advance h1,
+.r154-advance h2 {
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-stretch: condensed;
+}
+
+.r154-advance a {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.r154-advance a:focus-visible {
+    outline: 4px solid var(--r154-yellow);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   3. PAGE SHELL AND SHARED SECTIONS
+   ========================================================================== */
+
+.r154-advance-shell {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-large);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-advance-section {
+    padding: 44px 38px;
+    scroll-margin-top: 20px;
+}
+
+.r154-advance-section + .r154-advance-section {
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-advance-section-alt {
+    background: var(--r154-off-white);
+}
+
+.r154-advance-section-heading {
+    max-width: 875px;
+    margin: 0 auto 28px auto;
+
+    text-align: center;
+}
+
+.r154-advance-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--r154-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.r154-advance-section-title {
+    margin-bottom: 11px;
+
+    color: var(--r154-navy-dark);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-advance-section-intro {
+    max-width: 795px;
+    margin: 0 auto;
+
+    color: var(--r154-gray-600);
+    font-size: 1.02rem;
+}
+
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+
+.r154-advance-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 52px 38px 47px 38px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--r154-navy-dark) 0%,
+            var(--r154-navy) 58%,
+            var(--r154-navy-medium) 100%
+        );
+
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-advance-hero::before {
+    position: absolute;
+    top: -190px;
+    left: -150px;
+
+    width: 395px;
+    height: 395px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.r154-advance-hero::after {
+    position: absolute;
+    right: -115px;
+    bottom: -170px;
+
+    width: 385px;
+    height: 385px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.r154-advance-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.r154-advance-brand-name {
+    margin-bottom: 8px;
+
+    color: var(--r154-white);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: clamp(1.25rem, 4vw, 1.9rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.r154-advance-hero h1 {
+    margin-bottom: 20px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(2.2rem, 7vw, 4.15rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.r154-advance-hero-description {
+    max-width: 850px;
+    margin: 0 auto 24px auto;
+
+    color: var(--r154-white);
+    font-size: clamp(1rem, 2vw, 1.16rem);
+    line-height: 1.7;
+}
+
+.r154-advance-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+
+.r154-advance-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.r154-advance-button,
+.r154-advance-button:link,
+.r154-advance-button:visited {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 17px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-button:hover,
+.r154-advance-button:active,
+.r154-advance-button:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-advance-button-secondary,
+.r154-advance-button-secondary:link,
+.r154-advance-button-secondary:visited {
+    color: var(--r154-navy) !important;
+
+    background: var(--r154-white) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-advance-button-secondary:hover,
+.r154-advance-button-secondary:active,
+.r154-advance-button-secondary:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy-dark) !important;
+    border-color: var(--r154-navy-dark) !important;
+}
+
+.r154-advance-button-red,
+.r154-advance-button-red:link,
+.r154-advance-button-red:visited {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+.r154-advance-button-red:hover,
+.r154-advance-button-red:active,
+.r154-advance-button-red:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red-dark) !important;
+    border-color: var(--r154-red-dark) !important;
+}
+
+
+/* ==========================================================================
+   6. PATHWAY DISTINCTION NOTICE
+   ========================================================================== */
+
+.r154-advance-notice-wrap {
+    padding: 20px 26px;
+
+    background: var(--r154-white);
+}
+
+.r154-advance-notice {
+    padding: 18px 20px;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbb43;
+    border-left: 6px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-notice-title {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 900;
+}
+
+.r154-advance-notice p {
+    margin-bottom: 0;
+
+    color: var(--r154-text);
+    font-size: 0.94rem;
+}
+
+
+/* ==========================================================================
+   7. SHARED CROSS-PAGE REFEREE NAVIGATION
+   REF-NAV-1.0.0
+   ========================================================================== */
+
+.r154-advance-refnav {
+    padding: 29px 28px 31px 28px;
+
+    background: var(--r154-white);
+    border-top: 1px solid var(--r154-gray-200);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-advance-refnav-heading {
+    max-width: 780px;
+    margin: 0 auto 18px auto;
+
+    text-align: center;
+}
+
+.r154-advance-refnav-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.r154-advance-refnav-title {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.r154-advance-refnav-description {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-advance-refnav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-advance-refnav-link,
+.r154-advance-refnav-link:link,
+.r154-advance-refnav-link:visited {
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 12px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.84rem;
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-off-white) !important;
+    border: 2px solid var(--r154-gray-200) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-refnav-link:hover,
+.r154-advance-refnav-link:active,
+.r154-advance-refnav-link:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-advance-refnav-current,
+.r154-advance-refnav-current:link,
+.r154-advance-refnav-current:visited,
+.r154-advance-refnav-current:hover,
+.r154-advance-refnav-current:active,
+.r154-advance-refnav-current:focus {
+    color: var(--r154-white) !important;
+    cursor: default;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
+
+    transform: none;
+}
+
+
+/* ==========================================================================
+   8. LOCAL PAGE NAVIGATION
+   ========================================================================== */
+
+.r154-advance-page-nav {
+    padding: 26px 28px 29px 28px;
+    scroll-margin-top: 20px;
+
+    background: var(--r154-gray-100);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-advance-page-nav-label {
+    margin-bottom: 14px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-advance-page-nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-advance-page-nav-links a,
+.r154-advance-page-nav-links a:link,
+.r154-advance-page-nav-links a:visited {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-page-nav-links a:hover,
+.r154-advance-page-nav-links a:active,
+.r154-advance-page-nav-links a:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   9. BACK TO LOCAL PAGE MENU
+   ========================================================================== */
+
+.r154-advance-backlink-wrap {
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.r154-advance-backlink,
+.r154-advance-backlink:link,
+.r154-advance-backlink:visited {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 15px;
+
+    color: var(--r154-navy) !important;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-backlink:hover,
+.r154-advance-backlink:active,
+.r154-advance-backlink:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+
+/* ==========================================================================
+   10. PATHWAY CARDS
+   ========================================================================== */
+
+.r154-advance-path-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.r154-advance-path-card {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-advance-path-header {
+    padding: 24px;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-advance-path-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    background: var(--r154-yellow);
+    border-radius: 4px;
+}
+
+.r154-advance-path-header h3 {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.r154-advance-path-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 24px;
+}
+
+.r154-advance-path-body > p {
+    color: var(--r154-gray-600);
+}
+
+.r154-advance-path-body .r154-advance-button {
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* ==========================================================================
+   11. CUSTOM ACTION ROWS
+   ========================================================================== */
+
+.r154-advance-action-list {
+    display: grid;
+    gap: 9px;
+
+    margin-bottom: 18px;
+}
+
+.r154-advance-action-row {
+    position: relative;
+
+    padding: 11px 12px 11px 31px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.9rem;
+    line-height: 1.45;
+
+    background: var(--r154-off-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 5px;
+}
+
+.r154-advance-action-row::before {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+    color: var(--r154-red);
+    content: "—";
+    font-weight: 900;
+}
+
+
+/* ==========================================================================
+   12. AYSO BADGE PROGRESSION
+   ========================================================================== */
+
+.r154-advance-badge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.r154-advance-badge-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 22px 18px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-advance-badge-stage {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-advance-badge-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.13rem;
+    line-height: 1.25;
+}
+
+.r154-advance-badge-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.87rem;
+}
+
+.r154-advance-badge-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-left: 6px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   13. DEVELOPMENT STEPS
+   ========================================================================== */
+
+.r154-advance-steps {
+    display: grid;
+    gap: 15px;
+}
+
+.r154-advance-step {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-advance-step-number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 10px;
+
+    background: var(--r154-navy-dark);
+    border-right: 4px solid var(--r154-red);
+}
+
+.r154-advance-step-number {
+    color: var(--r154-yellow);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.r154-advance-step-content {
+    padding: 22px 24px;
+}
+
+.r154-advance-step-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-advance-step-content h3 {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.2rem;
+    line-height: 1.23;
+}
+
+.r154-advance-step-content p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.91rem;
+}
+
+.r154-advance-step-note {
+    margin-top: 13px;
+    padding: 12px 14px;
+
+    color: #604b00;
+    font-size: 0.87rem;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   14. DEVELOPMENT OPPORTUNITY CARDS
+   ========================================================================== */
+
+.r154-advance-opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-advance-opportunity-card {
+    padding: 21px 17px;
+
+    text-align: center;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-bottom: 4px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-opportunity-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-advance-opportunity-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.r154-advance-opportunity-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   15. PAID PATHWAY PANEL
+   ========================================================================== */
+
+.r154-advance-paid-panel {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-advance-paid-header {
+    padding: 26px 27px;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 5px solid var(--r154-yellow);
+}
+
+.r154-advance-paid-header h3 {
+    margin-bottom: 7px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.45rem, 3vw, 1.95rem);
+    line-height: 1.15;
+}
+
+.r154-advance-paid-header p {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 0.94rem;
+}
+
+.r154-advance-paid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.r154-advance-paid-card {
+    padding: 25px 24px;
+}
+
+.r154-advance-paid-card + .r154-advance-paid-card {
+    border-left: 1px solid var(--r154-gray-200);
+}
+
+.r154-advance-paid-card h4 {
+    margin-bottom: 13px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.17rem;
+}
+
+.r154-advance-paid-note {
+    margin: 0 24px 24px 24px;
+    padding: 17px 19px;
+
+    color: #66161b;
+
+    background: var(--r154-red-light);
+    border: 1px solid #efb5b8;
+    border-left: 5px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   16. PAID PATHWAY STEPS
+   ========================================================================== */
+
+.r154-advance-paid-steps {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.r154-advance-paid-step {
+    padding: 19px 15px;
+
+    text-align: center;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-paid-number {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-advance-paid-step h3 {
+    margin-bottom: 7px;
+
+    font-size: 0.98rem;
+    line-height: 1.25;
+}
+
+.r154-advance-paid-step p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.83rem;
+}
+
+
+/* ==========================================================================
+   17. CROSS-CERTIFICATION
+   ========================================================================== */
+
+.r154-advance-cross-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-advance-cross-card {
+    padding: 23px 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-purple);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-advance-cross-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-purple);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-advance-cross-card h3 {
+    margin-bottom: 9px;
+
+    font-size: 1.13rem;
+    line-height: 1.25;
+}
+
+.r154-advance-cross-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+}
+
+.r154-advance-cross-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #403064;
+
+    background: var(--r154-purple-light);
+    border: 1px solid #cfc2e5;
+    border-left: 6px solid var(--r154-purple);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   18. READINESS CHECKLIST
+   ========================================================================== */
+
+.r154-advance-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-advance-check-row {
+    position: relative;
+
+    padding: 13px 13px 13px 36px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.91rem;
+    line-height: 1.45;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 6px;
+}
+
+.r154-advance-check-row::before {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    width: 14px;
+    height: 14px;
+
+    content: "";
+
+    background: var(--r154-white);
+    border: 2px solid var(--r154-navy);
+    border-radius: 2px;
+}
+
+
+/* ==========================================================================
+   19. RESOURCE LINKS
+   ========================================================================== */
+
+.r154-advance-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.r154-advance-resource-link,
+.r154-advance-resource-link:link,
+.r154-advance-resource-link:visited {
+    display: flex;
+    min-height: 205px;
+    flex-direction: column;
+
+    padding: 22px 20px;
+
+    color: var(--r154-text) !important;
+    text-decoration: none !important;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-advance-resource-link:hover,
+.r154-advance-resource-link:active,
+.r154-advance-resource-link:focus {
+    color: var(--r154-text) !important;
+
+    border-top-color: var(--r154-red);
+    box-shadow: var(--r154-shadow-medium);
+
+    transform: translateY(-2px);
+}
+
+.r154-advance-resource-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-advance-resource-title {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.11rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.r154-advance-resource-description {
+    display: block;
+    margin-bottom: 14px;
+
+    color: var(--r154-gray-600);
+    font-size: 0.86rem;
+    line-height: 1.47;
+}
+
+.r154-advance-resource-action {
+    display: block;
+    margin-top: auto;
+    padding-top: 12px;
+
+    color: var(--r154-navy);
+    font-size: 0.8rem;
+    font-weight: 900;
+
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+
+/* ==========================================================================
+   20. SUPPORT PANEL
+   ========================================================================== */
+
+.r154-advance-support-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px;
+
+    color: var(--r154-white);
+
+    background: var(--r154-navy-dark);
+    border-left: 7px solid var(--r154-red);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-advance-support-panel .r154-advance-eyebrow {
+    color: #ff5360;
+}
+
+.r154-advance-support-panel h2 {
+    margin-bottom: 15px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-advance-support-panel p {
+    color: var(--r154-white);
+}
+
+.r154-advance-support-highlight {
+    margin-top: 22px;
+    padding: 17px 19px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 700;
+
+    background: var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-support-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+
+/* ==========================================================================
+   21. FAQ
+   ========================================================================== */
+
+.r154-advance-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.r154-advance-faq-card {
+    padding: 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-faq-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.04rem;
+    line-height: 1.3;
+}
+
+.r154-advance-faq-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   22. PAGE SEQUENCE NAVIGATION
+   ========================================================================== */
+
+.r154-advance-sequence {
+    padding: 30px 28px;
+
+    background: var(--r154-gray-100);
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-advance-sequence-heading {
+    margin-bottom: 16px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-advance-sequence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.r154-advance-sequence-item,
+.r154-advance-sequence-item:link,
+.r154-advance-sequence-item:visited {
+    display: flex;
+    min-height: 62px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 14px;
+
+    color: var(--r154-navy-dark) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-sequence-item:hover,
+.r154-advance-sequence-item:active,
+.r154-advance-sequence-item:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-advance-sequence-direction {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.r154-advance-sequence-page {
+    display: block;
+
+    font-size: 0.92rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.r154-advance-sequence-current {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+
+/* ==========================================================================
+   23. FOOTER
+   ========================================================================== */
+
+.r154-advance-footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: var(--r154-navy-dark);
+    border-top: 4px solid var(--r154-yellow);
+}
+
+.r154-advance-footer-brand {
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-advance-footer p {
+    margin-bottom: 17px;
+
+    color: var(--r154-white);
+    font-size: 0.89rem;
+}
+
+.r154-advance-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r154-advance-footer a,
+.r154-advance-footer a:link,
+.r154-advance-footer a:visited {
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border: 2px solid var(--r154-yellow) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-advance-footer a:hover,
+.r154-advance-footer a:active,
+.r154-advance-footer a:focus {
+    color: var(--r154-white) !important;
+
+    background: transparent !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   24. TABLET STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 900px) {
+    .r154-advance-refnav-grid,
+    .r154-advance-page-nav-links,
+    .r154-advance-badge-grid,
+    .r154-advance-opportunity-grid,
+    .r154-advance-paid-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-advance-resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================================================
+   25. MOBILE STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 640px) {
+    .r154-advance {
+        margin-top: 12px;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        font-size: 15px;
+    }
+
+    .r154-advance-shell {
+        border-radius: 9px;
+    }
+
+    .r154-advance-hero {
+        padding: 38px 20px 35px 20px;
+    }
+
+    .r154-advance-hero-actions,
+    .r154-advance-button-row,
+    .r154-advance-support-actions,
+    .r154-advance-footer-links {
+        flex-direction: column;
+    }
+
+    .r154-advance-notice-wrap {
+        padding: 15px;
+    }
+
+    .r154-advance-refnav {
+        padding: 25px 15px;
+    }
+
+    .r154-advance-page-nav {
+        padding: 20px 15px 22px 15px;
+    }
+
+    .r154-advance-refnav-grid,
+    .r154-advance-page-nav-links,
+    .r154-advance-path-grid,
+    .r154-advance-badge-grid,
+    .r154-advance-opportunity-grid,
+    .r154-advance-paid-grid,
+    .r154-advance-paid-steps,
+    .r154-advance-cross-grid,
+    .r154-advance-check-grid,
+    .r154-advance-resource-grid,
+    .r154-advance-faq-grid,
+    .r154-advance-sequence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-advance-section {
+        padding: 35px 20px;
+    }
+
+    .r154-advance-step {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-advance-step-number-wrap {
+        min-height: 60px;
+        padding: 12px;
+
+        border-right: 0;
+        border-bottom: 4px solid var(--r154-red);
+    }
+
+    .r154-advance-step-content {
+        padding: 20px 19px;
+    }
+
+    .r154-advance-paid-card + .r154-advance-paid-card {
+        border-top: 1px solid var(--r154-gray-200);
+        border-left: 0;
+    }
+
+    .r154-advance-button,
+    .r154-advance-button:link,
+    .r154-advance-button:visited,
+    .r154-advance-refnav-link,
+    .r154-advance-refnav-link:link,
+    .r154-advance-refnav-link:visited,
+    .r154-advance-page-nav-links a,
+    .r154-advance-page-nav-links a:link,
+    .r154-advance-page-nav-links a:visited,
+    .r154-advance-footer a,
+    .r154-advance-footer a:link,
+    .r154-advance-footer a:visited {
+        width: 100%;
+    }
+
+    .r154-advance-support-panel {
+        padding: 28px 22px;
+    }
+
+    .r154-advance-sequence {
+        padding: 27px 16px;
+    }
+}
+
+
+/* ==========================================================================
+   26. REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .r154-advance a {
+        transition: none;
+    }
+
+    .r154-advance-button:hover,
+    .r154-advance-refnav-link:hover,
+    .r154-advance-resource-link:hover {
+        transform: none;
+    }
+}
+</style>
+
+
+<!-- ========================================================================
+     BEGIN PUBLIC-FACING ADVANCEMENT & PAID REFEREEING PAGE
+     ======================================================================== -->
+
+<div class="r154-advance">
+
+    <main class="r154-advance-shell" id="region-154-referee-advancement">
+
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
+
+        <header class="r154-advance-hero">
+
+            <div class="r154-advance-hero-content">
+
+                <div class="r154-advance-brand-name">
+                    Cypress AYSO Region 154
+                </div>
+
+                <h1>
+                    Advancement &amp; Paid Refereeing
+                </h1>
+
+                <p class="r154-advance-hero-description">
+                    Continue developing through higher AYSO referee badges,
+                    mentoring, instruction and leadership—or explore the
+                    separate U.S. Soccer, Cal South and NOCRA pathway for
+                    additional officiating opportunities.
+                </p>
+
+                <div class="r154-advance-hero-actions">
+
+                    <a class="r154-advance-button r154-advance-button-red" href="#ayso-advancement">
+                        Explore AYSO Advancement
+                    </a>
+
+                    <a class="r154-advance-button r154-advance-button-secondary" href="#paid-pathway">
+                        Explore the Paid Pathway
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================================
+             PATHWAY DISTINCTION NOTICE
+             ================================================================ -->
+
+        <div class="r154-advance-notice-wrap">
+
+            <div class="r154-advance-notice">
+
+                <span class="r154-advance-notice-title">
+                    AYSO advancement and paid refereeing are separate pathways.
+                </span>
+
+                <p>
+                    An AYSO badge does not automatically create a U.S. Soccer
+                    license, NOCRA membership or paid assignment. Referees must
+                    complete the current requirements for each organization.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================================
+             SHARED REFEREE RESOURCES NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-advance-refnav" aria-label="Region 154 referee resources">
+
+            <div class="r154-advance-refnav-heading">
+
+                <span class="r154-advance-refnav-label">
+                    Region 154 Referee Resources
+                </span>
+
+                <h2 class="r154-advance-refnav-title">
+                    Navigate the Referee Program
+                </h2>
+
+                <p class="r154-advance-refnav-description">
+                    Use these links from any referee page to move directly to
+                    the information you need.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-refnav-grid">
+
+                <a class="r154-advance-refnav-link" href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a class="r154-advance-refnav-link" href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a class="r154-advance-refnav-link" href="/Default.aspx?tabid=976488">
+                    Youth Referees
+                </a>
+
+                <a class="r154-advance-refnav-link" href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a class="r154-advance-refnav-link" href="/Default.aspx?tabid=976490">
+                    Game Day Tools
+                </a>
+
+                <a class="r154-advance-refnav-link" href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a class="r154-advance-refnav-link r154-advance-refnav-current" href="/Default.aspx?tabid=976493" aria-current="page">
+                    Advancement &amp; Paid Refereeing — Current Page
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             LOCAL PAGE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-advance-page-nav" id="page-menu" aria-label="Explore Advancement and Paid Refereeing">
+
+            <div class="r154-advance-page-nav-label">
+                Explore This Page
+            </div>
+
+            <div class="r154-advance-page-nav-links">
+
+                <a href="#choose-path">
+                    Choose Your Path
+                </a>
+
+                <a href="#ayso-advancement">
+                    AYSO Badges
+                </a>
+
+                <a href="#development-plan">
+                    Development Plan
+                </a>
+
+                <a href="#leadership">
+                    Mentoring &amp; Leadership
+                </a>
+
+                <a href="#paid-pathway">
+                    Paid Refereeing
+                </a>
+
+                <a href="#cross-certification">
+                    Cross-Certification
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             CHOOSE A PATH
+             ================================================================ -->
+
+        <section class="r154-advance-section" id="choose-path" aria-labelledby="choose-path-title">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Decide What You Want to Develop Next
+                </span>
+
+                <h2 class="r154-advance-section-title" id="choose-path-title">
+                    Choose Your Referee Path
+                </h2>
+
+                <p class="r154-advance-section-intro">
+                    Referees may pursue one pathway or develop through both.
+                    Each pathway has separate requirements and records.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-path-grid">
+
+                <article class="r154-advance-path-card">
+
+                    <div class="r154-advance-path-header">
+
+                        <span class="r154-advance-path-label">
+                            AYSO Volunteer Development
+                        </span>
+
+                        <h3>
+                            Advance Within the AYSO Referee Program
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-advance-path-body">
+
+                        <p>
+                            Build experience, earn higher AYSO certifications,
+                            mentor other referees, teach courses, support
+                            assessments and serve in referee leadership.
+                        </p>
+
+                        <div class="r154-advance-action-list">
+
+                            <div class="r154-advance-action-row">
+                                Regional, Intermediate, Advanced and National
+                                Referee certifications
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Supported assignments and mentoring
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Formal observations and assessments
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Referee instruction and program leadership
+                            </div>
+
+                        </div>
+
+                        <a class="r154-advance-button" href="#ayso-advancement">
+                            View AYSO Advancement
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-advance-path-card">
+
+                    <div class="r154-advance-path-header">
+
+                        <span class="r154-advance-path-label">
+                            Separate Licensing Path
+                        </span>
+
+                        <h3>
+                            Pursue U.S. Soccer and Paid Assignments
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-advance-path-body">
+
+                        <p>
+                            Complete the current U.S. Soccer and Cal South
+                            licensing requirements, maintain good standing and
+                            connect with an approved referee association or
+                            assignor such as NOCRA.
+                        </p>
+
+                        <div class="r154-advance-action-list">
+
+                            <div class="r154-advance-action-row">
+                                U.S. Soccer referee license
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Cal South registration and risk management
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Current Registered Officials List status
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Referee-association or assignor onboarding
+                            </div>
+
+                        </div>
+
+                        <a class="r154-advance-button" href="#paid-pathway">
+                            View Paid Referee Pathway
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             AYSO BADGE ADVANCEMENT
+             ================================================================ -->
+
+        <section class="r154-advance-section r154-advance-section-alt" id="ayso-advancement" aria-labelledby="ayso-advancement-title">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    AYSO National Referee Program
+                </span>
+
+                <h2 class="r154-advance-section-title" id="ayso-advancement-title">
+                    AYSO Referee Badge Progression
+                </h2>
+
+                <p class="r154-advance-section-intro">
+                    Advancement combines training, match experience,
+                    demonstrated ability, service and the applicable
+                    observation or assessment process.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-badge-grid">
+
+                <article class="r154-advance-badge-card">
+
+                    <span class="r154-advance-badge-stage">
+                        Foundation
+                    </span>
+
+                    <h3>
+                        Regional Referee
+                    </h3>
+
+                    <p>
+                        Entry-level AYSO referee certification and the
+                        foundation for continued match experience,
+                        development and badge advancement.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-badge-card">
+
+                    <span class="r154-advance-badge-stage">
+                        Development
+                    </span>
+
+                    <h3>
+                        Intermediate Referee
+                    </h3>
+
+                    <p>
+                        Develops stronger positioning, foul recognition,
+                        teamwork and match-management skills for increasingly
+                        challenging assignments.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-badge-card">
+
+                    <span class="r154-advance-badge-stage">
+                        Experienced
+                    </span>
+
+                    <h3>
+                        Advanced Referee
+                    </h3>
+
+                    <p>
+                        Recognizes experienced referees who demonstrate
+                        advanced match-management, knowledge, judgment,
+                        service and leadership.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-badge-card">
+
+                    <span class="r154-advance-badge-stage">
+                        National Program
+                    </span>
+
+                    <h3>
+                        National Referee
+                    </h3>
+
+                    <p>
+                        Represents the highest AYSO referee certification and
+                        requires sustained experience, performance, service
+                        and formal approval.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-badge-note">
+
+                <strong>
+                    Badge advancement is not based only on completing a course.
+                </strong>
+
+                Before enrolling, contact the RRA to confirm the current
+                experience, service, assessment, age and application
+                requirements for the desired certification.
+
+            </div>
+
+
+            <div class="r154-advance-button-row">
+
+                <a class="r154-advance-button r154-advance-button-red" href="https://wiki.ayso.org/wiki/Category:Referee/Applications_for_Referee_Certification" target="_blank" rel="noopener noreferrer">
+                    Official AYSO Certification Applications
+                </a>
+
+                <a class="r154-advance-button r154-advance-button-secondary" href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             DEVELOPMENT PLAN
+             ================================================================ -->
+
+        <section class="r154-advance-section" id="development-plan" aria-labelledby="development-plan-title">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Build Experience Intentionally
+                </span>
+
+                <h2 class="r154-advance-section-title" id="development-plan-title">
+                    Create a Referee Development Plan
+                </h2>
+
+                <p class="r154-advance-section-intro">
+                    Advancement is easier when the referee, mentor and Region
+                    leadership understand the same goal.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-steps">
+
+                <article class="r154-advance-step">
+
+                    <div class="r154-advance-step-number-wrap">
+                        <span class="r154-advance-step-number">1</span>
+                    </div>
+
+                    <div class="r154-advance-step-content">
+
+                        <span class="r154-advance-step-label">
+                            Current Position
+                        </span>
+
+                        <h3>
+                            Confirm Your Badge and Official Record
+                        </h3>
+
+                        <p>
+                            Verify the referee certification shown in AYSOU and
+                            identify any missing course, assessment or
+                            volunteer-record information.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-advance-step">
+
+                    <div class="r154-advance-step-number-wrap">
+                        <span class="r154-advance-step-number">2</span>
+                    </div>
+
+                    <div class="r154-advance-step-content">
+
+                        <span class="r154-advance-step-label">
+                            Goal
+                        </span>
+
+                        <h3>
+                            Select the Next Certification or Skill
+                        </h3>
+
+                        <p>
+                            Decide whether the next goal is a higher badge,
+                            stronger Center Referee performance, Assistant
+                            Referee development, mentoring or leadership.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-advance-step">
+
+                    <div class="r154-advance-step-number-wrap">
+                        <span class="r154-advance-step-number">3</span>
+                    </div>
+
+                    <div class="r154-advance-step-content">
+
+                        <span class="r154-advance-step-label">
+                            Requirements
+                        </span>
+
+                        <h3>
+                            Review the Current Application
+                        </h3>
+
+                        <p>
+                            Confirm the current training, match experience,
+                            service, age, observation and assessment
+                            requirements before beginning the upgrade.
+                        </p>
+
+                        <div class="r154-advance-step-note">
+                            Do not rely on an old checklist or another
+                            referee’s prior upgrade experience.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-advance-step">
+
+                    <div class="r154-advance-step-number-wrap">
+                        <span class="r154-advance-step-number">4</span>
+                    </div>
+
+                    <div class="r154-advance-step-content">
+
+                        <span class="r154-advance-step-label">
+                            Experience
+                        </span>
+
+                        <h3>
+                            Select Developmental Assignments
+                        </h3>
+
+                        <p>
+                            Work with referee leadership to choose matches that
+                            build the specific positioning, decision-making,
+                            teamwork and management skills being developed.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-advance-step">
+
+                    <div class="r154-advance-step-number-wrap">
+                        <span class="r154-advance-step-number">5</span>
+                    </div>
+
+                    <div class="r154-advance-step-content">
+
+                        <span class="r154-advance-step-label">
+                            Feedback
+                        </span>
+
+                        <h3>
+                            Request Mentoring and Observation
+                        </h3>
+
+                        <p>
+                            Ask an experienced referee to observe the match,
+                            identify strengths and provide a small number of
+                            practical development priorities.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-advance-step">
+
+                    <div class="r154-advance-step-number-wrap">
+                        <span class="r154-advance-step-number">6</span>
+                    </div>
+
+                    <div class="r154-advance-step-content">
+
+                        <span class="r154-advance-step-label">
+                            Completion
+                        </span>
+
+                        <h3>
+                            Finish the Assessment and Application Process
+                        </h3>
+
+                        <p>
+                            Complete the current formal requirements and confirm
+                            that the approved certification appears in the
+                            official AYSOU record.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-button-row">
+
+                <a class="r154-advance-button r154-advance-button-red" href="mailto:Cypress154RRA@gmail.com">
+                    Request an Advancement Plan
+                </a>
+
+                <a class="r154-advance-button r154-advance-button-secondary" href="/Default.aspx?tabid=976490">
+                    Find Developmental Assignments
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             MENTORING AND LEADERSHIP
+             ================================================================ -->
+
+        <section class="r154-advance-section r154-advance-section-alt" id="leadership" aria-labelledby="leadership-title">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Development Is More Than Earning a Badge
+                </span>
+
+                <h2 class="r154-advance-section-title" id="leadership-title">
+                    Mentoring, Instruction and Leadership
+                </h2>
+
+                <p class="r154-advance-section-intro">
+                    Experienced referees can strengthen the entire Region by
+                    helping newer officials learn, prepare and stay involved.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-opportunity-grid">
+
+                <article class="r154-advance-opportunity-card">
+
+                    <span class="r154-advance-opportunity-label">
+                        Field Development
+                    </span>
+
+                    <h3>
+                        Referee Mentor
+                    </h3>
+
+                    <p>
+                        Support referees through pregame preparation,
+                        observation, encouragement and practical postgame
+                        feedback.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-opportunity-card">
+
+                    <span class="r154-advance-opportunity-label">
+                        Education
+                    </span>
+
+                    <h3>
+                        Referee Instructor
+                    </h3>
+
+                    <p>
+                        Help teach Laws, mechanics, teamwork, safety and
+                        practical referee skills during approved courses.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-opportunity-card">
+
+                    <span class="r154-advance-opportunity-label">
+                        Performance Support
+                    </span>
+
+                    <h3>
+                        Observer or Assessor
+                    </h3>
+
+                    <p>
+                        Provide structured evaluations supporting badge
+                        advancement and continued referee development.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-opportunity-card">
+
+                    <span class="r154-advance-opportunity-label">
+                        Program Service
+                    </span>
+
+                    <h3>
+                        Referee Leadership
+                    </h3>
+
+                    <p>
+                        Help plan training, scheduling, mentoring, assessments,
+                        communications and Region referee operations.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-button-row">
+
+                <a class="r154-advance-button" href="mailto:Cypress154RRA@gmail.com">
+                    Ask About Referee Leadership
+                </a>
+
+                <a class="r154-advance-button r154-advance-button-secondary" href="https://wiki.ayso.org/wiki/Category:Referee" target="_blank" rel="noopener noreferrer">
+                    AYSO National Referee Program
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAID REFEREE PATHWAY
+             ================================================================ -->
+
+        <section class="r154-advance-section" id="paid-pathway" aria-labelledby="paid-pathway-title">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Separate U.S. Soccer Licensing Path
+                </span>
+
+                <h2 class="r154-advance-section-title" id="paid-pathway-title">
+                    U.S. Soccer, Cal South and NOCRA
+                </h2>
+
+                <p class="r154-advance-section-intro">
+                    Referees interested in non-AYSO and potentially paid
+                    assignments must complete the current requirements of the
+                    applicable governing and assigning organizations.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-paid-panel">
+
+                <div class="r154-advance-paid-header">
+
+                    <h3>
+                        Complete Every Required Layer
+                    </h3>
+
+                    <p>
+                        Licensing, risk management, association membership and
+                        assignments are related—but they are not the same step.
+                    </p>
+
+                </div>
+
+
+                <div class="r154-advance-paid-grid">
+
+                    <article class="r154-advance-paid-card">
+
+                        <h4>
+                            U.S. Soccer and Cal South
+                        </h4>
+
+                        <div class="r154-advance-action-list">
+
+                            <div class="r154-advance-action-row">
+                                Create or maintain the correct U.S. Soccer
+                                referee profile.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Complete the current referee-license training.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Complete current Cal South registration and
+                                risk-management requirements.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Complete SafeSport when applicable.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Confirm current Registered Officials List
+                                status.
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="r154-advance-paid-card">
+
+                        <h4>
+                            NOCRA or Another Referee Association
+                        </h4>
+
+                        <div class="r154-advance-action-list">
+
+                            <div class="r154-advance-action-row">
+                                Complete the current association membership
+                                process.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Provide the requested certification and
+                                compliance documentation.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Complete association orientation or education.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Obtain access to the approved assigning system.
+                            </div>
+
+                            <div class="r154-advance-action-row">
+                                Accept assignments appropriate for your
+                                experience and standing.
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="r154-advance-paid-note">
+
+                    <strong>
+                        Certification and membership do not guarantee paid
+                        games or a particular level of income.
+                    </strong>
+
+                    Assignment volume depends on current demand, availability,
+                    experience, performance, good standing, competition needs
+                    and assignor decisions.
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-advance-button-row">
+
+                <a class="r154-advance-button" href="https://www.ussoccer.com/refereeing/become-a-referee" target="_blank" rel="noopener noreferrer">
+                    U.S. Soccer: Become a Referee
+                </a>
+
+                <a class="r154-advance-button" href="https://calsouth.com/new-referees/" target="_blank" rel="noopener noreferrer">
+                    Cal South New Referees
+                </a>
+
+                <a class="r154-advance-button r154-advance-button-red" href="https://www.nocra.com/referee-certification.html" target="_blank" rel="noopener noreferrer">
+                    NOCRA Certification Steps
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAID PATHWAY SUMMARY
+             ================================================================ -->
+
+        <section class="r154-advance-section r154-advance-section-alt">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    High-Level Onboarding Sequence
+                </span>
+
+                <h2 class="r154-advance-section-title">
+                    Five Stages of the Paid Referee Pathway
+                </h2>
+
+            </div>
+
+
+            <div class="r154-advance-paid-steps">
+
+                <article class="r154-advance-paid-step">
+
+                    <span class="r154-advance-paid-number">
+                        Stage 01
+                    </span>
+
+                    <h3>
+                        Verify Eligibility
+                    </h3>
+
+                    <p>
+                        Review current age, training, risk-management and
+                        registration requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-paid-step">
+
+                    <span class="r154-advance-paid-number">
+                        Stage 02
+                    </span>
+
+                    <h3>
+                        Earn the License
+                    </h3>
+
+                    <p>
+                        Complete the current U.S. Soccer and Cal South referee
+                        licensing process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-paid-step">
+
+                    <span class="r154-advance-paid-number">
+                        Stage 03
+                    </span>
+
+                    <h3>
+                        Confirm Good Standing
+                    </h3>
+
+                    <p>
+                        Verify that all current requirements are approved and
+                        visible in the applicable records.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-paid-step">
+
+                    <span class="r154-advance-paid-number">
+                        Stage 04
+                    </span>
+
+                    <h3>
+                        Join an Association
+                    </h3>
+
+                    <p>
+                        Complete NOCRA or another approved association’s current
+                        onboarding process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-paid-step">
+
+                    <span class="r154-advance-paid-number">
+                        Stage 05
+                    </span>
+
+                    <h3>
+                        Build Experience
+                    </h3>
+
+                    <p>
+                        Accept appropriate matches, attend education and earn
+                        increasingly challenging assignments.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-button-row">
+
+                <a class="r154-advance-button" href="https://calsouth.com/approved-registered-officials-list/" target="_blank" rel="noopener noreferrer">
+                    Cal South Registered Officials List
+                </a>
+
+                <a class="r154-advance-button r154-advance-button-secondary" href="https://www.nocra.com/" target="_blank" rel="noopener noreferrer">
+                    Visit NOCRA
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             CROSS-CERTIFICATION
+             ================================================================ -->
+
+        <section class="r154-advance-section" id="cross-certification" aria-labelledby="cross-certification-title">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Referees With Experience in Another Program
+                </span>
+
+                <h2 class="r154-advance-section-title" id="cross-certification-title">
+                    AYSO and U.S. Soccer Cross-Certification
+                </h2>
+
+                <p class="r154-advance-section-intro">
+                    AYSO provides a cross-certification process for eligible
+                    referees who hold certification in one system but not the
+                    other.
+                </p>
+
+            </div>
+
+
+            <div class="r154-advance-cross-grid">
+
+                <article class="r154-advance-cross-card">
+
+                    <span class="r154-advance-cross-label">
+                        U.S. Soccer to AYSO
+                    </span>
+
+                    <h3>
+                        Experienced U.S. Soccer Referees Joining AYSO
+                    </h3>
+
+                    <p>
+                        The referee may request review for the applicable AYSO
+                        certification while still completing Region 154
+                        volunteer registration, safety and eligibility
+                        requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-cross-card">
+
+                    <span class="r154-advance-cross-label">
+                        AYSO to U.S. Soccer
+                    </span>
+
+                    <h3>
+                        Experienced AYSO Referees Entering Cal South
+                    </h3>
+
+                    <p>
+                        An eligible AYSO referee may use the current crossover
+                        process, but must still complete all applicable U.S.
+                        Soccer and Cal South licensing requirements.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-cross-note">
+
+                <strong>
+                    Cross-certification is not automatic.
+                </strong>
+
+                Requirements may include minimum time holding the original
+                certification, documentation, review, fees, current training
+                and approval from the appropriate program administrators.
+
+            </div>
+
+
+            <div class="r154-advance-button-row">
+
+                <a class="r154-advance-button" href="https://wiki.ayso.org/wiki/Category:Referee/CrossCertification" target="_blank" rel="noopener noreferrer">
+                    Official AYSO Cross-Certification
+                </a>
+
+                <a class="r154-advance-button" href="https://calsouth.com/ayso-crossover/" target="_blank" rel="noopener noreferrer">
+                    Cal South AYSO Crossover
+                </a>
+
+                <a class="r154-advance-button r154-advance-button-secondary" href="mailto:Cypress154RRA@gmail.com">
+                    Ask the Region 154 RRA
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             READINESS CHECKLIST
+             ================================================================ -->
+
+        <section class="r154-advance-section r154-advance-section-alt">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Review Before Starting a New Path
+                </span>
+
+                <h2 class="r154-advance-section-title">
+                    Advancement Readiness Checklist
+                </h2>
+
+            </div>
+
+
+            <div class="r154-advance-check-grid">
+
+                <div class="r154-advance-check-row">
+                    My current referee certification appears correctly.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    My current volunteer or license requirements are complete.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I identified the specific certification or pathway I want.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I reviewed the current official requirements.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I discussed my goal with the RRA or appropriate administrator.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I understand which match experience must be documented.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I requested appropriate developmental assignments.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I requested mentoring or observation.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I understand the required course and assessment process.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I understand that fees and annual requirements may change.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I understand that paid assignments are not guaranteed.
+                </div>
+
+                <div class="r154-advance-check-row">
+                    I will retain proof until the new status is confirmed.
+                </div>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             OFFICIAL RESOURCES
+             ================================================================ -->
+
+        <section class="r154-advance-section">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Verify Current Requirements at the Source
+                </span>
+
+                <h2 class="r154-advance-section-title">
+                    Official Advancement Resources
+                </h2>
+
+            </div>
+
+
+            <div class="r154-advance-resource-grid">
+
+                <a class="r154-advance-resource-link" href="https://wiki.ayso.org/wiki/Category:Referee/Applications_for_Referee_Certification" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-advance-resource-label">
+                        AYSO Badges
+                    </span>
+
+                    <span class="r154-advance-resource-title">
+                        Certification Applications
+                    </span>
+
+                    <span class="r154-advance-resource-description">
+                        Review the current Regional, Intermediate, Advanced and
+                        National Referee application materials.
+                    </span>
+
+                    <span class="r154-advance-resource-action">
+                        Open AYSO Applications
+                    </span>
+
+                </a>
+
+
+                <a class="r154-advance-resource-link" href="https://www.ussoccer.com/refereeing/referee" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-advance-resource-label">
+                        National Licensing
+                    </span>
+
+                    <span class="r154-advance-resource-title">
+                        U.S. Soccer Referee Pathway
+                    </span>
+
+                    <span class="r154-advance-resource-description">
+                        Review the current U.S. Soccer referee-license and
+                        development pathway.
+                    </span>
+
+                    <span class="r154-advance-resource-action">
+                        Open U.S. Soccer Pathway
+                    </span>
+
+                </a>
+
+
+                <a class="r154-advance-resource-link" href="https://calsouth.com/new-referees/" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-advance-resource-label">
+                        State Referee Program
+                    </span>
+
+                    <span class="r154-advance-resource-title">
+                        Cal South New Referees
+                    </span>
+
+                    <span class="r154-advance-resource-description">
+                        Review current Southern California registration,
+                        certification and risk-management requirements.
+                    </span>
+
+                    <span class="r154-advance-resource-action">
+                        Open Cal South Information
+                    </span>
+
+                </a>
+
+
+                <a class="r154-advance-resource-link" href="https://calsouth.com/recertification-upgrade/" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-advance-resource-label">
+                        Annual Good Standing
+                    </span>
+
+                    <span class="r154-advance-resource-title">
+                        Recertification &amp; Upgrade
+                    </span>
+
+                    <span class="r154-advance-resource-description">
+                        Review current returning-referee, recertification and
+                        license-upgrade requirements.
+                    </span>
+
+                    <span class="r154-advance-resource-action">
+                        Open Cal South Requirements
+                    </span>
+
+                </a>
+
+
+                <a class="r154-advance-resource-link" href="https://www.nocra.com/referee-certification.html" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-advance-resource-label">
+                        Local Referee Association
+                    </span>
+
+                    <span class="r154-advance-resource-title">
+                        NOCRA Certification
+                    </span>
+
+                    <span class="r154-advance-resource-description">
+                        Review current association, Cal South certification and
+                        onboarding steps.
+                    </span>
+
+                    <span class="r154-advance-resource-action">
+                        Open NOCRA Instructions
+                    </span>
+
+                </a>
+
+
+                <a class="r154-advance-resource-link" href="https://calsouth.com/approved-registered-officials-list/" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-advance-resource-label">
+                        Current Approval Status
+                    </span>
+
+                    <span class="r154-advance-resource-title">
+                        Registered Officials List
+                    </span>
+
+                    <span class="r154-advance-resource-description">
+                        Check whether the current Cal South referee license and
+                        requirements have been approved.
+                    </span>
+
+                    <span class="r154-advance-resource-action">
+                        Check Current Status
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             SUPPORT PANEL
+             ================================================================ -->
+
+        <section class="r154-advance-section r154-advance-section-alt">
+
+            <div class="r154-advance-support-panel">
+
+                <span class="r154-advance-eyebrow">
+                    Start With a Conversation
+                </span>
+
+                <h2>
+                    Build the Right Development Plan
+                </h2>
+
+                <p>
+                    Before enrolling in an upgrade course or accepting a
+                    difficult assignment, contact the Regional Referee
+                    Administrator. Referee leadership can help identify the
+                    correct requirements, assignments, mentors and timing.
+                </p>
+
+                <div class="r154-advance-support-highlight">
+
+                    Include your current badge, approximate experience,
+                    preferred referee role, development goal and the type of
+                    assignments you want to prepare for.
+
+                </div>
+
+
+                <div class="r154-advance-support-actions">
+
+                    <a class="r154-advance-button r154-advance-button-red" href="mailto:Cypress154RRA@gmail.com">
+                        Email the Regional Referee Administrator
+                    </a>
+
+                    <a class="r154-advance-button" href="/Default.aspx?tabid=976489">
+                        Training &amp; Events
+                    </a>
+
+                    <a class="r154-advance-button r154-advance-button-secondary" href="/Default.aspx?tabid=976492">
+                        Rules &amp; Learning
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FAQ
+             ================================================================ -->
+
+        <section class="r154-advance-section">
+
+            <div class="r154-advance-section-heading">
+
+                <span class="r154-advance-eyebrow">
+                    Common Development and Paid-Referee Questions
+                </span>
+
+                <h2 class="r154-advance-section-title">
+                    Advancement &amp; Paid Refereeing FAQ
+                </h2>
+
+            </div>
+
+
+            <div class="r154-advance-faq-grid">
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        What comes after Regional Referee?
+                    </h3>
+
+                    <p>
+                        The next AYSO badge is generally Intermediate Referee,
+                        subject to the current training, experience, service
+                        and assessment requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Is completing an Intermediate course enough?
+                    </h3>
+
+                    <p>
+                        No. Badge advancement may also require documented
+                        experience, service, observation, assessment and an
+                        approved application.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        How do I know whether I am ready to advance?
+                    </h3>
+
+                    <p>
+                        Discuss your current experience and development goals
+                        with the RRA and request mentoring on appropriate
+                        assignments.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        May a youth referee earn higher AYSO badges?
+                    </h3>
+
+                    <p>
+                        Youth referees may continue developing, subject to the
+                        current age, experience and certification requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Must I pursue a higher badge?
+                    </h3>
+
+                    <p>
+                        No. Referees may continue serving successfully at their
+                        current certification while developing experience and
+                        confidence.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        How do I request a mentor?
+                    </h3>
+
+                    <p>
+                        Email the RRA with your badge, assignment experience,
+                        development goal and upcoming availability.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Does an AYSO badge allow me to referee paid games?
+                    </h3>
+
+                    <p>
+                        Not automatically. Paid U.S. Soccer-affiliated matches
+                        require the current U.S. Soccer and Cal South licensing
+                        process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Does U.S. Soccer certification replace AYSO compliance?
+                    </h3>
+
+                    <p>
+                        No. Region 154 volunteers must still complete the
+                        applicable AYSO registration, safety and eligibility
+                        requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        What is NOCRA?
+                    </h3>
+
+                    <p>
+                        NOCRA is a local referee association serving Cypress
+                        and surrounding communities and assigning referees to
+                        eligible competitions.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Does joining NOCRA guarantee assignments?
+                    </h3>
+
+                    <p>
+                        No. Assignments depend on current standing,
+                        availability, experience, performance, competition
+                        demand and assignor decisions.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Can my AYSO experience help with U.S. Soccer licensing?
+                    </h3>
+
+                    <p>
+                        A crossover process may be available. Review the
+                        current Cal South and AYSO cross-certification
+                        requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-advance-faq-card">
+
+                    <h3>
+                        Where should I begin?
+                    </h3>
+
+                    <p>
+                        Begin by identifying your goal, checking your current
+                        certification record and contacting the appropriate
+                        referee administrator.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-advance-backlink-wrap">
+
+                <a class="r154-advance-backlink" href="#page-menu">
+                    Back to Advancement Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAGE SEQUENCE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-advance-sequence" aria-label="Referee guide page sequence">
+
+            <div class="r154-advance-sequence-heading">
+                Continue Through the Referee Guide
+            </div>
+
+            <div class="r154-advance-sequence-grid">
+
+                <a class="r154-advance-sequence-item" href="/Default.aspx?tabid=976492">
+
+                    <span class="r154-advance-sequence-direction">
+                        Previous Page
+                    </span>
+
+                    <span class="r154-advance-sequence-page">
+                        Rules &amp; Learning
+                    </span>
+
+                </a>
+
+
+                <div class="r154-advance-sequence-item r154-advance-sequence-current" aria-current="page">
+
+                    <span class="r154-advance-sequence-direction">
+                        Current Page
+                    </span>
+
+                    <span class="r154-advance-sequence-page">
+                        Advancement &amp; Paid Refereeing
+                    </span>
+
+                </div>
+
+
+                <a class="r154-advance-sequence-item" href="/Default.aspx?tabid=976485">
+
+                    <span class="r154-advance-sequence-direction">
+                        Return to Start
+                    </span>
+
+                    <span class="r154-advance-sequence-page">
+                        Referee Central
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             FOOTER
+             ================================================================ -->
+
+        <footer class="r154-advance-footer">
+
+            <div class="r154-advance-footer-brand">
+                Cypress AYSO Region 154
+            </div>
+
+            <p>
+                Helping referees develop their knowledge, confidence,
+                leadership and service to the game.
+            </p>
+
+            <div class="r154-advance-footer-links">
+
+                <a href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a href="mailto:Cypress154RRA@gmail.com">
+                    Contact the RRA
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ========================================================================
+     END PUBLIC-FACING ADVANCEMENT & PAID REFEREEING PAGE
+     ======================================================================== -->
