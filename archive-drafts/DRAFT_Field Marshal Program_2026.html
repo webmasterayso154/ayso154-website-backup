@@ -1,0 +1,563 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   Field Marshal Program
+CMS Status:  Hidden / Inactive
+Audience:    [aud:volunteers] [aud:parents]
+Content:     [type:event] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      AYSO 154 Logo - 3D.png
+Notes:       Field Marshal program guide for Cypress Region 154 containing flexibility options, schedules, duties, training, and shift reporting tools.
+================================================================================
+-->
+
+<style>
+    /* ==========================================================================
+       CSS VARIABLES (Change these to quickly update the color scheme globally)
+       ========================================================================== */
+    :root {
+        --navy: #0A3161;             /* Primary Brand Color */
+        --red: #B31942;              /* Accent Color (Icons, Badges) */
+        --white: #ffffff;            /* Base White */
+        --off-white: #f8f9fa;        /* Light Gray Backgrounds */
+        --gold: #FFC107;             /* Warning/Attention Outline */
+        --highlight: #fff9c4;        /* Light Yellow for Warning Boxes */
+        --active-bg: #e3f2fd;        /* Light Blue for Current Week Card */
+        --active-border: #0A3161;    /* Navy Border for Current Week Card */
+        --shadow: 0 8px 20px rgba(0,0,0,0.1); /* Standard Drop Shadow */
+    }
+
+    /* Smooth scrolling for anchor jump links */
+    html { scroll-behavior: smooth; }
+
+    /* Main wrapper to keep content centered */
+    .ayso-container {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        max-width: 850px;
+        margin: 0 auto;
+        background-color: var(--white);
+        color: #333;
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* ==========================================================================
+       HERO BANNER & LOGO
+       ========================================================================== */
+    .fm-hero {
+        background: linear-gradient(135deg, var(--navy) 0%, #051b38 100%);
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .fm-logo-wrap {
+        width: 185px;
+        max-width: 62%;
+        margin: 0 auto 20px;
+        padding: 10px;
+        background: var(--white);
+        border-radius: 18px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    }
+    .fm-logo-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .fm-hero h1 {
+        margin: 0; 
+        font-family: 'Impact', sans-serif; 
+        text-transform: uppercase;
+        letter-spacing: 1px; 
+        font-size: 3rem; 
+        line-height: 1;
+        color: #ffffff !important; 
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .fm-hero h2 {
+        margin: 10px 0 5px;
+        color: var(--gold);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .fm-hero p { 
+        margin: 5px 0 0; 
+        font-size: 1rem; 
+        opacity: 0.95; 
+        color: #eeeeee !important; 
+    }
+
+    /* Offset for sticky nav headers */
+    #nav-hub { scroll-margin-top: 20px; }
+
+    /* ==========================================================================
+       QUICK NAVIGATION PILLS
+       ========================================================================== */
+    .quick-nav {
+        background-color: #eee; 
+        padding: 15px; 
+        display: flex; 
+        justify-content: center; 
+        gap: 10px; 
+        flex-wrap: wrap; 
+        border-bottom: 1px solid #ddd;
+    }
+    .nav-pill {
+        background-color: white; 
+        color: var(--navy); 
+        padding: 10px 20px; 
+        border-radius: 20px; 
+        text-decoration: none !important; 
+        font-weight: bold; 
+        border: 1px solid #ddd;
+        transition: all 0.2s;
+        font-size: 0.95rem;
+    }
+    .nav-pill:hover { 
+        background-color: var(--navy); 
+        color: white !important; 
+        transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       GENERAL SECTION STYLES
+       ========================================================================== */
+    .fm-section { padding: 40px 30px; border-bottom: 1px solid #eee; }
+    .fm-section.bg-light { background-color: var(--off-white); }
+    
+    .section-header { display: flex; align-items: center; margin-bottom: 25px; }
+    
+    .section-icon {
+        background-color: var(--red); 
+        color: white; 
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 1.2rem; 
+        margin-right: 15px; 
+        flex-shrink: 0;
+    }
+    .section-title { 
+        color: var(--navy); 
+        font-size: 1.8rem; 
+        font-weight: 800; 
+        text-transform: uppercase; 
+        margin: 0; 
+    }
+
+    /* ==========================================================================
+       GRIDS & CARDS
+       ========================================================================== */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
+    
+    .feature-card {
+        background: white;
+        border: 2px solid var(--navy);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-3px); }
+    .feature-card h3 { color: var(--red); margin-top: 0; font-size: 1.2rem; margin-bottom: 10px; }
+    .feature-card .big-text { font-size: 1.4rem; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
+    .feature-card p { font-size: 0.95rem; color: #555; margin: 0; line-height: 1.4; }
+
+    /* Photo Steps Grid */
+    .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
+    .photo-step {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .photo-placeholder {
+        background-color: #e0e6ed;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--navy);
+        font-size: 2.5rem;
+        border-bottom: 3px solid var(--gold);
+    }
+    .photo-content { padding: 15px; }
+    .photo-content strong { display: block; color: var(--navy); font-size: 1.1rem; margin-bottom: 5px; }
+    .photo-content p { margin: 0; font-size: 0.95rem; color: #555; line-height: 1.4; }
+
+    /* Shift Example Card */
+    .shift-example {
+        background-color: var(--active-bg);
+        border: 2px dashed var(--active-border);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    .shift-example h4 { margin: 0 0 10px 0; color: var(--navy); font-size: 1.2rem; }
+    .shift-example .badge-tag {
+        background-color: var(--gold);
+        color: var(--navy);
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    /* ==========================================================================
+       CONTENT BOXES & CALLOUTS
+       ========================================================================== */
+    .intro-box { text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6; color: #444; }
+    
+    .callout { padding: 20px; margin: 25px 0; border-left-width: 5px; border-left-style: solid; border-radius: 5px; }
+    .callout strong { display: block; margin-bottom: 5px; font-size: 1.1rem; }
+    .callout.highlight { background-color: #e6ffed; border-color: #28a745; color: #155724; } /* Green */
+    .callout.info { background-color: #e7f3fe; border-color: #007bff; color: #052c65; }        /* Blue */
+    .callout.warning { background-color: #fffbe6; border-color: #ffc107; color: #856404; }    /* Yellow */
+    
+    .placeholder-box {
+        background-color: var(--off-white);
+        border: 2px dashed #ccc;
+        border-radius: 8px;
+        padding: 40px 20px;
+        text-align: center;
+        color: #666;
+        margin: 20px 0;
+    }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .btn-action {
+        display: inline-block; padding: 15px 30px; border-radius: 50px; 
+        text-decoration: none !important; font-weight: bold; text-transform: uppercase; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); border: none; cursor: pointer; transition: transform 0.2s;
+        text-align: center;
+    }
+    .btn-action:hover { transform: translateY(-2px); }
+    .btn-red { background-color: var(--red); color: white !important; }
+    .btn-outline { background: white; color: var(--navy) !important; border: 2px solid var(--navy); }
+    .btn-blue { background-color: var(--navy); color: white !important; }
+    .btn-pending { background-color: #f0f0f0; color: #999 !important; border: 2px dashed #ccc; cursor: default; }
+    .btn-pending:hover { transform: none; box-shadow: none; }
+
+    .dual-btn-container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .back-nav { display: block; text-align: center; margin-top: 30px; font-size: 0.85rem; color: #999; text-decoration: none !important; font-weight: bold; }
+    .back-nav:hover { color: var(--navy); }
+    
+    .fm-footer { background-color: #333; color: #888; text-align: center; padding: 40px 20px; font-size: 0.9rem; line-height: 1.5; }
+
+    /* Custom Unordered List Formatting */
+    .soccer-list { list-style: none; padding-left: 0; margin-top: 15px; }
+    .soccer-list li { margin-bottom: 15px; padding-left: 30px; text-indent: -30px; line-height: 1.5; }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVENESS
+       ========================================================================== */
+    @media (min-width: 780px) {
+        .fm-logo-wrap { width: 205px; }
+    }
+
+    @media (max-width: 768px) {
+        .grid-3 { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: 1fr; }
+        .photo-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+        .btn-action { width: 100%; box-sizing: border-box; text-align: center; margin-bottom: 10px; }
+        .nav-pill { padding: 8px 14px; font-size: 0.9rem; width: 100%; text-align: center; }
+        .dual-btn-container { flex-direction: column; align-items: center; }
+    }
+</style>
+
+<div class="ayso-container">
+
+    <!-- 1. EMPATHETIC HERO AND THANK YOU -->
+    <div class="fm-hero">
+        <div class="fm-logo-wrap">
+            <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/AYSO%20154%20Logo%20-%203D.png" alt="AYSO Region 154 Cypress logo">
+        </div>
+        <h1>Field Marshal</h1>
+        <h2>A Little Time Makes a Big Difference</h2>
+        <p>Cypress Region 154 | Fall 2025</p>
+    </div>
+
+    <div id="nav-hub"></div>
+
+    <div class="quick-nav">
+        <a href="#flexibility" class="nav-pill">🤝 Ways to Help</a>
+        <a href="#schedule" class="nav-pill">📅 Sign-Ups</a>
+        <a href="#duties" class="nav-pill">🛡️ What You Do</a>
+        <a href="#training" class="nav-pill">🎓 Training &amp; Eligibility</a>
+        <a href="#tools" class="nav-pill">📝 Check-In &amp; Dashboards</a>
+    </div>
+
+    <div id="intro" class="fm-section">
+        <div class="intro-box">
+            <p style="font-size: 1.25rem; color: var(--navy); font-weight: bold; margin-top: 0;">
+                Thank you for giving your time to help make game day safe, organized, and enjoyable for our players and families.
+            </p>
+            <p>
+                We know our AYSO parents are busy. Between work, school, family commitments, and multiple children’s activities, weekends can fill up quickly. That is why we are working to make Field Marshal volunteering as simple and flexible as possible.
+            </p>
+            <p>
+                AYSO is a volunteer-powered organization. Our coaches, referees, team parents, board members, and Field Marshals are community volunteers working together to create a positive soccer experience for our children. Every shift helps—and we are genuinely grateful for the time you give.
+            </p>
+            <p style="font-weight: bold; color: var(--red); font-size: 1.2rem; margin-top: 25px;">
+                Four hours per team. Flexible ways to share them. Scheduled around your family whenever possible.
+            </p>
+        </div>
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 2. FOUR VOLUNTEER HOURS - THREE FLEXIBLE WAYS -->
+    <div id="flexibility" class="fm-section bg-light">
+        <div class="section-header">
+            <div class="section-icon">⏱️</div>
+            <h2 class="section-title">Choose What Works for Your Team</h2>
+        </div>
+        
+        <p style="text-align: center; max-width: 650px; margin: 0 auto;">
+            Each team completes a total of <strong>four Field Marshal volunteer hours</strong> per season. Your team may divide those hours in the way that works best:
+        </p>
+
+        <div class="grid-3">
+            <div class="feature-card">
+                <h3>Option 1: Share It Between Two</h3>
+                <div class="big-text">2 vols × 2 hours</div>
+                <p>Best for parents who prefer one continuous shift to fulfill their portion.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Option 2: Share It Between Four</h3>
+                <div class="big-text">4 vols × 1 hour</div>
+                <p>Best for busy families who can help, but for a shorter period of time.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Option 3: Mix and Match</h3>
+                <div class="big-text">1 two-hr + 2 one-hr</div>
+                <p>Your team may divide its four hours in the exact way that works best for you.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 25px; font-weight: bold; color: var(--navy); font-size: 1.1rem;">
+            Your team provides four total hours. You decide how to share them.
+        </p>
+
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 3. CHOOSE A SHIFT AROUND YOUR CHILD'S GAME -->
+    <div id="schedule" class="fm-section">
+        <div class="section-header">
+            <div class="section-icon">📅</div>
+            <h2 class="section-title">Schedule Around Your Game</h2>
+        </div>
+
+        <p style="text-align: center; max-width: 650px; margin: 0 auto;">
+            Whenever possible, volunteers may choose a shift before or after their child’s game so volunteering fits naturally into their game-day schedule. No more separate trips to the field!
+        </p>
+
+        <div class="shift-example">
+            <span class="badge-tag">Example Shift</span>
+            <h4>Saturday, 9:00 AM – 10:00 AM</h4>
+            <p style="margin: 5px 0; font-weight: bold; color: var(--red);">One-hour Field Marshal shift</p>
+            <p style="margin: 5px 0; font-size: 0.9rem; color: #555;"><em>Perfect if your team plays at 10:15 AM!</em></p>
+            <a href="javascript:void(0);" class="btn-action btn-blue" style="width: 100%; margin-top: 15px; padding: 10px; font-size: 0.9rem;">Choose This Shift</a>
+        </div>
+
+        <div class="placeholder-box">
+            <h3 style="margin-top: 0; color: var(--navy);">Live Shift Sign-Up Portal</h3>
+            <p>Select your child's division, view your assigned Field Marshal weekend, and pick a one or two-hour commitment.</p>
+            <div class="dual-btn-container">
+                <a href="javascript:void(0);" class="btn-action btn-pending" style="min-width: 250px;">Choose a Shift (Coming Soon)</a>
+            </div>
+        </div>
+
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 4. FOUR PHOTO-BASED STEPS & WHAT YOU DO -->
+    <div id="duties" class="fm-section bg-light">
+        <div class="section-header">
+            <div class="section-icon">🛡️</div>
+            <h2 class="section-title">What a Field Marshal Does</h2>
+        </div>
+
+        <p style="text-align: center; max-width: 650px; margin: 0 auto;">
+            New to Field Marshal? No special soccer experience is needed. We will show you exactly where to check in, what to watch for, and who to contact if assistance is needed.
+        </p>
+
+        <div class="photo-grid">
+            <div class="photo-step">
+                <div class="photo-placeholder">📱</div>
+                <div class="photo-content">
+                    <strong>1. Check In</strong>
+                    <p>Scan the check-in code and pick up your Field Marshal vest at the volunteer tent.</p>
+                </div>
+            </div>
+
+            <div class="photo-step">
+                <div class="photo-placeholder">🚶</div>
+                <div class="photo-content">
+                    <strong>2. Be Visible</strong>
+                    <p>Stay visible, walk your assigned area, and be available to assist families.</p>
+                </div>
+            </div>
+
+            <div class="photo-step">
+                <div class="photo-placeholder">👀</div>
+                <div class="photo-content">
+                    <strong>3. Observe and Report</strong>
+                    <p>Watch for safety concerns, prohibited activities, missing referees, or families needing assistance.</p>
+                </div>
+            </div>
+
+            <div class="photo-step">
+                <div class="photo-placeholder">✅</div>
+                <div class="photo-content">
+                    <strong>4. Check Out</strong>
+                    <p>Complete the short report and hand the vest to the next volunteer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout highlight" style="text-align: center; margin-top: 30px;">
+            <strong style="font-size: 1.2rem;">Reassurance</strong>
+            <p style="margin: 5px 0 0;">Field Marshals observe and report. You are not expected to referee games, provide medical care, or handle serious conflicts by yourself. Board members are available on game days to provide support.</p>
+        </div>
+
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 5. TRAINING & ELIGIBILITY PATHS -->
+    <div id="training" class="fm-section">
+        <div class="section-header">
+            <div class="section-icon">🎓</div>
+            <h2 class="section-title">Training &amp; Eligibility</h2>
+        </div>
+        
+        <p style="text-align: center; max-width: 650px; margin: 0 auto 25px auto;">
+            To respect your time, we have simplified our eligibility process. <strong>If you have completed our Field Marshal training in any previous season, you are already automatically eligible!</strong> No repeat in-person orientations, refreshers, or quizzes are required.
+        </p>
+
+        <div class="grid-2">
+            <div class="feature-card" style="text-align: left;">
+                <h3 style="color: var(--navy); text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 10px;">First-Time Volunteers</h3>
+                <p style="text-align: center; font-weight: bold; color: var(--red); margin-bottom: 15px;">15-20 Minute Orientation</p>
+                <ul class="soccer-list">
+                    <li>⚽ Quick, one-time in-person session</li>
+                    <li>⚽ See the check-in location and meet the team</li>
+                    <li>⚽ Learn the basic duties and what to watch for</li>
+                    <li>⚽ Receive a handy one-page visual guide</li>
+                </ul>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="javascript:void(0);" class="btn-action btn-pending" style="padding: 10px 20px; font-size: 0.85rem;">RSVP for Orientation</a>
+                </div>
+            </div>
+
+            <div class="feature-card" style="text-align: left;">
+                <h3 style="color: var(--navy); text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 10px;">Returning Volunteers</h3>
+                <p style="text-align: center; font-weight: bold; color: var(--navy); margin-bottom: 15px;">Automatically Eligible! 🎉</p>
+                <ul class="soccer-list">
+                    <li>⚽ No repeat in-person training required</li>
+                    <li>⚽ No mandatory quizzes or refresher courses</li>
+                    <li>⚽ Just review any new-season updates right here</li>
+                    <li>⚽ Head straight to the shift board to sign up</li>
+                </ul>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="#schedule" class="btn-action btn-blue" style="padding: 10px 20px; font-size: 0.85rem; text-transform: uppercase;">Go To Shift Board</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 6. PLANS CHANGED? REPLACE OR UPDATE -->
+    <div id="plans-changed" class="fm-section bg-light">
+        <div class="callout warning" style="margin: 0;">
+            <strong style="color: var(--navy); font-size: 1.3rem;">Plans Changed?</strong>
+            <p style="margin-top: 10px;">We understand that work, illness, family activities, and unexpected situations happen. Something unexpected came up? We understand.</p>
+            <p>Simply arrange for another qualified adult from your team to take the shift and update the sign-up information as soon as possible. The important thing is making sure the shift remains covered.</p>
+            <ul class="soccer-list" style="margin-top: 15px; font-size: 0.95rem;">
+                <li>⚽ The replacement must be an eligible adult.</li>
+                <li>⚽ Enter the replacement’s name into the sign-up system.</li>
+                <li>⚽ The original volunteer is responsible for ensuring coverage until confirmed.</li>
+                <li>⚽ Last-minute issues should be communicated directly to the board member on duty.</li>
+            </ul>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCW--xV9F4onKCgugPngcEGeAFOjnWJ1eYDUJysjKaN1ouYg/viewform" target="_blank" class="btn-action btn-outline" style="background: transparent;">Update or Replace a Volunteer</a>
+            </div>
+        </div>
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 7. ALREADY SIGNED UP? CHECK IN AND SUBMIT REPORT & 8. TEAM VOLUNTEER-POINTS STATUS -->
+    <div id="tools" class="fm-section">
+        <div class="section-header">
+            <div class="section-icon">📝</div>
+            <h2 class="section-title">Check-In &amp; Dashboards</h2>
+        </div>
+        
+        <p style="text-align: center; max-width: 600px; margin: 0 auto;">
+            Already signed up? Use the tools below to officially log your time at the fields, file game day reports, and check your team's volunteer progress.
+        </p>
+
+        <div class="grid-2">
+            <div class="placeholder-box" style="margin-top: 0;">
+                <h3 style="margin-top: 0; color: var(--navy);">📝 Shift Reporting</h3>
+                <p style="font-size: 0.9rem;">Scan the QR code at the Field Marshal tent, or click below to submit your end-of-shift report.</p>
+                <a href="javascript:void(0);" class="btn-action btn-pending" style="padding: 10px; font-size: 0.85rem; width: 100%; box-sizing: border-box;">Submit Shift Report</a>
+            </div>
+
+            <div class="placeholder-box" style="margin-top: 0;">
+                <h3 style="margin-top: 0; color: var(--navy);">📊 Points Status</h3>
+                <p style="font-size: 0.9rem;">Check your team's real-time volunteer points. Check-ins at the field automatically update this board!</p>
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtRlLhWnPe20kFYEf9GRuiwTwBusqM_nW6QI_gx365cXuIImP_3dp3lEakYUAucRXuTARt6j5ZHOmV/pubhtml?gid=31878947&amp;single=true" target="_blank" class="btn-action btn-outline" style="padding: 10px; font-size: 0.85rem; width: 100%; box-sizing: border-box;">View Live Dashboard</a>
+            </div>
+        </div>
+
+        <a href="#nav-hub" class="back-nav">↑ Back to Navigation</a>
+    </div>
+
+    <!-- 9. FAQS AND COORDINATOR CONTACT -->
+    <div class="fm-section bg-light" style="text-align: center; border-bottom: none;">
+        <h3 style="color: var(--navy); margin-top: 0;">Questions or Concerns?</h3>
+        <p style="margin-bottom: 5px;">We are here to help. Reach out to our program coordinator anytime.</p>
+        <p style="font-weight: bold; color: var(--red); font-size: 1.1rem;">
+            Program Coordinator: Jennifer Franco<br>
+            Email: fieldmarshalayso154@gmail.com
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="fm-footer">
+        <strong>AYSO Region 154 · Cypress, California</strong><br>
+        Field Marshal Program Fall 2025<br>
+        <span style="font-size: 0.8rem; color: #666;">For every child. For every volunteer. For every family.</span>
+    </div>
+
+</div>
