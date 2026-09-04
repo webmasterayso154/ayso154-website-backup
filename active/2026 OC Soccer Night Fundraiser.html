@@ -1,0 +1,233 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   OC Soccer Night Fundraiser
+CMS Status:  Live
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:event] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:btn-download] [ui:callout]
+Assets:      Cypress AYSO Fundraiser Flyer_OC Soccer Club.docx
+Notes:       Middle section of the live webpage detailing the OC Soccer Club fundraiser night on October 17, 2026, including ticket pricing, halftime scrimmage incentive, Beerfest upgrade info, and coordinator contacts.
+================================================================================
+-->
+
+<style>
+    /* ============================================================================== */
+    /*             ** STYLES for the OC Soccer Night Section (Mobile-First)**         */
+    /* ============================================================================== */
+
+    /* ----- Base Styles (Mobile First) ----- */
+    #event-feature-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        overflow: hidden;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    #event-feature-card .section-title {
+        color: #ffffff !important;
+        margin: 0;
+        padding: 16px;
+        font-size: 1.4em;
+        background-color: #dd5823; /* OC Soccer orange */
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    #event-feature-card .info-card-content {
+        padding: 16px;
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.55;
+        color: #222;
+    }
+
+    .subhead {
+        font-weight: 800;
+        color: #003366; /* AYSO Blue */
+        margin: 20px 0 8px;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 4px;
+    }
+
+    .callout {
+        background: #fff3e0;
+        border-left: 4px solid #dd5823;
+        border-radius: 0 8px 8px 0;
+        padding: 12px 14px;
+        margin: 15px 0;
+        font-size: 1em;
+    }
+    
+    .contact-box {
+        background: #f7fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 12px;
+        margin: 15px 0;
+        word-break: break-word;
+    }
+
+    /* ----- Action Buttons (Mobile-First Stack) ----- */
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .action-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.05em;
+        padding: 14px 20px;
+        border-radius: 8px;
+        text-decoration: none !important;
+        transition: all 0.2s ease-in-out;
+        min-height: 48px;
+    }
+
+    .btn-primary {
+        background-color: #003366; /* AYSO Blue */
+        color: #ffffff !important;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #002244;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn-calendar {
+        background-color: #ffffff;
+        color: #003366 !important;
+        border: 2px solid #003366;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .btn-calendar:hover, .btn-calendar:focus {
+        background-color: #f0f4f8;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    }
+
+    .screen-only { display: block; }
+    .highlight-text { color: #dd5823; font-weight: bold; }
+
+    /* ----- Desktop Enhancements (min-width: 768px) ----- */
+    @media (min-width: 768px) {
+        #event-feature-card {
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        #event-feature-card .section-title {
+            font-size: 1.8em;
+            padding: 20px 25px;
+            text-align: left;
+        }
+        #event-feature-card .info-card-content {
+            padding: 25px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .subhead {
+            font-size: 1.15em;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .callout {
+            border-left-width: 5px;
+            padding: 15px;
+            font-size: 1.05em;
+        }
+        .button-group {
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .action-button {
+            width: auto;
+            padding: 14px 24px;
+            font-size: 1.1em;
+        }
+    }
+
+    /* ----- Print Rules ----- */
+    @media print {
+        .screen-only { display: none !important; }
+        #event-feature-card { box-shadow: none; border: none; }
+        .callout { background: none; border: 1px solid #000; }
+        .button-group { display: none !important; }
+    }
+</style>
+
+<!-- ============================================================================== -->
+<!-- ================== START: OC Soccer Night Feature Section ===================== -->
+<!-- ============================================================================== -->
+
+<div id="event-feature-card">
+    <h2 class="section-title">⚽ OC Soccer Night Fundraiser!</h2>
+
+    <div class="info-card-content">
+        <section id="instructions-block">
+            
+            <p style="font-size: 1.2em; margin-bottom: 5px;"><strong>Cypress AYSO 154 — Fundraiser Night</strong></p>
+            <p><strong>Saturday, October 17, 2026 • 7:00 PM</strong><br>
+               Location: Championship Stadium, Irvine<br>
+               Tickets are just <strong>$10 each</strong> (50% off regular ticket prices!). A portion of each ticket sale goes directly to support Region 154.</p>
+
+            <div class="callout">
+                <strong>🔥 Bring the Team! Bring the Family! Bring the Fun!</strong><br>
+                Download the flyer below, print it, and turn it in with your payment to secure your team's tickets.
+            </div>
+
+            <p>Experience professional soccer in Orange County and visit the interactive Fan Zone featuring lawn games, a balloon artist, face painting, food vendors, and craft beers! <strong>Special experience for Cypress 154 players:</strong> The team that sells the most tickets will earn the ultimate prize—a scrimmage on the field at halftime!</p>
+
+            <p class="subhead">Key Notes</p>
+            <ul>
+                <li>Tickets are strictly limited to the <span class="highlight-text">first 100 tickets sold!</span> Act quickly to secure your spots.</li>
+                <li>Payments accepted by cash or check.</li>
+            </ul>
+
+            <p class="subhead">How to Purchase</p>
+            <ol>
+                <li><strong>Team Managers:</strong> Collect cash or checks from families to make a group payment (Purchase as a team before Oct 10).</li>
+                <li>Request and coordinate your ticket pickup with Troy Baron or a Board Volunteer at <strong>coachadmin154@gmail.com</strong> (please copy your Division Director).</li>
+                <li>Pay in person using the QR code provided at the pickup location. You will receive a digital receipt number.</li>
+                <li>Tickets will be distributed at Lexington Junior High School on Saturday, October 10 (time TBD).</li>
+            </ol>
+
+            <p class="subhead">Beerfest Upgrade (Optional)</p>
+            <p>Upgrade your ticket to the Beerfest event for $35 more (purchased directly through OC Soccer with a coupon code). Enjoy a 5:00 PM entrance and unlimited beer! <em>*All attendees must purchase an AYSO 154 $10 Fundraiser Ticket to participate.</em></p>
+
+            <div class="contact-box"><strong>Questions &amp; Coordination:</strong> Email coachadmin154@gmail.com (copy your Division Director).</div>
+
+            <p class="screen-only" style="color: #666; font-size: 0.9em;"><em>Note: Include your Team &amp; Age Division when coordinating with the Board/Division Director. (This note will not print.)</em></p>
+
+            <!-- Action buttons (Download + Calendar) -->
+            <div class="button-group">
+                <a href="/Portals/14837/docs/2026/Cypress AYSO Fundraiser Flyer_OC Soccer Club.docx" target="_blank" class="action-button btn-primary">
+                    📥 Download Flyer (Word Doc)
+                </a>
+                
+                <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NW45a29zZ3FxZjExdTNpYzVsOTdzaW5qY3QgaGlqcTA0djdndXJvbjc0ZzdtNnBvdWsyYzhAZw&amp;tmsrc=hijq04v7guron74g7m6pouk2c8%40group.calendar.google.com" target="_blank" class="action-button btn-calendar">
+                    🗓️ Add to Calendar
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- ============================================================================== -->
+<!-- =================== END: OC Soccer Night Feature Section ====================== -->
+<!-- ============================================================================== -->
