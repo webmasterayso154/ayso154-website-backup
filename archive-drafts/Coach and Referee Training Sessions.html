@@ -1,0 +1,412 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   AYSO Coach & Referee Training Sessions
+CMS Status:  Live
+Audience:    [aud:coaches] [aud:referees] [aud:volunteers]
+Content:     [type:event] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:table] [ui:callout]
+Assets:      None
+Notes:       Live training schedule page for AYSO coaches and referees containing in-person and companion course session cards, category filters, and AYSOU registration instructions.
+================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYSO Coach &amp; Referee Training Sessions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+        /* CSS variables for your brand colors */
+        :root {
+            --brand-red: #D92949;
+            --brand-gray: #79798C;
+            --brand-dark-blue: #2E4159;
+            --brand-light-gray: #F2F2F2;
+            --brand-muted-rose: #BF6F6F;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--brand-light-gray);
+            color: var(--brand-dark-blue);
+            margin: 0;
+            padding: 2em;
+        }
+
+        .training-container {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .training-header h1 {
+            font-size: 2.8em;
+            color: var(--brand-dark-blue);
+            margin-bottom: 0.25em;
+        }
+        
+        .training-header p {
+            font-size: 1.1em;
+            color: var(--brand-gray);
+            margin-bottom: 2em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Filter Button Styles */
+        .filter-buttons {
+            margin-bottom: 2.5em;
+        }
+
+        .filter-btn {
+            border-radius: 50px;
+            padding: 12px 25px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.coach { background-color: var(--brand-dark-blue); }
+        .filter-btn.referee { background-color: var(--brand-muted-rose); }
+
+        .filter-btn.active {
+           border-color: #fff;
+           box-shadow: 0 0 0 2px var(--brand-dark-blue);
+        }
+        
+         .filters-active .filter-btn:not(.active) {
+            opacity: 0.5;
+        }
+
+        /* Event Cards Grid */
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2em;
+        }
+
+        .event-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(46, 65, 89, 0.15);
+        }
+
+        .event-card-header {
+            padding: 1.5em;
+            flex-grow: 1;
+        }
+
+        .event-category {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 50px; /* Pill shape */
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 1em;
+        }
+
+        .event-category.coach { background-color: var(--brand-dark-blue); }
+        .event-category.referee { background-color: var(--brand-muted-rose); }
+
+        .event-card-header h3 {
+            margin: 0 0 0.5em 0;
+            font-size: 1.4em;
+            line-height: 1.3;
+            color: var(--brand-dark-blue);
+        }
+        
+        .event-card-header .sub-info {
+            font-size: 0.9em;
+            color: var(--brand-gray);
+            margin-top: -0.5em;
+            margin-bottom: 1em;
+            display: block;
+        }
+
+        .event-details {
+            display: flex;
+            align-items: center;
+            color: var(--brand-gray);
+            font-size: 0.95em;
+            margin-bottom: 0.75em;
+        }
+
+        .event-details svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            fill: var(--brand-gray);
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 1em; }
+            .filter-btn { display: block; width: 80%; margin: 10px auto; }
+            .training-header h1 { font-size: 2.2em; }
+            .event-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="training-container">
+        <header class="training-header">
+            <h1>Coach &amp; Referee In-Person Training</h1>
+            <p>Please note the following list is for reference only. To complete your mandatory in-person training, you must register for a session through the AYSOU platform. Enrollment on AYSOU (via your Sports Connect account) is required - attendance is not permitted without prior online registration.<br><br>For step-by-step registration instructions, visit our <a href="/Default.aspx?tabid=973655">Volunteer Central</a> page.</p>
+        </header>
+
+        <div class="filter-buttons" id="filter-container">
+            <button class="filter-btn coach">Coach Session</button>
+            <button class="filter-btn referee">Referee Session</button>
+        </div>
+
+        <div class="event-grid" id="event-grid">
+
+            <!-- Event 4 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Intermediate Referee Training</h3>
+                    <span class="sub-info">Intermediate Referee - Full In-Person Course</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>9th Aug 2025 | 9:00am - 6:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Boys &amp; Girls Club of Cypress, Moody St, Cypress CA 90630</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee Online Companion Class</h3>
+                    <span class="sub-info">FIELD SESSION ONLY</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>9th Aug 2025 | 9:00am - 12:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>2760 N Studebaker Rd, Long Beach CA 90815</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee Online Companion Class</h3>
+                    <span class="sub-info">FIELD SESSION ONLY</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>16th Aug 2025 | 9:00am - 12:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>2760 N Studebaker Rd, Long Beach CA 90815</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 7 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee Online + In-Person Companion Course</h3>
+                    <span class="sub-info">Region 94</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>17th Aug 2025 | 9:00am - 11:00am</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Imperial Middle School, Schoolwood Dr, La Habra CA 90631</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 8 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee Online + In-Person Companion Course</h3>
+                    <span class="sub-info">Region 55</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>18th Aug 2025 | 5:30pm - 8:30pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Marina High School, Springdale St, Huntington Beach CA 92649</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 9 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Referee Mentor - Full in Person</h3>
+                    <span class="sub-info">Region 159</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>19th Aug 2025 | 6:00pm - 9:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Orange County Fire Station 48, N Gate Rd, Seal Beach CA 90740</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 10 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee In-Person Course</h3>
+                    <span class="sub-info">Region 114</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>23rd Aug 2025 | 8:00am - 5:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Calvary Bellflower Church, Clark Ave, Bellflower CA 90706</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 11 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee Online + In-Person Companion Course</h3>
+                    <span class="sub-info">Region 154</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>23rd Aug 2025 | 9:00am - 1:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Lexington Junior High School, Orange Ave, Cypress CA 90630</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 12 -->
+            <div class="event-card" data-category="coach">
+                <div class="event-card-header">
+                    <span class="event-category coach">COACH</span>
+                    <h3>12U Coach Full in person class</h3>
+                    <span class="sub-info">Region 114</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>23rd Aug 2025 | 11:45am - 2:45pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>3938 Woodruff Ave, Long Beach CA 90808</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 13 -->
+            <div class="event-card" data-category="coach">
+                <div class="event-card-header">
+                    <span class="event-category coach">COACH</span>
+                    <h3>10U Coach Full in person class</h3>
+                    <span class="sub-info">Region 114</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>23rd Aug 2025 | 11:30am - 2:30pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>3938 Woodruff Ave, Long Beach CA 90808</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 14 -->
+            <div class="event-card" data-category="coach">
+                <div class="event-card-header">
+                    <span class="event-category coach">COACH</span>
+                    <h3>8U Coach Full in person class</h3>
+                    <span class="sub-info">Region 114</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>23rd Aug 2025 | 10:00am - 1:00pm</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>3938 Woodruff Ave, Long Beach CA 90808</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 15 -->
+            <div class="event-card" data-category="coach">
+                <div class="event-card-header">
+                    <span class="event-category coach">COACH</span>
+                    <h3>6U Coach Full in person class</h3>
+                    <span class="sub-info">Region 114</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>23rd Aug 2025 | 8:30am - 11:30am</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Parkcrest Christian Church, Parkcrest St, Long Beach CA 90808</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 16 -->
+            <div class="event-card" data-category="referee">
+                <div class="event-card-header">
+                    <span class="event-category referee">REFEREE</span>
+                    <h3>Regional Referee Online + In-Person Companion Course</h3>
+                    <span class="sub-info">Region 94</span>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19Z"></path></svg>
+                        <span>24th Aug 2025 | 9:00am - 11:00am</span>
+                    </div>
+                    <div class="event-details">
+                        <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+                        <span>Imperial Middle School, Schoolwood Dr, La Habra CA 90631</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body></html>
