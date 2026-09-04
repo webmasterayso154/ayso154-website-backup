@@ -1,0 +1,3503 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_REF_05_GAMEDAY
+CMS Status:  Hidden / Inactive (Public-Ready Review Candidate)
+Audience:    [aud:referees] [aud:volunteers]
+Content:     [type:event] [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      None
+Notes:       Primary operational reference page for Cypress AYSO Region 154 referees (Game Day Tools), covering MatchTrak status, assignment readiness, game-day workflow, crew coverage, credit, reports, and referee protection.
+================================================================================
+-->
+
+<!--
+===============================================================================
+CYPRESS AYSO REGION 154 — REFEREE WEBSITE REDESIGN
+===============================================================================
+
+PROJECT RELEASE:
+REF-RD-0.5.0-NAV-SYNC
+
+SHARED DESIGN SYSTEM:
+DS-1.1.0
+
+SHARED NAVIGATION MODULE:
+REF-NAV-1.0.0
+
+PAGE:
+DRAFT_REF_05_GAMEDAY
+
+PUBLIC PAGE NAME:
+Game Day Tools
+
+PAGE VERSION:
+1.2.0
+
+STATUS:
+PUBLIC-READY REVIEW CANDIDATE — PENDING REFEREE ADMINISTRATOR APPROVAL
+
+LAST UPDATED:
+July 17, 2026
+
+CONTENT OWNER:
+Regional Referee Administrator — Vince
+
+WEB IMPLEMENTATION:
+Bryan
+
+SPORTSCONNECT TAB ID:
+976490
+
+CURRENT PAGE URL:
+https://www.ayso154cypress.org/Default.aspx?tabid=976490
+
+===============================================================================
+PURPOSE
+===============================================================================
+
+Game Day Tools is the primary operational reference page for Cypress AYSO
+Region 154 referees preparing for and completing match assignments.
+
+The page is designed to:
+
+- Explain how MatchTrak will be used once Fall schedules are published.
+- Prevent volunteers from using an old competition or schedule link.
+- Help referees determine whether an assignment is appropriate.
+- Explain pregame preparation and field arrival.
+- Explain the referee crew’s basic game-day responsibilities.
+- Describe the Region 154 volunteer-referee and NOCRA operating model.
+- Route users to current seasonal referee-credit information.
+- Explain game-card and reporting responsibilities without publishing an
+  unapproved field-specific collection procedure.
+- Explain safety, incident escalation and referee-protection expectations.
+- Connect users to all other redesigned referee pages.
+- Provide local and cross-page navigation without JavaScript.
+
+===============================================================================
+NAVIGATION MODEL
+===============================================================================
+
+This page uses four coordinated navigation layers:
+
+1. SPORTSCONNECT PUBLIC MENU
+   Configured through SportsConnect after approval.
+
+2. SHARED REFEREE RESOURCES NAVIGATION
+   Appears near the top of all seven public referee pages.
+   Uses the same seven links in the same order.
+   Highlights "Game Day Tools — Current Page."
+
+3. LOCAL PAGE NAVIGATION
+   "Explore This Page" links to the primary operational sections.
+
+4. SEQUENCE NAVIGATION
+   Appears near the bottom.
+   Previous: Training & Events
+   Current: Game Day Tools
+   Next: Rules & Learning
+
+===============================================================================
+SHARED REFEREE PAGE SEQUENCE
+===============================================================================
+
+01 — Referee Central
+02 — Become a Referee
+03 — Youth Referees
+04 — Training & Events
+05 — Game Day Tools
+06 — Rules & Learning
+07 — Advancement & Paid Refereeing
+
+===============================================================================
+CONTENT OWNERSHIP
+===============================================================================
+
+THIS PAGE OWNS:
+
+- MatchTrak readiness and reservation guidance.
+- Current MatchTrak competition links after publication.
+- Pregame referee preparation.
+- Field arrival and referee-crew workflow.
+- High-level Region 154 and NOCRA game-day operations.
+- Referee-credit workflow and source-page routing.
+- Game-card and referee-report guidance.
+- Game-day safety and incident escalation.
+- Referee-protection procedures and support routing.
+
+THIS PAGE DOES NOT OWN:
+
+- Adult volunteer registration.
+- Youth-volunteer registration.
+- Current course dates.
+- Detailed annual Laws changes.
+- Complete Build-Out Line guidance.
+- AYSO badge-upgrade requirements.
+- Cal South, U.S. Soccer or NOCRA onboarding.
+- Seasonal referee-point values and deadlines.
+
+Those subjects are maintained on their designated source pages.
+
+===============================================================================
+MATCHTRAK PUBLICATION STATUS
+===============================================================================
+
+As of July 17, 2026:
+
+- Fall 2026 MatchTrak schedules are not yet published.
+- Publication is anticipated closer to the season.
+- No competition name or direct schedule URL should be added until confirmed.
+- Do not reuse an old MatchTrak competition name.
+- Do not create a placeholder MatchTrak link.
+- When schedules are published, update this page first.
+- Other redesigned pages should continue linking to Game Day Tools rather than
+  copying individual competition links.
+
+===============================================================================
+MATCHTRAK UPDATE PROCEDURE
+===============================================================================
+
+When the Fall competitions are published:
+
+1. Confirm the exact public competition name.
+2. Confirm which divisions or programs use each competition.
+3. Confirm the direct MatchTrak schedule URL.
+4. Confirm whether referees must create, reactivate or connect an account.
+5. Add approved links to the MatchTrak section on this page.
+6. Increase the PAGE VERSION.
+7. Add a VERSION HISTORY entry.
+8. Test every competition link while signed out of SportsConnect.
+9. Confirm mobile usability.
+10. Update Referee Central only when its MatchTrak status notice changes.
+
+===============================================================================
+SPORTSCONNECT REQUIREMENTS
+===============================================================================
+
+- HTML and CSS are included together in this single code block.
+- No JavaScript is used.
+- No external fonts, icon libraries, frameworks or dependencies are used.
+- All navigation and controls use text only.
+- CSS is scoped through the "r154-gameday" wrapper.
+- Custom rows are used instead of unordered lists to avoid duplicate
+  SportsConnect bullet markers.
+- Important link colors use !important because SportsConnect may override
+  normal and visited-link colors.
+- Region 154 page links open in the same tab.
+- External resources open in a new tab.
+- The current page uses visible text and aria-current="page".
+- The layout is mobile responsive.
+- No sticky navigation is used.
+- Search-engine indexing remains disabled until publication approval.
+
+===============================================================================
+CANONICAL REFEREE PAGE URL REGISTRY
+===============================================================================
+
+Referee Redesign Review Hub:
+https://www.ayso154cypress.org/Default.aspx?tabid=976482
+
+01 — Referee Central:
+https://www.ayso154cypress.org/Default.aspx?tabid=976485
+
+02 — Become a Referee:
+https://www.ayso154cypress.org/Default.aspx?tabid=976487
+
+03 — Youth Referees:
+https://www.ayso154cypress.org/Default.aspx?tabid=976488
+
+04 — Training & Events:
+https://www.ayso154cypress.org/Default.aspx?tabid=976489
+
+05 — Game Day Tools:
+https://www.ayso154cypress.org/Default.aspx?tabid=976490
+
+06 — Rules & Learning:
+https://www.ayso154cypress.org/Default.aspx?tabid=976492
+
+07 — Advancement & Paid Refereeing:
+https://www.ayso154cypress.org/Default.aspx?tabid=976493
+
+===============================================================================
+RELATED REGION 154 SOURCES
+===============================================================================
+
+Legacy MatchTrak Instructions:
+https://www.ayso154cypress.org/Default.aspx?tabid=866791
+
+Referee & Volunteer Point Program:
+https://www.ayso154cypress.org/Default.aspx?tabid=866792
+
+NOCRA Guidelines:
+https://www.ayso154cypress.org/Default.aspx?tabid=866788
+
+Referee Abuse Prevention:
+https://www.ayso154cypress.org/Default.aspx?tabid=974653
+
+Volunteer Compliance:
+https://www.ayso154cypress.org/Default.aspx?tabid=974613
+
+===============================================================================
+INTERNAL APPROVAL NOTES — NOT DISPLAYED PUBLICLY
+===============================================================================
+
+Before publication, Vince should verify:
+
+GD-01 — MATCHTRAK
+
+- Confirm the expected Fall publication date.
+- Confirm the exact competition names.
+- Confirm direct schedule URLs.
+- Confirm which divisions use each competition.
+- Confirm account creation, activation and password-reset procedures.
+- Confirm whether visiting referees use a different process.
+
+GD-02 — REFEREE COVERAGE
+
+- Confirm which divisions normally receive a NOCRA Center Referee.
+- Confirm which Center positions may be reserved by an AYSO referee.
+- Confirm team Assistant Referee requirements.
+- Confirm differences for Playground, younger divisions, upper divisions,
+  EXTRA, interleague and tournaments.
+- Confirm whether a division-by-division matrix should appear on this page.
+
+GD-03 — FIELD CHECK-IN
+
+- Confirm whether referees check in with:
+  - MatchTrak only
+  - A Field Marshal
+  - A QR process
+  - A referee tent
+  - A combination of these methods
+- Confirm the expected arrival time.
+- Confirm the process when no Field Marshal is present.
+
+GD-04 — REFEREE CREDIT
+
+- Confirm how team credit is assigned.
+- Confirm whether both MatchTrak reservation and field check-in are required.
+- Confirm whether Assistant Referees must identify a team.
+- Confirm when corrections must be requested.
+- Confirm who approves corrections.
+- Confirm the current seasonal point-program page.
+
+GD-05 — GAME CARDS
+
+- Confirm whether completed cards are:
+  - Returned to a coach
+  - Delivered to the Field Marshal tent
+  - Deposited in a field mailbox
+  - Retained by the referee
+  - Handled differently by field or competition
+- Do not publish a permanent location until Vince confirms the procedure.
+
+GD-06 — REPORTS
+
+- Confirm which events require a formal report.
+- Confirm the report recipient.
+- Confirm the submission deadline.
+- Confirm whether MatchTrak includes an online reporting function.
+- Confirm where misconduct, serious injury and match-termination reports go.
+
+GD-07 — REFEREE PROTECTION
+
+- Confirm immediate escalation to the Center Referee, Field Marshal and RRA.
+- Confirm youth-referee procedures.
+- Confirm the process when a Region representative is unavailable.
+- Confirm whether the existing referee-protection page remains authoritative.
+
+GD-08 — PUBLIC CONTACTS
+
+- Confirm Cypress154RRA@gmail.com.
+- Confirm whether an Assistant RRA or Referee Scheduler should be listed.
+- Confirm whether a game-day phone number should ever appear publicly.
+
+===============================================================================
+VERSION HISTORY
+===============================================================================
+
+1.2.0 — 2026-07-17 — Bryan
+
+- Advanced the project to REF-RD-0.5.0-NAV-SYNC.
+- Advanced the shared design system to DS-1.1.0.
+- Added shared navigation module REF-NAV-1.0.0.
+- Added the same seven-page navigation used throughout the redesign.
+- Added "Game Day Tools — Current Page" with aria-current="page".
+- Added local Explore This Page navigation.
+- Added Back to Game Day Tools Menu links.
+- Added Previous, Current and Next sequence navigation.
+- Preserved the notice that Fall MatchTrak schedules are not yet published.
+- Added a controlled MatchTrak publication procedure.
+- Added assignment-readiness guidance.
+- Added a pregame and field-arrival workflow.
+- Added high-level Region 154 and NOCRA coverage guidance.
+- Added season-specific referee-credit routing without copying point values.
+- Added game-card, reporting and incident guidance.
+- Added referee-protection and youth-referee escalation guidance.
+- Standardized internal and external link behavior.
+- Preserved text-only controls and no JavaScript.
+
+1.1.0 — 2026-07-17 — Bryan
+
+- Converted the original concept into a public-review game-day reference.
+- Established Game Day Tools as the future MatchTrak source.
+- Added referee-crew preparation and field procedures.
+- Added high-level NOCRA and volunteer-referee guidance.
+- Added referee-credit and report routing.
+- Avoided publishing unconfirmed Fall competition links.
+- Preserved mobile responsiveness and SportsConnect compatibility.
+
+1.0.0 — 2026-07-17 — Bryan
+
+- Created the initial Game Day Tools sandbox concept.
+- Added MatchTrak, preparation, field check-in and reporting sections.
+- Established the initial scoped HTML/CSS design.
+
+===============================================================================
+-->
+
+
+<style>
+/* ==========================================================================
+   1. PAGE VARIABLES
+   ========================================================================== */
+
+.r154-gameday {
+    --r154-navy-dark: #061a40;
+    --r154-navy: #0b326f;
+    --r154-navy-medium: #164580;
+    --r154-blue-light: #eaf2fb;
+
+    --r154-red: #d71920;
+    --r154-red-dark: #ad1117;
+    --r154-red-light: #fff0f1;
+
+    --r154-yellow: #ffc72c;
+    --r154-yellow-light: #fff7d6;
+
+    --r154-white: #ffffff;
+    --r154-off-white: #f7f9fc;
+
+    --r154-gray-100: #f0f4f8;
+    --r154-gray-200: #d9e1eb;
+    --r154-gray-300: #bec9d7;
+    --r154-gray-600: #506176;
+    --r154-gray-800: #26364a;
+
+    --r154-text: #17263a;
+
+    --r154-green: #276f46;
+    --r154-green-light: #eaf7ee;
+
+    --r154-orange: #a95108;
+    --r154-orange-light: #fff2e5;
+
+    --r154-shadow-small: 0 4px 13px rgba(6, 26, 64, 0.10);
+    --r154-shadow-medium: 0 8px 25px rgba(6, 26, 64, 0.15);
+
+    --r154-radius-small: 6px;
+    --r154-radius-medium: 10px;
+    --r154-radius-large: 14px;
+}
+
+
+/* ==========================================================================
+   2. SCOPED RESET AND TYPOGRAPHY
+   ========================================================================== */
+
+.r154-gameday,
+.r154-gameday * {
+    box-sizing: border-box;
+}
+
+.r154-gameday {
+    width: 100%;
+    max-width: 1120px;
+    margin: 24px auto 48px auto;
+    padding: 0 16px;
+
+    color: var(--r154-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.r154-gameday h1,
+.r154-gameday h2,
+.r154-gameday h3,
+.r154-gameday h4,
+.r154-gameday p {
+    margin-top: 0;
+}
+
+.r154-gameday h1,
+.r154-gameday h2,
+.r154-gameday h3,
+.r154-gameday h4 {
+    color: var(--r154-navy-dark);
+}
+
+.r154-gameday h1,
+.r154-gameday h2 {
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-stretch: condensed;
+}
+
+.r154-gameday a {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.r154-gameday a:focus-visible {
+    outline: 4px solid var(--r154-yellow);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   3. PAGE SHELL AND SHARED SECTIONS
+   ========================================================================== */
+
+.r154-gameday-shell {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-large);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-gameday-section {
+    padding: 44px 38px;
+    scroll-margin-top: 20px;
+}
+
+.r154-gameday-section + .r154-gameday-section {
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-gameday-section-alt {
+    background: var(--r154-off-white);
+}
+
+.r154-gameday-section-heading {
+    max-width: 875px;
+    margin: 0 auto 28px auto;
+
+    text-align: center;
+}
+
+.r154-gameday-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--r154-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.r154-gameday-section-title {
+    margin-bottom: 11px;
+
+    color: var(--r154-navy-dark);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-gameday-section-intro {
+    max-width: 795px;
+    margin: 0 auto;
+
+    color: var(--r154-gray-600);
+    font-size: 1.02rem;
+}
+
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+
+.r154-gameday-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 52px 38px 47px 38px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--r154-navy-dark) 0%,
+            var(--r154-navy) 58%,
+            var(--r154-navy-medium) 100%
+        );
+
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-gameday-hero::before {
+    position: absolute;
+    top: -190px;
+    left: -150px;
+
+    width: 395px;
+    height: 395px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.r154-gameday-hero::after {
+    position: absolute;
+    right: -115px;
+    bottom: -170px;
+
+    width: 385px;
+    height: 385px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.r154-gameday-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.r154-gameday-brand-name {
+    margin-bottom: 8px;
+
+    color: var(--r154-white);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: clamp(1.25rem, 4vw, 1.9rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.r154-gameday-hero h1 {
+    margin-bottom: 20px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(2.35rem, 7vw, 4.25rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.r154-gameday-hero-description {
+    max-width: 825px;
+    margin: 0 auto 24px auto;
+
+    color: var(--r154-white);
+    font-size: clamp(1rem, 2vw, 1.16rem);
+    line-height: 1.7;
+}
+
+.r154-gameday-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+
+.r154-gameday-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.r154-gameday-button,
+.r154-gameday-button:link,
+.r154-gameday-button:visited {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 17px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-button:hover,
+.r154-gameday-button:active,
+.r154-gameday-button:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-gameday-button-secondary,
+.r154-gameday-button-secondary:link,
+.r154-gameday-button-secondary:visited {
+    color: var(--r154-navy) !important;
+
+    background: var(--r154-white) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-gameday-button-secondary:hover,
+.r154-gameday-button-secondary:active,
+.r154-gameday-button-secondary:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy-dark) !important;
+    border-color: var(--r154-navy-dark) !important;
+}
+
+.r154-gameday-button-red,
+.r154-gameday-button-red:link,
+.r154-gameday-button-red:visited {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+.r154-gameday-button-red:hover,
+.r154-gameday-button-red:active,
+.r154-gameday-button-red:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red-dark) !important;
+    border-color: var(--r154-red-dark) !important;
+}
+
+
+/* ==========================================================================
+   6. MATCHTRAK STATUS NOTICE
+   ========================================================================== */
+
+.r154-gameday-notice-wrap {
+    padding: 20px 26px;
+
+    background: var(--r154-white);
+}
+
+.r154-gameday-notice {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbb43;
+    border-left: 6px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-notice-title {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 900;
+}
+
+.r154-gameday-notice p {
+    margin-bottom: 0;
+
+    color: var(--r154-text);
+    font-size: 0.94rem;
+}
+
+
+/* ==========================================================================
+   7. SHARED CROSS-PAGE REFEREE NAVIGATION
+   REF-NAV-1.0.0
+   ========================================================================== */
+
+.r154-gameday-refnav {
+    padding: 29px 28px 31px 28px;
+
+    background: var(--r154-white);
+    border-top: 1px solid var(--r154-gray-200);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-gameday-refnav-heading {
+    max-width: 780px;
+    margin: 0 auto 18px auto;
+
+    text-align: center;
+}
+
+.r154-gameday-refnav-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-refnav-title {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.r154-gameday-refnav-description {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-gameday-refnav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-gameday-refnav-link,
+.r154-gameday-refnav-link:link,
+.r154-gameday-refnav-link:visited {
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 12px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.84rem;
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-off-white) !important;
+    border: 2px solid var(--r154-gray-200) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-refnav-link:hover,
+.r154-gameday-refnav-link:active,
+.r154-gameday-refnav-link:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-gameday-refnav-current,
+.r154-gameday-refnav-current:link,
+.r154-gameday-refnav-current:visited,
+.r154-gameday-refnav-current:hover,
+.r154-gameday-refnav-current:active,
+.r154-gameday-refnav-current:focus {
+    color: var(--r154-white) !important;
+    cursor: default;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
+
+    transform: none;
+}
+
+
+/* ==========================================================================
+   8. LOCAL PAGE NAVIGATION
+   ========================================================================== */
+
+.r154-gameday-page-nav {
+    padding: 26px 28px 29px 28px;
+    scroll-margin-top: 20px;
+
+    background: var(--r154-gray-100);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-gameday-page-nav-label {
+    margin-bottom: 14px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-gameday-page-nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-gameday-page-nav-links a,
+.r154-gameday-page-nav-links a:link,
+.r154-gameday-page-nav-links a:visited {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-page-nav-links a:hover,
+.r154-gameday-page-nav-links a:active,
+.r154-gameday-page-nav-links a:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   9. BACK TO LOCAL PAGE MENU
+   ========================================================================== */
+
+.r154-gameday-backlink-wrap {
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.r154-gameday-backlink,
+.r154-gameday-backlink:link,
+.r154-gameday-backlink:visited {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 15px;
+
+    color: var(--r154-navy) !important;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-backlink:hover,
+.r154-gameday-backlink:active,
+.r154-gameday-backlink:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+
+/* ==========================================================================
+   10. MATCHTRAK STATUS CARDS
+   ========================================================================== */
+
+.r154-gameday-status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-gameday-status-card {
+    padding: 23px 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-gameday-status-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-status-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+
+.r154-gameday-status-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-gameday-status-alert {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #66161b;
+
+    background: var(--r154-red-light);
+    border: 1px solid #efb5b8;
+    border-left: 6px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   11. ASSIGNMENT STEPS
+   ========================================================================== */
+
+.r154-gameday-steps {
+    display: grid;
+    gap: 15px;
+}
+
+.r154-gameday-step {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-gameday-step-number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 10px;
+
+    background: var(--r154-navy-dark);
+    border-right: 4px solid var(--r154-red);
+}
+
+.r154-gameday-step-number {
+    color: var(--r154-yellow);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.r154-gameday-step-content {
+    padding: 22px 24px;
+}
+
+.r154-gameday-step-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-step-content h3 {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.2rem;
+    line-height: 1.23;
+}
+
+.r154-gameday-step-content p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.91rem;
+}
+
+.r154-gameday-step-note {
+    margin-top: 13px;
+    padding: 12px 14px;
+
+    color: #604b00;
+    font-size: 0.87rem;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   12. WORKFLOW CARDS
+   ========================================================================== */
+
+.r154-gameday-workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-gameday-workflow-card {
+    padding: 21px 17px;
+
+    text-align: center;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-bottom: 4px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-workflow-number {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-workflow-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.r154-gameday-workflow-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.86rem;
+}
+
+.r154-gameday-workflow-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-left: 6px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   13. CUSTOM ACTION ROWS AND CHECKLISTS
+   ========================================================================== */
+
+.r154-gameday-action-list {
+    display: grid;
+    gap: 9px;
+}
+
+.r154-gameday-action-row {
+    position: relative;
+
+    padding: 11px 12px 11px 31px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.9rem;
+    line-height: 1.45;
+
+    background: var(--r154-off-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 5px;
+}
+
+.r154-gameday-action-row::before {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+    color: var(--r154-red);
+    content: "—";
+    font-weight: 900;
+}
+
+.r154-gameday-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-gameday-check-row {
+    position: relative;
+
+    padding: 13px 13px 13px 36px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.91rem;
+    line-height: 1.45;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 6px;
+}
+
+.r154-gameday-check-row::before {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    width: 14px;
+    height: 14px;
+
+    content: "";
+
+    background: var(--r154-white);
+    border: 2px solid var(--r154-navy);
+    border-radius: 2px;
+}
+
+
+/* ==========================================================================
+   14. COVERAGE MODEL
+   ========================================================================== */
+
+.r154-gameday-coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-gameday-coverage-card {
+    padding: 23px 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-gameday-coverage-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-coverage-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+
+.r154-gameday-coverage-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-gameday-coverage-warning {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #604b00;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-left: 6px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   15. CREDIT AND REPORT CARDS
+   ========================================================================== */
+
+.r154-gameday-two-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.r154-gameday-panel-card {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-gameday-panel-header {
+    padding: 20px 22px;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 5px solid var(--r154-yellow);
+}
+
+.r154-gameday-panel-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-panel-header h3 {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 1.25rem;
+    line-height: 1.23;
+}
+
+.r154-gameday-panel-body {
+    padding: 23px 22px;
+}
+
+.r154-gameday-panel-body > p {
+    color: var(--r154-gray-600);
+}
+
+.r154-gameday-season-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-green-light);
+    border: 1px solid #a9d2b8;
+    border-left: 6px solid var(--r154-green);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   16. REPORTING CARDS
+   ========================================================================== */
+
+.r154-gameday-report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-gameday-report-card {
+    padding: 23px 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-gameday-report-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-report-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+
+.r154-gameday-report-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-gameday-report-warning {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #66161b;
+
+    background: var(--r154-red-light);
+    border: 1px solid #efb5b8;
+    border-left: 6px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   17. PROTECTION PANEL
+   ========================================================================== */
+
+.r154-gameday-protection-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px;
+
+    color: var(--r154-white);
+
+    background: var(--r154-navy-dark);
+    border-left: 7px solid var(--r154-red);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-gameday-protection-panel .r154-gameday-eyebrow {
+    color: #ff5360;
+}
+
+.r154-gameday-protection-panel h2 {
+    margin-bottom: 15px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-gameday-protection-panel p {
+    color: var(--r154-white);
+}
+
+.r154-gameday-protection-highlight {
+    margin-top: 22px;
+    padding: 17px 19px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 700;
+
+    background: var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-protection-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.r154-gameday-protection-step {
+    padding: 15px;
+
+    color: var(--r154-white);
+    font-size: 0.88rem;
+    line-height: 1.45;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-protection-number {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-gameday-protection-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+
+/* ==========================================================================
+   18. FAQ
+   ========================================================================== */
+
+.r154-gameday-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.r154-gameday-faq-card {
+    padding: 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-faq-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.04rem;
+    line-height: 1.3;
+}
+
+.r154-gameday-faq-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   19. RELATED RESOURCES
+   ========================================================================== */
+
+.r154-gameday-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-gameday-related-link,
+.r154-gameday-related-link:link,
+.r154-gameday-related-link:visited {
+    display: flex;
+    min-height: 140px;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px;
+
+    color: var(--r154-text) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-gameday-related-link:hover,
+.r154-gameday-related-link:active,
+.r154-gameday-related-link:focus {
+    color: var(--r154-text) !important;
+
+    border-top-color: var(--r154-red);
+    box-shadow: var(--r154-shadow-medium);
+
+    transform: translateY(-2px);
+}
+
+.r154-gameday-related-title {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.03rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.r154-gameday-related-description {
+    display: block;
+
+    color: var(--r154-gray-600);
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+
+/* ==========================================================================
+   20. PAGE SEQUENCE NAVIGATION
+   ========================================================================== */
+
+.r154-gameday-sequence {
+    padding: 30px 28px;
+
+    background: var(--r154-gray-100);
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-gameday-sequence-heading {
+    margin-bottom: 16px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-gameday-sequence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.r154-gameday-sequence-item,
+.r154-gameday-sequence-item:link,
+.r154-gameday-sequence-item:visited {
+    display: flex;
+    min-height: 62px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 14px;
+
+    color: var(--r154-navy-dark) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-sequence-item:hover,
+.r154-gameday-sequence-item:active,
+.r154-gameday-sequence-item:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-gameday-sequence-direction {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.r154-gameday-sequence-page {
+    display: block;
+
+    font-size: 0.92rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.r154-gameday-sequence-current {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+
+/* ==========================================================================
+   21. FOOTER
+   ========================================================================== */
+
+.r154-gameday-footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: var(--r154-navy-dark);
+    border-top: 4px solid var(--r154-yellow);
+}
+
+.r154-gameday-footer-brand {
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-gameday-footer p {
+    margin-bottom: 17px;
+
+    color: var(--r154-white);
+    font-size: 0.89rem;
+}
+
+.r154-gameday-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r154-gameday-footer a,
+.r154-gameday-footer a:link,
+.r154-gameday-footer a:visited {
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border: 2px solid var(--r154-yellow) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-gameday-footer a:hover,
+.r154-gameday-footer a:active,
+.r154-gameday-footer a:focus {
+    color: var(--r154-white) !important;
+
+    background: transparent !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   22. TABLET STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 900px) {
+    .r154-gameday-refnav-grid,
+    .r154-gameday-page-nav-links,
+    .r154-gameday-workflow-grid,
+    .r154-gameday-protection-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-gameday-status-grid,
+    .r154-gameday-coverage-grid,
+    .r154-gameday-report-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-gameday-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================================================
+   23. MOBILE STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 640px) {
+    .r154-gameday {
+        margin-top: 12px;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        font-size: 15px;
+    }
+
+    .r154-gameday-shell {
+        border-radius: 9px;
+    }
+
+    .r154-gameday-hero {
+        padding: 38px 20px 35px 20px;
+    }
+
+    .r154-gameday-hero-actions,
+    .r154-gameday-button-row,
+    .r154-gameday-protection-actions,
+    .r154-gameday-footer-links {
+        flex-direction: column;
+    }
+
+    .r154-gameday-notice-wrap {
+        padding: 15px;
+    }
+
+    .r154-gameday-notice {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-gameday-refnav {
+        padding: 25px 15px;
+    }
+
+    .r154-gameday-page-nav {
+        padding: 20px 15px 22px 15px;
+    }
+
+    .r154-gameday-refnav-grid,
+    .r154-gameday-page-nav-links,
+    .r154-gameday-status-grid,
+    .r154-gameday-workflow-grid,
+    .r154-gameday-check-grid,
+    .r154-gameday-coverage-grid,
+    .r154-gameday-two-grid,
+    .r154-gameday-report-grid,
+    .r154-gameday-protection-steps,
+    .r154-gameday-faq-grid,
+    .r154-gameday-related-grid,
+    .r154-gameday-sequence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-gameday-section {
+        padding: 35px 20px;
+    }
+
+    .r154-gameday-step {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-gameday-step-number-wrap {
+        min-height: 60px;
+        padding: 12px;
+
+        border-right: 0;
+        border-bottom: 4px solid var(--r154-red);
+    }
+
+    .r154-gameday-step-content {
+        padding: 20px 19px;
+    }
+
+    .r154-gameday-button,
+    .r154-gameday-button:link,
+    .r154-gameday-button:visited,
+    .r154-gameday-refnav-link,
+    .r154-gameday-refnav-link:link,
+    .r154-gameday-refnav-link:visited,
+    .r154-gameday-page-nav-links a,
+    .r154-gameday-page-nav-links a:link,
+    .r154-gameday-page-nav-links a:visited,
+    .r154-gameday-footer a,
+    .r154-gameday-footer a:link,
+    .r154-gameday-footer a:visited {
+        width: 100%;
+    }
+
+    .r154-gameday-protection-panel {
+        padding: 28px 22px;
+    }
+
+    .r154-gameday-sequence {
+        padding: 27px 16px;
+    }
+}
+
+
+/* ==========================================================================
+   24. REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .r154-gameday a {
+        transition: none;
+    }
+
+    .r154-gameday-button:hover,
+    .r154-gameday-refnav-link:hover,
+    .r154-gameday-related-link:hover {
+        transform: none;
+    }
+}
+</style>
+
+
+<!-- ========================================================================
+     BEGIN PUBLIC-FACING GAME DAY TOOLS PAGE
+     ======================================================================== -->
+
+<div class="r154-gameday">
+
+    <main class="r154-gameday-shell" id="region-154-game-day-tools">
+
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
+
+        <header class="r154-gameday-hero">
+
+            <div class="r154-gameday-hero-content">
+
+                <div class="r154-gameday-brand-name">
+                    Cypress AYSO Region 154
+                </div>
+
+                <h1>
+                    Game Day Tools
+                </h1>
+
+                <p class="r154-gameday-hero-description">
+                    Prepare for assignments, understand MatchTrak, arrive ready
+                    to work with the referee crew, complete required records
+                    and know where to get help when a problem occurs.
+                </p>
+
+                <div class="r154-gameday-hero-actions">
+
+                    <a class="r154-gameday-button r154-gameday-button-red" href="#assignment-readiness">
+                        Prepare for an Assignment
+                    </a>
+
+                    <a class="r154-gameday-button r154-gameday-button-secondary" href="#safety-support">
+                        Safety &amp; Referee Support
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================================
+             MATCHTRAK STATUS NOTICE
+             ================================================================ -->
+
+        <div class="r154-gameday-notice-wrap">
+
+            <div class="r154-gameday-notice">
+
+                <div>
+
+                    <span class="r154-gameday-notice-title">
+                        Fall 2026 MatchTrak schedules are not yet published.
+                    </span>
+
+                    <p>
+                        Competition names and direct reservation links will be
+                        added here after the Fall schedules are finalized.
+                        Do not use an old MatchTrak competition for the new
+                        season.
+                    </p>
+
+                </div>
+
+                <a class="r154-gameday-button" href="mailto:Cypress154RRA@gmail.com">
+                    Contact the RRA
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================================
+             SHARED REFEREE RESOURCES NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-gameday-refnav" aria-label="Region 154 referee resources">
+
+            <div class="r154-gameday-refnav-heading">
+
+                <span class="r154-gameday-refnav-label">
+                    Region 154 Referee Resources
+                </span>
+
+                <h2 class="r154-gameday-refnav-title">
+                    Navigate the Referee Program
+                </h2>
+
+                <p class="r154-gameday-refnav-description">
+                    Use these links from any referee page to move directly to
+                    the information you need.
+                </p>
+
+            </div>
+
+
+            <div class="r154-gameday-refnav-grid">
+
+                <a class="r154-gameday-refnav-link" href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a class="r154-gameday-refnav-link" href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a class="r154-gameday-refnav-link" href="/Default.aspx?tabid=976488">
+                    Youth Referees
+                </a>
+
+                <a class="r154-gameday-refnav-link" href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a class="r154-gameday-refnav-link r154-gameday-refnav-current" href="/Default.aspx?tabid=976490" aria-current="page">
+                    Game Day Tools — Current Page
+                </a>
+
+                <a class="r154-gameday-refnav-link" href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a class="r154-gameday-refnav-link" href="/Default.aspx?tabid=976493">
+                    Advancement &amp; Paid Refereeing
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             LOCAL PAGE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-gameday-page-nav" id="page-menu" aria-label="Explore Game Day Tools">
+
+            <div class="r154-gameday-page-nav-label">
+                Explore This Page
+            </div>
+
+            <div class="r154-gameday-page-nav-links">
+
+                <a href="#matchtrak-status">
+                    MatchTrak Status
+                </a>
+
+                <a href="#assignment-readiness">
+                    Accept an Assignment
+                </a>
+
+                <a href="#game-day-workflow">
+                    Game-Day Workflow
+                </a>
+
+                <a href="#crew-coverage">
+                    Crew &amp; Coverage
+                </a>
+
+                <a href="#credit-reports">
+                    Credit &amp; Reports
+                </a>
+
+                <a href="#safety-support">
+                    Safety &amp; Support
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             MATCHTRAK STATUS
+             ================================================================ -->
+
+        <section class="r154-gameday-section" id="matchtrak-status" aria-labelledby="matchtrak-status-title">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Schedule Publication Control
+                </span>
+
+                <h2 class="r154-gameday-section-title" id="matchtrak-status-title">
+                    MatchTrak Status
+                </h2>
+
+                <p class="r154-gameday-section-intro">
+                    Game schedules and referee reservations will become
+                    available after the Fall competitions are finalized.
+                </p>
+
+            </div>
+
+
+            <div class="r154-gameday-status-grid">
+
+                <article class="r154-gameday-status-card">
+
+                    <span class="r154-gameday-status-label">
+                        Current Status
+                    </span>
+
+                    <h3>
+                        Fall Schedules Are Pending
+                    </h3>
+
+                    <p>
+                        Referees should complete training, compliance, annual
+                        rule review and equipment preparation while waiting for
+                        the new competition links.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-status-card">
+
+                    <span class="r154-gameday-status-label">
+                        When Published
+                    </span>
+
+                    <h3>
+                        Approved Links Will Appear Here
+                    </h3>
+
+                    <p>
+                        This page will identify the correct competition and
+                        explain which divisions or programs use each link.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-status-card">
+
+                    <span class="r154-gameday-status-label">
+                        Avoid Errors
+                    </span>
+
+                    <h3>
+                        Do Not Reuse an Old Competition
+                    </h3>
+
+                    <p>
+                        A prior season’s MatchTrak competition may contain old
+                        teams, divisions, dates, fields or assignment records.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-status-alert">
+
+                <strong>
+                    Bookmark Game Day Tools—not an old MatchTrak schedule.
+                </strong>
+
+                When the Fall links are available, this page will remain the
+                Region 154 source for reaching the current competitions.
+
+            </div>
+
+
+            <div class="r154-gameday-button-row">
+
+                <a class="r154-gameday-button" href="/Default.aspx?tabid=976489">
+                    Complete Referee Training
+                </a>
+
+                <a class="r154-gameday-button r154-gameday-button-secondary" href="/Default.aspx?tabid=976492">
+                    Review Rules &amp; Learning
+                </a>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             ASSIGNMENT READINESS
+             ================================================================ -->
+
+        <section class="r154-gameday-section r154-gameday-section-alt" id="assignment-readiness" aria-labelledby="assignment-readiness-title">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Review Before Reserving a Match
+                </span>
+
+                <h2 class="r154-gameday-section-title" id="assignment-readiness-title">
+                    Is This Assignment Appropriate?
+                </h2>
+
+                <p class="r154-gameday-section-intro">
+                    Select assignments that match your current certification,
+                    experience, fitness, confidence and available support.
+                </p>
+
+            </div>
+
+
+            <div class="r154-gameday-steps">
+
+                <article class="r154-gameday-step">
+
+                    <div class="r154-gameday-step-number-wrap">
+                        <span class="r154-gameday-step-number">1</span>
+                    </div>
+
+                    <div class="r154-gameday-step-content">
+
+                        <span class="r154-gameday-step-label">
+                            Eligibility
+                        </span>
+
+                        <h3>
+                            Confirm Your Volunteer Status
+                        </h3>
+
+                        <p>
+                            Verify that your current application, screening,
+                            safety training and referee certification are
+                            complete before accepting an assignment.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-gameday-step">
+
+                    <div class="r154-gameday-step-number-wrap">
+                        <span class="r154-gameday-step-number">2</span>
+                    </div>
+
+                    <div class="r154-gameday-step-content">
+
+                        <span class="r154-gameday-step-label">
+                            Role
+                        </span>
+
+                        <h3>
+                            Confirm Center or Assistant Referee
+                        </h3>
+
+                        <p>
+                            Review the specific position you are reserving.
+                            Center Referee and Assistant Referee assignments
+                            require different preparation and responsibilities.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-gameday-step">
+
+                    <div class="r154-gameday-step-number-wrap">
+                        <span class="r154-gameday-step-number">3</span>
+                    </div>
+
+                    <div class="r154-gameday-step-content">
+
+                        <span class="r154-gameday-step-label">
+                            Competition
+                        </span>
+
+                        <h3>
+                            Review the Division and Program
+                        </h3>
+
+                        <p>
+                            Confirm the age group, competition, field, match
+                            length and local procedures before reserving the
+                            assignment.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-gameday-step">
+
+                    <div class="r154-gameday-step-number-wrap">
+                        <span class="r154-gameday-step-number">4</span>
+                    </div>
+
+                    <div class="r154-gameday-step-content">
+
+                        <span class="r154-gameday-step-label">
+                            Experience
+                        </span>
+
+                        <h3>
+                            Match the Assignment to Your Development
+                        </h3>
+
+                        <p>
+                            New or developing referees should select matches
+                            appropriate for their experience and request a
+                            mentor or experienced crew when needed.
+                        </p>
+
+                        <div class="r154-gameday-step-note">
+                            Youth referees and newly certified adults should
+                            not feel pressured to accept an assignment beyond
+                            their current comfort level.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-gameday-step">
+
+                    <div class="r154-gameday-step-number-wrap">
+                        <span class="r154-gameday-step-number">5</span>
+                    </div>
+
+                    <div class="r154-gameday-step-content">
+
+                        <span class="r154-gameday-step-label">
+                            Availability
+                        </span>
+
+                        <h3>
+                            Allow Enough Time Between Matches
+                        </h3>
+
+                        <p>
+                            Include travel, parking, field check-in, pregame
+                            inspection, referee-crew discussion and possible
+                            delays when reviewing your schedule.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-gameday-step">
+
+                    <div class="r154-gameday-step-number-wrap">
+                        <span class="r154-gameday-step-number">6</span>
+                    </div>
+
+                    <div class="r154-gameday-step-content">
+
+                        <span class="r154-gameday-step-label">
+                            Confirmation
+                        </span>
+
+                        <h3>
+                            Recheck the Assignment Before Game Day
+                        </h3>
+
+                        <p>
+                            Confirm that the assignment still appears in
+                            MatchTrak and review any field, time, crew or
+                            competition changes before leaving for the match.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             GAME-DAY WORKFLOW
+             ================================================================ -->
+
+        <section class="r154-gameday-section" id="game-day-workflow" aria-labelledby="game-day-workflow-title">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    From Arrival Through the Final Report
+                </span>
+
+                <h2 class="r154-gameday-section-title" id="game-day-workflow-title">
+                    Game-Day Referee Workflow
+                </h2>
+
+            </div>
+
+
+            <div class="r154-gameday-workflow-grid">
+
+                <article class="r154-gameday-workflow-card">
+
+                    <span class="r154-gameday-workflow-number">
+                        Stage 01
+                    </span>
+
+                    <h3>
+                        Arrive and Check In
+                    </h3>
+
+                    <p>
+                        Arrive early enough to locate the field, meet the crew
+                        and complete the current field check-in process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-workflow-card">
+
+                    <span class="r154-gameday-workflow-number">
+                        Stage 02
+                    </span>
+
+                    <h3>
+                        Inspect and Prepare
+                    </h3>
+
+                    <p>
+                        Inspect the field, goals, nets, markings, ball,
+                        equipment and player safety conditions.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-workflow-card">
+
+                    <span class="r154-gameday-workflow-number">
+                        Stage 03
+                    </span>
+
+                    <h3>
+                        Conduct the Match
+                    </h3>
+
+                    <p>
+                        Work as a crew, communicate clearly, protect the
+                        players and apply the applicable Laws and local rules.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-workflow-card">
+
+                    <span class="r154-gameday-workflow-number">
+                        Stage 04
+                    </span>
+
+                    <h3>
+                        Complete Records
+                    </h3>
+
+                    <p>
+                        Finish the game card, MatchTrak record and any required
+                        misconduct, injury or incident reports.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-workflow-note">
+
+                <strong>
+                    Follow the instructions for the specific field and
+                    competition.
+                </strong>
+
+                Check-in, game-card collection and reporting procedures may
+                vary. Ask the Center Referee, Field Marshal or Region referee
+                representative when the procedure is unclear.
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             GAME-DAY CHECKLIST
+             ================================================================ -->
+
+        <section class="r154-gameday-section r154-gameday-section-alt">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Pack and Review Before Leaving Home
+                </span>
+
+                <h2 class="r154-gameday-section-title">
+                    Referee Game-Day Checklist
+                </h2>
+
+            </div>
+
+
+            <div class="r154-gameday-check-grid">
+
+                <div class="r154-gameday-check-row">
+                    My assignment still appears correctly in MatchTrak.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I confirmed the field, kickoff time and referee position.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I reviewed the age-group and competition rules.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I have the approved referee shirt and badge.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I packed black shorts, socks and appropriate footwear.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I packed a whistle and backup whistle.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I packed a watch and backup timing method.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I packed referee cards and a writing tool.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I packed flags when my role or crew requires them.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I packed water and weather-appropriate protection.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I know the current field check-in procedure.
+                </div>
+
+                <div class="r154-gameday-check-row">
+                    I know who to contact if a safety problem occurs.
+                </div>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             CREW AND COVERAGE
+             ================================================================ -->
+
+        <section class="r154-gameday-section" id="crew-coverage" aria-labelledby="crew-coverage-title">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Volunteers and NOCRA Officials Working Together
+                </span>
+
+                <h2 class="r154-gameday-section-title" id="crew-coverage-title">
+                    Region 154 Referee Crew and Coverage
+                </h2>
+
+                <p class="r154-gameday-section-intro">
+                    Referee-crew responsibilities vary by age group,
+                    competition, program and season.
+                </p>
+
+            </div>
+
+
+            <div class="r154-gameday-coverage-grid">
+
+                <article class="r154-gameday-coverage-card">
+
+                    <span class="r154-gameday-coverage-label">
+                        Center Referee
+                    </span>
+
+                    <h3>
+                        Responsible for the Match
+                    </h3>
+
+                    <p>
+                        The Center Referee leads the crew, conducts the pregame
+                        discussion, manages the match and determines which
+                        reports or follow-up actions are required.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-coverage-card">
+
+                    <span class="r154-gameday-coverage-label">
+                        Assistant Referees
+                    </span>
+
+                    <h3>
+                        Essential Members of the Crew
+                    </h3>
+
+                    <p>
+                        Assistant Referees support touchline, offside,
+                        substitution and misconduct decisions while
+                        communicating with the Center Referee.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-coverage-card">
+
+                    <span class="r154-gameday-coverage-label">
+                        NOCRA Partnership
+                    </span>
+
+                    <h3>
+                        Additional Center Coverage
+                    </h3>
+
+                    <p>
+                        Region 154 partners with NOCRA for many competitive
+                        Center Referee assignments while AYSO volunteers remain
+                        essential for crew coverage.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-coverage-warning">
+
+                <strong>
+                    Confirm the exact crew requirement for the match.
+                </strong>
+
+                Do not assume every division or competition uses the same
+                Center Referee and Assistant Referee model. Review the current
+                competition listing and approved seasonal guidance.
+
+            </div>
+
+
+            <div class="r154-gameday-button-row">
+
+                <a class="r154-gameday-button" href="/Default.aspx?tabid=866788">
+                    Review Current NOCRA Guidelines
+                </a>
+
+                <a class="r154-gameday-button r154-gameday-button-secondary" href="/Default.aspx?tabid=976493">
+                    Advancement &amp; Paid Refereeing
+                </a>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             REFEREE CREDIT
+             ================================================================ -->
+
+        <section class="r154-gameday-section r154-gameday-section-alt" id="credit-reports" aria-labelledby="credit-reports-title">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Complete the Assignment Record Correctly
+                </span>
+
+                <h2 class="r154-gameday-section-title" id="credit-reports-title">
+                    Referee Credit and Team Support
+                </h2>
+
+                <p class="r154-gameday-section-intro">
+                    Seasonal referee-credit rules may change. Use the current
+                    season’s approved point-program page for values, deadlines
+                    and team requirements.
+                </p>
+
+            </div>
+
+
+            <div class="r154-gameday-two-grid">
+
+                <article class="r154-gameday-panel-card">
+
+                    <div class="r154-gameday-panel-header">
+
+                        <span class="r154-gameday-panel-label">
+                            Before and During the Match
+                        </span>
+
+                        <h3>
+                            Protect the Assignment Record
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-gameday-panel-body">
+
+                        <div class="r154-gameday-action-list">
+
+                            <div class="r154-gameday-action-row">
+                                Reserve the correct MatchTrak referee position.
+                            </div>
+
+                            <div class="r154-gameday-action-row">
+                                Confirm the team or program receiving credit
+                                when the current process requires it.
+                            </div>
+
+                            <div class="r154-gameday-action-row">
+                                Complete the approved field check-in procedure.
+                            </div>
+
+                            <div class="r154-gameday-action-row">
+                                Notify referee leadership promptly when the
+                                assignment record is incorrect.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-gameday-panel-card">
+
+                    <div class="r154-gameday-panel-header">
+
+                        <span class="r154-gameday-panel-label">
+                            After the Match
+                        </span>
+
+                        <h3>
+                            Verify and Correct Problems Promptly
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-gameday-panel-body">
+
+                        <div class="r154-gameday-action-list">
+
+                            <div class="r154-gameday-action-row">
+                                Confirm that the completed assignment appears
+                                under the correct referee.
+                            </div>
+
+                            <div class="r154-gameday-action-row">
+                                Confirm that the team-credit information is
+                                correct when applicable.
+                            </div>
+
+                            <div class="r154-gameday-action-row">
+                                Retain relevant screenshots until the record is
+                                confirmed.
+                            </div>
+
+                            <div class="r154-gameday-action-row">
+                                Request corrections before the current
+                                seasonal deadline.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-season-note">
+
+                <strong>
+                    Check the season shown on the point-program page.
+                </strong>
+
+                Do not rely on point values, deadlines or team requirements
+                from a prior season.
+
+            </div>
+
+
+            <div class="r154-gameday-button-row">
+
+                <a class="r154-gameday-button r154-gameday-button-red" href="/Default.aspx?tabid=866792">
+                    Referee &amp; Volunteer Point Program
+                </a>
+
+                <a class="r154-gameday-button r154-gameday-button-secondary" href="mailto:Cypress154RRA@gmail.com">
+                    Request Assignment Help
+                </a>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             GAME CARDS AND REPORTS
+             ================================================================ -->
+
+        <section class="r154-gameday-section">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Finish the Administrative Work
+                </span>
+
+                <h2 class="r154-gameday-section-title">
+                    Game Cards, Reports and Incidents
+                </h2>
+
+                <p class="r154-gameday-section-intro">
+                    The Center Referee should confirm the required postgame
+                    process before leaving the field.
+                </p>
+
+            </div>
+
+
+            <div class="r154-gameday-report-grid">
+
+                <article class="r154-gameday-report-card">
+
+                    <span class="r154-gameday-report-label">
+                        Routine Completion
+                    </span>
+
+                    <h3>
+                        Finish the Game Card
+                    </h3>
+
+                    <p>
+                        Confirm the score and required match information, then
+                        follow the current field-specific collection or
+                        submission procedure.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-report-card">
+
+                    <span class="r154-gameday-report-label">
+                        Misconduct or Serious Event
+                    </span>
+
+                    <h3>
+                        Submit the Required Report
+                    </h3>
+
+                    <p>
+                        Record factual details promptly when a send-off,
+                        serious injury, match termination or other reportable
+                        event occurs.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-report-card">
+
+                    <span class="r154-gameday-report-label">
+                        Follow-Up
+                    </span>
+
+                    <h3>
+                        Preserve Relevant Information
+                    </h3>
+
+                    <p>
+                        Retain the game card, notes, MatchTrak information and
+                        any requested documentation until referee leadership
+                        confirms the matter is complete.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-report-warning">
+
+                <strong>
+                    Do not publish or assume one permanent card-drop location.
+                </strong>
+
+                Until the field-specific process is confirmed, ask the Center
+                Referee, Field Marshal or Region representative where the
+                completed card must be delivered.
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             SAFETY AND SUPPORT
+             ================================================================ -->
+
+        <section class="r154-gameday-section r154-gameday-section-alt" id="safety-support" aria-labelledby="safety-support-title">
+
+            <div class="r154-gameday-protection-panel">
+
+                <span class="r154-gameday-eyebrow">
+                    Referee Safety Comes First
+                </span>
+
+                <h2 id="safety-support-title">
+                    Referee Protection and Game-Day Escalation
+                </h2>
+
+                <p>
+                    Referees must not be threatened, intimidated, insulted or
+                    aggressively confronted before, during or after a match.
+                    Concerns about decisions must be handled through the
+                    approved Region process.
+                </p>
+
+                <p>
+                    Youth referees require immediate adult protection and
+                    should never be expected to manage an aggressive adult
+                    without support.
+                </p>
+
+
+                <div class="r154-gameday-protection-highlight">
+
+                    When an interaction becomes unsafe, stop the confrontation,
+                    remain with the referee crew and seek a Field Marshal or
+                    Region representative.
+
+                </div>
+
+
+                <div class="r154-gameday-protection-steps">
+
+                    <div class="r154-gameday-protection-step">
+
+                        <span class="r154-gameday-protection-number">
+                            1. Do Not Debate
+                        </span>
+
+                        Avoid an extended argument with a coach, player or
+                        spectator.
+
+                    </div>
+
+
+                    <div class="r154-gameday-protection-step">
+
+                        <span class="r154-gameday-protection-number">
+                            2. Notify the Crew
+                        </span>
+
+                        Tell the Center Referee or another experienced official.
+
+                    </div>
+
+
+                    <div class="r154-gameday-protection-step">
+
+                        <span class="r154-gameday-protection-number">
+                            3. Seek Region Support
+                        </span>
+
+                        Contact the Field Marshal or Region representative.
+
+                    </div>
+
+
+                    <div class="r154-gameday-protection-step">
+
+                        <span class="r154-gameday-protection-number">
+                            4. Report the Event
+                        </span>
+
+                        Notify referee leadership and complete the required
+                        report.
+
+                    </div>
+
+                </div>
+
+
+                <div class="r154-gameday-protection-actions">
+
+                    <a class="r154-gameday-button r154-gameday-button-red" href="/Default.aspx?tabid=974653">
+                        Referee Abuse Prevention
+                    </a>
+
+                    <a class="r154-gameday-button" href="/Default.aspx?tabid=976488">
+                        Youth Referee Protection
+                    </a>
+
+                    <a class="r154-gameday-button r154-gameday-button-secondary" href="mailto:Cypress154RRA@gmail.com">
+                        Contact the RRA
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FAQ
+             ================================================================ -->
+
+        <section class="r154-gameday-section">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Common Game-Day Questions
+                </span>
+
+                <h2 class="r154-gameday-section-title">
+                    Game Day Tools FAQ
+                </h2>
+
+            </div>
+
+
+            <div class="r154-gameday-faq-grid">
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        When will Fall MatchTrak schedules be available?
+                    </h3>
+
+                    <p>
+                        They will be added after the Fall competitions are
+                        finalized. Game Day Tools will contain the approved
+                        links.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        May I use last season’s MatchTrak link?
+                    </h3>
+
+                    <p>
+                        No. Old competitions may contain outdated teams,
+                        divisions, fields and assignment records.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        How early should I arrive?
+                    </h3>
+
+                    <p>
+                        Arrive early enough to check in, inspect the field,
+                        meet the crew and conduct the required pregame duties.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        May a new referee accept any open assignment?
+                    </h3>
+
+                    <p>
+                        Select an assignment appropriate for your certification,
+                        experience and available mentoring.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        Does NOCRA replace volunteer referees?
+                    </h3>
+
+                    <p>
+                        No. Region 154 continues to rely on certified AYSO
+                        volunteers for Assistant Referee and eligible Center
+                        Referee assignments.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        How does my team receive referee credit?
+                    </h3>
+
+                    <p>
+                        Follow the current MatchTrak reservation, team-
+                        identification and field check-in process shown for the
+                        season.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        Where do I submit the completed game card?
+                    </h3>
+
+                    <p>
+                        Follow the instructions for the field and competition.
+                        Ask the Field Marshal or Center Referee when uncertain.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        What events require a referee report?
+                    </h3>
+
+                    <p>
+                        Misconduct, serious injuries, match termination and
+                        other significant incidents may require formal
+                        reporting.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        What should I do when the referee crew is incomplete?
+                    </h3>
+
+                    <p>
+                        Notify the Center Referee, Field Marshal or Region
+                        referee representative before changing assignments or
+                        match procedures.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        What should a youth referee do when confronted?
+                    </h3>
+
+                    <p>
+                        Do not argue. Move toward the referee crew or another
+                        trusted adult and request immediate assistance.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        Where can I review the division rules?
+                    </h3>
+
+                    <p>
+                        Use Rules &amp; Learning for current Laws, Region
+                        guidance and Build-Out Line resources.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-gameday-faq-card">
+
+                    <h3>
+                        Who should I contact about an assignment problem?
+                    </h3>
+
+                    <p>
+                        Email the Regional Referee Administrator with the match,
+                        date, field, referee role and a description of the
+                        problem.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             RELATED RESOURCES
+             ================================================================ -->
+
+        <section class="r154-gameday-section r154-gameday-section-alt">
+
+            <div class="r154-gameday-section-heading">
+
+                <span class="r154-gameday-eyebrow">
+                    Continue Preparing for the Assignment
+                </span>
+
+                <h2 class="r154-gameday-section-title">
+                    Related Referee Resources
+                </h2>
+
+            </div>
+
+
+            <div class="r154-gameday-related-grid">
+
+                <a class="r154-gameday-related-link" href="/Default.aspx?tabid=976489">
+
+                    <span class="r154-gameday-related-title">
+                        Training &amp; Events
+                    </span>
+
+                    <span class="r154-gameday-related-description">
+                        Complete entry-level, continuing or badge-upgrade
+                        training.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-gameday-related-link" href="/Default.aspx?tabid=976492">
+
+                    <span class="r154-gameday-related-title">
+                        Rules &amp; Learning
+                    </span>
+
+                    <span class="r154-gameday-related-description">
+                        Review the Laws, local procedures and continuing-
+                        education resources.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-gameday-related-link" href="/Default.aspx?tabid=866792">
+
+                    <span class="r154-gameday-related-title">
+                        Referee Point Program
+                    </span>
+
+                    <span class="r154-gameday-related-description">
+                        Review the current seasonal team requirements, values
+                        and deadlines.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-gameday-related-link" href="/Default.aspx?tabid=974653">
+
+                    <span class="r154-gameday-related-title">
+                        Referee Protection
+                    </span>
+
+                    <span class="r154-gameday-related-description">
+                        Review Region 154 referee-abuse prevention and
+                        escalation guidance.
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="r154-gameday-backlink-wrap">
+
+                <a class="r154-gameday-backlink" href="#page-menu">
+                    Back to Game Day Tools Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAGE SEQUENCE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-gameday-sequence" aria-label="Referee guide page sequence">
+
+            <div class="r154-gameday-sequence-heading">
+                Continue Through the Referee Guide
+            </div>
+
+            <div class="r154-gameday-sequence-grid">
+
+                <a class="r154-gameday-sequence-item" href="/Default.aspx?tabid=976489">
+
+                    <span class="r154-gameday-sequence-direction">
+                        Previous Page
+                    </span>
+
+                    <span class="r154-gameday-sequence-page">
+                        Training &amp; Events
+                    </span>
+
+                </a>
+
+
+                <div class="r154-gameday-sequence-item r154-gameday-sequence-current" aria-current="page">
+
+                    <span class="r154-gameday-sequence-direction">
+                        Current Page
+                    </span>
+
+                    <span class="r154-gameday-sequence-page">
+                        Game Day Tools
+                    </span>
+
+                </div>
+
+
+                <a class="r154-gameday-sequence-item" href="/Default.aspx?tabid=976492">
+
+                    <span class="r154-gameday-sequence-direction">
+                        Next Page
+                    </span>
+
+                    <span class="r154-gameday-sequence-page">
+                        Rules &amp; Learning
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             FOOTER
+             ================================================================ -->
+
+        <footer class="r154-gameday-footer">
+
+            <div class="r154-gameday-footer-brand">
+                Cypress AYSO Region 154
+            </div>
+
+            <p>
+                Helping every referee arrive prepared, work as a team and
+                complete each assignment safely and responsibly.
+            </p>
+
+            <div class="r154-gameday-footer-links">
+
+                <a href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a href="mailto:Cypress154RRA@gmail.com">
+                    Contact the RRA
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ========================================================================
+     END PUBLIC-FACING GAME DAY TOOLS PAGE
+     ======================================================================== -->
