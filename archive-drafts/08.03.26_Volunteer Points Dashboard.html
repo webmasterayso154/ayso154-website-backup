@@ -1,0 +1,404 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   08.03.26_Volunteer Points Dashboard
+CMS Status:  Hidden / Inactive
+Audience:    [aud:volunteers] [aud:parents]
+Content:     [type:dashboard]
+Components:  [ui:card] [ui:table]
+Assets:      Looker Studio Embed / Google Sheets Source
+Notes:       Historical dashboard for volunteer point tracking.
+================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AYSO Region 154 — Volunteer Points Standings</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+/* =========================================================================
+   AYSO Region 154 — Volunteer Points Standings widget
+   Zero JavaScript. Selection is native radio inputs + CSS :has().
+   Paste everything from <style> through </div><!--/vp--> into the CMS.
+
+   TO SCALE PAST THE DEMO DATA: the three ENUMERATED BLOCKS below (marked
+   "GENERATED") must list every division id and team slug. Have Apps Script
+   emit those rule lists along with the markup.
+   ========================================================================= */
+
+:root{
+  --ink:      oklch(0.28 0.03 260);
+  --ink-2:    oklch(0.42 0.02 260);
+  --muted:    oklch(0.55 0.015 260);
+  --line:     oklch(0.92 0.008 260);
+  --line-2:   oklch(0.85 0.01 260);
+  --paper:    oklch(0.995 0.003 85);
+  --paper-2:  oklch(0.975 0.005 85);
+  --track:    oklch(0.915 0.008 260);
+  --good:     oklch(0.66 0.13 150);
+  --good-dim: oklch(0.83 0.07 150);
+  --good-ink: oklch(0.38 0.1 150);
+  --warn:     oklch(0.72 0.13 80);
+  --warn-ink: oklch(0.45 0.09 65);
+  --bad:      oklch(0.62 0.16 30);
+  --bad-ink:  oklch(0.46 0.14 30);
+  --dim:      0.32;                 /* opacity of non-selected teams */
+  --line-17:  65.4%;               /* 17 / 26 — the playoff threshold */
+}
+
+.vp *{box-sizing:border-box;}
+.vp{
+  max-width:480px; margin:0 auto; background:var(--paper);
+  border:1px solid oklch(0.89 0.008 260); border-radius:14px; overflow:hidden;
+  font-family:'Archivo',system-ui,-apple-system,sans-serif; color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+}
+.vp a{color:oklch(0.45 0.09 250); text-decoration:none;}
+.vp a:hover{color:oklch(0.35 0.09 250); text-decoration:underline;}
+.vp input[type=radio]{position:absolute; opacity:0; pointer-events:none;}
+.vp .mono{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+
+/* ---- masthead ---- */
+.vp-head{padding:16px 18px; background:var(--ink); color:var(--paper);}
+.vp-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; opacity:.65;}
+.vp-head h2{margin:3px 0 0; font-size:19px; font-weight:600;}
+.vp-head p{margin:6px 0 0; font-size:13px; line-height:1.45; opacity:.8;}
+
+/* ---- dropdowns ---- */
+.vp-pick{padding:14px 18px; display:flex; flex-direction:column; gap:10px; background:var(--paper-2); border-bottom:1px solid var(--line);}
+.vp-drop{border:1px solid var(--line-2); border-radius:9px; background:var(--paper); overflow:hidden;}
+.vp-drop > summary{display:flex; align-items:center; justify-content:space-between; gap:8px; padding:12px 14px; cursor:pointer; list-style:none;}
+.vp-drop > summary::-webkit-details-marker{display:none;}
+.vp-drop > summary .lab{display:flex; flex-direction:column; gap:2px;}
+.vp-drop > summary .cap{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);}
+.vp-drop > summary .val{font-size:15px; font-weight:600; min-height:20px;}
+.vp-drop > summary .act{font-size:12px; color:var(--muted);}
+.vp-list{max-height:210px; overflow:auto; border-top:1px solid var(--line);}
+.vp-opt{display:block; padding:11px 14px; font-size:14px; color:oklch(0.3 0.02 260); cursor:pointer; border-bottom:1px solid oklch(0.95 0.008 260);}
+.vp-opt:last-child{border-bottom:0;}
+.vp-opt:has(input:checked){background:oklch(0.94 0.008 260); font-weight:600;}
+.vp-ph{font-weight:500; color:var(--muted);}
+
+/* ---- progress bar with the fixed 17-point line ---- */
+.vp-bar{position:relative; height:14px; border-radius:3px; background:var(--track); overflow:hidden;}
+.vp-bar .fill{position:absolute; top:0; bottom:0; left:0; width:var(--fill,0%);}
+.vp-bar .bonus{position:absolute; top:0; bottom:0; left:var(--line-17); width:var(--over,0%); background:var(--good-dim);}
+.vp-bar::after{content:""; position:absolute; top:-1px; bottom:-1px; left:var(--line-17); width:2px; background:var(--ink);}
+.vp-bar.sm{height:8px; border-radius:2px;}
+.vp-barlab{position:relative; height:15px;}
+.vp-barlab span{position:absolute; left:var(--line-17); transform:translateX(-50%); font-family:'IBM Plex Mono',monospace; font-size:10px; color:oklch(0.5 0.02 260); white-space:nowrap;}
+.is-good .fill{background:var(--good);}
+.is-warn .fill{background:var(--warn);}
+.is-bad  .fill{background:var(--bad);}
+
+/* ---- verdict ---- */
+.vp-verdict{padding:20px 18px; border-bottom:1px solid var(--line);}
+.vp-verdict h3{margin:0; font-size:25px; font-weight:700; line-height:1.15; letter-spacing:-.02em; text-wrap:pretty;}
+.is-good h3{color:var(--good-ink);} .is-warn h3{color:var(--warn-ink);} .is-bad h3{color:var(--bad-ink);}
+.vp-score{display:flex; align-items:baseline; gap:8px; margin:12px 0; font-family:'IBM Plex Mono',monospace;}
+.vp-score b{font-size:32px; font-weight:500; letter-spacing:-.03em;}
+.vp-score span{font-size:14px; color:var(--muted);}
+.vp-cats{display:grid; grid-template-columns:1fr 1fr; gap:7px 12px; margin-top:12px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-2);}
+.vp-cats div{display:flex; justify-content:space-between;}
+.vp-cats .short{color:oklch(0.52 0.13 40);}
+.vp-note{margin-top:12px; padding:11px 13px; border-radius:9px; font-size:13px; line-height:1.5;}
+.is-warn .vp-note{background:oklch(0.97 0.02 80); color:oklch(0.42 0.05 60);}
+.is-bad  .vp-note{background:oklch(0.975 0.02 30); color:oklch(0.44 0.1 30);}
+.vp-empty{padding:22px 18px; font-size:15px; line-height:1.5; color:oklch(0.5 0.02 260); border-bottom:1px solid var(--line);}
+
+/* ---- standings ---- */
+.vp-secthead{padding:14px 18px 6px; display:flex; align-items:baseline; justify-content:space-between; font-size:14px; font-weight:600;}
+.vp-secthead .mono{font-size:11px; font-weight:400; color:var(--muted);}
+.vp-row{padding:11px 18px; border-top:1px solid oklch(0.94 0.008 260);}
+.vp-row:last-of-type{padding-bottom:16px;}
+.vp-row .top{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.vp-row .name{font-size:15px; font-weight:600;}
+.vp-row .pts{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink-2);}
+.vp-row .pts i{font-style:normal; color:oklch(0.65 0.015 260);}
+.vp-row .vp-bar{margin-top:7px;}
+
+/* ---- rules accordion ---- */
+.vp-rules{border-top:1px solid var(--line); background:var(--paper-2);}
+.vp-rules > summary{padding:14px 18px; font-size:13px; font-weight:600; color:oklch(0.35 0.02 260); cursor:pointer; list-style:none;}
+.vp-rules > summary::-webkit-details-marker{display:none;}
+.vp-rules .body{padding:0 18px 16px; display:flex; flex-direction:column; gap:8px; font-size:13px; line-height:1.5; color:oklch(0.45 0.02 260);}
+
+/* =========================== SELECTION LOGIC ============================ */
+/* Hidden until their controlling radio is checked. */
+.vp [data-dlbl], .vp [data-tlbl], .vp [data-verdict]{display:none;}
+
+/* --- GENERATED 1: hide everything not in the selected division --------- */
+.vp:has(#d-g8u:checked)  [data-div]:not([data-div="g8u"]),
+.vp:has(#d-b10u:checked) [data-div]:not([data-div="b10u"]),
+.vp:has(#d-b12u:checked) [data-div]:not([data-div="b12u"]){display:none !important;}
+
+/* --- GENERATED 2: reveal the checked division / team label + verdict --- */
+.vp:has(#d-g8u:checked)  [data-dlbl="g8u"],
+.vp:has(#d-b10u:checked) [data-dlbl="b10u"],
+.vp:has(#d-b12u:checked) [data-dlbl="b12u"],
+.vp:has(#t-alvarez:checked)   [data-tlbl="alvarez"],
+.vp:has(#t-burnett:checked)   [data-tlbl="burnett"],
+.vp:has(#t-chen:checked)      [data-tlbl="chen"],
+.vp:has(#t-delgado:checked)   [data-tlbl="delgado"],
+.vp:has(#t-garcia:checked)    [data-tlbl="garcia"],
+.vp:has(#t-mackay:checked)    [data-tlbl="mackay"],
+.vp:has(#t-nguyen:checked)    [data-tlbl="nguyen"],
+.vp:has(#t-whitfield:checked) [data-tlbl="whitfield"],
+.vp:has(#t-jones:checked)     [data-tlbl="jones"],
+.vp:has(#t-smith:checked)     [data-tlbl="smith"],
+.vp:has(#t-franco:checked)    [data-tlbl="franco"]{display:inline;}
+.vp:has(#t-alvarez:checked)   [data-verdict="alvarez"],
+.vp:has(#t-burnett:checked)   [data-verdict="burnett"],
+.vp:has(#t-chen:checked)      [data-verdict="chen"],
+.vp:has(#t-delgado:checked)   [data-verdict="delgado"],
+.vp:has(#t-garcia:checked)    [data-verdict="garcia"],
+.vp:has(#t-mackay:checked)    [data-verdict="mackay"],
+.vp:has(#t-nguyen:checked)    [data-verdict="nguyen"],
+.vp:has(#t-whitfield:checked) [data-verdict="whitfield"],
+.vp:has(#t-jones:checked)     [data-verdict="jones"],
+.vp:has(#t-smith:checked)     [data-verdict="smith"],
+.vp:has(#t-franco:checked)    [data-verdict="franco"]{display:block;}
+
+/* --- GENERATED 3: dim the teams that were not selected ----------------- */
+.vp:has(#t-alvarez:checked)   [data-team]:not([data-team="alvarez"]),
+.vp:has(#t-burnett:checked)   [data-team]:not([data-team="burnett"]),
+.vp:has(#t-chen:checked)      [data-team]:not([data-team="chen"]),
+.vp:has(#t-delgado:checked)   [data-team]:not([data-team="delgado"]),
+.vp:has(#t-garcia:checked)    [data-team]:not([data-team="garcia"]),
+.vp:has(#t-mackay:checked)    [data-team]:not([data-team="mackay"]),
+.vp:has(#t-nguyen:checked)    [data-team]:not([data-team="nguyen"]),
+.vp:has(#t-whitfield:checked) [data-team]:not([data-team="whitfield"]),
+.vp:has(#t-jones:checked)     [data-team]:not([data-team="jones"]),
+.vp:has(#t-smith:checked)     [data-team]:not([data-team="smith"]),
+.vp:has(#t-franco:checked)    [data-team]:not([data-team="franco"]){opacity:var(--dim);}
+
+/* --- GENERATED 4: hide "Choose your team" once a team in the selected
+       division is checked (one selector per division/team pair) --------- */
+.vp:has(#d-g8u:checked):has(#t-alvarez:checked)   .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-burnett:checked)   .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-chen:checked)      .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-delgado:checked)   .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-garcia:checked)    .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-mackay:checked)    .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-nguyen:checked)    .vp-ph,
+.vp:has(#d-g8u:checked):has(#t-whitfield:checked) .vp-ph,
+.vp:has(#d-b10u:checked):has(#t-jones:checked)    .vp-ph,
+.vp:has(#d-b10u:checked):has(#t-smith:checked)    .vp-ph,
+.vp:has(#d-b12u:checked):has(#t-franco:checked)   .vp-ph{display:none !important;}
+</style>
+</head>
+<body style="margin:0; padding:24px 12px; background:oklch(0.955 0.006 85);">
+
+<div class="vp">
+
+  <div class="vp-head">
+    <div class="vp-eyebrow">AYSO Region 154</div>
+    <h2>Volunteer Points Standings</h2>
+    <p>17 of 26 points qualifies a team for the Cypress Cup and playoffs.</p>
+  </div>
+
+  <!-- ========================= SELECTION ========================= -->
+  <div class="vp-pick">
+
+    <details class="vp-drop">
+      <summary>
+        <span class="lab">
+          <span class="cap">Division</span>
+          <span class="val"><span data-dlbl="g8u">Girls 8U</span><span data-dlbl="b10u">Boys 10U</span><span data-dlbl="b12u">Boys 12U</span></span>
+        </span>
+        <span class="act">Change</span>
+      </summary>
+      <div class="vp-list">
+        <label class="vp-opt">Girls 8U<input type="radio" name="division" id="d-g8u" checked=""></label>
+        <label class="vp-opt">Boys 10U<input type="radio" name="division" id="d-b10u"></label>
+        <label class="vp-opt">Boys 12U<input type="radio" name="division" id="d-b12u"></label>
+      </div>
+    </details>
+
+    <details class="vp-drop">
+      <summary>
+        <span class="lab">
+          <span class="cap">My team</span>
+          <span class="val"><span class="vp-ph">Choose your team</span><span data-tlbl="alvarez" data-div="g8u">Alvarez</span><span data-tlbl="burnett" data-div="g8u">Burnett</span><span data-tlbl="chen" data-div="g8u">Chen</span><span data-tlbl="delgado" data-div="g8u">Delgado</span><span data-tlbl="garcia" data-div="g8u">Garcia</span><span data-tlbl="mackay" data-div="g8u">Mackay</span><span data-tlbl="nguyen" data-div="g8u">Nguyen</span><span data-tlbl="whitfield" data-div="g8u">Whitfield</span><span data-tlbl="jones" data-div="b10u">Jones</span><span data-tlbl="smith" data-div="b10u">Smith</span><span data-tlbl="franco" data-div="b12u">Franco</span></span>
+        </span>
+        <span class="act">Change</span>
+      </summary>
+      <div class="vp-list">
+        <label class="vp-opt" data-div="g8u">Alvarez<input type="radio" name="team" id="t-alvarez"></label>
+        <label class="vp-opt" data-div="g8u">Burnett<input type="radio" name="team" id="t-burnett" checked=""></label>
+        <label class="vp-opt" data-div="g8u">Chen<input type="radio" name="team" id="t-chen"></label>
+        <label class="vp-opt" data-div="g8u">Delgado<input type="radio" name="team" id="t-delgado"></label>
+        <label class="vp-opt" data-div="g8u">Garcia<input type="radio" name="team" id="t-garcia"></label>
+        <label class="vp-opt" data-div="g8u">Mackay<input type="radio" name="team" id="t-mackay"></label>
+        <label class="vp-opt" data-div="g8u">Nguyen<input type="radio" name="team" id="t-nguyen"></label>
+        <label class="vp-opt" data-div="g8u">Whitfield<input type="radio" name="team" id="t-whitfield"></label>
+        <label class="vp-opt" data-div="b10u">Jones<input type="radio" name="team" id="t-jones"></label>
+        <label class="vp-opt" data-div="b10u">Smith<input type="radio" name="team" id="t-smith"></label>
+        <label class="vp-opt" data-div="b12u">Franco<input type="radio" name="team" id="t-franco"></label>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- ===================== VERDICT (one per team) ===================== -->
+  <div class="vp-empty vp-ph">Choose your team above to see whether it has qualified.</div>
+
+  <div class="vp-verdict is-good" data-verdict="alvarez" data-div="g8u">
+    <h3>Qualified — 4 points clear.</h3>
+    <div class="vp-score"><b>21</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:65.4%; --over:15.4%"><div class="fill"></div><div class="bonus"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>14/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>5/5</span></div><div><span>Picture</span><span>0/2</span></div></div>
+  </div>
+
+  <div class="vp-verdict is-warn" data-verdict="burnett" data-div="g8u">
+    <h3>Not qualified yet — 3 points to go.</h3>
+    <div class="vp-score"><b>14</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:53.8%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>9/17</span></div><div><span>Marshal</span><span>2/2</span></div><div class="short"><span>Friday</span><span>1/5</span></div><div><span>Picture</span><span>2/2</span></div></div>
+    <div class="vp-note">Still available: 8 referee points, 4 Friday setup points.</div>
+  </div>
+
+  <div class="vp-verdict is-good" data-verdict="chen" data-div="g8u">
+    <h3>Qualified — 1 point clear.</h3>
+    <div class="vp-score"><b>18</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:65.4%; --over:3.8%"><div class="fill"></div><div class="bonus"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>12/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>2/5</span></div><div><span>Picture</span><span>2/2</span></div></div>
+  </div>
+
+  <div class="vp-verdict is-warn" data-verdict="delgado" data-div="g8u">
+    <h3>Not qualified yet — 5 points to go.</h3>
+    <div class="vp-score"><b>12</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:46.2%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>8/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>2/5</span></div><div class="short"><span>Picture</span><span>0/2</span></div></div>
+    <div class="vp-note">Still available: 9 referee points, 3 Friday setup points, 2 Picture Day points.</div>
+  </div>
+
+  <div class="vp-verdict is-bad" data-verdict="garcia" data-div="g8u">
+    <h3>Not qualified — 11 points to go.</h3>
+    <div class="vp-score"><b>6</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:23.1%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div class="short"><span>Referee</span><span>4/17</span></div><div class="short"><span>Marshal</span><span>0/2</span></div><div><span>Friday</span><span>2/5</span></div><div class="short"><span>Picture</span><span>0/2</span></div></div>
+    <div class="vp-note">Still available: 13 referee points, 2 field marshal, 3 Friday setup, 2 Picture Day.</div>
+  </div>
+
+  <div class="vp-verdict is-bad" data-verdict="mackay" data-div="g8u">
+    <h3>Not qualified — 13 points to go.</h3>
+    <div class="vp-score"><b>4</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:15.4%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div class="short"><span>Referee</span><span>2/17</span></div><div><span>Marshal</span><span>2/2</span></div><div class="short"><span>Friday</span><span>0/5</span></div><div class="short"><span>Picture</span><span>0/2</span></div></div>
+    <div class="vp-note">Still available: 15 referee points, 5 Friday setup, 2 Picture Day.</div>
+  </div>
+
+  <div class="vp-verdict is-good" data-verdict="nguyen" data-div="g8u">
+    <h3>Qualified — exactly at the line.</h3>
+    <div class="vp-score"><b>17</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:65.4%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>10/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>3/5</span></div><div><span>Picture</span><span>2/2</span></div></div>
+  </div>
+
+  <div class="vp-verdict is-bad" data-verdict="whitfield" data-div="g8u">
+    <h3>Not qualified — 8 points to go.</h3>
+    <div class="vp-score"><b>9</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:34.6%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div class="short"><span>Referee</span><span>5/17</span></div><div><span>Marshal</span><span>2/2</span></div><div class="short"><span>Friday</span><span>0/5</span></div><div><span>Picture</span><span>2/2</span></div></div>
+    <div class="vp-note">Still available: 12 referee points, 5 Friday setup points.</div>
+  </div>
+
+  <div class="vp-verdict is-good" data-verdict="jones" data-div="b10u">
+    <h3>Qualified — 1 point clear.</h3>
+    <div class="vp-score"><b>18</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:65.4%; --over:3.8%"><div class="fill"></div><div class="bonus"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>12/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>2/5</span></div><div><span>Picture</span><span>2/2</span></div></div>
+  </div>
+
+  <div class="vp-verdict is-warn" data-verdict="smith" data-div="b10u">
+    <h3>Not qualified yet — 5 points to go.</h3>
+    <div class="vp-score"><b>12</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:46.2%"><div class="fill"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>8/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>2/5</span></div><div class="short"><span>Picture</span><span>0/2</span></div></div>
+    <div class="vp-note">Still available: 9 referee points, 3 Friday setup points, 2 Picture Day points.</div>
+  </div>
+
+  <div class="vp-verdict is-good" data-verdict="franco" data-div="b12u">
+    <h3>Qualified — 4 points clear.</h3>
+    <div class="vp-score"><b>21</b><span>of 17 needed · 26 possible</span></div>
+    <div class="vp-bar" style="--fill:65.4%; --over:15.4%"><div class="fill"></div><div class="bonus"></div></div>
+    <div class="vp-barlab"><span>17 · playoff line</span></div>
+    <div class="vp-cats"><div><span>Referee</span><span>14/17</span></div><div><span>Marshal</span><span>2/2</span></div><div><span>Friday</span><span>5/5</span></div><div><span>Picture</span><span>0/2</span></div></div>
+  </div>
+
+  <!-- ======================= DIVISION STANDINGS ======================= -->
+  <div class="vp-secthead"><span>Division standings</span><span class="mono">A–Z</span></div>
+
+  <div class="vp-row is-good" data-div="g8u" data-team="alvarez">
+    <div class="top"><span class="name">Alvarez</span><span class="pts">21<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:65.4%; --over:15.4%"><div class="fill"></div><div class="bonus"></div></div>
+  </div>
+  <div class="vp-row is-warn" data-div="g8u" data-team="burnett">
+    <div class="top"><span class="name">Burnett</span><span class="pts">14<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:53.8%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-good" data-div="g8u" data-team="chen">
+    <div class="top"><span class="name">Chen</span><span class="pts">18<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:65.4%; --over:3.8%"><div class="fill"></div><div class="bonus"></div></div>
+  </div>
+  <div class="vp-row is-warn" data-div="g8u" data-team="delgado">
+    <div class="top"><span class="name">Delgado</span><span class="pts">12<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:46.2%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-bad" data-div="g8u" data-team="garcia">
+    <div class="top"><span class="name">Garcia</span><span class="pts">6<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:23.1%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-bad" data-div="g8u" data-team="mackay">
+    <div class="top"><span class="name">Mackay</span><span class="pts">4<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:15.4%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-good" data-div="g8u" data-team="nguyen">
+    <div class="top"><span class="name">Nguyen</span><span class="pts">17<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:65.4%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-bad" data-div="g8u" data-team="whitfield">
+    <div class="top"><span class="name">Whitfield</span><span class="pts">9<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:34.6%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-good" data-div="b10u" data-team="jones">
+    <div class="top"><span class="name">Jones</span><span class="pts">18<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:65.4%; --over:3.8%"><div class="fill"></div><div class="bonus"></div></div>
+  </div>
+  <div class="vp-row is-warn" data-div="b10u" data-team="smith">
+    <div class="top"><span class="name">Smith</span><span class="pts">12<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:46.2%"><div class="fill"></div></div>
+  </div>
+  <div class="vp-row is-good" data-div="b12u" data-team="franco">
+    <div class="top"><span class="name">Franco</span><span class="pts">21<i>/26</i></span></div>
+    <div class="vp-bar sm" style="--fill:65.4%; --over:15.4%"><div class="fill"></div><div class="bonus"></div></div>
+  </div>
+
+  <!-- ============================= RULES ============================= -->
+  <details class="vp-rules">
+    <summary>How points work &amp; category caps</summary>
+    <div class="body">
+      <div><strong>Referee — max 17.</strong> Roster allocation up to 5, MatchTrak early coverage 2, field check-ins up to 10.</div>
+      <div><strong>Field marshal — max 2.</strong> Two completed shifts per team.</div>
+      <div><strong>Friday setup — max 5.</strong> Season-wide Friday setup check-ins.</div>
+      <div><strong>Picture Picnic Day — max 2.</strong> Event volunteer shifts.</div>
+      <div><a href="/Portals/14837/docs/2026/2026%20Referee%20and%20Volunteer%20Point%20System%20flyer.pdf" target="_blank" rel="noopener">Official rules (PDF)</a></div>
+    </div>
+  </details>
+
+</div><!--/vp-->
+
+
+</body></html>
