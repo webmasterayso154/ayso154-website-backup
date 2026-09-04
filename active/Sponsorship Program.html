@@ -1,0 +1,203 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   Sponsorship Program
+CMS Status:  Live
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:policy] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:table] [ui:callout]
+Assets:      2026 sponsorship packet.pdf
+Notes:       Live sponsorship page for Cypress AYSO Region 154 for Fall 2026, containing download links for the official sponsorship packet, business sponsor benefits, online payment links, submission guidelines, in-person drop-off dates (Parent Meetings and Coach/Team Manager Meeting), and coordinator contact info for Mary Kamhi.
+================================================================================
+-->
+
+<style>
+    /* Makes the jump-links scroll smoothly */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* ----- Main Container ----- */
+    .sponsorship-page-container {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    /* ----- Reusable "Info Card" Style ----- */
+    .info-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    /* ----- Navigation Hub at the top ----- */
+    #navigation-hub { 
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .navigation-buttons {
+        display: flex; 
+        justify-content: center;
+        gap: 15px; 
+        margin-top: 15px;
+    }
+
+    /* Styles for the two navigation buttons */
+    .nav-button {
+        display: block;
+        flex: 1; 
+        max-width: 300px;
+        background-color: #f0f0f0;
+        color: #003366 !important;
+        border: 1px solid #ccc;
+        padding: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+    .nav-button:hover {
+        background-color: #e0e0e0;
+        border-color: #999;
+    }
+
+    /* ----- Main "Download Form" Button ----- */
+    .primary-download-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        background-color: #007bff; 
+        color: #ffffff !important;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .primary-download-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* ----- Section-Specific Styles ----- */
+    .section-title {
+        text-align: center;
+        color: #003366;
+        margin-top: 40px; 
+        padding-top: 20px; 
+        margin-bottom: 20px;
+        border-top: 2px solid #eee;
+    }
+    .info-card h3 {
+        margin-top: 0;
+        color: #003366;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    .info-card ul li {
+        margin-bottom: 10px;
+    }
+    .date-list li { 
+        list-style-type: none; 
+        padding-left: 0; 
+    } 
+
+    /* ----- Helper Styles ----- */
+    code {
+        background-color: #e9e9e9; 
+        padding: 3px 6px; 
+        border-radius: 4px; 
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .back-to-top-link {
+        display: block; 
+        text-align: right; 
+        margin-top: 15px; 
+        font-size: 0.9em; 
+        color: #007bff;
+        text-decoration: none;
+    }
+    .back-to-top-link:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<!-- ----- HTML CONTENT ----- -->
+<div class="sponsorship-page-container">
+
+    <!-- NAVIGATION HUB & PRIMARY DOWNLOAD -->
+    <div id="navigation-hub" class="info-card">
+        <h3>Fall 2026 Sponsorship Form</h3>
+        <p>Thank you for your interest in supporting AYSO Cypress! The first step for everyone is to download the official form.</p>
+        <a href="/Portals/14837/docs/2026/2026%20sponsorship%20packet.pdf" class="primary-download-button" target="_blank">Download Sponsorship Form (PDF)</a>
+        
+        <p style="margin-top:25px; margin-bottom: 10px;">Then, find your role below for specific instructions:</p>
+        <div class="navigation-buttons">
+            <a href="#sponsors" class="nav-button">For Business Sponsors</a>
+            <a href="#parents" class="nav-button">For Parents &amp; Coaches</a>
+        </div>
+    </div>
+
+
+    <!-- SECTION 1: BUSINESS SPONSORS -->
+    <div id="sponsors" class="section-container">
+        <h2 class="section-title">For our Business &amp; Community Sponsors</h2>
+        <div class="info-card">
+            <h3>Sponsor Benefits</h3>
+            <p>Your contribution of <strong>$150.00</strong> makes a huge difference! As a thank you, sponsors receive:</p>
+            <ul>
+                <li>A commemorative plaque with the team's picture.</li>
+                <li>Your business name featured on our website for the 2026 season.</li>
+                <li><strong>Bonus:</strong> Teams with a 3rd sponsor get a pizza party!  🍕🎉</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h3>Submission Guidelines</h3>
+            <p><strong>Step 1:</strong> Complete the Sponsorship form (linked above) and email to the AYSO Region 154 Sponsorship Coordinator.</p>
+            <p><strong>Step 2:</strong> Submit your payment online or via check (Check payment instructions in Sponsorship Form).</p>
+            <p><strong><a href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e" target="_blank">Online Payment Link</a></strong></p>
+            <br>
+            <p>To ensure your sponsorship is processed correctly, please follow these guidelines when emailing your form to <a href="mailto:sponsorshipayso154@gmail.com">sponsorshipayso154@gmail.com</a>.</p>
+            <ul>
+                <li><strong>Email Subject Line:</strong> <code>Sponsorship for (Division) (Coach's Last Name)</code></li>
+                <li><strong>File Naming:</strong> <code>(Division)_(Coach's Last Name)_(Payment Type)</code></li>
+            </ul>
+            <a href="#navigation-hub" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+    
+
+    <!-- SECTION 2: PARENTS & COACHES -->
+    <div id="parents" class="section-container">
+        <h2 class="section-title">Sponsorship Info for Parents &amp; Coaches</h2>
+        <div class="info-card">
+            <h3>Form Update &amp; Instructions</h3>
+            <p>A friendly update regarding team sponsorships. We have updated our 2026 form for more clarity. If you are still working on securing your sponsorship, please use the new version available at the top of this page.</p>
+            <p><strong>If your team has already submitted a form, no other action is needed.</strong> Thank you for your speediness!</p>
+        </div>
+        <div class="info-card">
+            <h3>In-Person Form Drop-Off</h3>
+            <p>If you prefer to drop off your form and payment in person, we have several dates available:</p>
+            <ul class="date-list"><li><strong>Parent Meetings - July 27-29</strong></li><li><strong>Coach &amp; Team Manager Meeting - August 6th</strong></li></ul>
+            <a href="#navigation-hub" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+
+    <!-- SECTION 3: CONTACT INFORMATION -->
+    <div class="section-container">
+        <div class="info-card" style="text-align: center; border-color: #003366; background-color: #eaf1fa;">
+            <h3>Need Help?</h3>
+            <p>If you have any questions regarding the sponsorship process, forms, or payments, please reach out to our Coordinator, <strong>Mary Kamhi</strong>.</p>
+            <p><strong>Email:</strong> <a href="mailto:purchaserayso154@gmail.com">purchaserayso154@gmail.com</a></p>
+        </div>
+    </div>
+
+</div>
