@@ -1,0 +1,1460 @@
+<!--
+============================================================================
+AYSO REGION 154 – FALL 2026 COACH CENTRAL
+CMS-SAFE SINGLE-FILE HTML/CSS (NO JAVASCRIPT)
+
+VERSION CONTROL
+v4.4.0 - 2026-08-07 - Professional Visual Redesign & Data Sync:
+- Re-architected design system: modernized card layouts, crisp typography, 
+  and polished brand elevation.
+- Fixed border-radius scaling issues on information cards and step modules.
+- Embedded live Fall 2026 Orientation PDF link.
+- Fully synchronized all PowerPoint source data across all modules.
+============================================================================
+-->
+
+<style>
+/* ====================================================================== */
+/* AYSO REGION 154 COACH CENTRAL — SCOPED DESIGN SYSTEM                   */
+/* ====================================================================== */
+
+#coach-central {
+    --r154-navy: #102a5c;
+    --r154-navy-dark: #081a3e;
+    --r154-navy-light: #1e3a75;
+    --r154-red: #e3222a;
+    --r154-red-dark: #b9151c;
+    --r154-gold: #ffc72c;
+    --r154-gold-light: #fffbeb;
+    --r154-green: #15803d;
+    --r154-green-light: #f0fdf4;
+    --r154-white: #ffffff;
+    --r154-slate-50: #f8fafc;
+    --r154-slate-100: #f1f5f9;
+    --r154-slate-200: #e2e8f0;
+    --r154-slate-300: #cbd5e1;
+    --r154-slate-600: #475569;
+    --r154-slate-700: #334155;
+    --r154-slate-900: #0f172a;
+
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+    color: var(--r154-slate-900);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+#coach-central *,
+#coach-central *::before,
+#coach-central *::after {
+    box-sizing: border-box;
+}
+
+#coach-central img {
+    max-width: 100%;
+    height: auto;
+}
+
+#coach-central a {
+    overflow-wrap: anywhere;
+}
+
+#coach-central [id] {
+    scroll-margin-top: 24px;
+}
+
+/* BASE CONTAINER & CARDS */
+#coach-central .cc-card {
+    margin-bottom: 28px;
+    background: var(--r154-white);
+    border: 1px solid var(--r154-slate-200);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px -2px rgba(16, 42, 92, 0.06);
+    overflow: hidden;
+}
+
+#coach-central .cc-content {
+    padding: 24px;
+}
+
+/* SECTION TITLES */
+#coach-central .cc-section-title {
+    position: relative;
+    margin: 0;
+    padding: 20px 24px 20px 58px;
+    color: var(--r154-white) !important;
+    background: linear-gradient(135deg, var(--r154-navy) 0%, var(--r154-navy-dark) 100%);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+#coach-central .cc-section-title::before {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    content: "⚽";
+    font-size: 1.2rem;
+    transform: translateY(-50%);
+}
+
+#coach-central .cc-section-title::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 6px;
+    content: "";
+    background: var(--r154-red);
+}
+
+/* TYPOGRAPHY */
+#coach-central h3 {
+    margin: 28px 0 16px;
+    padding-bottom: 8px;
+    color: var(--r154-navy);
+    border-bottom: 2px solid var(--r154-slate-200);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#coach-central h4 {
+    margin: 20px 0 10px;
+    color: var(--r154-navy-dark);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+#coach-central p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--r154-slate-700);
+}
+
+#coach-central .cc-muted {
+    color: var(--r154-slate-600);
+}
+
+#coach-central .cc-small {
+    font-size: 0.88rem;
+}
+
+/* BADGES & TAGS */
+#coach-central .cc-local-rule {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    color: var(--r154-white);
+    background: var(--r154-red);
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* HERO HEADER */
+#coach-central .cc-hero {
+    position: relative;
+    padding: 36px 20px 40px;
+    color: var(--r154-white);
+    background: linear-gradient(135deg, var(--r154-navy-dark) 0%, var(--r154-navy) 60%, var(--r154-navy-light) 100%);
+    border-bottom: 6px solid var(--r154-red);
+    text-align: center;
+}
+
+#coach-central .cc-logo-wrap {
+    width: 170px;
+    margin: 0 auto 20px;
+    padding: 12px;
+    background: var(--r154-white);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#coach-central .cc-hero h1 {
+    margin: 0;
+    color: var(--r154-white);
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+#coach-central .cc-hero h1 span {
+    display: block;
+    margin-top: 6px;
+    color: var(--r154-gold);
+}
+
+#coach-central .cc-hero p {
+    max-width: 680px;
+    margin: 16px auto 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+}
+
+#coach-central .cc-badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    color: var(--r154-navy-dark);
+    background: var(--r154-gold);
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#coach-central .cc-updated {
+    margin-top: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8rem;
+}
+
+/* NAVIGATION HUB */
+#coach-central .cc-nav {
+    padding: 24px;
+    text-align: center;
+}
+
+#coach-central .cc-nav h2 {
+    margin: 0 0 6px;
+    color: var(--r154-navy);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+#coach-central .cc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+#coach-central .cc-nav-grid {
+    margin-top: 20px;
+}
+
+/* BUTTON SYSTEM */
+#coach-central .cc-nav-button,
+#coach-central .cc-button {
+    min-height: 50px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--r154-white) !important;
+    background: var(--r154-navy);
+    border: 1px solid var(--r154-navy);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(16, 42, 92, 0.08);
+    transition: all 0.2s ease;
+}
+
+#coach-central .cc-nav-button::before {
+    margin-right: 8px;
+    content: "⚽";
+    font-size: 0.9rem;
+}
+
+#coach-central .cc-nav-button:hover,
+#coach-central .cc-nav-button:focus-visible,
+#coach-central .cc-button:hover,
+#coach-central .cc-button:focus-visible {
+    color: var(--r154-white) !important;
+    background: var(--r154-navy-dark);
+    border-color: var(--r154-navy-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 42, 92, 0.18);
+}
+
+#coach-central .cc-nav-button:focus-visible,
+#coach-central .cc-button:focus-visible,
+#coach-central .cc-back-link:focus-visible {
+    outline: 3px solid var(--r154-gold);
+    outline-offset: 2px;
+}
+
+#coach-central .cc-nav-important,
+#coach-central .cc-button-red {
+    background: var(--r154-red);
+    border-color: var(--r154-red);
+}
+
+#coach-central .cc-nav-important:hover,
+#coach-central .cc-nav-important:focus-visible,
+#coach-central .cc-button-red:hover,
+#coach-central .cc-button-red:focus-visible {
+    background: var(--r154-red-dark);
+    border-color: var(--r154-red-dark);
+}
+
+#coach-central .cc-button-outline {
+    color: var(--r154-navy) !important;
+    background: var(--r154-white);
+    border: 2px solid var(--r154-navy);
+}
+
+#coach-central .cc-button-outline:hover,
+#coach-central .cc-button-outline:focus-visible {
+    color: var(--r154-white) !important;
+    background: var(--r154-navy);
+}
+
+#coach-central .cc-link-grid {
+    margin: 20px 0;
+}
+
+#coach-central .cc-single-action {
+    max-width: 440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* CALLOUT BOXES */
+#coach-central .cc-callout {
+    margin: 20px 0;
+    padding: 18px 20px;
+    border-left: 5px solid var(--r154-navy);
+    border-radius: 8px;
+    font-size: 0.96rem;
+}
+
+#coach-central .cc-callout strong:first-child {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.02rem;
+}
+
+#coach-central .cc-info {
+    color: var(--r154-navy-dark);
+    background: var(--r154-slate-50);
+    border-color: var(--r154-navy);
+}
+
+#coach-central .cc-warning {
+    color: #78350f;
+    background: var(--r154-gold-light);
+    border-color: var(--r154-gold);
+}
+
+#coach-central .cc-danger {
+    color: #991b1b;
+    background: #fef2f2;
+    border-color: var(--r154-red);
+}
+
+#coach-central .cc-success {
+    color: #14532d;
+    background: var(--r154-green-light);
+    border-color: var(--r154-green);
+}
+
+/* LIST STYLES */
+#coach-central .cc-list {
+    margin: 16px 0;
+    padding-left: 0 !important;
+    list-style: none !important;
+}
+
+#coach-central .cc-list li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 28px;
+    color: var(--r154-slate-700);
+}
+
+#coach-central .cc-list li::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    content: "⚽";
+    font-size: 0.9rem;
+}
+
+/* MODULES & MINI-CARDS (FIXED PROPORTIONAL BORDER RADIUS) */
+#coach-central .cc-step-grid,
+#coach-central .cc-check-grid,
+#coach-central .cc-status-grid,
+#coach-central .cc-division-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+#coach-central .cc-step,
+#coach-central .cc-check,
+#coach-central .cc-status,
+#coach-central .cc-mini-card,
+#coach-central .cc-point-card {
+    padding: 18px 20px;
+    background: var(--r154-slate-50);
+    border: 1px solid var(--r154-slate-200);
+    border-radius: 10px; /* Clean proportional radius */
+}
+
+#coach-central .cc-step {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: start;
+    gap: 14px;
+}
+
+#coach-central .cc-step-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--r154-white);
+    background: var(--r154-navy);
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+#coach-central .cc-step:last-child .cc-step-number {
+    background: var(--r154-green);
+}
+
+#coach-central .cc-step strong,
+#coach-central .cc-check strong,
+#coach-central .cc-status strong,
+#coach-central .cc-mini-card strong,
+#coach-central .cc-point-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--r154-navy);
+    font-size: 1.02rem;
+}
+
+#coach-central .cc-check {
+    position: relative;
+    padding-left: 48px;
+}
+
+#coach-central .cc-check::before {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    content: "✓";
+    color: var(--r154-green);
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+#coach-central .cc-status {
+    text-align: center;
+}
+
+#coach-central .cc-status-label {
+    display: block;
+    color: var(--r154-slate-600);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+#coach-central .cc-status-value {
+    display: block;
+    margin-top: 4px;
+    color: var(--r154-red);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+/* REFEREE POINT MODULES */
+#coach-central .cc-point-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#coach-central .cc-point-value {
+    color: var(--r154-green);
+    font-size: 1.8rem;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+/* DIVISION CARDS */
+#coach-central .cc-division-card {
+    background: var(--r154-white);
+    border: 1px solid var(--r154-slate-200);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#coach-central .cc-division-header {
+    padding: 12px 16px;
+    color: var(--r154-white);
+    background: var(--r154-navy);
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#coach-central .cc-division-body {
+    padding: 12px 18px;
+}
+
+#coach-central .cc-rule-row {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--r154-slate-100);
+    font-size: 0.92rem;
+}
+
+#coach-central .cc-rule-row:last-child {
+    border-bottom: 0;
+}
+
+#coach-central .cc-rule-label {
+    color: var(--r154-navy);
+    font-weight: 700;
+}
+
+#coach-central .cc-rule-value {
+    text-align: right;
+    color: var(--r154-slate-700);
+}
+
+#coach-central .cc-red-text {
+    color: var(--r154-red);
+    font-weight: 700;
+}
+
+/* WORKFLOW PROCESS CARDS */
+#coach-central .cc-process {
+    counter-reset: lineup;
+}
+
+#coach-central .cc-process-card {
+    position: relative;
+    padding: 18px 18px 18px 60px;
+    background: var(--r154-slate-50);
+    border: 1px solid var(--r154-slate-200);
+    border-radius: 10px;
+}
+
+#coach-central .cc-process-card::before {
+    counter-increment: lineup;
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: counter(lineup);
+    color: var(--r154-white);
+    background: var(--r154-navy);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+/* SECTION NAVIGATION BACK LINK */
+#coach-central .cc-section-nav {
+    margin-top: 28px;
+    padding-top: 18px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--r154-slate-200);
+}
+
+#coach-central .cc-back-link {
+    min-height: 42px;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--r154-navy) !important;
+    background: var(--r154-white);
+    border: 1px solid var(--r154-slate-300);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+#coach-central .cc-back-link:hover,
+#coach-central .cc-back-link:focus-visible {
+    color: var(--r154-white) !important;
+    background: var(--r154-navy);
+    border-color: var(--r154-navy);
+}
+
+/* FOOTER */
+#coach-central .cc-footer {
+    padding: 30px 20px;
+    color: var(--r154-white);
+    background: var(--r154-navy-dark);
+    border-top: 5px solid var(--r154-red);
+    border-radius: 12px;
+    text-align: center;
+}
+
+#coach-central .cc-footer strong {
+    display: block;
+    color: var(--r154-gold);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+}
+
+#coach-central .cc-footer p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#coach-central .cc-footer a {
+    color: var(--r154-white) !important;
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+@media (min-width: 600px) {
+    #coach-central .cc-nav-grid,
+    #coach-central .cc-link-grid,
+    #coach-central .cc-check-grid,
+    #coach-central .cc-status-grid,
+    #coach-central .cc-division-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 820px) {
+    #coach-central .cc-hero {
+        padding: 44px 32px;
+    }
+
+    #coach-central .cc-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #coach-central .cc-nav-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #coach-central .cc-step-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #coach-central .cc-step {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #coach-central .cc-step-number {
+        margin: 0 auto 8px;
+    }
+
+    #coach-central .cc-three-column {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #coach-central .cc-nav-button,
+    #coach-central .cc-button,
+    #coach-central .cc-back-link {
+        transition: none;
+    }
+
+    #coach-central .cc-nav-button:hover,
+    #coach-central .cc-button:hover {
+        transform: none;
+    }
+}
+</style>
+
+<!-- ====================================================================== -->
+<!-- START OF MAIN CONTENT AREA                                             -->
+<!-- ====================================================================== -->
+<div id="coach-central">
+
+    <!-- HERO SECTION -->
+    <section class="cc-card" aria-labelledby="coach-central-title">
+        <div class="cc-hero">
+            <div class="cc-hero-inner">
+                <div class="cc-logo-wrap">
+                    <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/AYSO%20154%20Logo%20-%203D.png" alt="AYSO Region 154 Cypress logo">
+                </div>
+
+                <h1 id="coach-central-title">
+                    Fall 2026
+                    <span>Coach Central</span>
+                </h1>
+
+                <p>
+                    Everything Head Coaches, Assistant Coaches, and Team Managers need to get cleared, prepare their team, manage game day, and complete a safe and positive season.
+                </p>
+
+                <div class="cc-badge">For All Region 154 Team Leaders</div>
+                <div class="cc-updated">Version 4.4 · Last reviewed August 7, 2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAVIGATION MENU HUB -->
+    <nav id="coach-menu" class="cc-card cc-nav" aria-label="Coach Central section menu">
+        <h2>Your Fall 2026 Season Starts Here</h2>
+        <p class="cc-muted">
+            Select a topic to jump directly to official guides and resources.
+        </p>
+
+        <div class="cc-grid cc-nav-grid">
+            <a href="#start-here" class="cc-nav-button cc-nav-important">New Coach: Start Here</a>
+            <a href="#coach-meeting" class="cc-nav-button">Season Orientation &amp; Resources</a>
+            <a href="#equipment" class="cc-nav-button">Equipment Distribution</a>
+            <a href="#kickoff" class="cc-nav-button">Countdown to Opening Day</a>
+            <a href="#facility-rules" class="cc-nav-button">Practice &amp; Facility Policies</a>
+            <a href="#division-rules" class="cc-nav-button">Division Rules &amp; Build-Out Line</a>
+            <a href="#game-day" class="cc-nav-button">Lineup Cards &amp; Game Setup</a>
+            <a href="#playoffs" class="cc-nav-button">Playoffs &amp; Referee Points</a>
+            <a href="#safety" class="cc-nav-button">Safety &amp; Emergencies</a>
+            <a href="#sportsmanship" class="cc-nav-button">Goal Differential &amp; RAPP</a>
+            <a href="#evaluations" class="cc-nav-button">Evaluations &amp; Contacts</a>
+            <a href="#toolkit" class="cc-nav-button">Coach Toolkit &amp; Forms</a>
+        </div>
+    </nav>
+
+    <!-- SECTION: NEW COACH CHECKLIST -->
+    <section id="start-here" class="cc-card" aria-labelledby="start-here-title">
+        <h2 id="start-here-title" class="cc-section-title">New Coach Checklist</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-warning">
+                <strong>First Practice Contingency</strong>
+                A team may not begin practicing until its required team volunteers — Head Coach, Assistant Coach, and Team Manager — have completed Region 154 compliance requirements and the roster has been officially released. Do not hold a team practice until your Division Director confirms approval.
+            </div>
+
+            <div class="cc-callout cc-info">
+                <strong>Team Sponsorships and Uniform Selection</strong>
+                Submit your team sponsorship as early as possible. Uniform colors and designs are selected based on the order in which sponsorship funds are received.
+            </div>
+
+            <h3>Get Cleared to Coach</h3>
+            <p>Complete each step before participating in practices or games as a coach. Need help? Contact <strong><a href="mailto:Coachadmin154@gmail.com">Coachadmin154@gmail.com</a></strong>.</p>
+
+            <div class="cc-step-grid">
+                <div class="cc-step">
+                    <span class="cc-step-number">1</span>
+                    <div>
+                        <strong>Register</strong>
+                        Submit a current volunteer application through Region 154 Sports Connect.
+                    </div>
+                </div>
+
+                <div class="cc-step">
+                    <span class="cc-step-number">2</span>
+                    <div>
+                        <strong>Complete Screening</strong>
+                        Complete background screening, California Live Scan, and assigned safety courses.
+                    </div>
+                </div>
+
+                <div class="cc-step">
+                    <span class="cc-step-number">3</span>
+                    <div>
+                        <strong>Complete Training</strong>
+                        Complete the age-specific coach course and required classroom or field components.
+                    </div>
+                </div>
+
+                <div class="cc-step">
+                    <span class="cc-step-number">4</span>
+                    <div>
+                        <strong>Receive Clearance</strong>
+                        Wait for official roster release and approval before beginning team activities.
+                    </div>
+                </div>
+            </div>
+
+            <h4>Live Scan Fingerprinting Options</h4>
+            <p>If you haven't completed your one-time AYSO Live Scan requirement, choose an option below. All options are 100% free for Region 154 volunteers.</p>
+            <div class="cc-grid cc-three-column">
+                <div class="cc-callout cc-info" style="margin: 0;">
+                    <strong>1. Pizza &amp; Brews Event</strong><br>
+                    Saturday, Aug 1, 2026<br>
+                    5:00 PM – 7:00 PM<br>
+                    Coach's Corner (4756 Lincoln Ave)
+                </div>
+                <div class="cc-callout cc-info" style="margin: 0;">
+                    <strong>2. Coach Meeting Lobby</strong><br>
+                    Thursday, Aug 6, 2026<br>
+                    Arrive by 6:00 PM<br>
+                    Cypress Community Center
+                </div>
+                <div class="cc-callout cc-info" style="margin: 0;">
+                    <strong>3. Walk-In Location</strong><br>
+                    American Health Biometrics<br>
+                    3816 Stineman Ct Ste 104, Long Beach<br>
+                    Mon-Fri: 9:00 AM – 6:00 PM
+                </div>
+            </div>
+
+            <div class="cc-grid cc-link-grid">
+                <a href="/Default.aspx?tabid=974613" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    View Volunteer Compliance Steps
+                </a>
+                <a href="https://aysou.org" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Open AYSOU Training
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: SEASON ORIENTATION & TEAM LEADER RESOURCES -->
+    <section id="coach-meeting" class="cc-card" aria-labelledby="coach-meeting-title">
+        <h2 id="coach-meeting-title" class="cc-section-title">Season Orientation &amp; Team Leader Resources</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-success">
+                <strong>Welcome to the Fall 2026 Season!</strong>
+                Whether you attended our live kickoff orientation or are stepping into a team leadership role post-meeting, this resource hub contains everything Head Coaches, Assistant Coaches, and Team Managers need to guide their team toward a smooth, fun, and compliant season.
+            </div>
+
+            <h3>Official Presentation &amp; Briefing Materials</h3>
+            <p>Review the full orientation presentation deck or listen to a quick audio summary before holding your first team practice or sending your initial family welcome email.</p>
+
+            <div class="cc-grid cc-link-grid">
+                <a href="/Portals/14837/docs/2026/AYSO-Region%20154%20-%20Coach-Parent%20Meeting%20-%20Fall%202026.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    Download Fall 2026 Orientation Deck (PDF)
+                </a>
+                <a href="[INSERT SECONDARY RESOURCE URL]" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Listen to 10-Minute Audio Overview
+                </a>
+            </div>
+
+            <h3>Key Takeaways for Coaches &amp; Team Managers</h3>
+            <p class="cc-muted">A quick-reference summary of critical orientation topics:</p>
+
+            <div class="cc-check-grid">
+                <div class="cc-mini-card">
+                    <strong>1. AYSO Philosophies &amp; Conduct</strong>
+                    Uphold our 6 Core Philosophies: <em>Everyone Plays, Balanced Teams, Open Registration, Positive Coaching, Good Sportsmanship, and Player Development</em>. Maintain a strict <strong>Kids Zone</strong> environment at all fields.
+                </div>
+
+                <div class="cc-mini-card">
+                    <strong>2. Volunteer Clearance (CVPA)</strong>
+                    All Head Coaches, Assistant Coaches, and Team Managers must complete background checks, Live Scan fingerprinting, Safe Haven, CDC Concussion, and Sudden Cardiac Arrest certifications before rosters are released.
+                </div>
+
+                <div class="cc-mini-card">
+                    <strong>3. Team Logistics &amp; Sponsorships</strong>
+                    Team Managers manage family communications, collect team sponsorship forms ($150 minimum per team), and coordinate Picture Day logistics.
+                </div>
+
+                <div class="cc-mini-card">
+                    <strong>4. Game Day &amp; Referee Points</strong>
+                    Coaches print official lineup cards from Sports Connect for every match. Divisions 10U–19U must accumulate team volunteer points (referees, field setup, field marshals) to qualify for end-of-season playoffs and the Cypress Cup.
+                </div>
+            </div>
+
+            <div class="cc-callout cc-warning">
+                <strong>Mandatory Pre-Season Action Required:</strong>
+                Please review the complete presentation deck or audio overview with your coaching staff and Team Manager prior to your first team communication and initial practice session.
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: EQUIPMENT DISTRIBUTION -->
+    <section id="equipment" class="cc-card" aria-labelledby="equipment-title">
+        <h2 id="equipment-title" class="cc-section-title">Coach/Team Equipment Distribution</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-warning">
+                <strong>Equipment Pick-Up</strong>
+                Each team must send a designated team representative (Head Coach, Assistant Coach, or Team Manager) to pick up team equipment and gear for the Fall 2026 season.
+            </div>
+
+            <div class="cc-status-grid cc-three-column">
+                <div class="cc-status">
+                    <span class="cc-status-label">Dates</span>
+                    <span class="cc-status-value">Tue, Aug 11 &amp;<br>Wed, Aug 12, 2026</span>
+                </div>
+
+                <div class="cc-status">
+                    <span class="cc-status-label">Time</span>
+                    <span class="cc-status-value">5:30 PM – 7:30 PM</span>
+                    <span style="display: block; font-size: 0.85rem; color: var(--r154-slate-600); margin-top: 4px;">Both Evenings</span>
+                </div>
+
+                <div class="cc-status">
+                    <span class="cc-status-label">Location</span>
+                    <span class="cc-status-value" style="font-size: 1.05rem;">Lexington Jr. HS</span>
+                    <span style="display: block; font-size: 0.85rem; color: var(--r154-slate-600); margin-top: 4px;">4351 Orange Ave, Cypress</span>
+                </div>
+            </div>
+
+            <h3>Provided Team Equipment</h3>
+            <p>Each Head Coach will receive the following items to manage practices and games throughout the season:</p>
+            <ul class="cc-list">
+                <li>3 soccer balls</li>
+                <li>10 practice cones</li>
+                <li>1 whistle and 1 pump</li>
+                <li>1 mesh bag and 1 clipboard</li>
+                <li>1 First Aid Kit</li>
+                <li>Head Coach &amp; Assistant Coach shirts (please know your sizes)</li>
+            </ul>
+            <p><em>Note: 10U and older teams will also receive a Goalie Shirt and pinnies.</em></p>
+
+            <div class="cc-grid cc-link-grid cc-single-action">
+                <a href="/Portals/14837/docs/2026/Equipment%20Distribution%202026.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    Download Equipment Distribution Flyer (PDF)
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: COUNTDOWN TO OPENING DAY -->
+    <section id="kickoff" class="cc-card" aria-labelledby="kickoff-title">
+        <h2 id="kickoff-title" class="cc-section-title">Countdown to Opening Day</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-info">
+                <strong>Pre-Season Warm-Ups &amp; Friendly Scrimmages</strong>
+                Friendly games are non-standings scrimmages designed to help players, coaches, referees, and team managers practice game-day routines before official competition begins.
+            </div>
+
+            <div class="cc-status-grid cc-three-column">
+                <div class="cc-status" style="border-top: 4px solid var(--r154-red);">
+                    <span class="cc-status-label">Saturday, Aug 22, 2026</span>
+                    <span class="cc-status-value" style="color: var(--r154-red);">U10 Friendly Scrimmages</span>
+                    <p style="font-size: 0.88rem; margin-top: 8px; text-align: left;">
+                        <strong>Division:</strong> U10 Division Only<br>
+                        <strong>Location:</strong> Lexington Jr. High (LJHS)<br>
+                        <strong>Focus:</strong> Low-pressure 7v7 play practice, Build-Out Line testing, and positioning.
+                    </p>
+                </div>
+
+                <div class="cc-status" style="border-top: 4px solid var(--r154-navy);">
+                    <span class="cc-status-label">Saturday, Aug 29, 2026</span>
+                    <span class="cc-status-value" style="color: var(--r154-navy);">All-Division Friendlies</span>
+                    <p style="font-size: 0.88rem; margin-top: 8px; text-align: left;">
+                        <strong>Locations:</strong> U5/6, U10, U12 at LJHS; U8 at Grace Christian.<br>
+                        <strong>Focus:</strong> Full dress rehearsal Saturday! Mandatory uniforms and real field setups.
+                    </p>
+                </div>
+
+                <div class="cc-status" style="border-top: 4px solid var(--r154-gold);">
+                    <span class="cc-status-label">Saturday, Sept 12, 2026</span>
+                    <span class="cc-status-value" style="color: #854d0e;">Official Opening Day</span>
+                    <p style="font-size: 0.88rem; margin-top: 8px; text-align: left;">
+                        <strong>Divisions:</strong> All Divisions<br>
+                        <strong>Focus:</strong> Season Kickoff! Standings open for 10U+ and points count toward playoffs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cc-callout cc-warning">
+                <strong>August 29th Feature: Referee Companion Course Field Mentoring ⚽</strong>
+                <p style="margin-bottom: 0;">
+                    During the August 29th friendly matches, we will host our <strong>On-Field Referee Companion Course Training</strong> simultaneously! Experienced Mentor Referees will be on the field directly mentoring new team referees during live match play.
+                </p>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PRACTICE & FACILITY POLICIES -->
+    <section id="facility-rules" class="cc-card" aria-labelledby="facility-rules-title">
+        <h2 id="facility-rules-title" class="cc-section-title">Practice &amp; Facility Policies</h2>
+
+        <div class="cc-content">
+            <h3>Player Drop-off &amp; Pick-up</h3>
+            <ul class="cc-list">
+                <li>Players must not be left at the field without supervision by an AYSO Safe Haven certified adult (Coach, Asst. Coach, or Team Manager).</li>
+                <li>If your child's certified team adult has not yet arrived, parents must wait with their child.</li>
+                <li>Ensure direct contact with your Coach or Team Manager when dropping off AND picking up your child.</li>
+            </ul>
+
+            <div class="cc-callout cc-danger">
+                <strong>Important Coach Safety Protocol:</strong>
+                A Coach, Asst. Coach, or Team Manager must wait with any player until a parent or responsible adult arrives for pick-up. The waiting adult must be of the same gender as the player.
+            </div>
+
+            <h3>School District Rules for Facility Use</h3>
+            <p>All coaches, parents, players, and guests must abide by the following school district rules at all times. Remember, these fields are a <strong>KIDS ZONE</strong>.</p>
+            <ul class="cc-list">
+                <li><strong>NO DOGS ALLOWED</strong> on school fields at any time (service animals excepted).</li>
+                <li><strong>NO SMOKING or ALCOHOL</strong> is permitted on any school property.</li>
+                <li><strong>NO</strong> urinating or defecating on school property or in surrounding neighborhoods.</li>
+                <li><strong>DO</strong> pick up and properly dispose of all trash after every practice. Leave it better than you found it.</li>
+            </ul>
+
+            <div class="cc-callout cc-warning">
+                <strong>Lexington Park (Synthetic Field) Restrictions</strong>
+                <ul class="cc-list" style="margin-bottom: 0;">
+                    <li>Molded rubber cleats or turf shoes only (studs not to exceed 1-inch).</li>
+                    <li>Water ONLY. No sports drinks or other liquids.</li>
+                    <li>No sharp objects or straight-leg folding chairs that can penetrate the turf.</li>
+                    <li>No stake umbrellas (must have a weighted stand).</li>
+                </ul>
+            </div>
+
+            <h3>Practice Maps</h3>
+            <div class="cc-grid cc-link-grid cc-three-column">
+                 <a href="/Portals/14837/docs/2026/Oak%20Knoll%20-%202026%20Practice%20Field.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">Oak Knoll Park Map</a>
+                 <a href="/Portals/14837/docs/2026/Lexington%20Jr.%20High%20-%202026%20Practice%20Field.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">Lexington Jr. HS Map</a>
+                 <a href="/Portals/14837/docs/2026/Park%20Lexington%20-%202026%20Practice%20Field.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">Park Lexington Map</a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DIVISION RULES & FORMATS -->
+    <section id="division-rules" class="cc-card" aria-labelledby="division-rules-title">
+        <h2 id="division-rules-title" class="cc-section-title">Division Rules &amp; Formats</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-info">
+                <strong>Everyone Plays</strong>
+                Region 154 expects every eligible player to play at least three quarters before any player participates in all four quarters, unless a published division rule states otherwise.
+            </div>
+
+            <div class="cc-division-grid">
+                <article class="cc-division-card">
+                    <div class="cc-division-header">6U Division</div>
+                    <div class="cc-division-body">
+                        <div class="cc-rule-row"><span class="cc-rule-label">Format</span><span class="cc-rule-value">5v5</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Goalkeepers</span><span class="cc-rule-value cc-red-text">No</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Scores / Standings</span><span class="cc-rule-value cc-red-text">No</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Restarts</span><span class="cc-rule-value">Pass-ins instead of throw-ins</span></div>
+                    </div>
+                </article>
+
+                <article class="cc-division-card">
+                    <div class="cc-division-header">8U Division</div>
+                    <div class="cc-division-body">
+                        <div class="cc-rule-row"><span class="cc-rule-label">Format</span><span class="cc-rule-value">7v7; minimum 5</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Goalkeepers</span><span class="cc-rule-value">Yes; rotate quarterly</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Scores / Standings</span><span class="cc-rule-value cc-red-text">No</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Special Rule</span><span class="cc-rule-value cc-red-text">Build-out line</span></div>
+                    </div>
+                </article>
+
+                <article class="cc-division-card">
+                    <div class="cc-division-header">10U Division</div>
+                    <div class="cc-division-body">
+                        <div class="cc-rule-row"><span class="cc-rule-label">Format</span><span class="cc-rule-value">7v7; minimum 5</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Goalkeepers</span><span class="cc-rule-value">Yes</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Scores / Standings</span><span class="cc-rule-value">Yes; win 3, tie 1</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Punting / Heading</span><span class="cc-rule-value cc-red-text">No / No</span></div>
+                    </div>
+                </article>
+
+                <article class="cc-division-card">
+                    <div class="cc-division-header">12U Division</div>
+                    <div class="cc-division-body">
+                        <div class="cc-rule-row"><span class="cc-rule-label">Format</span><span class="cc-rule-value">9v9; minimum 7</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Goalkeepers</span><span class="cc-rule-value">Yes</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Scores / Standings</span><span class="cc-rule-value">Yes; win 3, tie 1</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Punting / Heading</span><span class="cc-rule-value">Punting yes; follow heading rule</span></div>
+                    </div>
+                </article>
+
+                <article class="cc-division-card">
+                    <div class="cc-division-header">14U &amp; Older</div>
+                    <div class="cc-division-body">
+                        <div class="cc-rule-row"><span class="cc-rule-label">Format</span><span class="cc-rule-value">11v11; minimum 7</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Goalkeepers</span><span class="cc-rule-value">Yes</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Scores / Standings</span><span class="cc-rule-value">Yes; win 3, tie 1</span></div>
+                        <div class="cc-rule-row"><span class="cc-rule-label">Practice Limit</span><span class="cc-rule-value">Max 6 hrs/week</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <h3>Build-Out Line (8U &amp; 10U)</h3>
+            <p>
+                The build-out line is designed to help young players learn to advance the ball from the back through controlled possession rather than immediately sending the ball into a crowded area.
+            </p>
+
+            <div class="cc-grid cc-link-grid">
+                <a href="#" class="cc-button cc-button-red">Build-Out Line Rules (Coming Soon)</a>
+                <a href="https://www.youtube.com/watch?v=sY408eOnAW4" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Watch Build-Out Line Video on YouTube
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: GAME DAY ADMINISTRATION & SETUP -->
+    <section id="game-day" class="cc-card" aria-labelledby="game-day-title">
+        <h2 id="game-day-title" class="cc-section-title">Game Day Administration &amp; Setup</h2>
+
+        <div class="cc-content">
+            <h3>Game Field Maps</h3>
+            <div class="cc-grid cc-link-grid">
+                <a href="#" class="cc-button cc-button-outline">Park Lexington Map (Coming Soon)</a>
+                <a href="#" class="cc-button cc-button-outline">Lexington Jr. HS / Arnold Map (Coming Soon)</a>
+                <a href="#" class="cc-button cc-button-outline">Grace Christian (Cawthon) Map (Coming Soon)</a>
+            </div>
+
+            <h3>Sideline Management</h3>
+            <div class="cc-callout cc-danger">
+                <strong>Spectator Seating (The "LEFT" Rule)</strong>
+                Spectators must sit on the <strong>LEFT side</strong> of their team's Coach.<br>
+                <strong>Home Team:</strong> Positioned on the North or West side of the field.<br>
+                <strong>Visiting Team:</strong> Positioned on the South or East side of the field.
+            </div>
+            
+            <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/Sideline%20SetUp.png" alt="Sideline Setup Diagram" style="width: 100%; border-radius: 8px; margin: 15px 0;">
+
+            <h3>Goal Assembly Workflow</h3>
+            <div class="cc-step-grid">
+                <div class="cc-mini-card"><strong>1. Crossbar</strong> Thread the net entirely through the #1 Crossbar.</div>
+                <div class="cc-mini-card"><strong>2. Side Posts</strong> Attach #2 Side Posts to crossbar (label facing UP).</div>
+                <div class="cc-mini-card"><strong>3. Base Post</strong> Attach #3 Base Post (no bottom crossbar).</div>
+                <div class="cc-mini-card"><strong>4. Secure Goal</strong> Add sandbags (Orange=10U, Green=12U).</div>
+            </div>
+
+            <h3>Official Game Lineup Cards</h3>
+            <div class="cc-grid cc-process">
+                <div class="cc-process-card">
+                    <strong>Update Sports Connect</strong>
+                    Enter every player’s jersey number in Team Central before printing.
+                </div>
+                <div class="cc-process-card">
+                    <strong>Print Official Card</strong>
+                    Print lineup card from Team Central. Use Region cardstock for 8U+.
+                </div>
+                <div class="cc-process-card">
+                    <strong>Verify Information</strong>
+                    Include region, division, team #, date, team name, and roster in order.
+                </div>
+                <div class="cc-process-card">
+                    <strong>Submit Before Kickoff</strong>
+                    Hand the lineup card to the center referee before match start.
+                </div>
+            </div>
+
+            <div class="cc-grid cc-link-grid">
+                <a href="/Portals/14837/docs/2025/Line%20up%20cards%20Procedure.pdf" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    Open Lineup Card Instructions (PDF)
+                </a>
+                <a href="https://www.matchtrak.com" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    Submit Match Score on MatchTrak
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PLAYOFFS & REFEREE POINTS -->
+    <section id="playoffs" class="cc-card" aria-labelledby="playoffs-title">
+        <h2 id="playoffs-title" class="cc-section-title">Playoffs &amp; Referee Points</h2>
+
+        <div class="cc-content">
+            <p>Earning a spot in the post-season playoffs is a team effort that extends to volunteering! For divisions <strong>10U through 19U</strong>, teams must earn points by completing the missions below.</p>
+            
+            <div class="cc-callout cc-info" style="text-align: center;">
+                <strong>🏁 Goal: Each team needs 17 out of 26 possible points to qualify for Cypress Cup and Playoffs!</strong>
+                <p style="margin-bottom: 0; font-size: 0.88rem;"><em>Note: Teams generally need 3 certified referees, but U8 teams only require 2 certified referees.</em></p>
+            </div>
+
+            <div class="cc-grid cc-three-column">
+                <div class="cc-point-card">
+                    <div class="cc-point-value">+5</div>
+                    <div>
+                        <strong>Get Referees Certified</strong>
+                        1 pt per certified referee listed in Matchtrak (max 5).
+                    </div>
+                </div>
+                <div class="cc-point-card">
+                    <div class="cc-point-value">+2</div>
+                    <div>
+                        <strong>Sign Up Early</strong>
+                        Earn 2 pts if all assigned games are scheduled before Sept 26th.
+                    </div>
+                </div>
+                <div class="cc-point-card">
+                    <div class="cc-point-value">+10</div>
+                    <div>
+                        <strong>Complete Assignments</strong>
+                        1 pt per referee assignment completed in full uniform (max 10).
+                    </div>
+                </div>
+                <div class="cc-point-card">
+                    <div class="cc-point-value">+2</div>
+                    <div>
+                        <strong>Serve as Field Marshal</strong>
+                        Earn 2 pts upon completing team's assigned shift.
+                    </div>
+                </div>
+                <div class="cc-point-card">
+                    <div class="cc-point-value">+5</div>
+                    <div>
+                        <strong>Field Setup</strong>
+                        Earn 5 pts for completing Friday Night or Saturday Field Setups.
+                    </div>
+                </div>
+                <div class="cc-point-card">
+                    <div class="cc-point-value">+2</div>
+                    <div>
+                        <strong>Picture Picnic Day</strong>
+                        Earn 2 pts for completing Picture Picnic Day volunteer shifts.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Important Post-Season Dates</h3>
+            <div class="cc-status-grid cc-three-column">
+                 <div class="cc-status">
+                     <span class="cc-status-label">Cypress Cup</span>
+                     <span class="cc-status-value">Nov 13-15 &amp; Nov 20-22</span>
+                     <p class="cc-small cc-muted" style="margin-top: 6px;">1st and 2nd place receive automatic Area Playoff berths.</p>
+                 </div>
+                 <div class="cc-status">
+                     <span class="cc-status-label">Area Playoffs</span>
+                     <span class="cc-status-value">Dec 5 &amp; 6</span>
+                 </div>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: SAFETY & EMERGENCIES -->
+    <section id="safety" class="cc-card" aria-labelledby="safety-title">
+        <h2 id="safety-title" class="cc-section-title">Safety &amp; Emergencies</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-danger">
+                <strong>Suspected Concussion Protocol</strong>
+                Remove the player from participation immediately and do not allow same-day return. Notify the parent/guardian and follow the required Incident Report and Return-to-Play clearance process.
+            </div>
+
+            <div class="cc-check-grid">
+                <div class="cc-check">
+                    <strong>Respond</strong>
+                    Stop play, assess danger, and call 911 for life-threatening emergencies.
+                </div>
+                <div class="cc-check">
+                    <strong>Notify</strong>
+                    Contact player’s parent/guardian and inform Region Safety Director.
+                </div>
+                <div class="cc-check">
+                    <strong>Document</strong>
+                    Complete Incident Report for injuries, fighting, damage, or hospitalization.
+                </div>
+                <div class="cc-check">
+                    <strong>Clear the Player</strong>
+                    Do not return player until required parent and medical forms are complete.
+                </div>
+            </div>
+
+            <div class="cc-grid cc-link-grid">
+                <a href="https://wiki.ayso.org/wiki/Fill_Out_an_Incident_Report" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    Incident Report Instructions &amp; Form
+                </a>
+                <a href="https://wiki.ayso.org/wiki/AYSO_Participation_(Return_to_Play)_Release_Form" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    Return-to-Play Instructions &amp; Form
+                </a>
+                <a href="/Default.aspx?tabid=856513" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Region 154 Safety Procedures
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: GOAL DIFFERENTIAL & SPORTSMANSHIP -->
+    <section id="sportsmanship" class="cc-card" aria-labelledby="sportsmanship-title">
+        <h2 id="sportsmanship-title" class="cc-section-title">Goal Differential &amp; Sportsmanship</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-warning">
+                <strong>Keep Goal Differential at Six or Fewer</strong>
+                Coaches must make a genuine effort to avoid running up the score. Begin making tactical adjustments early rather than waiting until the match is out of balance.
+            </div>
+
+            <h4>Positive Adjustments Coaches Can Make</h4>
+            <ul class="cc-list">
+                <li><strong>Focus on one player:</strong> Instruct the team to only pass to the least experienced player (who should be positioned at center mid-field). The team must work to earn the ball back and pass it right back to that one player.</li>
+                <li>Give developing players additional playing time and expanded responsibilities.</li>
+                <li>Move experienced players into unfamiliar positions (e.g., goalies play on the field).</li>
+                <li>Switch attacking and defensive players, or play a player down.</li>
+            </ul>
+
+            <div class="cc-grid cc-link-grid">
+                <a href="/Default.aspx?tabid=974653" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    Read Region 154 RAPP Guidelines
+                </a>
+                <a href="/Default.aspx?tabid=975698" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Review Game Day Sideline Rules
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: EVALUATIONS & CONTACTS -->
+    <section id="evaluations" class="cc-card" aria-labelledby="evaluations-title">
+        <h2 id="evaluations-title" class="cc-section-title">Evaluations &amp; Contacts</h2>
+
+        <div class="cc-content">
+            <div class="cc-callout cc-danger">
+                <strong>Player Evaluation Deadline: Midnight Saturday, October 29th</strong>
+                All players U8 (older players) through U14 must be evaluated for the season and to qualify for All Stars U10-U14 to support our Balanced Teams philosophy.
+            </div>
+
+            <h3>Board of Directors Contacts</h3>
+            <div class="cc-grid cc-three-column">
+                <div class="cc-mini-card">
+                    <strong>Playground 4U &amp; 10U</strong>
+                    Chris Franco<br>
+                    <a href="mailto:playgroundayso154@gmail.com" class="cc-small">Playground Email</a> | <a href="mailto:divisionu10ayso154@gmail.com" class="cc-small">10U Email</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>5U/6U &amp; Schoolyard</strong>
+                    Jared Moye<br>
+                    <a href="mailto:divisionu5u6ayso154@gmail.com" class="cc-small">divisionu5u6ayso154@gmail.com</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>8U Division</strong>
+                    Amira Medina<br>
+                    <a href="mailto:divisionu8ayso154@gmail.com" class="cc-small">divisionu8ayso154@gmail.com</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>12U Division</strong>
+                    Shane Hartgrave<br>
+                    <a href="mailto:divisionu12ayso154@gmail.com" class="cc-small">divisionu12ayso154@gmail.com</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>14U/16U/19U Divisions</strong>
+                    Christen Jackson<br>
+                    <a href="mailto:upperdivisionayso154@gmail.com" class="cc-small">upperdivisionayso154@gmail.com</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>EPIC (Special Needs)</strong>
+                    Rick Tkach<br>
+                    <a href="mailto:vipdivisionayso154@gmail.com" class="cc-small">vipdivisionayso154@gmail.com</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>Interim Coach Admin</strong>
+                    Troy Baron<br>
+                    <a href="mailto:Coachadmin154@gmail.com" class="cc-small">Coachadmin154@gmail.com</a>
+                </div>
+                <div class="cc-mini-card">
+                    <strong>Field Marshal Coordinator</strong>
+                    Jennifer Franco<br>
+                    <a href="mailto:FieldMarshalayso154@gmail.com" class="cc-small">FieldMarshalayso154@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: COACH TOOLKIT & QUICK LINKS -->
+    <section id="toolkit" class="cc-card" aria-labelledby="toolkit-title">
+        <h2 id="toolkit-title" class="cc-section-title">Coach Toolkit &amp; Quick Links</h2>
+
+        <div class="cc-content">
+            <div class="cc-grid cc-link-grid cc-three-column">
+                <a href="/Default.aspx?tabid=974613" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    Volunteer Compliance
+                </a>
+                <a href="https://aysou.org" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    AYSOU Training
+                </a>
+                <a href="https://www.matchtrak.com" target="_blank" rel="noopener noreferrer" class="cc-button">
+                    MatchTrak
+                </a>
+                <a href="/Portals/14837/docs/2025/Line%20up%20cards%20Procedure.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Lineup Card Procedure
+                </a>
+                <a href="https://wiki.ayso.org/wiki/Fill_Out_an_Incident_Report" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    Incident Report
+                </a>
+                <a href="https://wiki.ayso.org/wiki/AYSO_Participation_(Return_to_Play)_Release_Form" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    Return to Play
+                </a>
+                <a href="/Default.aspx?tabid=856513" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    Region 154 Safety
+                </a>
+                <a href="#" class="cc-button cc-button-outline">
+                    Build-Out Line Rules (Coming Soon)
+                </a>
+                <a href="/Default.aspx?tabid=974653" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-outline">
+                    RAPP Guidelines
+                </a>
+            </div>
+
+            <div class="cc-section-nav">
+                <a href="#coach-menu" class="cc-back-link">↑ Back to Coach Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cc-footer">
+        <div class="cc-footer-inner">
+            <strong>AYSO Region 154 · Cypress, California</strong>
+            <p>For every child. For every volunteer. For every family.</p>
+            <p class="cc-small" style="margin-bottom: 0;">
+                Fall 2026 Coach Central · Version 4.4 · Review policies and links before each season.
+            </p>
+        </div>
+    </footer>
+
+</div>
+<!-- ====================================================================== -->
+<!-- END OF MAIN CONTENT AREA                                               -->
+<!-- ====================================================================== -->
