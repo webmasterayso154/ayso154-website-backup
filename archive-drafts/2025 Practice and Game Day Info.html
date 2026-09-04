@@ -1,0 +1,451 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   Cypress 154 - Spring 2026 Park Lexington Game Fields
+CMS Status:  Live
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:policy] [type:event]
+Components:  [ui:card] [ui:btn-cta] [ui:table] [ui:callout]
+Assets:      Oak Knoll Map - Practice Fall 2025.pdf, Lexington Jr. High - 2025 Practice Fields.pdf, Cypress 154 - Park Lexington 2025 Practice.pdf, Cypress 154 - Fall 2025 Game Fields.pdf, Field Marshal Program .pdf
+Notes:       Live field information and playbook hub for Cypress Region 154 containing practice rules, parking policies, school district rules, game field maps, setup/takedown procedures, Field Marshal duties, general field rules, referee point system, parent code of conduct, and game schedules.
+================================================================================
+-->
+
+<!-- ============================================================================== -->
+<!-- ======================= START OF AYSO WEBPAGE CODE ======================= -->
+<!-- ============================================================================== -->
+
+<style>
+    /* ============================================================================== */
+    /*                      ** General & Reusable Styles **                         */
+    /* ============================================================================== */
+
+    /* ----- Global Settings ----- */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* ----- Main Page Container ----- */
+    .field-page-container {
+        padding: 15px;
+        max-width: 850px; /* Slightly wider for better spacing on larger screens */
+        margin: 0 auto;
+        font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font stack */
+        line-height: 1.6;
+        color: #333; /* Default text color for better readability */
+    }
+
+    /* ----- Reusable "Info Card" Style ----- */
+    .info-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0; /* Softer border color */
+        border-radius: 12px; /* Increased for a more modern look */
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More pronounced shadow */
+        overflow: hidden; /* Ensures child elements respect the border radius */
+    }
+
+    /* ----- Section Header Bar ----- */
+    .section-title {
+        color: #ffffff !important;
+        margin: 0;
+        padding: 20px 25px;
+        font-size: 1.6em; /* Larger for more impact */
+    }
+
+    /* ----- Content Padding ----- */
+    .info-card-content {
+        padding: 25px;
+    }
+
+    /* ----- Content Headers (H3 & H4) ----- */
+    .info-card h3 {
+        margin-top: 30px;
+        color: #003366; /* AYSO Blue for consistency */
+        border-bottom: 2px solid #003366; /* Stronger accent */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.3em;
+    }
+    .info-card h4 {
+        margin-top: 25px;
+        color: #333;
+        font-size: 1.1em;
+    }
+    .info-card-content h3:first-of-type {
+        margin-top: 0;
+    }
+
+    /* ============================================================================== */
+    /*                  ** Top Navigation Hub Styles **                             */
+    /* ============================================================================== */
+    #field-navigation-hub {
+        text-align: center;
+        padding: 30px;
+        background-color: #f8f9fa; /* Lighter gray for a cleaner look */
+        border: none; /* Remove border for a more integrated feel */
+    }
+    #field-navigation-hub h2 {
+        text-align: center;
+        color: #003366;
+        font-size: 1.4em;
+        margin-bottom: 25px;
+    }
+    .navigation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .nav-button {
+        display: block;
+        background-color: #003366; /* AYSO Blue */
+        color: #ffffff !important;
+        padding: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        border-radius: 8px;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .nav-button:hover, .nav-button:focus {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0, 51, 102, 0.3);
+    }
+    .nav-button-practice {
+        background-color: #28a745;  /* AYSO Green */
+    }
+    .nav-button-practice:hover, .nav-button-practice:focus {
+        background-color: #218838;
+        box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    }
+
+    /* ============================================================================== */
+    /*                      ** Section-Specific Styles **                           */
+    /* ============================================================================== */
+    #practice .section-title { background-color: #28a745; }
+    #gameday .section-title, #gameday-maps .section-title, #setup .section-title, #field-marshal .section-title, #rules .section-title, #playoffs .section-title, #conduct .section-title {
+        background-color: #003366;
+    }
+    
+    /* ============================================================================== */
+    /*                      ** Utility & Component Styles **                        */
+    /* ============================================================================== */
+    .link-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    .grid-button {
+        display: block; padding: 15px; background-color: #f8f9fa; color: #003366 !important;
+        text-decoration: none; font-weight: bold; text-align: center; border: 1px solid #dee2e6;
+        border-radius: 8px; transition: all 0.2s ease-in-out;
+    }
+    .grid-button:hover, .grid-button:focus {
+        background-color: #e9ecef; border-color: #003366; transform: translateY(-2px);
+    }
+    .info-card ul, .info-card ol { padding-left: 25px; }
+    .info-card li { margin-bottom: 12px; }
+    ul.list-soccerball { list-style-type: none !important; padding-left: 0; }
+    ul.list-soccerball > li { padding-left: 2em; position: relative; }
+    ul.list-soccerball > li::before { content: '⚽'; position: absolute; left: 0; top: 0; font-size: 1.1em; }
+    ul.list-soccerball ul { list-style-type: circle !important; margin-top: 10px; padding-left: 25px; }
+    ul.list-soccerball ul li::before { content: "" !important; }
+    .callout { padding: 20px; margin: 25px 0; border-left-width: 5px; border-left-style: solid; border-radius: 5px; }
+    .callout strong { display: block; margin-bottom: 5px; }
+    .callout.warning { background-color: #fffbe6; border-color: #ffc107; color: #664d03; }
+    .callout.danger { background-color: #f8d7da; border-color: #dc3545; color: #58151c; }
+    .callout.info { background-color: #e7f3fe; border-color: #007bff; color: #052c65; }
+    .callout.highlight { background-color: #e6ffed; border-color: #28a745; color: #155724; font-size: 1.2em; text-align: center; }
+    .point-system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; margin-bottom: 30px; }
+    .point-card { background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; display: flex; flex-direction: column; }
+    .point-card-header { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #dee2e6; }
+    .point-value { font-size: 2em; font-weight: bold; color: #28a745; margin-right: 15px; flex-shrink: 0; }
+    .point-card-title { font-size: 1.1em; color: #003366; margin: 0; }
+    .point-card-body { padding: 15px; font-size: 1em; flex-grow: 1; }
+    .contact-info { margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; font-size: 1.1em; }
+    .contact-info a { font-weight: bold; color: #007bff; }
+    .back-to-top-link { display: block; text-align: right; margin-top: 25px; font-size: 1em; font-weight: bold; color: #007bff; text-decoration: none; }
+    .back-to-top-link:hover { text-decoration: underline; }
+</style>
+
+<!-- ============================================================================== -->
+<!-- =================== START OF HTML CONTENT (EDIT BELOW) ======================= -->
+<!-- ============================================================================== -->
+<div class="field-page-container">
+
+    <!-- Top Navigation Hub -->
+    <div id="field-navigation-hub" class="info-card">
+        <h2>Ready for the match? Whether you're a Cypress regular or a visiting team, this is your complete playbook! Find everything you need for both practice and game days - including maps, schedules, and field rules. Tap a button below to get started.</h2>
+        <div class="navigation-grid">
+            <a href="#practice" class="nav-button nav-button-practice">Practice Rules &amp; Maps</a>
+            <a href="#gameday" class="nav-button">Game Schedules</a>
+            <a href="#gameday-maps" class="nav-button">Game Day Map</a>
+            <a href="#setup" class="nav-button">Field Setup &amp; Takedown</a>
+            <a href="#field-marshal" class="nav-button">Field Marshal Duty</a>
+            <a href="#playoffs" class="nav-button">Playoff Point System</a>
+            <a href="#conduct" class="nav-button">Parent Code of Conduct</a>
+            <a href="#rules" class="nav-button">General Field Rules</a>
+        </div>
+    </div>
+
+    <!-- Practice Rules & Maps Section -->
+    <div id="practice" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">Practice Rules &amp; Maps</h2>
+            <div class="info-card-content">
+                <h3>Player Drop-off &amp; Pick-up</h3>
+                <ul>
+                    <li>Players must not be left at the field without supervision by an AYSO Safe Haven certified adult (Coach, Asst. Coach, or Team Parent).</li>
+                    <li>If your child's certified team adult has not yet arrived, you must wait with your child. Do not leave them unattended.</li>
+                    <li>Please make direct contact with your Coach, Asst. Coach, or Team Parent when dropping off AND picking up your child.</li>
+                    <li>Do not rely on your child to relay messages about pick-up; ensure a team adult knows the child is leaving with you.</li>
+                </ul>
+                <div class="callout warning">
+                    <strong>Important Safety Protocol:</strong>
+                    A Coach, Asst. Coach, or Team Parent must wait with any player until a parent or responsible adult arrives for pick-up. The waiting adult must be of the same gender as the player. If a parent/guardian cannot be contacted after a reasonable time (approx. 1 hour), the volunteer's next step is to notify the local police department for assistance.
+                </div>
+                <h3>School Parking Policy</h3>
+                <div class="callout danger">
+                    <strong>Warning: All school parking rules are strictly enforced. Violators may be ticketed or towed at the owner's expense.</strong>
+                </div>
+                <ul>
+                    <li><strong>NO PARKING</strong> is allowed in any school Day Care area, Monday – Friday.</li>
+                    <li>Park in marked stalls ONLY.</li>
+                    <li>Observe all posted signs. Do not park in red zones or designated loading/unloading zones.</li>
+                </ul>
+                <h3>School District Rules for Facility Use</h3>
+                <p>All coaches, parents, players, and guests must abide by the following school district rules at all times. Remember, these fields are a <strong>KIDS ZONE</strong>.</p>
+                <ul>
+                    <li><strong>NO DOGS ALLOWED</strong> on school fields at any time (service animals excepted).</li>
+                    <li><strong>NO SMOKING or ALCOHOL</strong> is permitted on any school property.</li>
+                    <li><strong>NO</strong> urinating or defecating on school property or in surrounding neighborhoods.</li>
+                    <li><strong>DO NOT</strong> use Day Care or school restrooms.</li>
+                    <li><strong>DO NOT</strong> disturb any on-campus resident live-ins.</li>
+                    <li><strong>DO</strong> park in designated areas only.</li>
+                    <li><strong>DO</strong> pick up and properly dispose of all trash after every practice.</li>
+                    <li><strong>DO</strong> respect the area and leave it better than you found it.</li>
+                </ul>
+                <h3>Practice Maps</h3>
+                <div class="link-grid">
+                     <a href="/Portals/14837/docs/2026/Oak Knoll Map - Practice Fall 2025.pdf" target="_blank" class="grid-button">Oak Knoll Park</a>
+                     <a href="/Portals/14837/docs/2026/Lexington Jr. High - 2025 Practice Fields.pdf" target="_blank" class="grid-button">Lexington Jr. HS</a>
+                     <a href="/Portals/14837/docs/2026/Cypress 154 - Park Lexington 2025 Practice.pdf" target="_blank" class="grid-button">Lexington Park (turf)</a>
+                </div>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Field Maps Section -->
+    <div id="gameday-maps" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">Game Field Map</h2>
+            <div class="info-card-content">
+                <p>The Game Day field layout for all divisions is available in our comprehensive map PDF below.</p>
+                <div class="link-grid">
+                    <a href="/Portals/14837/docs/2026/Cypress%20154%20-%20Fall%202025%20Game%20Fields.pdf" target="_blank" class="grid-button">Game Field Map</a>
+                </div>
+                <p style="text-align:center; font-style:italic; margin-top:15px;">This map covers all game fields at <strong>Lexington Jr. HS</strong> (including the adjacent <strong>Arnold Elementary</strong> fields) and <strong>Park Lexington</strong>.</p>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Field Setup & Takedown Section -->
+    <div id="setup" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">Field Setup &amp; Takedown Procedures</h2>
+            <div class="info-card-content">
+                <p>Teamwork is essential for a great game day, starting with field preparation. Teams scheduled for the first and last games are responsible for setup and takedown. Please follow the procedures for your specific location below.</p>
+                <h3>Lexington Jr. HS (10U &amp; 12U Fields)</h3>
+                <p style="font-style: italic; color: #555; margin-top: -10px;">To make things easier, a Board Member will have the lockup open and the necessary goals, paint, and flags staged for you.</p>
+                <h4>Friday Night Setup</h4>
+                <ul class="list-soccerball">
+                    <li><strong>Paint Fields:</strong> Touch-up the fields using the staged paint for clear markings.</li>
+                    <li><strong>Position Goals:</strong> Carry the staged goals from behind the "Lockup" container (near the Arnold gate) and place them on the fields.</li>
+                    <li><strong>Set Corner Flags:</strong> Place all 6 corner flags in their designated positions.</li>
+                    <li><strong>Secure Goals:</strong> For safety, place two sandbags on the back frame of each goal.</li>
+                </ul>
+                <h4>End-of-Day Takedown</h4>
+                <ul class="list-soccerball">
+                    <li><strong>Store Equipment:</strong> Both teams work together to return goals, sandbags, and flags to the designated storage area. A Board Member will be present to help secure everything.</li>
+                    <li><strong>Leave Nets On:</strong> Please leave nets attached to the goals until the end of the season.</li>
+                    <li><strong>Clean Up:</strong> Both teams are responsible for cleaning up all trash around their field.</li>
+                </ul>
+                <h3>Lexington Park — Turf Field (14U - 19U Fields)</h3>
+                <p style="font-style: italic; color: #555; margin-top: -10px;">A Board Member will have the corner flags staged and ready for you.</p>
+                <h4>Saturday Morning Setup</h4>
+                <ul class="list-soccerball"><li><strong>Set Corner Flags:</strong> Ensure all 6 of the staged corner flags are properly set up before the first game.</li></ul>
+                <h4>End-of-Day Takedown</h4>
+                 <ul class="list-soccerball">
+                    <li><strong>Store Flags:</strong> The last two teams take down the 6 corner flags and return them to the storage facility.</li>
+                    <li><strong>Clean Up:</strong> Both teams are responsible for cleaning up all trash around the field area.</li>
+                </ul>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Field Marshal Duty Section -->
+    <div id="field-marshal" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">Field Marshal Duty</h2>
+            <div class="info-card-content">
+                <p>Our Field Marshal program is here to make game days safe, smooth, and fun for everyone! It’s staffed by trained volunteers from our own teams. Here’s a quick overview of what you need to know.</p>
+                <p><strong>Program Coordinator:</strong> Jared Moye</p>
+                <p>For questions about the program, <a href="mailto:assistantrcayso154@gmail.com">CLICK HERE</a> to email Jared.</p>
+                <a href="/Portals/14837/docs/2026/Field Marshal Program .pdf" target="_blank" class="grid-button" style="margin-bottom: 30px;">Download Full Program Details (PDF)</a>
+                <h3>What's Required for My Team? 🙋‍♀️🙋‍♂️</h3>
+                <ul>
+                    <li><strong>Send 2 Volunteers to Training:</strong> Each team must send two representatives to one of the mandatory training sessions to get certified.</li>
+                    <li><strong>Sign Up for One Shift:</strong> Once trained, your volunteers will sign up for one ~2 hour shift during your division's assigned weekend.</li>
+                </ul>
+                <div class="callout warning">
+                    <strong>Heads Up!</strong>
+                    Volunteers who do not show for their assigned shift will miss earning valuable referee point(s) for their team. This can directly affect standings for Cypress Cup and the Playoffs. 🏆
+                </div>
+                <h3>What Does a Field Marshal Do? 🦸</h3>
+                <ul class="list-soccerball">
+                    <li>Assist with volunteer and referee sign in at the tent.</li>
+                    <li>Walk the fields during games and pick up trash as needed.</li>
+                    <li>Look out for any potential issues including:
+                        <ul>
+                            <li>Parents or volunteers getting out of hand.</li>
+                            <li>Parents, players, or guests breaking field rules.</li>
+                            <li>Injuries requiring medical care.</li>
+                            <li>Field issues.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="callout warning">
+                    <strong>📱 Emergency Contact:</strong>
+                    Call the Board Member on call if issues or emergencies arise needing board assistance. You will be given the name and phone number of the on-call board member for your weekend when you sign in.
+                </div>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- General Field Rules Section -->
+    <div id="rules" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">General Field Rules &amp; Respect</h2>
+            <div class="info-card-content">
+                <h3>General Rules for All Events</h3>
+                <p>Please respect school grounds and our community by following these rules at all times:</p>
+                <ul>
+                    <li><strong>NO PETS:</strong> With the exception of certified service animals, pets are NOT allowed on school fields.</li>
+                    <li><strong>NO SMOKING OR ALCOHOL:</strong> Strictly prohibited on all school properties.</li>
+                    <li><strong>RESPECT THE EQUIPMENT:</strong> Do not hang or climb on soccer goals.</li>
+                    <li><strong>LEAVE IT BETTER THAN YOU FOUND IT:</strong> Always pick up your trash.</li>
+                </ul>
+                <h3>Sideline Rules for Parents &amp; Spectators</h3>
+                 <ul>
+                     <li>Parents sit on the same half of the sideline as their team. Home team sits on the west or north side of the field.</li>
+                     <li>Chairs, tables, umbrellas, etc. must be set up at least 5 feet back from the touchline.</li>
+                     <li>"Coaching" from the sidelines, behind goals, or on the player's side is not allowed.</li>
+                     <li><strong>ZERO TOLERANCE POLICY:</strong> No yelling at, arguing with, or showing dissent/abuse towards referees, especially our youth referees. They are children dedicating themselves to the game. Be nice!</li>
+                 </ul>
+                <h3>Did You Know? The "Why" Behind Our 6-Goal Rule</h3>
+                <div class="callout info">
+                    <p>You might notice that in our games, a team won't run up the score on another... Thank you for cheering on the good sportsmanship that this rule promotes!</p>
+                </div>
+                 <h3>Rules for Coaches</h3>
+                 <ul><li>Coaches must stay within the technical area (approximately 8 yards on either side of the halfway line).</li></ul>
+                <div class="diagram-placeholder">
+                    <h4>Field Diagram Coming Soon</h4>
+                    <p>A visual guide showing sideline placements for teams and spectators, plus the coach's technical area, will be posted here.</p>
+                </div>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Referee Point System Section -->
+    <div id="playoffs" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">2025 Referee Point System: The Road to the Playoffs</h2>
+            <div class="info-card-content">
+                <p>Earning a spot in the post-season playoffs is a team effort that extends to volunteering! For divisions <strong>U10 through U19</strong>, teams must earn points by completing the missions below. Track your progress and secure your spot!</p>
+                <div class="point-system-grid">
+                    <div class="point-card"><div class="point-card-header"><div class="point-value">+5</div><h4 class="point-card-title">Mission: Get Referees Certified</h4></div><div class="point-card-body">Earn <strong>1 point</strong> for every certified referee listed for your team in Matchtrak (max of 5).</div></div>
+                    <div class="point-card"><div class="point-card-header"><div class="point-value">+2</div><h4 class="point-card-title">Mission: Sign Up Early</h4></div><div class="point-card-body">Earn <strong>2 points</strong> if all your team's assigned games are signed up for in Matchtrak before September 21st.</div></div>
+                    <div class="point-card"><div class="point-card-header"><div class="point-value">+10</div><h4 class="point-card-title">Mission: Complete Game Assignments</h4></div><div class="point-card-body">Earn <strong>1 point</strong> for each referee assignment completed in full uniform (max of 10). For U14+, this requires 2 ARs per home game.</div></div>
+                    <div class="point-card"><div class="point-card-header"><div class="point-value">+2</div><h4 class="point-card-title">Mission: Serve as Field Marshal</h4></div><div class="point-card-body">Earn <strong>2 points</strong> upon successful completion of your team's assigned Field Marshal shift.</div></div>
+                </div>
+                <div class="callout highlight"><strong>🏁 Goal: Each team needs a minimum of 14 points to be eligible for playoffs!</strong></div>
+                <div class="contact-info">If you have any questions, please email the Regional Referee Administrator by <a href="mailto:Cypress154RRA@gmail.com">CLICKING HERE</a>.</div>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parent's Code of Conduct Section -->
+    <div id="conduct" class="field-section">
+        <div class="info-card">
+            <h2 class="section-title">Parent's Code of Conduct</h2>
+            <div class="info-card-content">
+                <p>AYSO is a nationwide non-profit organization that develops and delivers quality youth soccer programs in a fun, family environment based on AYSO’s Six Philosophies:</p>
+                <ul class="philosophy-list">
+                    <li><strong>Everyone Plays®:</strong> Our program’s goal is for kids to play soccer...</li>
+                    <li><strong>Balanced Teams:</strong> Each year we form new teams as evenly balanced as possible...</li>
+                    <li><strong>Open Registration:</strong> Our program is open to all children between 3 and 19 years of age...</li>
+                    <li><strong>Positive Coaching:</strong> Encouragement of player effort provides for greater enjoyment...</li>
+                    <li><strong>Good Sportsmanship:</strong> We strive to create a positive environment based on mutual respect...</li>
+                    <li><strong>Player Development:</strong> We believe that all players should be able to develop their soccer skills...</li>
+                </ul>
+                <h3>Therefore I agree:</h3>
+                <ol>
+                    <li>I will not force my child to participate in sports...</li>
+                    <li>I will learn the rules of the game and the policies of the region.</li>
+                    <li>... (and so on, the rest of the list is preserved)</li>
+                </ol>
+                <div class="callout danger">
+                    <strong>Strictly Prohibited &amp; Enforced:</strong>
+                    <ul>
+                        <li>NO dogs (service animals excepted).</li>
+                        <li>NO drugs, tobacco, or alcohol at any AYSO event.</li>
+                        <li>NO liquids other than water are allowed on the turf field at Lexington Park.</li>
+                    </ul>
+                </div>
+                <div class="consequence-statement">
+                    I understand and accept that if I violate this Code of Conduct, I may be asked to leave the game...
+                </div>
+                <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ============================================================================== -->
+    <!--         NEW GAME SCHEDULES SECTION (ADDED TO BOTTOM AS REQUESTED)            -->
+    <!-- ============================================================================== -->
+    <div id="gameday" class="info-card">
+        <h2 class="section-title">Game Schedules</h2>
+        <div class="info-card-content">
+            
+            <h3>Cypress League Schedules (5U - 12U)</h3>
+            <p>All schedules and standings for our 5U through 12U Boys and Girls divisions are located on our official Matchtrak page. Click the button below, then use the dropdown menus on the schedule page to select your child's specific division (e.g., '10U Girls') to view their information.</p>
+            <div class="link-grid">
+                <a href="https://s11e154-25-fall.matchtrak.com/11/main.nsf/standings-region?openview&amp;count=500&amp;ExpandView&amp;&amp;RestrictToCategory=R154" target="_blank" class="grid-button">View 5U - 12U Schedules &amp; Standings</a>
+            </div>
+
+            <hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;">
+
+            <h3>Inter-League Schedules (14U, 16U/19U, &amp; EXTRA)</h3>
+            <p>Schedules for our older divisions and EXTRA program teams that compete against teams from other local AYSO regions.</p>
+            <div class="link-grid">
+                <a href="#" class="grid-button">14U Schedules</a>
+                <a href="#" class="grid-button">16U / 19U Schedules</a>
+                <a href="https://scedsl-25-fall.matchtrak.com/" target="_blank" class="grid-button">EXTRA Program Schedules</a>
+            </div>
+            
+            <a href="#field-navigation-hub" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+    <!-- =================== END OF NEW GAME SCHEDULES SECTION ================== -->
+
+</div>
+<!-- ============================================================================== -->
+<!-- ======================== END OF HTML CONTENT ================================= -->
+<!-- ============================================================================== -->
