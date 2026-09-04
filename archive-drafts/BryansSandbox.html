@@ -1,0 +1,706 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   Volunteer Compliance Dashboard Prototype
+CMS Status:  Hidden / Inactive
+Audience:    [aud:volunteers] [aud:referees]
+Content:     [type:dashboard] [type:policy]
+Components:  [ui:card] [ui:table] [ui:callout]
+Assets:      None
+Notes:       Static user-experience prototype for the AYSO Region 154 Volunteer Compliance Dashboard using fictional test data.
+================================================================================
+-->
+
+<style>
+/* =========================================================
+   AYSO REGION 154
+   VOLUNTEER COMPLIANCE DASHBOARD PROTOTYPE
+   FICTIONAL DATA ONLY — HTML/CSS — NO JAVASCRIPT
+   ========================================================= */
+
+.ayso-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 16px;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ayso-dashboard,
+.ayso-dashboard * {
+  box-sizing: border-box;
+}
+
+.ayso-dashboard h1,
+.ayso-dashboard h2,
+.ayso-dashboard h3,
+.ayso-dashboard p {
+  margin-top: 0;
+}
+
+.ayso-dashboard h1 {
+  margin-bottom: 6px;
+  color: #003b70;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.ayso-dashboard h2 {
+  margin-bottom: 16px;
+  color: #172033;
+  font-size: 23px;
+}
+
+.dashboard-subtitle {
+  margin-bottom: 20px;
+  color: #566274;
+  font-size: 16px;
+}
+
+.dashboard-notice {
+  margin-bottom: 20px;
+  padding: 16px;
+  color: #5c4300;
+  background: #fff4cc;
+  border: 1px solid #e0a800;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.dashboard-notice strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dashboard-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d9e0ea;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.dashboard-section {
+  margin-top: 20px;
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-card {
+  min-height: 140px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d9e0ea;
+  border-top: 6px solid #607d8b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.metric-card.compliant {
+  border-top-color: #218739;
+}
+
+.metric-card.action {
+  border-top-color: #c62828;
+}
+
+.metric-card.pending {
+  border-top-color: #d88600;
+}
+
+.metric-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #566274;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.metric-number {
+  display: block;
+  margin-bottom: 4px;
+  color: #172033;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.metric-description {
+  color: #667386;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* OVERALL PROGRESS */
+
+.overall-progress-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.progress-summary {
+  min-width: 150px;
+  text-align: center;
+}
+
+.progress-percentage {
+  display: block;
+  color: #218739;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.progress-label {
+  display: block;
+  margin-top: 6px;
+  color: #566274;
+  font-weight: bold;
+}
+
+.progress-container {
+  flex: 1;
+}
+
+.progress-track {
+  width: 100%;
+  height: 26px;
+  overflow: hidden;
+  background: #e7ebf0;
+  border-radius: 20px;
+}
+
+.progress-fill {
+  width: 75%;
+  height: 100%;
+  background: #218739;
+  border-radius: 20px;
+}
+
+.progress-caption {
+  margin: 10px 0 0;
+  color: #566274;
+  font-size: 14px;
+}
+
+/* REQUIREMENTS */
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.requirement-item {
+  padding: 16px;
+  background: #f7f9fc;
+  border: 1px solid #d9e0ea;
+  border-radius: 10px;
+}
+
+.requirement-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.requirement-count {
+  white-space: nowrap;
+  color: #566274;
+}
+
+.requirement-track {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  background: #dfe5ec;
+  border-radius: 10px;
+}
+
+.requirement-fill {
+  height: 100%;
+  background: #218739;
+  border-radius: 10px;
+}
+
+.requirement-fill.safe-haven {
+  width: 96%;
+}
+
+.requirement-fill.concussion {
+  width: 88%;
+}
+
+.requirement-fill.cardiac {
+  width: 83%;
+  background: #d88600;
+}
+
+.requirement-fill.background {
+  width: 92%;
+}
+
+.requirement-fill.safesport {
+  width: 92%;
+}
+
+/* TABLES */
+
+.dashboard-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d9e0ea;
+  border-radius: 10px;
+}
+
+.dashboard-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e2e7ed;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.dashboard-table th {
+  color: #ffffff;
+  background: #004b8d;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background: #f7f9fc;
+}
+
+.dashboard-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* STATUS LABELS */
+
+.status {
+  display: inline-block;
+  min-width: 82px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.status-complete {
+  color: #145c25;
+  background: #dff3e4;
+  border: 1px solid #82c891;
+}
+
+.status-action {
+  color: #8a1616;
+  background: #ffe2e2;
+  border: 1px solid #e99b9b;
+}
+
+.status-pending {
+  color: #704800;
+  background: #fff0cc;
+  border: 1px solid #e4bd64;
+}
+
+.status-na {
+  color: #4f5c6e;
+  background: #edf0f4;
+  border: 1px solid #c7ced8;
+}
+
+/* LEGEND */
+
+.dashboard-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* PRIVACY */
+
+.dashboard-privacy {
+  margin-top: 20px;
+  padding: 16px;
+  color: #7a1111;
+  background: #fff0f0;
+  border: 1px solid #c62828;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .dashboard-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .requirements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .ayso-dashboard {
+    margin: 10px auto;
+    padding: 8px;
+  }
+
+  .ayso-dashboard h1 {
+    font-size: 25px;
+  }
+
+  .ayso-dashboard h2 {
+    font-size: 21px;
+  }
+
+  .dashboard-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    min-height: 120px;
+  }
+
+  .overall-progress-row {
+    display: block;
+  }
+
+  .progress-summary {
+    margin-bottom: 20px;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 11px 10px;
+  }
+}
+</style>
+
+<main class="ayso-dashboard">
+
+  <h1>Volunteer Compliance Dashboard</h1>
+
+  <p class="dashboard-subtitle">
+    Static user-experience prototype for AYSO Region 154
+  </p>
+
+  <div class="dashboard-notice">
+    <strong>Fictional test data only</strong>
+    This prototype does not contain actual volunteer names, email addresses,
+    background-check results, training dates, registration information, or
+    other confidential records.
+  </div>
+
+  <!-- SUMMARY METRICS -->
+
+  <section class="dashboard-metrics">
+
+    <div class="metric-card">
+      <span class="metric-label">Total volunteers</span>
+      <span class="metric-number">24</span>
+      <span class="metric-description">
+        Fictional volunteers included in this prototype
+      </span>
+    </div>
+
+    <div class="metric-card compliant">
+      <span class="metric-label">Fully compliant</span>
+      <span class="metric-number">18</span>
+      <span class="metric-description">
+        All required compliance steps complete
+      </span>
+    </div>
+
+    <div class="metric-card action">
+      <span class="metric-label">Action needed</span>
+      <span class="metric-number">4</span>
+      <span class="metric-description">
+        One or more requirements are incomplete
+      </span>
+    </div>
+
+    <div class="metric-card pending">
+      <span class="metric-label">Pending review</span>
+      <span class="metric-number">2</span>
+      <span class="metric-description">
+        Submitted requirements awaiting confirmation
+      </span>
+    </div>
+
+  </section>
+
+  <!-- OVERALL COMPLIANCE -->
+
+  <section class="dashboard-card dashboard-section">
+    <h2>Overall Compliance</h2>
+
+    <div class="overall-progress-row">
+
+      <div class="progress-summary">
+        <span class="progress-percentage">75%</span>
+        <span class="progress-label">Compliant</span>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+
+        <p class="progress-caption">
+          18 of 24 fictional volunteers have completed every assigned requirement.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REQUIREMENT COMPLETION -->
+
+  <section class="dashboard-card dashboard-section">
+    <h2>Completion by Requirement</h2>
+
+    <div class="requirements-grid">
+
+      <div class="requirement-item">
+        <div class="requirement-heading">
+          <span>AYSO Safe Haven</span>
+          <span class="requirement-count">23 of 24</span>
+        </div>
+
+        <div class="requirement-track">
+          <div class="requirement-fill safe-haven"></div>
+        </div>
+      </div>
+
+      <div class="requirement-item">
+        <div class="requirement-heading">
+          <span>Concussion Awareness</span>
+          <span class="requirement-count">21 of 24</span>
+        </div>
+
+        <div class="requirement-track">
+          <div class="requirement-fill concussion"></div>
+        </div>
+      </div>
+
+      <div class="requirement-item">
+        <div class="requirement-heading">
+          <span>Sudden Cardiac Arrest</span>
+          <span class="requirement-count">20 of 24</span>
+        </div>
+
+        <div class="requirement-track">
+          <div class="requirement-fill cardiac"></div>
+        </div>
+      </div>
+
+      <div class="requirement-item">
+        <div class="requirement-heading">
+          <span>Background Check Status</span>
+          <span class="requirement-count">22 of 24</span>
+        </div>
+
+        <div class="requirement-track">
+          <div class="requirement-fill background"></div>
+        </div>
+      </div>
+
+      <div class="requirement-item">
+        <div class="requirement-heading">
+          <span>SafeSport</span>
+          <span class="requirement-count">22 of 24</span>
+        </div>
+
+        <div class="requirement-track">
+          <div class="requirement-fill safesport"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIVISION SUMMARY -->
+
+  <section class="dashboard-card dashboard-section">
+    <h2>Compliance by Division</h2>
+
+    <div class="dashboard-table-wrap">
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th>Division</th>
+            <th>Total</th>
+            <th>Compliant</th>
+            <th>Action Needed</th>
+            <th>Pending</th>
+            <th>Compliance Rate</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>8U</strong></td>
+            <td>8</td>
+            <td>7</td>
+            <td>1</td>
+            <td>0</td>
+            <td><strong>88%</strong></td>
+          </tr>
+
+          <tr>
+            <td><strong>10U</strong></td>
+            <td>9</td>
+            <td>6</td>
+            <td>2</td>
+            <td>1</td>
+            <td><strong>67%</strong></td>
+          </tr>
+
+          <tr>
+            <td><strong>12U</strong></td>
+            <td>7</td>
+            <td>5</td>
+            <td>1</td>
+            <td>1</td>
+            <td><strong>71%</strong></td>
+          </tr>
+
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>24</strong></td>
+            <td><strong>18</strong></td>
+            <td><strong>4</strong></td>
+            <td><strong>2</strong></td>
+            <td><strong>75%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FICTIONAL RECORDS -->
+
+  <section class="dashboard-card dashboard-section">
+    <h2>Sample Volunteer Statuses</h2>
+
+    <div class="dashboard-table-wrap">
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th>Test ID</th>
+            <th>Division</th>
+            <th>Role</th>
+            <th>Training</th>
+            <th>Background Check</th>
+            <th>Overall</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>TEST-001</td>
+            <td>8U</td>
+            <td>Head Coach</td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-complete">Compliant</span></td>
+          </tr>
+
+          <tr>
+            <td>TEST-002</td>
+            <td>8U</td>
+            <td>Assistant Coach</td>
+            <td><span class="status status-action">Missing</span></td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-action">Action needed</span></td>
+          </tr>
+
+          <tr>
+            <td>TEST-003</td>
+            <td>10U</td>
+            <td>Team Manager</td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-pending">Pending</span></td>
+            <td><span class="status status-pending">Pending</span></td>
+          </tr>
+
+          <tr>
+            <td>TEST-004</td>
+            <td>10U</td>
+            <td>Assistant Referee</td>
+            <td><span class="status status-action">Incomplete</span></td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-action">Action needed</span></td>
+          </tr>
+
+          <tr>
+            <td>TEST-005</td>
+            <td>12U</td>
+            <td>Head Coach</td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-complete">Compliant</span></td>
+          </tr>
+
+          <tr>
+            <td>TEST-006</td>
+            <td>12U</td>
+            <td>Assistant Referee</td>
+            <td><span class="status status-na">Not assigned</span></td>
+            <td><span class="status status-complete">Complete</span></td>
+            <td><span class="status status-pending">Review</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="dashboard-legend">
+      <span class="status status-complete">Complete</span>
+      <span class="status status-action">Action needed</span>
+      <span class="status status-pending">Pending</span>
+      <span class="status status-na">Not assigned</span>
+    </div>
+  </section>
+
+  <!-- PRIVACY BOUNDARY -->
+
+  <div class="dashboard-privacy">
+    <strong>Production privacy requirement:</strong>
+    A live dashboard containing identifiable volunteer information would be
+    restricted to specifically authorized users. Public pages should display
+    only instructions, aggregate statistics, and nonconfidential information.
+    Individual records would not be published until access controls have been
+    separately tested and approved.
+  </div>
+
+</main>
