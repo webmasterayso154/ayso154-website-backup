@@ -1,0 +1,1232 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   Sponsorship Program Proposal
+CMS Status:  Hidden / Inactive
+Audience:    [aud:volunteers] [aud:parents]
+Content:     [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:table] [ui:callout]
+Assets:      AYSO 154 Logo - 3D.png, 2026 sponsorship packet.pdf
+Notes:       Fall 2026 pilot proposal for the Cypress AYSO Region 154 Executive Board regarding modernized sponsorship levels and volunteer sustainability.
+================================================================================
+-->
+
+<style>
+  .r154-board-page {
+    --r154-blue: #004b93;
+    --r154-blue-dark: #08275b;
+    --r154-blue-soft: #eaf4ff;
+    --r154-red: #d71920;
+    --r154-red-soft: #ffe8ea;
+    --r154-yellow: #ffd200;
+    --r154-yellow-soft: #fff7d1;
+    --r154-green: #178a45;
+    --r154-green-soft: #e8f7ee;
+    --r154-white: #ffffff;
+    --r154-ink: #172033;
+    --r154-muted: #52657d;
+    --r154-line: #d7e4f3;
+    --r154-shadow: 0 14px 34px rgba(8, 39, 91, 0.14);
+    --r154-radius: 22px;
+    --r154-radius-sm: 14px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--r154-ink);
+    background: #ffffff;
+    line-height: 1.55;
+  }
+
+  .r154-board-page *,
+  .r154-board-page *::before,
+  .r154-board-page *::after {
+    box-sizing: border-box;
+  }
+
+  .r154-board-page a {
+    color: inherit;
+  }
+
+  .r154-wrap {
+    width: min(1120px, calc(100% - 28px));
+    margin: 0 auto;
+  }
+
+  .r154-section {
+    padding: 42px 0;
+    scroll-margin-top: 18px;
+  }
+
+  .r154-section-alt {
+    background: #f5f9ff;
+    border-top: 1px solid var(--r154-line);
+    border-bottom: 1px solid var(--r154-line);
+  }
+
+  .r154-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    padding: 8px 13px;
+    border-radius: 999px;
+    background: var(--r154-yellow);
+    color: var(--r154-blue-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .r154-board-page h1,
+  .r154-board-page h2,
+  .r154-board-page h3,
+  .r154-board-page h4,
+  .r154-board-page p,
+  .r154-board-page li,
+  .r154-board-page a,
+  .r154-board-page span,
+  .r154-board-page td,
+  .r154-board-page th {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .r154-board-page h1 {
+    margin: 16px 0 14px;
+    color: var(--r154-white);
+    font-size: clamp(2rem, 8vw, 4.25rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+  }
+
+  .r154-board-page h2 {
+    margin: 14px 0 12px;
+    color: var(--r154-blue-dark);
+    font-size: clamp(1.7rem, 5.7vw, 2.65rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    font-weight: 900;
+  }
+
+  .r154-board-page h3 {
+    margin: 0 0 10px;
+    color: var(--r154-blue-dark);
+    font-size: 1.18rem;
+    line-height: 1.25;
+    font-weight: 900;
+  }
+
+  .r154-board-page h4 {
+    margin: 0 0 5px;
+    color: var(--r154-blue-dark);
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .r154-board-page p {
+    margin: 0 0 16px;
+    color: var(--r154-muted);
+    font-size: 1rem;
+  }
+
+  .r154-board-page ul {
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .r154-board-page li {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 30px;
+    color: #25364c;
+    font-size: 0.98rem;
+  }
+
+  .r154-board-page li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: var(--r154-green-soft);
+    color: var(--r154-green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 900;
+  }
+
+  .r154-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: var(--r154-blue-soft);
+    color: var(--r154-blue);
+    border: 1px solid var(--r154-line);
+    font-size: 0.92rem;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .r154-back:hover {
+    background: var(--r154-blue);
+    color: var(--r154-white);
+  }
+
+  .r154-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 0 50px;
+    color: var(--r154-white);
+    background:
+      radial-gradient(circle at 90% 14%, rgba(255, 210, 0, 0.18), transparent 23%),
+      linear-gradient(135deg, #004b93 0%, #0059aa 56%, #08275b 100%);
+  }
+
+  .r154-hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 70px;
+    background:
+      linear-gradient(90deg, transparent 49.8%, rgba(255,255,255,0.45) 50%, transparent 50.2%),
+      radial-gradient(circle at center, transparent 0 34px, rgba(255,255,255,0.38) 35px 37px, transparent 38px),
+      linear-gradient(180deg, #1d9a55, #13763f);
+    border-top: 4px solid rgba(255,255,255,0.38);
+  }
+
+  .r154-hero-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .r154-hero p {
+    max-width: 780px;
+    color: rgba(255,255,255,0.96);
+    font-size: clamp(1rem, 3vw, 1.16rem);
+  }
+
+  .r154-hero strong {
+    color: var(--r154-yellow);
+  }
+
+  .r154-logo-box {
+    width: min(250px, 78vw);
+    margin: 0 auto;
+    padding: 14px;
+    border-radius: 24px;
+    background: var(--r154-white);
+    border: 1px solid rgba(255,255,255,0.85);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.24);
+  }
+
+  .r154-logo-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .r154-hero-buttons,
+  .r154-button-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .r154-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 13px 18px;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    font-size: 0.96rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+
+  .r154-btn-yellow {
+    background: var(--r154-yellow);
+    color: var(--r154-blue-dark);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  }
+
+  .r154-btn-red {
+    background: var(--r154-red);
+    color: var(--r154-white);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  }
+
+  .r154-btn-white {
+    background: var(--r154-white);
+    color: var(--r154-blue);
+    border-color: rgba(255,255,255,0.75);
+  }
+
+  .r154-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+  }
+
+  .r154-badges span {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.16);
+    color: var(--r154-white);
+    border: 1px solid rgba(255,255,255,0.35);
+    font-size: 0.86rem;
+    font-weight: 900;
+  }
+
+  .r154-quick {
+    position: relative;
+    z-index: 4;
+    margin-top: -10px;
+    background: #ffffff;
+    padding-bottom: 12px;
+  }
+
+  .r154-quick-card {
+    padding: 16px;
+    border-radius: 20px;
+    background: var(--r154-white);
+    border: 1px solid var(--r154-line);
+    box-shadow: var(--r154-shadow);
+  }
+
+  .r154-quick-title {
+    margin: 0 0 12px;
+    color: var(--r154-blue-dark);
+    font-size: 0.95rem;
+    font-weight: 900;
+  }
+
+  .r154-quick-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .r154-quick-grid a {
+    min-height: 44px;
+    padding: 10px 8px;
+    border-radius: 12px;
+    background: var(--r154-blue-soft);
+    color: var(--r154-blue);
+    border: 1px solid #c9ddf5;
+    font-size: 0.84rem;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .r154-quick-grid a:hover {
+    background: var(--r154-blue);
+    color: var(--r154-white);
+  }
+
+  .r154-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .r154-card {
+    padding: 22px;
+    border-radius: var(--r154-radius);
+    background: var(--r154-white);
+    border: 1px solid var(--r154-line);
+    box-shadow: 0 10px 26px rgba(8, 39, 91, 0.08);
+  }
+
+  .r154-card-blue {
+    background: linear-gradient(135deg, var(--r154-blue), var(--r154-blue-dark));
+    color: var(--r154-white);
+    border: none;
+  }
+
+  .r154-card-blue h3,
+  .r154-card-blue p,
+  .r154-card-blue li {
+    color: var(--r154-white);
+  }
+
+  .r154-card-blue li::before {
+    background: rgba(255,255,255,0.18);
+    color: var(--r154-yellow);
+  }
+
+  .r154-card-yellow {
+    background: linear-gradient(180deg, var(--r154-yellow-soft), #ffffff);
+    border-color: #f0d76d;
+  }
+
+  .r154-note {
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: var(--r154-radius-sm);
+    background: var(--r154-yellow-soft);
+    border: 1px solid #ecd678;
+    color: #4f3f00;
+    font-size: 0.95rem;
+  }
+
+  .r154-note strong {
+    color: #2f2500;
+  }
+
+  .r154-flow {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .r154-flow-step {
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--r154-white);
+    border: 1px solid var(--r154-line);
+    box-shadow: 0 10px 24px rgba(8, 39, 91, 0.08);
+  }
+
+  .r154-flow-step::after {
+    content: "↓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 14px auto -8px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--r154-yellow);
+    color: var(--r154-blue-dark);
+    font-weight: 900;
+  }
+
+  .r154-flow-step:last-child::after {
+    display: none;
+  }
+
+  .r154-flow-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--r154-blue-soft);
+    color: var(--r154-blue);
+    font-size: 1.45rem;
+  }
+
+  .r154-flow-step p {
+    margin: 0;
+    font-size: 0.96rem;
+  }
+
+  .r154-plan-wrap {
+    margin-top: 22px;
+    overflow-x: auto;
+    border-radius: 22px;
+    border: 1px solid var(--r154-line);
+    background: #061a3a;
+    box-shadow: var(--r154-shadow);
+  }
+
+  .r154-plan-table {
+    width: 100%;
+    min-width: 920px;
+    border-collapse: collapse;
+    color: var(--r154-white);
+  }
+
+  .r154-plan-table th,
+  .r154-plan-table td {
+    padding: 18px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    border-right: 1px solid rgba(255,255,255,0.12);
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .r154-plan-table th:first-child,
+  .r154-plan-table td:first-child {
+    text-align: left;
+    width: 240px;
+    background: #020b19;
+  }
+
+  .r154-plan-table th:last-child,
+  .r154-plan-table td:last-child {
+    border-right: none;
+  }
+
+  .r154-plan-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .r154-plan-title {
+    display: block;
+    color: #64a9ff;
+    font-size: 1.05rem;
+    font-weight: 900;
+  }
+
+  .r154-plan-price {
+    display: block;
+    margin-top: 6px;
+    color: var(--r154-white);
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .r154-plan-sub {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .r154-row-title {
+    color: var(--r154-white);
+    font-weight: 900;
+  }
+
+  .r154-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #2f80ed;
+    color: var(--r154-white);
+    font-size: 0.86rem;
+    font-weight: 900;
+  }
+
+  .r154-dash {
+    color: rgba(255,255,255,0.45);
+    font-weight: 900;
+  }
+
+  .r154-plus {
+    color: var(--r154-yellow);
+    font-weight: 900;
+  }
+
+  .r154-plan-cta {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: var(--r154-yellow);
+    color: var(--r154-blue-dark);
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .r154-plan-cta-red {
+    background: var(--r154-red);
+    color: var(--r154-white);
+  }
+
+  .r154-plan-footnote {
+    margin-top: 12px;
+    color: var(--r154-muted);
+    font-size: 0.92rem;
+  }
+
+  .r154-idea-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .r154-idea {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 13px;
+    align-items: start;
+    padding: 16px;
+    border: 1px solid var(--r154-line);
+    border-radius: 16px;
+    background: var(--r154-white);
+  }
+
+  .r154-idea-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: var(--r154-blue-soft);
+    color: var(--r154-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+  }
+
+  .r154-idea p {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+
+  .r154-table-wrap {
+    margin-top: 18px;
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 1px solid var(--r154-line);
+    background: var(--r154-white);
+  }
+
+  .r154-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+  }
+
+  .r154-table th,
+  .r154-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--r154-line);
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.94rem;
+  }
+
+  .r154-table th {
+    background: var(--r154-blue);
+    color: var(--r154-white);
+    font-weight: 900;
+  }
+
+  .r154-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .r154-table td:first-child {
+    color: var(--r154-blue-dark);
+    font-weight: 900;
+  }
+
+  .r154-final {
+    padding: 26px;
+    border-radius: 26px;
+    background:
+      radial-gradient(circle at 88% 12%, rgba(255,210,0,0.26), transparent 25%),
+      linear-gradient(135deg, var(--r154-blue-dark), var(--r154-blue));
+    color: var(--r154-white);
+    box-shadow: var(--r154-shadow);
+  }
+
+  .r154-final h2,
+  .r154-final p {
+    color: var(--r154-white);
+  }
+
+  @media (min-width: 640px) {
+    .r154-hero-buttons,
+    .r154-button-row {
+      grid-template-columns: repeat(3, auto);
+      justify-content: start;
+    }
+
+    .r154-quick-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .r154-idea-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 860px) {
+    .r154-hero {
+      padding: 54px 0 78px;
+    }
+
+    .r154-hero-inner {
+      grid-template-columns: 1.35fr 0.65fr;
+    }
+
+    .r154-logo-box {
+      margin-left: auto;
+      margin-right: 0;
+      width: min(320px, 100%);
+    }
+
+    .r154-section {
+      padding: 58px 0;
+    }
+
+    .r154-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .r154-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .r154-quick-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    .r154-flow {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .r154-flow-step::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -26px;
+      margin: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .r154-flow-step:last-child::after {
+      display: none;
+    }
+
+    .r154-idea-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
+<div class="r154-board-page" id="top">
+
+  <header class="r154-hero">
+    <div class="r154-wrap">
+      <div class="r154-hero-inner">
+        <div>
+          <div class="r154-eyebrow">⚽ Proposal for Executive Board Review</div>
+
+          <h1>What if sponsorship became a volunteer sustainability tool?</h1>
+
+          <p>
+            This page is a <strong>Fall 2026 pilot proposal</strong> for the Cypress AYSO Region 154
+            Executive Board. The goal is not to overhaul the sponsorship program, but to explore whether a few optional enhanced sponsorship levels could help strengthen
+            the region while keeping the current process familiar.
+          </p>
+
+          <p>
+            <strong>What if</strong> local businesses could still sponsor teams, but also help us appreciate
+            coaches, referees, team parents, board members, and the volunteers who make the season possible?
+          </p>
+
+          <div class="r154-hero-buttons">
+            <a class="r154-btn r154-btn-yellow" href="#proposal">Review Proposal</a>
+            <a class="r154-btn r154-btn-red" href="#levels">View Pilot Levels</a>
+            <a class="r154-btn r154-btn-white" href="#proceeds">Review Proceeds</a>
+          </div>
+
+          <div class="r154-badges">
+            <span>Board review draft</span>
+            <span>Small 2026 pilot</span>
+            <span>Current $150 option remains</span>
+            <span>Scale only if successful</span>
+          </div>
+        </div>
+
+        <div class="r154-logo-box">
+          <img src="/portals/14837/data:image/webp;base64,UklGRjYnAABXRUJQVlA4IConAACQgwGdASoEAQQBPpEyiUckIiGinpGIJ2kALascFXFHZ3H3fKnHt63VV+y3GMWBwHfMfLyd3n/izfRXuFp25ETW/SkQoiZpn3KUs8qorDbFdKBsNVkfcXJvF7isruO2PUxyD1okcF6HwX5sCLT8tP4YYdBXvGwCSWyZ0pFrs0NFE90nj6wYu4THIn8Q4zwf4clv6i1sGYp6TrHEUAvsSg2pdtJ4qzTIaooX89AzSlahjxm6t5DhLyXsTmCy8TyHS6OPWH3K2Ndqh34zcVfPslvaPPz0psiz1kz8BXY2+6mcw4f9S9SjeP/1X7+XbkDRcfUPuYsRVqo7emW1d/eH7UPnXrfiYBz2vQw8/E74Y7h/w/yvDhzW2HLxKIMlkgJqdiQW0/k/cgqIbje6Qq5jC++5JVXIfCdN5Y+MFlE6S2ZHlxYRlc+v/Uf2/TfzIr+lmTNWY0qzn9q5+Nx2N/zeM4kRXf2h5cDYqUdPYMim4kmBC4D4KsLqgNpU0l6eZAIj6lJXUcb0HCRF5NCuwPa7uz1cP4a/Z18m4grRlzNb/y49KymZ4XcT7W0Q0FdQLi7oFk13o5+yN+mlT38WgNl63w/0MLQ56/ApAcbH7FV6C3NbX3oj+j/YGH97l72ZLJg48yY4sl+9JJJKwHQDUOSfdcQKzBdM8LkMDKM1T3n9y8Zl7nAEuRCOu0sbFLA07toPE+fw2knv+1D0o55OCUWEDzzq+uV7SYFAlrMvRB9HD2Cda/mBfYk0aW8SZdS4t2q/2dOZ7uw8c5OGJ9dpQYv8e+I9vbbn/j6HE1jOKYOvlSxYpdxUsh5UjhgpQRSI3aH9NBRbD7wnOkoAtazEHLl3l87T7MW2lL5WqJaMPWO1b8kD58TjEZpkXXO8Nx5qv/eBtLeFKzv+O6GxvE/lca+bU/OQzz9+fPqf/CQdS0y3PIj/tO+Y3LR6Y/BWc0NjVAM7phvm4RMwAMnIOq85Wbbf+nylG5Vi3TdCVy1nQBhWrfbW/+cTBGKBY+G0zmqWHC2Tx8EWaRB3H8IaeU9G+FjDWxhc5W4Z43pnMFRPX7z4XnyM7L/4CyeTT+gCeo8x6lYeePpmTirYV/9jE2cKP8zPgv0r9eSlRh9Z+7rDmqb9OGuOo8r6t0iVTW2K/e5x8Me0/yvXkwuPz/uc3jccA2uqZpuG6Zd5mz/7r9xIacm2c4ePug4Db+8FXTcvS7wUcH/y7KcxpRnzRUy0hlwUr0MX7AsNr87+cQZEEJSn9HR84tWPbqx/3GeYzZ7ZSQx4Zm0oKxMq+8AcjZ/D+VMCeP1Nn8f/j86xUHj2yO8iAts4CZgTX2KNWqozs4TAb8FrfUMWp1KFb2CkBq5A9YwJ6eAajDHiWZ20+JhplNKB0X+re4VOR+i+cY+qyU+dxREOeMsxSmAm7dhoifpW3HRavxMjMlZewMvQNdg6we36P0rEJroWi8N9yy2kXvVMn/q71L7Nul7f4cEc4wcZrMNmMw5RXApsYPAuZ6PEhfkqMKYBn2O8a7m5t5y0f25+TBG5a/Qs4JdB/v1+D+Mlgz5WomYHqtk+lCBZmD1w6tv/zho3BMcRIFVT8oqHeQ6wMhKp/IYkOj2obC84lOsuKfd9fZzvzZMd5TleF+B6f87Yk1yEUHNz7zPaWbHqQ9aMj0lWe4oX0X//m7Dc2jkGLu1RP0v9uXxKk+K1dcgKVD22q+AN4zOEcoE0J8tDKtClnF4YtFHgkj/9P9w/8aH38DfCgvU1EmiDmAb5blFecwY1CvV9VwzNpghW/9kQYLT7K6nS6VgB7ETaVZGYhj5zP4GS8ePDzI779q7n2m2f2P3/wM8ijzvVe5T/C3nQAA==" alt="AYSO Cypress Region 154 logo">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="r154-quick" aria-label="Proposal navigation">
+    <div class="r154-wrap">
+      <div class="r154-quick-card">
+        <p class="r154-quick-title">Proposal Navigation</p>
+        <div class="r154-quick-grid">
+          <a href="#proposal">Proposal</a>
+          <a href="#synergy">Synergy Flow</a>
+          <a href="#levels">Pilot Levels</a>
+          <a href="#proceeds">Proceeds</a>
+          <a href="#guardrails">Guardrails</a>
+          <a href="#current-process">Process</a>
+          <a href="#decision">Decision</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="r154-section" id="proposal">
+    <div class="r154-wrap">
+      <div class="r154-eyebrow">Executive Summary</div>
+      <h2>Proposal for Fall 2026.</h2>
+
+      <div class="r154-grid r154-grid-2">
+        <div class="r154-card">
+          <h3>What if we modernized sponsorship without disrupting the current program?</h3>
+          <p>
+            The existing $150 team sponsorship would remain the foundation. The pilot would simply add a few
+            optional levels for businesses and community supporters who may want to give more.
+          </p>
+          <ul>
+            <li>Keep the current $150 team sponsor option</li>
+            <li>Add optional $300, $500, and $1,000 pilot levels</li>
+            <li>Use simple sponsor recognition, not advertising promises</li>
+            <li>Review results before considering a larger Fall 2027 program</li>
+          </ul>
+        </div>
+
+        <div class="r154-card r154-card-yellow">
+          <h3>What problem could this help solve?</h3>
+          <p>
+            Volunteer recruitment and retention are ongoing challenges. This proposal asks whether enhanced
+            sponsorship support could help create a better volunteer experience through more appreciation gifts,
+            recognition, training-day support, and recruitment materials.
+          </p>
+          <ul>
+            <li>Make volunteers feel seen and appreciated</li>
+            <li>Encourage coaches, referees, and team parents to return</li>
+            <li>Give businesses a more meaningful story behind their support</li>
+            <li>Keep proceeds aligned with the general operating budget</li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+  <section class="r154-section r154-section-alt" id="synergy">
+    <div class="r154-wrap">
+      <div class="r154-eyebrow">Synergy Flow</div>
+      <h2>What if sponsorship created a simple loop of community support?</h2>
+
+      <p>
+        Instead of presenting sponsorship as only “pay $150 and get listed on the website,” this could
+        frame sponsorship as a community loop.
+      </p>
+
+      <div class="r154-flow">
+        <div class="r154-flow-step">
+          <div class="r154-flow-icon">🏢</div>
+          <h3>Business Support</h3>
+          <p>A local business chooses a team, volunteer, or program-focused sponsorship level.</p>
+        </div>
+
+        <div class="r154-flow-step">
+          <div class="r154-flow-icon">⚽</div>
+          <h3>AYSO Recognition</h3>
+          <p>Region 154 provides value-neutral sponsor acknowledgment and community thank-you messaging.</p>
+        </div>
+
+        <div class="r154-flow-step">
+          <div class="r154-flow-icon">🎁</div>
+          <h3>Volunteer Appreciation</h3>
+          <p>The region could use the additional operating funds for even more volunteer gifts, recognition, and retention support.</p>
+        </div>
+
+        <div class="r154-flow-step">
+          <div class="r154-flow-icon">💙</div>
+          <h3>Stronger Season</h3>
+          <p>Supported volunteers help create a better experience for players, families, and sponsors.</p>
+        </div>
+      </div>
+
+      <div class="r154-note">
+        <strong>Key framing:</strong> These are vision ideas for Board review. Public-facing language would stay
+        simpler and avoid promising business results, advertising performance, or restricted use of proceeds.
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+  <section class="r154-section" id="levels">
+    <div class="r154-wrap">
+      <div class="r154-eyebrow">Pilot Sponsorship Levels</div>
+      <h2>A familiar tiered format: each level builds on the previous one.</h2>
+
+      <p>
+        This format makes the options easy to compare. Each higher level includes everything in the previous
+        level, plus a small additional benefit. The highest standard pilot level would be $1,000 for Fall 2026.
+      </p>
+
+      <div class="r154-plan-wrap">
+        <table class="r154-plan-table">
+          <thead>
+            <tr>
+              <th><span class="r154-row-title">Fall 2026 Pilot</span></th>
+              <th>
+                <span class="r154-plan-title">Team Sponsor</span>
+                <span class="r154-plan-price">$150</span>
+                <span class="r154-plan-sub">Current standard option</span>
+              </th>
+              <th>
+                <span class="r154-plan-title">Volunteer Supporter</span>
+                <span class="r154-plan-price">$300</span>
+                <span class="r154-plan-sub">Everything in Team Sponsor, plus...</span>
+              </th>
+              <th>
+                <span class="r154-plan-title">Volunteer Appreciation Sponsor</span>
+                <span class="r154-plan-price">$500</span>
+                <span class="r154-plan-sub">Everything in Volunteer Supporter, plus...</span>
+              </th>
+              <th>
+                <span class="r154-plan-title">Program Partner</span>
+                <span class="r154-plan-price">$1,000</span>
+                <span class="r154-plan-sub">Everything in Appreciation Sponsor, plus...</span>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><span class="r154-row-title">Team sponsor recognition</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Website sponsor listing</span></td>
+              <td>Name listed</td>
+              <td>Name listed</td>
+              <td>Logo listed</td>
+              <td>Logo listed</td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Plaque / photo recognition</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Digital supporter badge</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-plus">Added</span></td>
+              <td><span class="r154-check">✓</span></td>
+              <td><span class="r154-check">✓</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Volunteer appreciation connection</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td>General support message</td>
+              <td><span class="r154-plus">Named volunteer appreciation level</span></td>
+              <td><span class="r154-check">✓</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Sponsor recognition graphic</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td>One simple graphic</td>
+              <td>One simple graphic</td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Program designation</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td>Board-approved program area</td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">End-of-season recap mention</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-dash">—</span></td>
+              <td><span class="r154-check">✓</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Recommended 2026 cap</span></td>
+              <td>No cap change</td>
+              <td>Up to 10</td>
+              <td>Up to 6</td>
+              <td>Up to 3</td>
+            </tr>
+
+            <tr>
+              <td><span class="r154-row-title">Action</span></td>
+              <td><a class="r154-plan-cta" href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e?cart=906ec9bc-909a-4563-a9ea-affba13c3e6e" target="_blank" rel="noopener">Pay Online</a></td>
+              <td><a class="r154-plan-cta" href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e?cart=906ec9bc-909a-4563-a9ea-affba13c3e6e" target="_blank" rel="noopener">Pay Online</a></td>
+              <td><a class="r154-plan-cta r154-plan-cta-red" href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e?cart=906ec9bc-909a-4563-a9ea-affba13c3e6e" target="_blank" rel="noopener">Pay Online</a></td>
+              <td><a class="r154-plan-cta r154-plan-cta-red" href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e?cart=906ec9bc-909a-4563-a9ea-affba13c3e6e" target="_blank" rel="noopener">Pay Online</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="r154-plan-footnote">
+        Mobile note: the comparison table scrolls horizontally on small screens so the full comparison stays readable.
+      </p>
+
+      <div class="r154-note">
+        <strong>Board review point:</strong> The pilot can be approved with caps. If demand exceeds the cap,
+        the Executive Board can decide whether to pause, approve more, or wait until Fall 2027.
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+  <section class="r154-section r154-section-alt" id="proceeds">
+    <div class="r154-wrap">
+      <div class="r154-eyebrow">Proceeds &amp; Budget Treatment</div>
+      <h2>Sponsorship proceeds remain part of general estimated revenue.</h2>
+
+      <div class="r154-grid r154-grid-2">
+        <div class="r154-card">
+          <h3>Important budget clarification</h3>
+          <p>
+            Account 4310, Sponsors/Contributions/Donations, is not proposed as a restricted fund and is not
+            tied to one specific expense line item. Sponsorship revenue would continue to flow into the region’s
+            general Total Estimated Revenue bucket alongside registration fees.
+          </p>
+          <p>
+            From there, funds support the region’s overall operating budget, including fields, uniforms,
+            equipment, training, volunteer support, media, and other board-approved operating needs.
+          </p>
+        </div>
+
+        <div class="r154-card r154-card-yellow">
+          <h3>What if we identify volunteer appreciation as a priority?</h3>
+          <p>
+            The Board could still communicate an internal priority: if sponsorship activity improves, the region
+            may have more flexibility to fund volunteer appreciation and retention needs within the approved
+            general operating budget.
+          </p>
+          <p>
+            This avoids promising restricted use while still explaining the vision behind the pilot.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:28px;">Brainstorm: possible board-approved uses supported by the general operating fund</h3>
+
+      <div class="r154-idea-grid">
+        <div class="r154-idea">
+          <div class="r154-idea-icon">🎁</div>
+          <div>
+            <h4>Volunteer Appreciation Gifts</h4>
+            <p>Coach, referee, team parent, and board volunteer thank-you items.</p>
+          </div>
+        </div>
+
+        <div class="r154-idea">
+          <div class="r154-idea-icon">🟨</div>
+          <div>
+            <h4>Referee Retention</h4>
+            <p>Youth referee recognition, snacks, lanyards, pins, or appreciation station supplies.</p>
+          </div>
+        </div>
+
+        <div class="r154-idea">
+          <div class="r154-idea-icon">🧢</div>
+          <div>
+            <h4>Coach Support</h4>
+            <p>Coach bags, clipboards, cones, whistles, or training-day refreshments.</p>
+          </div>
+        </div>
+
+        <div class="r154-idea">
+          <div class="r154-idea-icon">📣</div>
+          <div>
+            <h4>Volunteer Recruitment</h4>
+            <p>Flyers, banners, graphics, volunteer welcome materials, and parent meeting messaging.</p>
+          </div>
+        </div>
+
+        <div class="r154-idea">
+          <div class="r154-idea-icon">📷</div>
+          <div>
+            <h4>Media &amp; Communication</h4>
+            <p>Basic sponsor recognition, social media graphics, website graphics, and season recap content.</p>
+          </div>
+        </div>
+
+        <div class="r154-idea">
+          <div class="r154-idea-icon">⚽</div>
+          <div>
+            <h4>Core Operating Needs</h4>
+            <p>Fields, uniforms, equipment, training, scholarships, and other approved region expenses.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="r154-note">
+        <strong>Recommended wording:</strong> “Sponsorship proceeds are not restricted to one expense line.
+        They remain part of the region’s general operating revenue. The Board may choose to prioritize volunteer
+        appreciation and retention as part of the approved annual budget.”
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+  <section class="r154-section" id="guardrails">
+    <div class="r154-wrap">
+      <div class="r154-eyebrow">Risk &amp; Stewardship Guardrails</div>
+      <h2>What if we keep the pilot safe, reviewable, and easy to control?</h2>
+
+      <div class="r154-table-wrap">
+        <table class="r154-table">
+          <thead>
+            <tr>
+              <th>Concern</th>
+              <th>Proposed Guardrail</th>
+              <th>Why It Helps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Too much change</td>
+              <td>Keep the current $150 team sponsor option and add only three optional pilot levels.</td>
+              <td>Maintains the familiar program while testing a small improvement.</td>
+            </tr>
+            <tr>
+              <td>Too much revenue</td>
+              <td>Use sponsorship caps and require Executive Board review before expanding beyond the pilot.</td>
+              <td>Prevents uncontrolled growth and keeps the Treasurer involved.</td>
+            </tr>
+            <tr>
+              <td>Restricted fund confusion</td>
+              <td>State clearly that Account 4310 flows into general Total Estimated Revenue.</td>
+              <td>Avoids implying sponsor dollars are legally or internally restricted to one expense.</td>
+            </tr>
+            <tr>
+              <td>Advertising risk</td>
+              <td>Use value-neutral sponsor acknowledgment only: name, logo, website, and thank-you language.</td>
+              <td>Avoids price claims, endorsements, comparative language, and “buy now” messaging.</td>
+            </tr>
+            <tr>
+              <td>AI / marketing overpromise</td>
+              <td>Describe any content as volunteer-created sponsor recognition, not marketing services.</td>
+              <td>Keeps expectations realistic and avoids promising leads, clicks, views, or business results.</td>
+            </tr>
+            <tr>
+              <td>Volunteer gift concerns</td>
+              <td>Use modest, non-cash, board-approved appreciation items.</td>
+              <td>Frames appreciation as mission support, not compensation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+  <section class="r154-section r154-section-alt" id="current-process">
+    <div class="r154-wrap">
+      <div class="r154-eyebrow">Familiar Current Layout</div>
+      <h2>Keep the current sponsor process recognizable.</h2>
+
+      <div class="r154-grid r154-grid-2">
+        <div class="r154-card">
+          <h3>Fall 2026 Sponsorship Form</h3>
+          <p>
+            This section mirrors the existing page structure so parents, coaches, and sponsors are not confused.
+            The first step remains downloading and completing the official sponsorship form.
+          </p>
+
+          <div class="r154-button-row">
+            <a class="r154-btn r154-btn-yellow" href="https://dt5602vnjxv0c.cloudfront.net/portals/14837/docs/2026/2026%20sponsorship%20packet.pdf" target="_blank" rel="noopener">Download Form</a>
+            <a class="r154-btn r154-btn-red" href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e?cart=906ec9bc-909a-4563-a9ea-affba13c3e6e" target="_blank" rel="noopener">Pay Online</a>
+            <a class="r154-btn r154-btn-white" href="mailto:sponsorshipayso154@gmail.com">Email Form</a>
+          </div>
+        </div>
+
+        <div class="r154-card r154-card-blue">
+          <h3>For Business &amp; Community Sponsors</h3>
+          <p>
+            What if businesses had a clearer invitation: support local youth soccer, be recognized by the region,
+            and help us create a stronger volunteer culture?
+          </p>
+          <ul>
+            <li>Choose a sponsorship level</li>
+            <li>Complete the official form</li>
+            <li>Pay online or follow check instructions</li>
+            <li>Send logo if the selected level includes logo recognition</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="r154-card" style="margin-top:16px;">
+        <h3>For Parents &amp; Coaches</h3>
+        <p>
+          The team-level process can remain the same. Parents and coaches may still pursue the $150 team
+          sponsorship. If a business asks whether they can do more, the optional pilot levels provide a clear
+          answer without forcing every team to change its current process.
+        </p>
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+  <section class="r154-section" id="decision">
+    <div class="r154-wrap">
+      <div class="r154-final">
+        <div class="r154-eyebrow">Board Decision Point</div>
+        <h2>What if we approve this only as a limited Fall 2026 pilot?</h2>
+        <p>
+          The Executive Board could approve the concept as a small pilot with caps, clear budget treatment,
+          and a post-season review. If the pilot creates confusion, too much workload, or compliance concerns,
+          it can stop after Fall 2026. If it works, the Board can consider a more polished Fall 2027 version.
+        </p>
+
+        <div class="r154-button-row">
+          <a class="r154-btn r154-btn-yellow" href="#levels">Review Levels</a>
+          <a class="r154-btn r154-btn-red" href="https://checkout.mystackpay.com/1f75a2de-b587-4237-9fb8-59544cb3623e?cart=906ec9bc-909a-4563-a9ea-affba13c3e6e" target="_blank" rel="noopener">Payment Link</a>
+          <a class="r154-btn r154-btn-white" href="#proceeds">Review Proceeds</a>
+        </div>
+
+        <div class="r154-note">
+          <strong>Suggested motion language:</strong> “Approve a limited Fall 2026 sponsorship pilot using the
+          existing sponsorship process, with optional enhanced levels capped for the season, proceeds recorded
+          to Account 4310 as general revenue, and a post-season review before any Fall 2027 expansion.”
+        </div>
+      </div>
+
+      <a class="r154-back" href="#top">Back to Top ↑</a>
+    </div>
+  </section>
+
+</div>
