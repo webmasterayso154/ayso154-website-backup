@@ -1,0 +1,618 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   AYSO Region 154 - Governance & Board
+CMS Status:  Hidden / Inactive
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      ayso 154 refund 2026.pdf
+Notes:       Governance and Board page for Cypress AYSO Region 154 containing community meeting details (Cypress Senior Center), registration cancellation and refund policies, inclement weather and game cancellation policies, operational document links under VAR review, and national governance references.
+================================================================================
+-->
+
+<!--
+============================================================================
+AYSO REGION 154 – GOVERNANCE & BOARD
+CMS-SAFE SINGLE-FILE HTML/CSS (NO JAVASCRIPT)
+
+VERSION CONTROL
+v1.2.0 - 2026-08-31 - Formatted & integrated official Regional Cancellation, 
+                      Refund Policy, and Inclement Weather Policy.
+v1.1.0 - 2026-07-16 - Updated board meeting location to Cypress Senior Center.
+                      Added VAR Review / Under Construction states to doc links.
+v1.0.0 - 2026-07-16 - Created standalone Governance & Board page.
+============================================================================
+-->
+
+<style>
+/* ====================================================================== */
+/* AYSO REGION 154 GOVERNANCE — SCOPED STYLES                             */
+/* ====================================================================== */
+
+#governance-board {
+    --r154-navy: #102a5c;
+    --r154-navy-dark: #081c40;
+    --r154-red: #e3222a;
+    --r154-red-dark: #b9151c;
+    --r154-gold: #ffd34d;
+    --r154-green: #237a3b;
+    --r154-white: #ffffff;
+    --r154-light: #f4f6f8;
+    --r154-blue-light: #eaf1fa;
+    --r154-red-light: #fff0f1;
+    --r154-gold-light: #fff9dd;
+    --r154-green-light: #eaf7ee;
+    --r154-border: #d8dee8;
+    --r154-text: #303846;
+    --r154-muted: #5f6978;
+
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 12px;
+    box-sizing: border-box;
+    color: var(--r154-text);
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#governance-board *,
+#governance-board *::before,
+#governance-board *::after {
+    box-sizing: border-box;
+}
+
+#governance-board img {
+    max-width: 100%;
+    height: auto;
+}
+
+#governance-board a {
+    overflow-wrap: anywhere;
+}
+
+#governance-board [id] {
+    scroll-margin-top: 18px;
+}
+
+#governance-board .cc-card {
+    margin-bottom: 26px;
+    overflow: hidden;
+    background: var(--r154-white);
+    border: 1px solid var(--r154-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(8, 28, 64, 0.09);
+}
+
+#governance-board .cc-content {
+    padding: 20px;
+}
+
+#governance-board .cc-section-title {
+    position: relative;
+    margin: 0;
+    padding: 18px 20px 18px 54px;
+    overflow: hidden;
+    color: var(--r154-white) !important;
+    background: var(--r154-navy);
+    font-size: 1.4rem;
+    line-height: 1.25;
+}
+
+#governance-board .cc-section-title::before {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    content: "⚽";
+    transform: translateY(-50%);
+}
+
+#governance-board .cc-section-title::after {
+    position: absolute;
+    right: -24px;
+    bottom: -48px;
+    width: 125px;
+    height: 125px;
+    content: "";
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+}
+
+#governance-board h3 {
+    margin: 28px 0 16px;
+    padding-bottom: 8px;
+    color: var(--r154-navy);
+    border-bottom: 3px solid var(--r154-red);
+    font-size: 1.22rem;
+    line-height: 1.3;
+}
+
+#governance-board h4 {
+    margin: 20px 0 8px;
+    color: var(--r154-navy);
+    font-size: 1.08rem;
+    font-weight: bold;
+}
+
+#governance-board p {
+    margin-top: 0;
+}
+
+#governance-board .cc-muted {
+    color: var(--r154-muted);
+}
+
+/* HERO */
+#governance-board .cc-hero {
+    position: relative;
+    padding: 28px 18px 34px;
+    overflow: hidden;
+    color: var(--r154-white);
+    background:
+        linear-gradient(rgba(8, 28, 64, 0.94), rgba(16, 42, 92, 0.96)),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 48px,
+            rgba(255, 255, 255, 0.07) 49px,
+            rgba(255, 255, 255, 0.07) 51px
+        );
+    border-bottom: 7px solid var(--r154-red);
+    text-align: center;
+}
+
+#governance-board .cc-hero::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 560px;
+    height: 280px;
+    content: "";
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#governance-board .cc-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+#governance-board .cc-hero h1 {
+    margin: 0;
+    color: var(--r154-white);
+    font-size: 2rem;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+#governance-board .cc-hero h1 span {
+    display: block;
+    margin-top: 7px;
+    color: var(--r154-gold);
+}
+
+#governance-board .cc-hero p {
+    max-width: 690px;
+    margin: 17px auto 0;
+    color: var(--r154-white);
+}
+
+/* BUTTONS & LINKS */
+#governance-board .cc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+#governance-board .cc-button {
+    min-height: 50px;
+    padding: 12px 18px;
+    display: inline-flex;
+    color: var(--r154-white) !important;
+    background: var(--r154-navy);
+    border: 2px solid var(--r154-navy);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+#governance-board .cc-button:hover,
+#governance-board .cc-button:focus-visible {
+    color: var(--r154-white) !important;
+    background: var(--r154-navy-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(8, 28, 64, 0.22);
+}
+
+#governance-board .cc-button-red {
+    background: var(--r154-red);
+    border-color: var(--r154-red);
+}
+
+#governance-board .cc-button-red:hover,
+#governance-board .cc-button-red:focus-visible {
+    background: var(--r154-red-dark);
+}
+
+#governance-board .cc-button-outline {
+    color: var(--r154-navy) !important;
+    background: var(--r154-white);
+}
+
+#governance-board .cc-button-outline:hover,
+#governance-board .cc-button-outline:focus-visible {
+    color: var(--r154-white) !important;
+    background: var(--r154-navy);
+}
+
+#governance-board .cc-link-grid {
+    margin: 18px 0;
+}
+
+/* POLICY PANELS & BLOCKS */
+#governance-board .cc-policy-block {
+    background: #ffffff;
+    border: 1px solid var(--r154-border);
+    border-radius: 10px;
+    padding: 22px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(8, 28, 64, 0.04);
+}
+
+#governance-board .cc-download-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: var(--r154-blue-light);
+    border: 1px solid var(--r154-border);
+    border-left: 6px solid var(--r154-red);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+}
+
+#governance-board .cc-download-copy h4 {
+    margin: 0 0 4px;
+    color: var(--r154-navy);
+}
+
+#governance-board .cc-download-copy p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--r154-muted);
+}
+
+#governance-board .cc-policy-list {
+    margin: 12px 0 0;
+    padding-left: 20px;
+}
+
+#governance-board .cc-policy-list li {
+    margin-bottom: 12px;
+}
+
+#governance-board .cc-policy-list li:last-child {
+    margin-bottom: 0;
+}
+
+#governance-board .cc-policy-list strong {
+    color: var(--r154-navy);
+}
+
+#governance-board .cc-email-list {
+    margin-top: 6px;
+    padding-left: 20px;
+}
+
+#governance-board .cc-email-list li {
+    margin-bottom: 4px;
+}
+
+/* CALLOUTS */
+#governance-board .cc-callout {
+    margin: 20px 0;
+    padding: 17px;
+    border-left: 6px solid var(--r154-navy);
+    border-radius: 6px;
+}
+
+#governance-board .cc-callout strong:first-child {
+    display: block;
+    margin-bottom: 4px;
+}
+
+#governance-board .cc-info {
+    color: var(--r154-navy-dark);
+    background: var(--r154-blue-light);
+    border-color: var(--r154-navy);
+}
+
+#governance-board .cc-success {
+    color: #124b24;
+    background: var(--r154-green-light);
+    border-color: var(--r154-green);
+}
+
+#governance-board .cc-warning {
+    color: #604b00;
+    background: var(--r154-gold-light);
+    border-color: #e4b900;
+}
+
+/* STATUS GRID */
+#governance-board .cc-status-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin: 20px 0;
+}
+
+#governance-board .cc-status {
+    padding: 16px;
+    background: var(--r154-light);
+    border: 1px solid var(--r154-border);
+    border-radius: 9px;
+    text-align: center;
+}
+
+#governance-board .cc-status-label {
+    display: block;
+    color: var(--r154-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#governance-board .cc-status-value {
+    display: block;
+    margin-top: 4px;
+    color: var(--r154-red);
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+/* CONSTRUCTION TOOLTIP */
+#governance-board .cc-under-construction {
+    position: relative;
+    cursor: help;
+}
+
+#governance-board .cc-under-construction::after {
+    content: "🚧 VAR Review! Document updating...";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: var(--r154-gold);
+    color: var(--r154-navy-dark);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+#governance-board .cc-under-construction::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: var(--r154-gold);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -16px;
+    z-index: 10;
+}
+
+#governance-board .cc-under-construction:hover::after,
+#governance-board .cc-under-construction:hover::before,
+#governance-board .cc-under-construction:focus::after,
+#governance-board .cc-under-construction:focus::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media (min-width: 560px) {
+    #governance-board { padding: 15px; }
+    #governance-board .cc-link-grid,
+    #governance-board .cc-status-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 780px) {
+    #governance-board .cc-hero { padding: 38px 30px; }
+    #governance-board .cc-hero h1 { font-size: 2.65rem; }
+    #governance-board .cc-content { padding: 25px; }
+    #governance-board .cc-three-column { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+</style>
+
+<div id="governance-board">
+
+    <!-- HERO -->
+    <section class="cc-card">
+        <div class="cc-hero">
+            <div class="cc-hero-inner">
+                <h1>
+                    Region 154
+                    <span>Governance &amp; Board</span>
+                </h1>
+                <p>
+                    Learn more about the governing principles, official documents, and community meetings that guide AYSO Region 154.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: BOARD MEETINGS -->
+    <section id="board-meetings" class="cc-card">
+        <h2 class="cc-section-title">Community Board Meetings</h2>
+
+        <div class="cc-content">
+            <p>Our region is run entirely by volunteers. We value transparency and community input, and all members are welcome to attend our monthly board meetings.</p>
+
+            <div class="cc-status-grid" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                <div class="cc-status">
+                    <span class="cc-status-label">Meeting Date</span>
+                    <span class="cc-status-value" style="font-size: 1.05rem;">3rd Monday of Every Month</span>
+                </div>
+                <div class="cc-status">
+                    <span class="cc-status-label">Meeting Location</span>
+                    <span class="cc-status-value" style="font-size: 1.05rem;">Cypress Senior Center</span>
+                    <span style="display: block; font-size: 0.85rem; color: var(--r154-muted); margin-top: 4px; line-height: 1.4;">
+                        9031 Grindlay St, Cypress, CA 90630<br>
+                        <em>Most meetings are held here, but always check our Regional Calendar for updates.</em>
+                    </span>
+                </div>
+            </div>
+
+            <div class="cc-callout cc-info">
+                <strong>Your Voice Matters!</strong> 
+                Attending meetings is a great way to understand how the region operates, share your ideas, and help us continue to improve the program for our kids.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: REGIONAL POLICIES & REPORTS -->
+    <section id="regional-documents" class="cc-card">
+        <h2 class="cc-section-title">Regional Policies &amp; Reports</h2>
+
+        <div class="cc-content">
+
+            <!-- 1. REGISTRATION CANCELLATION & REFUND POLICY -->
+            <h3>Region Registration Cancellation &amp; Refund Policy</h3>
+            
+            <p>
+                We understand that family circumstances can change. Please review the deadlines and instructions below before submitting a cancellation or refund request.
+            </p>
+
+            <!-- Download Feature Panel -->
+            <div class="cc-download-panel">
+                <div class="cc-download-copy">
+                    <h4>Looking for the Refund Request Form?</h4>
+                    <p>Download the form, complete it, and email it to the Registrar, Regional Commissioner, and Treasurer.</p>
+                </div>
+                <a href="https://dt5602vnjxv0c.cloudfront.net/portals/14837/docs/2026/ayso%20154%20refund%202026.pdf" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    📄 Download Refund Form (PDF)
+                </a>
+            </div>
+
+            <!-- Waitlist Notice -->
+            <div class="cc-callout cc-success">
+                <strong>Waitlist Cancellation</strong>
+                If your player is currently on the waitlist, you have not paid registration fees yet and do not need to submit the refund form. Email our volunteer Registrar at <a href="mailto:Registrarayso154@gmail.com">Registrarayso154@gmail.com</a> to have your player removed from the waitlist.
+            </div>
+
+            <!-- Policy Terms & Deadlines -->
+            <div class="cc-policy-block">
+                <h4 style="margin-top: 0;">Policy Deadlines &amp; Conditions</h4>
+                <ul class="cc-policy-list">
+                    <li>Refund requests must be received by&nbsp;<strong>July 31, 2026</strong>, minus the non-refundable <strong>$25 National AYSO Membership Fee</strong> charged by AYSO National.&nbsp;</li>
+                    <li>
+                        Refunds will <strong>not</strong> be issued for requests received after <strong>August 1, 2026</strong>.
+                    </li>
+                    <li>
+                        All refund requests must be emailed by the applicable deadline to:
+                        <ul class="cc-email-list">
+                            <li>Registrar: <a href="mailto:Registrarayso154@gmail.com">Registrarayso154@gmail.com</a></li>
+                            <li>Regional Commissioner: <a href="mailto:RCayso154@gmail.com">RCayso154@gmail.com</a></li>
+                            <li>Treasurer: <a href="mailto:Treasurerayso154@gmail.com">Treasurerayso154@gmail.com</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Approved refunds will normally be credited to the original form of payment. If the original payment method cannot be refunded, the Region will mail a check.
+                    </li>
+                    <li>
+                        <strong>Refunds will be issued within four weeks of the emailed request.</strong> If you do not receive an email confirmation within <strong>10 business days</strong>, resend the request to both the RC and Treasurer.
+                    </li>
+                    <li>
+                        Refunds cannot be granted because of a practice-schedule conflict. Practice schedules are determined by the volunteer Head Coach and Regional Scheduler. The only way to guarantee control over a team's practice schedule is to volunteer as a Head Coach.
+                    </li>
+                    <li>
+                        Refunds cannot be granted because a player was not placed with a requested teammate or coach, or because a player was placed with a particular teammate or coach. AYSO Region 154 must uphold the AYSO philosophy of <strong>Balanced Teams</strong>.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 2. INCLEMENT WEATHER POLICY -->
+            <h3>Inclement Weather &amp; Game Cancellation Policy</h3>
+            <div class="cc-callout cc-info" style="margin-top: 14px;">
+                <p style="margin-bottom: 8px;">
+                    We understand that weather and field conditions can sometimes impact scheduled games. Our organization will make every reasonable effort to reschedule games canceled due to inclement weather or unsafe field conditions, when scheduling and field availability allow.
+                </p>
+                <p style="margin-bottom: 0;">
+                    Please understand that game cancellations do not qualify for refunds, credits, or prorated registration fees. Registration fees cover the overall youth sports program and associated operating costs, not individual games or practices. By registering, participants acknowledge and agree that all registration fees are final and non-refundable, including in the event of weather-related cancellations or other circumstances beyond the organization’s control. Thank you for your understanding and for supporting our efforts to provide a safe and enjoyable experience for all players.
+                </p>
+            </div>
+
+            <!-- 3. OPERATIONAL POLICIES & VAR REVIEW -->
+            <h3>Operational Documents &amp; Financials</h3>
+            <p>These documents outline the specific operational policies of Region 154 and provide insight into our activities and financial health.</p>
+            
+            <div class="cc-grid cc-link-grid cc-three-column">
+                <a href="#var-review" class="cc-button cc-button-outline cc-under-construction">
+                    Region 154 Policies &amp; Procedures
+                </a>
+                <a href="#var-review" class="cc-button cc-button-outline cc-under-construction">
+                    Region 154 Statement of Activity
+                </a>
+                <a href="#var-review" class="cc-button cc-button-outline cc-under-construction">
+                    Region 154 Tournament Procedures
+                </a>
+            </div>
+
+            <div id="var-review" class="cc-callout cc-warning">
+                <strong>📺 VAR Review in Progress!</strong>
+                Our regional documents are currently in the booth for review. We are updating these policies for the upcoming season, so the links above are temporarily under construction. Check back soon for the updated files!
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: NATIONAL GOVERNANCE -->
+    <section id="national-governance" class="cc-card">
+        <h2 class="cc-section-title">AYSO National Governance</h2>
+
+        <div class="cc-content">
+            <p>The governing documents of the American Youth Soccer Organization (AYSO) provide direction and organization in the operation of AYSO programs everywhere. They are living documents that are periodically changed and updated to reflect new information, changing times, and the decisions of the National Board of Directors and executive membership.</p>
+            
+            <div class="cc-grid cc-link-grid" style="max-width: 400px;">
+                <a href="https://www.aysovolunteers.org/welcome-to-governing-documents/" target="_blank" rel="noopener noreferrer" class="cc-button cc-button-red">
+                    View AYSO National Governing Documents
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CONTACT DIRECTIVE -->
+    <section class="cc-card">
+        <div class="cc-content" style="text-align: center;">
+            <p style="margin-bottom: 0;">
+                <strong>Have Questions?</strong> We want to ensure that all users email their assigned Division Director for any assistance or inquiries.
+            </p>
+        </div>
+    </section>
+
+</div>
