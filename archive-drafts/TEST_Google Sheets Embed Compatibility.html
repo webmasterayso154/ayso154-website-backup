@@ -1,0 +1,199 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   TEST_Google Sheets Embed Compatibility
+CMS Status:  Hidden / Inactive (Technical Test)
+Audience:    [aud:volunteers]
+Content:     [type:dashboard]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      Google Sheets Iframe Embed
+Notes:       Technical test for embedding live Google Sheets workbooks into Sports Connect without JavaScript.
+================================================================================
+-->
+
+<style>
+/* =========================================================
+   GOOGLE SHEETS EMBED COMPATIBILITY TEST
+   HTML AND CSS ONLY — NO JAVASCRIPT
+   ========================================================= */
+
+.ayso-sheet-test {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #d9e0ea;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ayso-sheet-test,
+.ayso-sheet-test * {
+  box-sizing: border-box;
+}
+
+.ayso-sheet-test h2 {
+  margin: 0 0 16px;
+  color: #172033;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.ayso-sheet-notice {
+  margin-bottom: 18px;
+  padding: 14px;
+  color: #5c4300;
+  background: #fff4cc;
+  border: 1px solid #e0a800;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.ayso-sheet-warning {
+  margin: 18px 0;
+  padding: 14px;
+  color: #7a1111;
+  background: #fff0f0;
+  border: 1px solid #c62828;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.ayso-sheet-frame {
+  width: 100%;
+  min-height: 750px;
+  overflow: hidden;
+  background: #f4f6f9;
+  border: 1px solid #d9e0ea;
+  border-radius: 10px;
+}
+
+.ayso-sheet-frame iframe {
+  display: block;
+  width: 100%;
+  height: 750px;
+  border: 0;
+}
+
+.ayso-sheet-fallback {
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.ayso-sheet-button {
+  display: inline-block;
+  min-height: 48px;
+  padding: 14px 18px;
+  color: #ffffff !important;
+  background: #004b8d;
+  border: 2px solid #004b8d;
+  border-radius: 8px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ayso-sheet-button:hover,
+.ayso-sheet-button:focus {
+  color: #ffffff !important;
+  background: #003766;
+  border-color: #003766;
+  text-decoration: underline;
+}
+
+.ayso-sheet-checklist {
+  margin-top: 18px;
+  padding: 16px;
+  background: #f3f6fa;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.ayso-sheet-checklist h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.ayso-sheet-checklist ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.ayso-sheet-checklist li {
+  margin-bottom: 7px;
+}
+
+@media (max-width: 700px) {
+  .ayso-sheet-test {
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .ayso-sheet-test h2 {
+    font-size: 22px;
+  }
+
+  .ayso-sheet-frame,
+  .ayso-sheet-frame iframe {
+    min-height: 650px;
+    height: 650px;
+  }
+
+  .ayso-sheet-button {
+    display: block;
+    width: 100%;
+  }
+}
+</style>
+
+<section class="ayso-sheet-test">
+
+  <h2>Google Sheets Embed Test</h2>
+
+  <div class="ayso-sheet-notice">
+    <strong>Technical test only:</strong>
+    This test attempts to display the “Start Here” tab from the AYSO 154
+    Game Day OS workbook. Do not place this test on a publicly promoted page.
+  </div>
+
+  <div class="ayso-sheet-frame">
+    <iframe src="https://docs.google.com/spreadsheets/d/1Xxa1Seo44hNLX1LpWL9gUg-ZZxQReNTD6dS3q6a8hk8/preview?gid=1613866695" title="AYSO 154 Game Day OS Google Sheets test" width="100%" height="750" frameborder="0" loading="lazy">
+      Loading spreadsheet…
+    </iframe>
+  </div>
+
+  <div class="ayso-sheet-warning">
+    <strong>Privacy warning:</strong>
+    This workbook contains additional visible and hidden tabs. If viewers
+    can navigate to, download, copy, or otherwise access those tabs, this
+    workbook should not be used for the final public embed. A separate
+    public-only workbook should be created instead.
+  </div>
+
+  <p class="ayso-sheet-fallback">
+    <a class="ayso-sheet-button" href="https://docs.google.com/spreadsheets/d/1Xxa1Seo44hNLX1LpWL9gUg-ZZxQReNTD6dS3q6a8hk8/edit?gid=1613866695#gid=1613866695" target="_blank" rel="noopener noreferrer">
+      Open Spreadsheet in a New Window
+    </a>
+  </p>
+
+  <div class="ayso-sheet-checklist">
+    <h3>Test checklist</h3>
+
+    <ul>
+      <li>Does the “Start Here” tab display?</li>
+      <li>Can you scroll horizontally and vertically?</li>
+      <li>Does it display acceptably on a phone?</li>
+      <li>Does it open in an incognito window?</li>
+      <li>Can a viewer navigate to other workbook tabs?</li>
+      <li>Can a viewer download or copy the entire workbook?</li>
+      <li>Does the iframe remain after reopening the Sports Connect editor?</li>
+    </ul>
+  </div>
+
+</section>
