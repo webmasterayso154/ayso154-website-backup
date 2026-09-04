@@ -1,0 +1,4363 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_REF_REDESIGN
+CMS Status:  Hidden / Inactive (Internal Review Hub)
+Audience:    [aud:volunteers] [aud:referees]
+Content:     [type:dashboard] [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      None
+Notes:       Internal control center and review hub for the Cypress AYSO Region 154 referee website redesign project.
+================================================================================
+-->
+
+<!--
+===============================================================================
+CYPRESS AYSO REGION 154 — REFEREE WEBSITE REDESIGN
+===============================================================================
+
+PROJECT RELEASE:
+REF-RD-0.4.0-VINCE-REVIEW
+
+SHARED DESIGN SYSTEM:
+DS-1.0.0
+
+PAGE:
+DRAFT_REF_REDESIGN
+
+INTERNAL PAGE NAME:
+Referee Redesign Review Hub
+
+PAGE VERSION:
+1.2.0
+
+STATUS:
+INTERNAL PROJECT CONTROL PAGE — NOT INTENDED FOR PUBLIC NAVIGATION
+
+LAST UPDATED:
+July 17, 2026
+
+PROJECT CONTENT OWNER:
+Regional Referee Administrator — Vince
+
+WEB IMPLEMENTATION:
+Bryan
+
+SPORTSCONNECT TAB ID:
+976482
+
+CURRENT PAGE URL:
+https://www.ayso154cypress.org/Default.aspx?tabid=976482
+
+===============================================================================
+PURPOSE
+===============================================================================
+
+DRAFT_REF_REDESIGN is the internal control center for the Cypress AYSO
+Region 154 referee website redesign.
+
+This page is NOT intended to become a normal public referee page.
+
+It is designed to help Bryan, Vince and other authorized reviewers:
+
+- Open all seven redesigned referee pages.
+- Review the pages in a consistent sequence.
+- Confirm each page's purpose and information ownership.
+- Prevent the same changing information from being copied across pages.
+- Track project and page versions.
+- Identify unresolved content decisions.
+- Verify desktop and mobile presentation.
+- Verify every internal and external link.
+- Decide what happens to each legacy referee page.
+- Plan the SportsConnect menu migration.
+- Control the final publication sequence.
+- Preserve a record of project decisions and changes.
+
+===============================================================================
+PROJECT STATUS
+===============================================================================
+
+All seven numbered referee pages have been revised as public-review
+candidates.
+
+CURRENT PROJECT RELEASE:
+REF-RD-0.4.0-VINCE-REVIEW
+
+CURRENT NUMBERED PAGE VERSIONS:
+
+01 — Referee Central:
+1.1.0
+
+02 — Become a Referee:
+1.1.0
+
+03 — Youth Referees:
+1.1.0
+
+04 — Training & Events:
+1.1.0
+
+05 — Game Day Tools:
+1.1.0
+
+06 — Rules & Learning:
+1.1.0
+
+07 — Advancement & Paid Refereeing:
+1.1.0
+
+IMPORTANT:
+
+- Verify each version in the source comments before final approval.
+- A page-level revision does not automatically require all pages to change.
+- A shared design-system revision may require all seven pages to change.
+- A changed URL requires every page linking to that URL to be reviewed.
+- A changed operating procedure requires every page repeating that procedure
+  to be reviewed.
+
+===============================================================================
+SPORTSCONNECT PAGE SETTINGS
+===============================================================================
+
+KEEP THIS PAGE PRIVATE DURING THE PROJECT:
+
+- Include in Menu:
+  NO
+
+- Include in Search:
+  NO
+
+- Allow Indexing:
+  NO
+
+- Page Status:
+  Available by direct URL only
+
+- Parent Page:
+  May remain outside the public referee menu until final migration
+
+This page should remain private even after the seven public referee pages are
+approved, unless the Region intentionally wants to preserve an internal
+website-maintenance dashboard.
+
+===============================================================================
+SPORTSCONNECT CODE REQUIREMENTS
+===============================================================================
+
+- HTML and CSS are contained together in this single code block.
+- No JavaScript is used.
+- No external fonts are used.
+- No icon library is used.
+- No framework or external code dependency is used.
+- Navigation and controls use text only.
+- CSS is scoped through the "r154-redesign" wrapper.
+- Custom rows are used instead of unordered lists to avoid duplicate bullets
+  created by SportsConnect.
+- Important link colors use !important because SportsConnect may override
+  normal and visited-link styles.
+- The layout is responsive.
+- The page includes print styles for an in-person review meeting.
+- The page can be used without the public SportsConnect child-page menu.
+
+===============================================================================
+CANONICAL DRAFT PAGE URL REGISTRY
+===============================================================================
+
+PROJECT REVIEW HUB:
+https://www.ayso154cypress.org/Default.aspx?tabid=976482
+
+01 — REFEREE CENTRAL:
+https://www.ayso154cypress.org/Default.aspx?tabid=976485
+
+02 — BECOME A REFEREE:
+https://www.ayso154cypress.org/Default.aspx?tabid=976487
+
+03 — YOUTH REFEREES:
+https://www.ayso154cypress.org/Default.aspx?tabid=976488
+
+04 — TRAINING & EVENTS:
+https://www.ayso154cypress.org/Default.aspx?tabid=976489
+
+05 — GAME DAY TOOLS:
+https://www.ayso154cypress.org/Default.aspx?tabid=976490
+
+06 — RULES & LEARNING:
+https://www.ayso154cypress.org/Default.aspx?tabid=976492
+
+07 — ADVANCEMENT & PAID REFEREEING:
+https://www.ayso154cypress.org/Default.aspx?tabid=976493
+
+===============================================================================
+PROPOSED PUBLIC INFORMATION ARCHITECTURE
+===============================================================================
+
+REFEREES
+
+START HERE:
+- Referee Central
+- Become a Referee
+- Youth Referees
+
+CURRENT REFEREES:
+- Training & Events
+- Game Day Tools
+- Rules & Learning
+
+ADVANCEMENT:
+- Advancement & Paid Refereeing
+
+The public SportsConnect menu should use text-only page names.
+
+The project-review hub should not appear in the public menu.
+
+===============================================================================
+SOURCE-OF-TRUTH MODEL
+===============================================================================
+
+REFEREE CENTRAL OWNS:
+
+- Program orientation
+- Audience routing
+- High-level Region 154 referee model
+- Links to all specialized referee pages
+- General support and referee-protection routing
+
+BECOME A REFEREE OWNS:
+
+- Adult new-referee orientation
+- Adult onboarding sequence
+- High-level volunteer-compliance summary
+- Entry-level training explanation
+- First-assignment preparation
+
+YOUTH REFEREES OWNS:
+
+- Youth and parent orientation
+- Youth volunteer registration
+- Youth-specific compliance
+- Parent responsibilities
+- Youth mentoring and protection
+
+TRAINING & EVENTS OWNS:
+
+- Current course dates
+- Course locations
+- AYSOU registration instructions
+- Course prerequisites
+- Referee meetings and training events
+- Nearby Area 11E training options
+
+GAME DAY TOOLS OWNS:
+
+- MatchTrak instructions
+- Current competition links after publication
+- Team referee-credit process
+- Field check-in
+- Uniform and equipment expectations
+- Game cards and reports
+- Game-day safety and escalation
+
+RULES & LEARNING OWNS:
+
+- Current annual Law updates
+- Official IFAB and AYSO references
+- Region 154 local rule guidance
+- Build-Out Line references
+- Continuing referee education
+
+ADVANCEMENT & PAID REFEREEING OWNS:
+
+- AYSO badge advancement
+- Match-count requirements
+- Mentoring, instruction and assessment pathways
+- U.S. Soccer and Cal South licensing
+- AYSO crossover
+- NOCRA onboarding
+- Paid-referee pathway
+
+DRAFT_REF_REDESIGN OWNS:
+
+- Canonical page URLs
+- Project versions
+- Review status
+- Decision tracking
+- Publication sequence
+- Legacy migration plan
+- Cross-page quality control
+
+===============================================================================
+MATCHTRAK STATUS
+===============================================================================
+
+Fall MatchTrak schedules are not yet published.
+
+PROJECT RULE:
+
+- Do not add placeholder competition names.
+- Do not reuse an old competition name.
+- Do not duplicate individual competition URLs across several pages.
+- Add approved current competition links to Game Day Tools first.
+- Referee Central should link to Game Day Tools.
+- Become a Referee and Youth Referees should link to Game Day Tools.
+- Rules & Learning should remain independent of MatchTrak schedules.
+- This review hub should track the publication task but should not become the
+  public schedule source.
+
+===============================================================================
+LEGACY-PAGE MANAGEMENT PRINCIPLES
+===============================================================================
+
+- Do not delete any legacy page before checking inbound links.
+- Do not replace an authoritative operational page until its new owner page is
+  approved.
+- Keep Volunteer Compliance as the detailed compliance source unless the Board
+  approves a different system.
+- Keep Referee Abuse Prevention as the detailed protection source unless the
+  Board approves a different system.
+- Keep the seasonal point-program page separate unless its process is formally
+  redesigned.
+- Redirect or archive outdated MatchTrak and paid-referee instructions only
+  after the replacement pages are approved.
+- Preserve useful documents and authoritative procedures even when the public
+  navigation page changes.
+- Test bookmarked and emailed legacy links before removing a page.
+
+===============================================================================
+RELEASE CONTROL
+===============================================================================
+
+PAGE-ONLY CHANGE:
+
+1. Increase the affected PAGE VERSION.
+2. Add a page VERSION HISTORY entry.
+3. Update only the affected page unless another page repeats the information.
+4. Review every inbound link to that page.
+
+SHARED DESIGN CHANGE:
+
+1. Increase SHARED DESIGN SYSTEM.
+2. Document the affected component.
+3. Apply the change to every affected referee page.
+4. Retest desktop and mobile layouts.
+5. Retest visited, hover and focus link states.
+
+SHARED CONTENT OR PROCEDURE CHANGE:
+
+1. Update the owning page first.
+2. Search all seven pages for duplicated language.
+3. Update any affected summary.
+4. Record the change in each affected page's version history.
+
+URL CHANGE:
+
+1. Update the canonical registry on this page.
+2. Update all seven referee pages.
+3. Update the SportsConnect menu.
+4. Update legacy redirects.
+5. Retest every affected link.
+
+FINAL PUBLIC RELEASE:
+
+Use a release label such as:
+
+REF-RD-1.0.0-PUBLIC
+
+Only after:
+
+- Vince approves the content.
+- Required Board or administrator decisions are complete.
+- All links pass testing.
+- Mobile and desktop review is complete.
+- Public-menu structure is approved.
+- Legacy-page actions are approved.
+- Indexing settings are approved.
+
+===============================================================================
+VERSION HISTORY
+===============================================================================
+
+1.2.0 — 2026-07-17 — Bryan
+
+- Advanced the project to REF-RD-0.4.0-VINCE-REVIEW.
+- Converted the linked draft hub into a complete internal review dashboard.
+- Synchronized all seven canonical page URLs.
+- Recorded all seven current public-review page versions.
+- Added explicit content ownership for every page.
+- Added the proposed text-only SportsConnect menu architecture.
+- Added a project status dashboard.
+- Added page-by-page review cards.
+- Added maintenance-level guidance for each page.
+- Added a cross-page consistency checklist.
+- Added a Vince decision register.
+- Added a MatchTrak publication control item.
+- Added a legacy-page migration map.
+- Added a structured publication and rollback sequence.
+- Added project acceptance criteria.
+- Added print-friendly review styles.
+- Preserved text-only controls and no JavaScript.
+- Kept the review hub private and outside the proposed public menu.
+
+1.1.0 — 2026-07-17 — Bryan
+
+- Updated the hub with working cards for all seven numbered draft pages.
+- Established REF-RD-0.2.0-LINKED.
+- Added canonical draft URLs.
+- Added initial review and page-linking guidance.
+
+1.0.0 — 2026-07-17 — Bryan
+
+- Created the initial DRAFT_REF_REDESIGN project hub.
+- Established the proposed seven-page referee architecture.
+- Added preliminary project notes and design concepts.
+
+===============================================================================
+-->
+
+
+<style>
+/* ==========================================================================
+   1. PAGE VARIABLES
+   ========================================================================== */
+
+.r154-redesign {
+    --r154-navy-dark: #061a40;
+    --r154-navy: #0b326f;
+    --r154-navy-medium: #164580;
+    --r154-blue-light: #eaf2fb;
+
+    --r154-red: #d71920;
+    --r154-red-dark: #ad1117;
+    --r154-red-light: #fff0f1;
+
+    --r154-yellow: #ffc72c;
+    --r154-yellow-light: #fff7d6;
+
+    --r154-white: #ffffff;
+    --r154-off-white: #f7f9fc;
+
+    --r154-gray-100: #f0f4f8;
+    --r154-gray-200: #d9e1eb;
+    --r154-gray-300: #bec9d7;
+    --r154-gray-500: #6b7b8f;
+    --r154-gray-600: #506176;
+    --r154-gray-800: #26364a;
+
+    --r154-text: #17263a;
+
+    --r154-green: #276f46;
+    --r154-green-dark: #1d5837;
+    --r154-green-light: #eaf7ee;
+
+    --r154-orange: #a95108;
+    --r154-orange-light: #fff2e5;
+
+    --r154-purple: #644696;
+    --r154-purple-light: #f1ecf9;
+
+    --r154-shadow-small: 0 4px 13px rgba(6, 26, 64, 0.10);
+    --r154-shadow-medium: 0 8px 25px rgba(6, 26, 64, 0.15);
+
+    --r154-radius-small: 6px;
+    --r154-radius-medium: 10px;
+    --r154-radius-large: 14px;
+}
+
+
+/* ==========================================================================
+   2. SCOPED RESET AND TYPOGRAPHY
+   ========================================================================== */
+
+.r154-redesign,
+.r154-redesign * {
+    box-sizing: border-box;
+}
+
+.r154-redesign {
+    width: 100%;
+    max-width: 1180px;
+    margin: 24px auto 48px auto;
+    padding: 0 16px;
+
+    color: var(--r154-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.r154-redesign h1,
+.r154-redesign h2,
+.r154-redesign h3,
+.r154-redesign h4,
+.r154-redesign p {
+    margin-top: 0;
+}
+
+.r154-redesign h1,
+.r154-redesign h2,
+.r154-redesign h3,
+.r154-redesign h4 {
+    color: var(--r154-navy-dark);
+}
+
+.r154-redesign h1,
+.r154-redesign h2 {
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-stretch: condensed;
+}
+
+.r154-redesign a {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.r154-redesign a:focus-visible {
+    outline: 4px solid var(--r154-yellow);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   3. PAGE SHELL AND SHARED SECTIONS
+   ========================================================================== */
+
+.r154-redesign-shell {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-large);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-redesign-section {
+    padding: 44px 38px;
+    scroll-margin-top: 20px;
+}
+
+.r154-redesign-section + .r154-redesign-section {
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-redesign-section-alt {
+    background: var(--r154-off-white);
+}
+
+.r154-redesign-section-heading {
+    max-width: 900px;
+    margin: 0 auto 29px auto;
+
+    text-align: center;
+}
+
+.r154-redesign-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--r154-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.r154-redesign-section-title {
+    margin-bottom: 11px;
+
+    color: var(--r154-navy-dark);
+    font-size: clamp(1.8rem, 4vw, 2.55rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-redesign-section-intro {
+    max-width: 820px;
+    margin: 0 auto;
+
+    color: var(--r154-gray-600);
+    font-size: 1.02rem;
+}
+
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+
+.r154-redesign-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 54px 38px 49px 38px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--r154-navy-dark) 0%,
+            var(--r154-navy) 58%,
+            var(--r154-navy-medium) 100%
+        );
+
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-redesign-hero::before {
+    position: absolute;
+    top: -190px;
+    left: -150px;
+
+    width: 395px;
+    height: 395px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.r154-redesign-hero::after {
+    position: absolute;
+    right: -115px;
+    bottom: -170px;
+
+    width: 385px;
+    height: 385px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.r154-redesign-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.r154-redesign-brand-name {
+    margin-bottom: 8px;
+
+    color: var(--r154-white);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: clamp(1.25rem, 4vw, 1.9rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.r154-redesign-hero h1 {
+    margin-bottom: 20px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(2.25rem, 7vw, 4.25rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.r154-redesign-hero-description {
+    max-width: 870px;
+    margin: 0 auto 25px auto;
+
+    color: var(--r154-white);
+    font-size: clamp(1rem, 2vw, 1.17rem);
+    line-height: 1.7;
+}
+
+.r154-redesign-release {
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    background: var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   5. INTERNAL-PAGE WARNING
+   ========================================================================== */
+
+.r154-redesign-private-wrap {
+    padding: 20px 26px;
+
+    background: var(--r154-white);
+}
+
+.r154-redesign-private {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background: var(--r154-red-light);
+    border: 1px solid #efb5b8;
+    border-left: 6px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-private-title {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #66161b;
+    font-weight: 900;
+}
+
+.r154-redesign-private p {
+    margin-bottom: 0;
+
+    color: var(--r154-text);
+    font-size: 0.94rem;
+}
+
+.r154-redesign-private-badge {
+    padding: 8px 12px;
+
+    color: var(--r154-white);
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   6. PAGE NAVIGATION
+   ========================================================================== */
+
+.r154-redesign-page-nav {
+    padding: 26px 28px 29px 28px;
+
+    background: var(--r154-gray-100);
+    border-top: 1px solid var(--r154-gray-200);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-redesign-page-nav-label {
+    margin-bottom: 14px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-redesign-page-nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-redesign-page-nav-links a,
+.r154-redesign-page-nav-links a:link,
+.r154-redesign-page-nav-links a:visited {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    color: #ffffff !important;
+    font-size: 0.87rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-page-nav-links a:hover,
+.r154-redesign-page-nav-links a:active,
+.r154-redesign-page-nav-links a:focus {
+    color: var(--r154-navy-dark) !important;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   7. BUTTONS
+   ========================================================================== */
+
+.r154-redesign-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.r154-redesign-button,
+.r154-redesign-button:link,
+.r154-redesign-button:visited {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 16px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.83rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-button:hover,
+.r154-redesign-button:active,
+.r154-redesign-button:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-redesign-button-secondary,
+.r154-redesign-button-secondary:link,
+.r154-redesign-button-secondary:visited {
+    color: var(--r154-navy) !important;
+
+    background: var(--r154-white) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-redesign-button-secondary:hover,
+.r154-redesign-button-secondary:active,
+.r154-redesign-button-secondary:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy-dark) !important;
+    border-color: var(--r154-navy-dark) !important;
+}
+
+.r154-redesign-button-red,
+.r154-redesign-button-red:link,
+.r154-redesign-button-red:visited {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+.r154-redesign-button-red:hover,
+.r154-redesign-button-red:active,
+.r154-redesign-button-red:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red-dark) !important;
+    border-color: var(--r154-red-dark) !important;
+}
+
+
+/* ==========================================================================
+   8. PROJECT STATUS DASHBOARD
+   ========================================================================== */
+
+.r154-redesign-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-redesign-status-card {
+    padding: 21px 17px;
+
+    text-align: center;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-bottom: 4px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-redesign-status-value {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--r154-red);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 1.65rem;
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.r154-redesign-status-label {
+    display: block;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.r154-redesign-status-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #604b00;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-left: 6px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   9. PAGE REGISTRY
+   ========================================================================== */
+
+.r154-redesign-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.r154-redesign-page-card {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-redesign-page-card-wide {
+    grid-column: 1 / -1;
+}
+
+.r154-redesign-page-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 13px;
+    align-items: center;
+
+    padding: 20px 22px;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-redesign-page-number {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--r154-navy-dark);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+
+    background: var(--r154-yellow);
+    border-radius: 50%;
+}
+
+.r154-redesign-page-title-wrap h3 {
+    margin-bottom: 2px;
+
+    color: var(--r154-white);
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.r154-redesign-page-code {
+    display: block;
+
+    color: #d7e3f4;
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.r154-redesign-page-version {
+    padding: 6px 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.71rem;
+    font-weight: 900;
+    white-space: nowrap;
+
+    background: var(--r154-yellow);
+    border-radius: 4px;
+}
+
+.r154-redesign-page-body {
+    padding: 23px 22px 24px 22px;
+}
+
+.r154-redesign-page-description {
+    margin-bottom: 17px;
+
+    color: var(--r154-gray-600);
+    font-size: 0.92rem;
+}
+
+.r154-redesign-page-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+
+    margin-bottom: 17px;
+}
+
+.r154-redesign-page-meta {
+    padding: 10px 11px;
+
+    background: var(--r154-off-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 5px;
+}
+
+.r154-redesign-page-meta-label {
+    display: block;
+    margin-bottom: 3px;
+
+    color: var(--r154-red);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.r154-redesign-page-meta-value {
+    display: block;
+
+    color: var(--r154-gray-800);
+    font-size: 0.84rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.r154-redesign-page-focus {
+    padding: 14px 15px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.87rem;
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-page-focus strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+
+/* ==========================================================================
+   10. PROPOSED PUBLIC MENU
+   ========================================================================== */
+
+.r154-redesign-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-redesign-menu-column {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-redesign-menu-header {
+    padding: 18px 20px;
+
+    color: var(--r154-yellow);
+    font-size: 0.77rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 4px solid var(--r154-red);
+}
+
+.r154-redesign-menu-body {
+    display: grid;
+    gap: 9px;
+
+    padding: 20px;
+}
+
+.r154-redesign-menu-link,
+.r154-redesign-menu-link:link,
+.r154-redesign-menu-link:visited {
+    display: block;
+
+    padding: 12px 13px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.9rem;
+    font-weight: 900;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-off-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-menu-link:hover,
+.r154-redesign-menu-link:active,
+.r154-redesign-menu-link:focus {
+    color: var(--r154-white) !important;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-redesign-menu-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-left: 6px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   11. SOURCE-OF-TRUTH GOVERNANCE
+   ========================================================================== */
+
+.r154-redesign-owner-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.r154-redesign-owner-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.32fr) minmax(0, 0.68fr);
+    gap: 14px;
+    align-items: center;
+
+    padding: 14px 16px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-owner-page {
+    color: var(--r154-navy-dark);
+    font-size: 0.92rem;
+    font-weight: 900;
+}
+
+.r154-redesign-owner-content {
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+    line-height: 1.45;
+}
+
+.r154-redesign-governance-panel {
+    margin-top: 24px;
+    padding: 26px;
+
+    color: var(--r154-white);
+
+    background: var(--r154-navy-dark);
+    border-left: 7px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-medium);
+}
+
+.r154-redesign-governance-panel h3 {
+    margin-bottom: 12px;
+
+    color: var(--r154-yellow);
+    font-size: 1.35rem;
+}
+
+.r154-redesign-governance-panel p {
+    color: var(--r154-white);
+}
+
+.r154-redesign-governance-highlight {
+    margin-top: 18px;
+    padding: 15px 17px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 800;
+
+    background: var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   12. REVIEW WORKFLOW
+   ========================================================================== */
+
+.r154-redesign-review-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-redesign-review-card {
+    padding: 21px 18px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-redesign-review-number {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-redesign-review-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.07rem;
+    line-height: 1.25;
+}
+
+.r154-redesign-review-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.87rem;
+}
+
+
+/* ==========================================================================
+   13. REVIEW CHECKLIST
+   ========================================================================== */
+
+.r154-redesign-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-redesign-check-row {
+    position: relative;
+
+    padding: 13px 13px 13px 39px;
+
+    color: var(--r154-gray-800);
+    font-size: 0.9rem;
+    line-height: 1.45;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: 6px;
+}
+
+.r154-redesign-check-row::before {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+
+    width: 15px;
+    height: 15px;
+
+    content: "";
+
+    background: var(--r154-white);
+    border: 2px solid var(--r154-navy);
+    border-radius: 2px;
+}
+
+
+/* ==========================================================================
+   14. DECISION REGISTER
+   ========================================================================== */
+
+.r154-redesign-decision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.r154-redesign-decision-card {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-redesign-decision-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 11px;
+    align-items: center;
+
+    padding: 17px 19px;
+
+    background: var(--r154-navy);
+    border-bottom: 4px solid var(--r154-yellow);
+}
+
+.r154-redesign-decision-code {
+    padding: 5px 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.7rem;
+    font-weight: 900;
+
+    background: var(--r154-yellow);
+    border-radius: 4px;
+}
+
+.r154-redesign-decision-header h3 {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 1.04rem;
+    line-height: 1.25;
+}
+
+.r154-redesign-decision-body {
+    padding: 20px 19px;
+}
+
+.r154-redesign-decision-body p {
+    margin-bottom: 13px;
+
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+}
+
+.r154-redesign-decision-status {
+    display: inline-block;
+
+    padding: 6px 9px;
+
+    color: #744000;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-radius: 4px;
+}
+
+.r154-redesign-decision-status-waiting {
+    color: var(--r154-navy);
+    background: var(--r154-blue-light);
+    border-color: #b8cee8;
+}
+
+.r154-redesign-decision-status-seasonal {
+    color: var(--r154-orange);
+    background: var(--r154-orange-light);
+    border-color: #e0b182;
+}
+
+
+/* ==========================================================================
+   15. LEGACY MIGRATION
+   ========================================================================== */
+
+.r154-redesign-migration-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.r154-redesign-migration-row {
+    display: grid;
+    grid-template-columns:
+        minmax(175px, 0.24fr)
+        minmax(180px, 0.26fr)
+        minmax(0, 0.50fr);
+    gap: 13px;
+    align-items: center;
+
+    padding: 14px 16px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-migration-old {
+    color: var(--r154-navy-dark);
+    font-size: 0.87rem;
+    font-weight: 900;
+}
+
+.r154-redesign-migration-target {
+    color: var(--r154-red);
+    font-size: 0.84rem;
+    font-weight: 900;
+}
+
+.r154-redesign-migration-action {
+    color: var(--r154-gray-600);
+    font-size: 0.86rem;
+    line-height: 1.4;
+}
+
+.r154-redesign-migration-alert {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #66161b;
+
+    background: var(--r154-red-light);
+    border: 1px solid #efb5b8;
+    border-left: 6px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   16. LEGACY REFERENCE LINKS
+   ========================================================================== */
+
+.r154-redesign-legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-top: 22px;
+}
+
+.r154-redesign-legacy-link,
+.r154-redesign-legacy-link:link,
+.r154-redesign-legacy-link:visited {
+    display: flex;
+    min-height: 125px;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 19px;
+
+    color: var(--r154-text) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-gray-500);
+    border-radius: var(--r154-radius-medium);
+}
+
+.r154-redesign-legacy-link:hover,
+.r154-redesign-legacy-link:active,
+.r154-redesign-legacy-link:focus {
+    color: var(--r154-text) !important;
+    text-decoration: none !important;
+
+    border-top-color: var(--r154-red);
+    box-shadow: var(--r154-shadow-small);
+
+    transform: translateY(-2px);
+}
+
+.r154-redesign-legacy-title {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.98rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.r154-redesign-legacy-description {
+    display: block;
+
+    color: var(--r154-gray-600);
+    font-size: 0.81rem;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================================
+   17. PUBLICATION PLAN
+   ========================================================================== */
+
+.r154-redesign-publish-steps {
+    display: grid;
+    gap: 14px;
+}
+
+.r154-redesign-publish-step {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-redesign-publish-number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 10px;
+
+    background: var(--r154-navy-dark);
+    border-right: 4px solid var(--r154-red);
+}
+
+.r154-redesign-publish-number {
+    color: var(--r154-yellow);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.r154-redesign-publish-content {
+    padding: 20px 22px;
+}
+
+.r154-redesign-publish-label {
+    display: block;
+    margin-bottom: 4px;
+
+    color: var(--r154-red);
+    font-size: 0.69rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.r154-redesign-publish-content h3 {
+    margin-bottom: 6px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.13rem;
+    line-height: 1.25;
+}
+
+.r154-redesign-publish-content p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+}
+
+
+/* ==========================================================================
+   18. ACCEPTANCE PANEL
+   ========================================================================== */
+
+.r154-redesign-acceptance-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px;
+
+    color: var(--r154-white);
+
+    background: var(--r154-navy-dark);
+    border-left: 7px solid var(--r154-green);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-redesign-acceptance-panel .r154-redesign-eyebrow {
+    color: #7ee2a4;
+}
+
+.r154-redesign-acceptance-panel h2 {
+    margin-bottom: 15px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-redesign-acceptance-panel p {
+    color: var(--r154-white);
+}
+
+.r154-redesign-acceptance-highlight {
+    margin-top: 22px;
+    padding: 17px 19px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 800;
+
+    background: var(--r154-green-light);
+    border: 1px solid #a9d2b8;
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   19. FOOTER
+   ========================================================================== */
+
+.r154-redesign-footer {
+    padding: 29px;
+
+    text-align: center;
+
+    background: var(--r154-navy-dark);
+    border-top: 4px solid var(--r154-yellow);
+}
+
+.r154-redesign-footer-brand {
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-redesign-footer p {
+    margin-bottom: 17px;
+
+    color: var(--r154-white);
+    font-size: 0.89rem;
+}
+
+.r154-redesign-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r154-redesign-footer a,
+.r154-redesign-footer a:link,
+.r154-redesign-footer a:visited {
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 17px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border: 2px solid var(--r154-yellow) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-redesign-footer a:hover,
+.r154-redesign-footer a:active,
+.r154-redesign-footer a:focus {
+    color: var(--r154-white) !important;
+
+    background: transparent !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   20. TABLET STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 920px) {
+    .r154-redesign-page-nav-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-redesign-status-grid,
+    .r154-redesign-review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-redesign-menu-grid,
+    .r154-redesign-legacy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-redesign-migration-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+
+/* ==========================================================================
+   21. MOBILE STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 680px) {
+    .r154-redesign {
+        margin-top: 12px;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        font-size: 15px;
+    }
+
+    .r154-redesign-shell {
+        border-radius: 9px;
+    }
+
+    .r154-redesign-hero {
+        padding: 39px 20px 36px 20px;
+    }
+
+    .r154-redesign-private-wrap {
+        padding: 15px;
+    }
+
+    .r154-redesign-private {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-redesign-private-badge {
+        width: 100%;
+    }
+
+    .r154-redesign-page-nav {
+        padding: 20px 15px 22px 15px;
+    }
+
+    .r154-redesign-page-nav-links,
+    .r154-redesign-status-grid,
+    .r154-redesign-page-grid,
+    .r154-redesign-menu-grid,
+    .r154-redesign-review-grid,
+    .r154-redesign-check-grid,
+    .r154-redesign-decision-grid,
+    .r154-redesign-legacy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-redesign-page-card-wide {
+        grid-column: auto;
+    }
+
+    .r154-redesign-section {
+        padding: 35px 20px;
+    }
+
+    .r154-redesign-page-header {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .r154-redesign-page-version {
+        grid-column: 1 / -1;
+
+        text-align: center;
+    }
+
+    .r154-redesign-page-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-redesign-owner-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .r154-redesign-publish-step {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-redesign-publish-number-wrap {
+        min-height: 58px;
+        padding: 11px;
+
+        border-right: 0;
+        border-bottom: 4px solid var(--r154-red);
+    }
+
+    .r154-redesign-button-row {
+        flex-direction: column;
+    }
+
+    .r154-redesign-button,
+    .r154-redesign-button:link,
+    .r154-redesign-button:visited {
+        width: 100%;
+    }
+
+    .r154-redesign-acceptance-panel {
+        padding: 28px 22px;
+    }
+
+    .r154-redesign-footer-links {
+        flex-direction: column;
+    }
+
+    .r154-redesign-footer a,
+    .r154-redesign-footer a:link,
+    .r154-redesign-footer a:visited {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================================
+   22. REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .r154-redesign a {
+        transition: none;
+    }
+
+    .r154-redesign-button:hover,
+    .r154-redesign-legacy-link:hover {
+        transform: none;
+    }
+}
+
+
+/* ==========================================================================
+   23. PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    .r154-redesign {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+
+        color: #000000;
+        font-size: 11pt;
+    }
+
+    .r154-redesign-shell {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .r154-redesign-page-nav,
+    .r154-redesign-button-row,
+    .r154-redesign-footer-links,
+    .r154-redesign-legacy-grid {
+        display: none;
+    }
+
+    .r154-redesign-hero,
+    .r154-redesign-governance-panel,
+    .r154-redesign-acceptance-panel,
+    .r154-redesign-footer {
+        color: #000000;
+        background: #ffffff;
+        border: 1px solid #999999;
+    }
+
+    .r154-redesign-hero h1,
+    .r154-redesign-governance-panel h3,
+    .r154-redesign-acceptance-panel h2,
+    .r154-redesign-footer-brand,
+    .r154-redesign-footer p {
+        color: #000000;
+    }
+
+    .r154-redesign-hero-description,
+    .r154-redesign-governance-panel p,
+    .r154-redesign-acceptance-panel p {
+        color: #000000;
+    }
+
+    .r154-redesign-section {
+        padding: 22px 16px;
+    }
+
+    .r154-redesign-page-card,
+    .r154-redesign-decision-card,
+    .r154-redesign-review-card,
+    .r154-redesign-status-card {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    .r154-redesign-page-header,
+    .r154-redesign-decision-header,
+    .r154-redesign-menu-header,
+    .r154-redesign-publish-number-wrap {
+        color: #000000;
+        background: #eeeeee;
+    }
+
+    .r154-redesign-page-header h3,
+    .r154-redesign-decision-header h3,
+    .r154-redesign-menu-header,
+    .r154-redesign-publish-number {
+        color: #000000;
+    }
+}
+</style>
+
+
+<!-- ========================================================================
+     BEGIN INTERNAL REFEREE REDESIGN REVIEW HUB
+     ======================================================================== -->
+
+<div class="r154-redesign">
+
+    <main class="r154-redesign-shell" id="referee-redesign-review-hub">
+
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
+
+        <header class="r154-redesign-hero">
+
+            <div class="r154-redesign-hero-content">
+
+                <div class="r154-redesign-brand-name">
+                    Cypress AYSO Region 154
+                </div>
+
+                <h1>
+                    Referee Website Redesign Review Hub
+                </h1>
+
+                <p class="r154-redesign-hero-description">
+                    Internal project dashboard for reviewing all seven referee
+                    pages, resolving outstanding decisions, testing the new
+                    information architecture and controlling the final
+                    SportsConnect publication process.
+                </p>
+
+                <div class="r154-redesign-release">
+                    Project Release: REF-RD-0.4.0-VINCE-REVIEW
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================================
+             PRIVATE-PAGE WARNING
+             ================================================================ -->
+
+        <div class="r154-redesign-private-wrap">
+
+            <div class="r154-redesign-private">
+
+                <div>
+
+                    <span class="r154-redesign-private-title">
+                        Internal review page — do not add this page to the
+                        public menu.
+                    </span>
+
+                    <p>
+                        Use this hub to review and manage the seven numbered
+                        referee pages. The future public landing page is
+                        Referee Central, not this project dashboard.
+                    </p>
+
+                </div>
+
+                <div class="r154-redesign-private-badge">
+                    Private Project Page
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================================
+             PAGE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-redesign-page-nav" aria-label="Referee redesign project navigation">
+
+            <div class="r154-redesign-page-nav-label">
+                Review This Project
+            </div>
+
+            <div class="r154-redesign-page-nav-links">
+
+                <a href="#project-status">
+                    Project Status
+                </a>
+
+                <a href="#page-registry">
+                    Seven-Page Registry
+                </a>
+
+                <a href="#public-menu">
+                    Proposed Public Menu
+                </a>
+
+                <a href="#review-checklist">
+                    Review Checklist
+                </a>
+
+                <a href="#decision-register">
+                    Decisions Needed
+                </a>
+
+                <a href="#publication-plan">
+                    Publication Plan
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             PROJECT STATUS
+             ================================================================ -->
+
+        <section class="r154-redesign-section" id="project-status" aria-labelledby="project-status-title">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Synchronized Review Release
+                </span>
+
+                <h2 class="r154-redesign-section-title" id="project-status-title">
+                    Project Status
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    All seven numbered pages are linked and have been revised
+                    as public-ready review candidates. They remain private
+                    until the content, links and SportsConnect settings are
+                    approved.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-status-grid">
+
+                <article class="r154-redesign-status-card">
+
+                    <span class="r154-redesign-status-value">
+                        7
+                    </span>
+
+                    <span class="r154-redesign-status-label">
+                        Numbered Pages Complete
+                    </span>
+
+                </article>
+
+
+                <article class="r154-redesign-status-card">
+
+                    <span class="r154-redesign-status-value">
+                        1.1.0
+                    </span>
+
+                    <span class="r154-redesign-status-label">
+                        Target Page Version
+                    </span>
+
+                </article>
+
+
+                <article class="r154-redesign-status-card">
+
+                    <span class="r154-redesign-status-value">
+                        0.4.0
+                    </span>
+
+                    <span class="r154-redesign-status-label">
+                        Project Review Release
+                    </span>
+
+                </article>
+
+
+                <article class="r154-redesign-status-card">
+
+                    <span class="r154-redesign-status-value">
+                        Pending
+                    </span>
+
+                    <span class="r154-redesign-status-label">
+                        Vince Content Approval
+                    </span>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-redesign-status-note">
+
+                <strong>
+                    MatchTrak schedules remain a future dependency.
+                </strong>
+
+                When the Fall competitions are published, add the approved
+                links to Game Day Tools first. Do not delay the content review
+                of the other pages while waiting for MatchTrak.
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAGE REGISTRY
+             ================================================================ -->
+
+        <section class="r154-redesign-section r154-redesign-section-alt" id="page-registry" aria-labelledby="page-registry-title">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Canonical Project Page Registry
+                </span>
+
+                <h2 class="r154-redesign-section-title" id="page-registry-title">
+                    Review All Seven Referee Pages
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    Open each page directly, review the content focus, verify
+                    the version in its source comments and record any required
+                    changes before public release.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-page-grid">
+
+                <!-- ========================================================
+                     PAGE 01
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            01
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Referee Central
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_01_CENTRAL
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            Future public referee landing page. Routes new
+                            adults, youth families and current referees to the
+                            correct specialized resource.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Low
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Primary landing page
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Program model, public page name, audience routing,
+                            referee-protection language and primary contact.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976485">
+                                Open Page 01
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================================
+                     PAGE 02
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            02
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Become a Referee
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_02_BECOME
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            Adult new-referee onboarding, volunteer compliance,
+                            Regional Referee training options and
+                            first-assignment preparation.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Medium / annual
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Adult onboarding
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Course pathway, equipment process, MatchTrak
+                            activation, first assignments and adult support.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976487">
+                                Open Page 02
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================================
+                     PAGE 03
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            03
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Youth Referees
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_03_YOUTH
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            Youth and parent orientation, youth-volunteer
+                            registration, training, assignments, mentoring and
+                            referee protection.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Medium / annual
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Youth and parent guide
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Ages, parent field presence, signed youth form,
+                            appropriate assignment levels, mentoring and
+                            incident response.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976488">
+                                Open Page 03
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================================
+                     PAGE 04
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            04
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Training &amp; Events
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_04_TRAINING
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            Current courses, AYSOU enrollment instructions,
+                            prerequisites, meetings and nearby training
+                            opportunities.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    High during training season
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Course calendar and registration
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Current course dates, exact course titles,
+                            enrollment steps, prerequisites, contacts and Area
+                            11E options.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976489">
+                                Open Page 04
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================================
+                     PAGE 05
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            05
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Game Day Tools
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_05_GAMEDAY
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            MatchTrak, referee credit, field check-in,
+                            uniforms, crew responsibilities, cards, reports,
+                            safety and incident escalation.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    High during the season
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Operational source of truth
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Division coverage, NOCRA and AR responsibilities,
+                            credit process, QR check-in, card collection,
+                            reports and MatchTrak publication.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976490">
+                                Open Page 05
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================================
+                     PAGE 06
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            06
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Rules &amp; Learning
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_06_RULES
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            Stable reference library for annual Law changes,
+                            official rule sources, Build-Out Line guidance and
+                            continuing referee learning.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Low / annual review
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Reference library
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Annual update accuracy, local implementation,
+                            Build-Out Line procedures, legacy handouts and
+                            referee-learning resources.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976492">
+                                Open Page 06
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================================
+                     PAGE 07
+                     ======================================================== -->
+
+                <article class="r154-redesign-page-card r154-redesign-page-card-wide">
+
+                    <div class="r154-redesign-page-header">
+
+                        <div class="r154-redesign-page-number">
+                            07
+                        </div>
+
+                        <div class="r154-redesign-page-title-wrap">
+
+                            <h3>
+                                Advancement &amp; Paid Refereeing
+                            </h3>
+
+                            <span class="r154-redesign-page-code">
+                                DRAFT_REF_07_ADVANCE
+                            </span>
+
+                        </div>
+
+                        <span class="r154-redesign-page-version">
+                            v1.1.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="r154-redesign-page-body">
+
+                        <p class="r154-redesign-page-description">
+                            AYSO badge upgrades, mentoring, instruction,
+                            assessment, leadership and the separate U.S.
+                            Soccer, Cal South and NOCRA paid-referee pathway.
+                        </p>
+
+                        <div class="r154-redesign-page-meta-grid">
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Maintenance
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Medium / annual
+                                </span>
+
+                            </div>
+
+                            <div class="r154-redesign-page-meta">
+
+                                <span class="r154-redesign-page-meta-label">
+                                    Public Role
+                                </span>
+
+                                <span class="r154-redesign-page-meta-value">
+                                    Development and paid pathway
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="r154-redesign-page-focus">
+
+                            <strong>
+                                Vince review focus:
+                            </strong>
+
+                            Current AYSO badge requirements, conflicting local
+                            field-experience requirements, Cal South crossover,
+                            NOCRA onboarding, ratings and public terminology.
+
+                        </div>
+
+                        <div class="r154-redesign-button-row">
+
+                            <a class="r154-redesign-button" href="/Default.aspx?tabid=976493">
+                                Open Page 07
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PUBLIC MENU ARCHITECTURE
+             ================================================================ -->
+
+        <section class="r154-redesign-section" id="public-menu" aria-labelledby="public-menu-title">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Proposed SportsConnect Referees Menu
+                </span>
+
+                <h2 class="r154-redesign-section-title" id="public-menu-title">
+                    Text-Only Public Navigation
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    The public menu should use short page names organized by
+                    visitor intent. The review hub remains outside the menu.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-menu-grid">
+
+                <section class="r154-redesign-menu-column">
+
+                    <div class="r154-redesign-menu-header">
+                        Start Here
+                    </div>
+
+                    <div class="r154-redesign-menu-body">
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976485">
+                            Referee Central
+                        </a>
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976487">
+                            Become a Referee
+                        </a>
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976488">
+                            Youth Referees
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <section class="r154-redesign-menu-column">
+
+                    <div class="r154-redesign-menu-header">
+                        Current Referees
+                    </div>
+
+                    <div class="r154-redesign-menu-body">
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976489">
+                            Training &amp; Events
+                        </a>
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976490">
+                            Game Day Tools
+                        </a>
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976492">
+                            Rules &amp; Learning
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <section class="r154-redesign-menu-column">
+
+                    <div class="r154-redesign-menu-header">
+                        Advancement
+                    </div>
+
+                    <div class="r154-redesign-menu-body">
+
+                        <a class="r154-redesign-menu-link" href="/Default.aspx?tabid=976493">
+                            Advancement &amp; Paid Refereeing
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <div class="r154-redesign-menu-note">
+
+                <strong>
+                    SportsConnect configuration note:
+                </strong>
+
+                When the pages are approved, the menu can be created with
+                text-only page names. The cards and in-page navigation provide
+                the richer visual experience without requiring menu icons,
+                JavaScript or custom navigation components.
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             SOURCE OF TRUTH
+             ================================================================ -->
+
+        <section class="r154-redesign-section r154-redesign-section-alt">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Prevent Conflicting Information
+                </span>
+
+                <h2 class="r154-redesign-section-title">
+                    Page Ownership and Change Control
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    Each subject should have one owning page. Other pages may
+                    provide a short summary and link to the owner rather than
+                    copying the complete procedure.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-owner-grid">
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Referee Central
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        Orientation, audience routing, high-level program model
+                        and links to specialized resources.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Become a Referee
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        Adult onboarding and preparation for an initial
+                        referee assignment.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Youth Referees
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        Youth registration, parent responsibilities, youth
+                        development and youth-referee protection.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Training &amp; Events
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        Current course dates, locations, prerequisites and
+                        registration instructions.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Game Day Tools
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        Current MatchTrak links and all operational game-day
+                        referee procedures.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Rules &amp; Learning
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        Current Laws, local rule guidance, Build-Out Line and
+                        referee education.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-owner-row">
+
+                    <div class="r154-redesign-owner-page">
+                        Advancement &amp; Paid Refereeing
+                    </div>
+
+                    <div class="r154-redesign-owner-content">
+                        AYSO advancement, mentoring and the separate paid
+                        licensing and association pathway.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-redesign-governance-panel">
+
+                <h3>
+                    Source-of-Truth Rule
+                </h3>
+
+                <p>
+                    When a policy, procedure, date, link or requirement
+                    changes, update the owning page first. Then search all
+                    seven pages for any summary that also needs revision.
+                </p>
+
+                <div class="r154-redesign-governance-highlight">
+
+                    Do not copy changing course dates, MatchTrak competition
+                    links, seasonal point totals or annual fees across several
+                    referee pages.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             REVIEW WORKFLOW
+             ================================================================ -->
+
+        <section class="r154-redesign-section" id="review-checklist" aria-labelledby="review-checklist-title">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Recommended Vince Review Process
+                </span>
+
+                <h2 class="r154-redesign-section-title" id="review-checklist-title">
+                    Review the Project in Four Passes
+                </h2>
+
+            </div>
+
+
+            <div class="r154-redesign-review-grid">
+
+                <article class="r154-redesign-review-card">
+
+                    <span class="r154-redesign-review-number">
+                        Pass 01
+                    </span>
+
+                    <h3>
+                        Content Accuracy
+                    </h3>
+
+                    <p>
+                        Review procedures, responsibilities, terminology,
+                        contacts, requirements and missing information.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-redesign-review-card">
+
+                    <span class="r154-redesign-review-number">
+                        Pass 02
+                    </span>
+
+                    <h3>
+                        Information Ownership
+                    </h3>
+
+                    <p>
+                        Confirm that changing information lives on the correct
+                        page and is not unnecessarily duplicated.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-redesign-review-card">
+
+                    <span class="r154-redesign-review-number">
+                        Pass 03
+                    </span>
+
+                    <h3>
+                        User Experience
+                    </h3>
+
+                    <p>
+                        Test whether a new parent, youth referee or current
+                        referee can quickly find the correct next step.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-redesign-review-card">
+
+                    <span class="r154-redesign-review-number">
+                        Pass 04
+                    </span>
+
+                    <h3>
+                        Publication Readiness
+                    </h3>
+
+                    <p>
+                        Test links, mobile layout, page settings, menu names,
+                        legacy-page actions and indexing.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-redesign-section-heading" style="margin-top: 34px;">
+
+                <span class="r154-redesign-eyebrow">
+                    Cross-Page Quality-Control Checklist
+                </span>
+
+                <h2 class="r154-redesign-section-title">
+                    Approval Checklist
+                </h2>
+
+            </div>
+
+
+            <div class="r154-redesign-check-grid">
+
+                <div class="r154-redesign-check-row">
+                    All seven pages open through their direct URLs.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Each source comment shows the correct page code and tab ID.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Each page shows the intended public page name.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Each page version is confirmed.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Adult and youth registration procedures are clearly
+                    separated.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Course dates appear only on Training &amp; Events.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    MatchTrak competition links appear only on Game Day Tools.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Seasonal referee-point totals are not copied across pages.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    The Region 154 and NOCRA model is described consistently.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Youth-referee protection language is consistent.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    The public RRA email is correct on every page.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Internal redesigned-page links open the correct pages.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    External AYSO, IFAB, Cal South and NOCRA links work.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Buttons remain readable after they have been visited.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Desktop layout is approved.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Mobile layout is approved.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    No duplicate SportsConnect bullets appear.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    No JavaScript, external framework or icon dependency is
+                    present.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    Legacy-page migration actions are approved.
+                </div>
+
+                <div class="r154-redesign-check-row">
+                    The public menu order and page names are approved.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             DECISION REGISTER
+             ================================================================ -->
+
+        <section class="r154-redesign-section r154-redesign-section-alt" id="decision-register" aria-labelledby="decision-register-title">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Resolve Before the Public Release
+                </span>
+
+                <h2 class="r154-redesign-section-title" id="decision-register-title">
+                    Vince Decision Register
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    These are the primary cross-page decisions. Detailed
+                    page-specific questions remain documented inside each
+                    page's HTML comments.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-decision-grid">
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-01
+                        </span>
+
+                        <h3>
+                            Public Landing-Page Name
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Confirm whether the public menu should display
+                            “Referee Central” or the shorter “Referees.”
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-02
+                        </span>
+
+                        <h3>
+                            Referee Coverage Matrix
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Approve the Fall division-by-division Center and
+                            Assistant Referee responsibilities before adding
+                            them to Game Day Tools.
+                        </p>
+
+                        <span class="r154-redesign-decision-status r154-redesign-decision-status-seasonal">
+                            Seasonal Decision
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-03
+                        </span>
+
+                        <h3>
+                            MatchTrak Publication
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Confirm competition names, direct links and the
+                            approved publication date when schedules become
+                            available.
+                        </p>
+
+                        <span class="r154-redesign-decision-status r154-redesign-decision-status-waiting">
+                            Waiting on Schedules
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-04
+                        </span>
+
+                        <h3>
+                            Referee Credit and Point Program
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Confirm Fall team requirements, point values,
+                            deadlines and whether the seasonal page remains
+                            separate.
+                        </p>
+
+                        <span class="r154-redesign-decision-status r154-redesign-decision-status-seasonal">
+                            Seasonal Decision
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-05
+                        </span>
+
+                        <h3>
+                            Game-Card Collection
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Confirm whether completed cards go to the Field
+                            Marshal tent, the Lexington/Arnold mailbox or
+                            different locations by field.
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-06
+                        </span>
+
+                        <h3>
+                            New Referee Assignments
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Approve the first-assignment process for new adult
+                            and youth referees, including mentoring and
+                            appropriate divisions.
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-07
+                        </span>
+
+                        <h3>
+                            Equipment Distribution
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Confirm which uniform and equipment items Region 154
+                            supplies and when new referees receive them.
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-08
+                        </span>
+
+                        <h3>
+                            Youth Parent Requirements
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Confirm parent field-presence expectations, youth
+                            check-in, communication and the signed Youth
+                            Volunteer form procedure.
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-09
+                        </span>
+
+                        <h3>
+                            Paid-Referee Field Experience
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Resolve the conflicting local match-count and
+                            Fall/Spring experience requirements before
+                            publishing exact totals.
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-decision-card">
+
+                    <div class="r154-redesign-decision-header">
+
+                        <span class="r154-redesign-decision-code">
+                            DR-10
+                        </span>
+
+                        <h3>
+                            Legacy Page Disposition
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-redesign-decision-body">
+
+                        <p>
+                            Decide which current pages are retained,
+                            redirected, archived, rewritten or removed from the
+                            public Referees menu.
+                        </p>
+
+                        <span class="r154-redesign-decision-status">
+                            Pending Vince
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             LEGACY MIGRATION
+             ================================================================ -->
+
+        <section class="r154-redesign-section">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Proposed Migration — Not Yet Approved
+                </span>
+
+                <h2 class="r154-redesign-section-title">
+                    Legacy Referee Page Map
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    Review the proposed destination for each current referee
+                    resource. Authoritative operational pages may remain
+                    available even when removed from the main menu.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-migration-grid">
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Current Referees Landing / Training Page
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Referee Central + Training &amp; Events
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Split general orientation from changing course and
+                        event information.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Regional Referee
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Become a Referee
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Redirect or archive after adult and youth onboarding
+                        links are confirmed.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Regional Referee Training Program
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Training &amp; Events
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Move current course information to the designated
+                        training source.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Youth Referee Program
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Youth Referees
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Redirect after youth registration, mentoring and
+                        protection procedures are approved.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Referee Scheduling — MatchTrak
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Game Day Tools
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Replace old competition instructions after current
+                        Fall schedules are published.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Build-Out Line
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Rules &amp; Learning
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Retain the detailed source page when useful, but access
+                        it through the new reference library.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        USSF / NOCRA Pages
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Advancement &amp; Paid Refereeing
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Replace outdated terminology and consolidate current
+                        first-time, crossover and membership guidance.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Referee &amp; Volunteer Point Program
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Retain Seasonal Source
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Link from Game Day Tools after Fall requirements and
+                        dates are approved.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Volunteer Compliance
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Retain Authoritative Source
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Link from Become a Referee and Referee Central rather
+                        than duplicating every compliance detail.
+                    </div>
+
+                </div>
+
+
+                <div class="r154-redesign-migration-row">
+
+                    <div class="r154-redesign-migration-old">
+                        Referee Abuse Prevention
+                    </div>
+
+                    <div class="r154-redesign-migration-target">
+                        Retain Authoritative Source
+                    </div>
+
+                    <div class="r154-redesign-migration-action">
+                        Link from Central, Youth Referees and Game Day Tools.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-redesign-migration-alert">
+
+                <strong>
+                    Do not delete legacy pages during the review phase.
+                </strong>
+
+                Existing bookmarks, emails, PDFs, search results and other
+                pages may still link to them. Review inbound links and create
+                an approved redirect or archive plan first.
+
+            </div>
+
+
+            <div class="r154-redesign-legacy-grid">
+
+                <a class="r154-redesign-legacy-link" href="/Default.aspx?tabid=856512" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-redesign-legacy-title">
+                        Current Referee Page
+                    </span>
+
+                    <span class="r154-redesign-legacy-description">
+                        Compare the current combined content with the proposed
+                        seven-page structure.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-redesign-legacy-link" href="/Default.aspx?tabid=856569" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-redesign-legacy-title">
+                        Regional Referee
+                    </span>
+
+                    <span class="r154-redesign-legacy-description">
+                        Review current entry-level certification instructions.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-redesign-legacy-link" href="/Default.aspx?tabid=943195" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-redesign-legacy-title">
+                        Youth Referee Program
+                    </span>
+
+                    <span class="r154-redesign-legacy-description">
+                        Compare current youth content with the revised youth
+                        and parent guide.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-redesign-legacy-link" href="/Default.aspx?tabid=866791" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-redesign-legacy-title">
+                        Legacy MatchTrak
+                    </span>
+
+                    <span class="r154-redesign-legacy-description">
+                        Review before replacing old competition instructions.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-redesign-legacy-link" href="/Default.aspx?tabid=866788" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-redesign-legacy-title">
+                        NOCRA Guidelines
+                    </span>
+
+                    <span class="r154-redesign-legacy-description">
+                        Compare the operating model with the new advancement
+                        and game-day summaries.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-redesign-legacy-link" href="/Default.aspx?tabid=866792" target="_blank" rel="noopener noreferrer">
+
+                    <span class="r154-redesign-legacy-title">
+                        Referee Point Program
+                    </span>
+
+                    <span class="r154-redesign-legacy-description">
+                        Confirm the current season before publishing totals or
+                        deadlines.
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PUBLICATION PLAN
+             ================================================================ -->
+
+        <section class="r154-redesign-section r154-redesign-section-alt" id="publication-plan" aria-labelledby="publication-plan-title">
+
+            <div class="r154-redesign-section-heading">
+
+                <span class="r154-redesign-eyebrow">
+                    Controlled SportsConnect Migration
+                </span>
+
+                <h2 class="r154-redesign-section-title" id="publication-plan-title">
+                    Recommended Publication Sequence
+                </h2>
+
+                <p class="r154-redesign-section-intro">
+                    Publish the system only after page content, cross-page
+                    links and legacy-page decisions are coordinated.
+                </p>
+
+            </div>
+
+
+            <div class="r154-redesign-publish-steps">
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">1</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Content Review
+                        </span>
+
+                        <h3>
+                            Vince Reviews All Seven Pages
+                        </h3>
+
+                        <p>
+                            Review pages in numerical order and record required
+                            changes using this hub and the internal comments on
+                            each page.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">2</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Decision Resolution
+                        </span>
+
+                        <h3>
+                            Resolve Cross-Page Procedures
+                        </h3>
+
+                        <p>
+                            Approve coverage, credit, card collection, youth,
+                            equipment, advancement and legacy-page decisions.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">3</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Final Revisions
+                        </span>
+
+                        <h3>
+                            Update the Affected Pages
+                        </h3>
+
+                        <p>
+                            Increase page versions, update version histories
+                            and keep unrelated pages unchanged when possible.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">4</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Technical QA
+                        </span>
+
+                        <h3>
+                            Test Desktop, Mobile and Links
+                        </h3>
+
+                        <p>
+                            Test every page, button, in-page anchor, visited
+                            state, email link and external resource.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">5</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Specialized Pages
+                        </span>
+
+                        <h3>
+                            Publish Pages 02 Through 07
+                        </h3>
+
+                        <p>
+                            Make the specialized pages publicly available
+                            before making Referee Central the primary landing
+                            page.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">6</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Landing Page
+                        </span>
+
+                        <h3>
+                            Publish Referee Central
+                        </h3>
+
+                        <p>
+                            Confirm that every destination is available, then
+                            publish Page 01 as the primary referee landing page.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">7</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Menu Migration
+                        </span>
+
+                        <h3>
+                            Configure the Text-Only Referees Menu
+                        </h3>
+
+                        <p>
+                            Add the approved page names and order. Do not add
+                            DRAFT_REF_REDESIGN to the public menu.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">8</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Legacy Migration
+                        </span>
+
+                        <h3>
+                            Redirect, Archive or Retain Old Pages
+                        </h3>
+
+                        <p>
+                            Follow the approved legacy map only after checking
+                            inbound links and preserved documents.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">9</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Search and Indexing
+                        </span>
+
+                        <h3>
+                            Enable Approved Public Settings
+                        </h3>
+
+                        <p>
+                            Enable indexing only for final public pages. Keep
+                            this project-review hub excluded.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-redesign-publish-step">
+
+                    <div class="r154-redesign-publish-number-wrap">
+                        <span class="r154-redesign-publish-number">10</span>
+                    </div>
+
+                    <div class="r154-redesign-publish-content">
+
+                        <span class="r154-redesign-publish-label">
+                            Post-Publication QA
+                        </span>
+
+                        <h3>
+                            Test the Live Menu and Common User Paths
+                        </h3>
+
+                        <p>
+                            Test the site as a new adult, youth parent, current
+                            referee and mobile visitor before announcing the
+                            redesign.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             ACCEPTANCE CRITERIA
+             ================================================================ -->
+
+        <section class="r154-redesign-section">
+
+            <div class="r154-redesign-acceptance-panel">
+
+                <span class="r154-redesign-eyebrow">
+                    Release Gate
+                </span>
+
+                <h2>
+                    Ready for REF-RD-1.0.0-PUBLIC
+                </h2>
+
+                <p>
+                    The referee redesign is ready for its first public release
+                    when all seven pages are approved, all cross-page decisions
+                    are resolved, all links and layouts pass testing, the
+                    text-only SportsConnect menu is configured and the legacy
+                    migration plan is approved.
+                </p>
+
+                <div class="r154-redesign-acceptance-highlight">
+
+                    Until those conditions are met, retain the current project
+                    label and keep the draft pages outside the public menu and
+                    search index.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FOOTER
+             ================================================================ -->
+
+        <footer class="r154-redesign-footer">
+
+            <div class="r154-redesign-footer-brand">
+                Cypress AYSO Region 154 — Referee Website Redesign
+            </div>
+
+            <p>
+                Internal project hub for coordinated review, version control
+                and publication management.
+            </p>
+
+            <div class="r154-redesign-footer-links">
+
+                <a href="/Default.aspx?tabid=976485">
+                    Referee Central
+                </a>
+
+                <a href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a href="/Default.aspx?tabid=976488">
+                    Youth Referees
+                </a>
+
+                <a href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a href="/Default.aspx?tabid=976490">
+                    Game Day Tools
+                </a>
+
+                <a href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a href="/Default.aspx?tabid=976493">
+                    Advancement
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ========================================================================
+     END INTERNAL REFEREE REDESIGN REVIEW HUB
+     ======================================================================== -->
