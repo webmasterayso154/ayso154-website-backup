@@ -1,0 +1,3235 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_REF_01_CENTRAL
+CMS Status:  Hidden / Inactive (Public-Ready Review Candidate)
+Audience:    [aud:referees] [aud:volunteers] [aud:parents]
+Content:     [type:registration] [type:event] [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      None
+Notes:       Public landing page for the Cypress AYSO Region 154 referee program (Referee Central), featuring audience routing, operating model, referee journey, quick tools, and protection policy.
+================================================================================
+-->
+
+<!--
+===============================================================================
+CYPRESS AYSO REGION 154 — REFEREE WEBSITE REDESIGN
+===============================================================================
+
+PROJECT RELEASE:
+REF-RD-0.5.0-NAV-SYNC
+
+SHARED DESIGN SYSTEM:
+DS-1.1.0
+
+SHARED NAVIGATION MODULE:
+REF-NAV-1.0.0
+
+PAGE:
+DRAFT_REF_01_CENTRAL
+
+PUBLIC PAGE NAME:
+Referee Central
+
+PAGE VERSION:
+1.2.0
+
+STATUS:
+PUBLIC-READY REVIEW CANDIDATE — PENDING REFEREE ADMINISTRATOR APPROVAL
+
+LAST UPDATED:
+July 17, 2026
+
+CONTENT OWNER:
+Regional Referee Administrator — Vince
+
+WEB IMPLEMENTATION:
+Bryan
+
+SPORTSCONNECT TAB ID:
+976485
+
+CURRENT PAGE URL:
+https://www.ayso154cypress.org/Default.aspx?tabid=976485
+
+===============================================================================
+PURPOSE
+===============================================================================
+
+Referee Central is the proposed public landing page for the Cypress AYSO
+Region 154 referee program.
+
+This page helps visitors:
+
+- Identify the correct referee path.
+- Navigate to every redesigned referee page.
+- Understand the Region 154 referee program at a high level.
+- Prepare for the season before MatchTrak schedules are published.
+- Locate training, game-day, rules and advancement information.
+- Access referee-protection and Regional Referee Administrator support.
+- Move between pages without relying on the SportsConnect dropdown menu.
+- Return to the local page menu from long sections.
+
+===============================================================================
+NAVIGATION MODEL
+===============================================================================
+
+This page uses four navigation layers:
+
+1. SPORTSCONNECT PUBLIC MENU
+   Configured through the SportsConnect page settings after approval.
+
+2. SHARED REFEREE RESOURCES NAVIGATION
+   Appears near the top of every redesigned referee page.
+   Uses the same seven page links in the same order.
+   Shows the current page with text and aria-current="page".
+
+3. LOCAL PAGE NAVIGATION
+   "Explore Referee Central" links to the major sections on this page.
+
+4. SEQUENCE NAVIGATION
+   Appears near the bottom.
+   Helps users move through the seven-page referee guide in order.
+
+===============================================================================
+SHARED REFEREE PAGE SEQUENCE
+===============================================================================
+
+01 — Referee Central
+02 — Become a Referee
+03 — Youth Referees
+04 — Training & Events
+05 — Game Day Tools
+06 — Rules & Learning
+07 — Advancement & Paid Refereeing
+
+===============================================================================
+SPORTSCONNECT REQUIREMENTS
+===============================================================================
+
+- HTML and CSS are included together in this single code block.
+- No JavaScript is used.
+- No external fonts, icon libraries, frameworks or dependencies are used.
+- All page names, buttons and navigation controls use text only.
+- CSS is scoped through the "r154-central" wrapper.
+- Custom rows are used instead of unordered lists to prevent duplicate
+  SportsConnect bullet markers.
+- Important link colors use !important because SportsConnect may override
+  normal and visited-link colors.
+- Navigation links have a minimum comfortable touch height.
+- The active page does not rely only on color.
+- The page is mobile responsive.
+- External links open in a new tab.
+- Region 154 links open in the same tab.
+- No sticky navigation is used.
+- Search-engine indexing remains disabled until publication approval.
+
+===============================================================================
+CANONICAL REFEREE PAGE URL REGISTRY
+===============================================================================
+
+Referee Redesign Review Hub:
+https://www.ayso154cypress.org/Default.aspx?tabid=976482
+
+01 — Referee Central:
+https://www.ayso154cypress.org/Default.aspx?tabid=976485
+
+02 — Become a Referee:
+https://www.ayso154cypress.org/Default.aspx?tabid=976487
+
+03 — Youth Referees:
+https://www.ayso154cypress.org/Default.aspx?tabid=976488
+
+04 — Training & Events:
+https://www.ayso154cypress.org/Default.aspx?tabid=976489
+
+05 — Game Day Tools:
+https://www.ayso154cypress.org/Default.aspx?tabid=976490
+
+06 — Rules & Learning:
+https://www.ayso154cypress.org/Default.aspx?tabid=976492
+
+07 — Advancement & Paid Refereeing:
+https://www.ayso154cypress.org/Default.aspx?tabid=976493
+
+===============================================================================
+CONTENT OWNERSHIP
+===============================================================================
+
+REFEREE CENTRAL OWNS:
+
+- Referee-program orientation.
+- Audience routing.
+- High-level Region 154 referee model.
+- Shared links to all specialized referee pages.
+- General referee-protection routing.
+- General referee-program support information.
+
+REFEREE CENTRAL DOES NOT OWN:
+
+- Detailed volunteer-compliance procedures.
+- Course dates, locations or AYSOU registration instructions.
+- MatchTrak competition names or seasonal schedule links.
+- Seasonal referee-point totals.
+- Complete game-day procedures.
+- Detailed annual Laws summaries.
+- Badge-upgrade requirements.
+- Cal South, U.S. Soccer or NOCRA onboarding details.
+
+===============================================================================
+MATCHTRAK PUBLICATION STATUS
+===============================================================================
+
+As of July 17, 2026:
+
+- Fall MatchTrak competitions have not yet been published.
+- MatchTrak competition names and direct schedule URLs must not be added here.
+- Game Day Tools may explain the workflow before schedules are available.
+- When schedules are published, update Game Day Tools first.
+- Referee Central should continue linking to Game Day Tools rather than
+  duplicating individual MatchTrak schedule URLs.
+
+===============================================================================
+VERSION HISTORY
+===============================================================================
+
+1.2.0 — 2026-07-17 — Bryan
+
+- Advanced the project to REF-RD-0.5.0-NAV-SYNC.
+- Advanced the shared design system to DS-1.1.0.
+- Added shared navigation module REF-NAV-1.0.0.
+- Added the same seven-page referee navigation used across the redesign.
+- Added a visible current-page state using text and aria-current="page".
+- Added a dedicated local page-menu anchor.
+- Added Back to Page Menu links after long sections.
+- Added bottom sequence navigation.
+- Standardized Region 154 links to open in the same tab.
+- Preserved new-tab behavior for external AYSO and public resources.
+- Added clearer navigation accessibility labels.
+- Added mobile navigation stacking.
+- Preserved text-only controls and no JavaScript.
+
+1.1.0 — 2026-07-17 — Bryan
+
+- Advanced the page to REF-RD-0.3.0-PUBLIC-REVIEW.
+- Converted the sandbox concept into a public-facing referee landing page.
+- Added working links to all six specialized referee pages.
+- Added audience routing for new adults, youth referees and current referees.
+- Established Referee Central as a stable navigation page.
+- Removed detailed course dates and locations.
+- Removed fixed MatchTrak competition names and schedule URLs.
+- Removed seasonal referee-point totals.
+- Added the high-level Region 154 and NOCRA operating model.
+- Added referee-development, readiness and protection sections.
+- Preserved mobile responsiveness, text-only controls and no JavaScript.
+
+1.0.0 — 2026-07-17 — Bryan
+
+- Created the initial Referee Central sandbox concept.
+- Added referee-program overview and audience-routing cards.
+- Added links to the proposed specialized referee pages.
+- Established the initial scoped HTML/CSS design.
+
+===============================================================================
+-->
+
+
+<style>
+/* ==========================================================================
+   1. PAGE VARIABLES
+   ========================================================================== */
+
+.r154-central {
+    --r154-navy-dark: #061a40;
+    --r154-navy: #0b326f;
+    --r154-navy-medium: #164580;
+    --r154-blue-light: #eaf2fb;
+
+    --r154-red: #d71920;
+    --r154-red-dark: #ad1117;
+    --r154-red-light: #fff0f1;
+
+    --r154-yellow: #ffc72c;
+    --r154-yellow-light: #fff7d6;
+
+    --r154-white: #ffffff;
+    --r154-off-white: #f7f9fc;
+
+    --r154-gray-100: #f0f4f8;
+    --r154-gray-200: #d9e1eb;
+    --r154-gray-300: #bec9d7;
+    --r154-gray-600: #506176;
+    --r154-gray-800: #26364a;
+
+    --r154-text: #17263a;
+
+    --r154-green: #276f46;
+    --r154-green-light: #eaf7ee;
+
+    --r154-shadow-small: 0 4px 13px rgba(6, 26, 64, 0.10);
+    --r154-shadow-medium: 0 8px 25px rgba(6, 26, 64, 0.15);
+
+    --r154-radius-small: 6px;
+    --r154-radius-medium: 10px;
+    --r154-radius-large: 14px;
+}
+
+
+/* ==========================================================================
+   2. SCOPED RESET AND TYPOGRAPHY
+   ========================================================================== */
+
+.r154-central,
+.r154-central * {
+    box-sizing: border-box;
+}
+
+.r154-central {
+    width: 100%;
+    max-width: 1120px;
+    margin: 24px auto 48px auto;
+    padding: 0 16px;
+
+    color: var(--r154-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.r154-central h1,
+.r154-central h2,
+.r154-central h3,
+.r154-central h4,
+.r154-central p {
+    margin-top: 0;
+}
+
+.r154-central h1,
+.r154-central h2,
+.r154-central h3,
+.r154-central h4 {
+    color: var(--r154-navy-dark);
+}
+
+.r154-central h1,
+.r154-central h2 {
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-stretch: condensed;
+}
+
+.r154-central a {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.r154-central a:focus-visible {
+    outline: 4px solid var(--r154-yellow);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   3. PAGE SHELL AND SHARED SECTIONS
+   ========================================================================== */
+
+.r154-central-shell {
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-large);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-central-section {
+    padding: 44px 38px;
+    scroll-margin-top: 20px;
+}
+
+.r154-central-section + .r154-central-section {
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-central-section-alt {
+    background: var(--r154-off-white);
+}
+
+.r154-central-section-heading {
+    max-width: 880px;
+    margin: 0 auto 28px auto;
+
+    text-align: center;
+}
+
+.r154-central-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--r154-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.r154-central-section-title {
+    margin-bottom: 11px;
+
+    color: var(--r154-navy-dark);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-central-section-intro {
+    max-width: 800px;
+    margin: 0 auto;
+
+    color: var(--r154-gray-600);
+    font-size: 1.02rem;
+}
+
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+
+.r154-central-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 54px 38px 49px 38px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--r154-navy-dark) 0%,
+            var(--r154-navy) 58%,
+            var(--r154-navy-medium) 100%
+        );
+
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-central-hero::before {
+    position: absolute;
+    top: -190px;
+    left: -150px;
+
+    width: 395px;
+    height: 395px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.r154-central-hero::after {
+    position: absolute;
+    right: -115px;
+    bottom: -170px;
+
+    width: 385px;
+    height: 385px;
+
+    content: "";
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.r154-central-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.r154-central-brand-name {
+    margin-bottom: 8px;
+
+    color: var(--r154-white);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: clamp(1.25rem, 4vw, 1.9rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.r154-central-hero h1 {
+    margin-bottom: 20px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(2.45rem, 7vw, 4.45rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.r154-central-hero-description {
+    max-width: 840px;
+    margin: 0 auto 25px auto;
+
+    color: var(--r154-white);
+    font-size: clamp(1rem, 2vw, 1.17rem);
+    line-height: 1.7;
+}
+
+.r154-central-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+
+.r154-central-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.r154-central-button,
+.r154-central-button:link,
+.r154-central-button:visited {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 17px;
+
+    color: var(--r154-white) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-button:hover,
+.r154-central-button:active,
+.r154-central-button:focus {
+    color: var(--r154-navy-dark) !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-central-button-secondary,
+.r154-central-button-secondary:link,
+.r154-central-button-secondary:visited {
+    color: var(--r154-navy) !important;
+
+    background: var(--r154-white) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-central-button-secondary:hover,
+.r154-central-button-secondary:active,
+.r154-central-button-secondary:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy-dark) !important;
+    border-color: var(--r154-navy-dark) !important;
+}
+
+.r154-central-button-red,
+.r154-central-button-red:link,
+.r154-central-button-red:visited {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+.r154-central-button-red:hover,
+.r154-central-button-red:active,
+.r154-central-button-red:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red-dark) !important;
+    border-color: var(--r154-red-dark) !important;
+}
+
+
+/* ==========================================================================
+   6. SEASON STATUS NOTICE
+   ========================================================================== */
+
+.r154-central-status-wrap {
+    padding: 20px 26px;
+
+    background: var(--r154-white);
+}
+
+.r154-central-status {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbb43;
+    border-left: 6px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-status-title {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 900;
+}
+
+.r154-central-status p {
+    margin-bottom: 0;
+
+    color: var(--r154-text);
+    font-size: 0.94rem;
+}
+
+
+/* ==========================================================================
+   7. SHARED CROSS-PAGE REFEREE NAVIGATION
+   REF-NAV-1.0.0
+   ========================================================================== */
+
+.r154-central-refnav {
+    padding: 29px 28px 31px 28px;
+
+    background: var(--r154-white);
+    border-top: 1px solid var(--r154-gray-200);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-central-refnav-heading {
+    max-width: 780px;
+    margin: 0 auto 18px auto;
+
+    text-align: center;
+}
+
+.r154-central-refnav-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.r154-central-refnav-title {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.r154-central-refnav-description {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-central-refnav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-central-refnav-link,
+.r154-central-refnav-link:link,
+.r154-central-refnav-link:visited {
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 12px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.84rem;
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-off-white) !important;
+    border: 2px solid var(--r154-gray-200) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-refnav-link:hover,
+.r154-central-refnav-link:active,
+.r154-central-refnav-link:focus {
+    color: var(--r154-white) !important;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+
+    transform: translateY(-2px);
+}
+
+.r154-central-refnav-current,
+.r154-central-refnav-current:link,
+.r154-central-refnav-current:visited,
+.r154-central-refnav-current:hover,
+.r154-central-refnav-current:active,
+.r154-central-refnav-current:focus {
+    color: var(--r154-white) !important;
+    cursor: default;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
+
+    transform: none;
+}
+
+
+/* ==========================================================================
+   8. LOCAL PAGE NAVIGATION
+   ========================================================================== */
+
+.r154-central-page-nav {
+    padding: 26px 28px 29px 28px;
+    scroll-margin-top: 20px;
+
+    background: var(--r154-gray-100);
+    border-bottom: 1px solid var(--r154-gray-200);
+}
+
+.r154-central-page-nav-label {
+    margin-bottom: 14px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-central-page-nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.r154-central-page-nav-links a,
+.r154-central-page-nav-links a:link,
+.r154-central-page-nav-links a:visited {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    color: #ffffff !important;
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-navy) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-page-nav-links a:hover,
+.r154-central-page-nav-links a:active,
+.r154-central-page-nav-links a:focus {
+    color: var(--r154-navy-dark) !important;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   9. BACK TO PAGE MENU
+   ========================================================================== */
+
+.r154-central-backlink-wrap {
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.r154-central-backlink,
+.r154-central-backlink:link,
+.r154-central-backlink:visited {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 15px;
+
+    color: var(--r154-navy) !important;
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-backlink:hover,
+.r154-central-backlink:active,
+.r154-central-backlink:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+
+/* ==========================================================================
+   10. AUDIENCE ROUTING CARDS
+   ========================================================================== */
+
+.r154-central-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.r154-central-audience-card {
+    display: flex;
+    min-height: 335px;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-central-audience-header {
+    padding: 21px 22px;
+
+    background: var(--r154-navy-dark);
+    border-bottom: 5px solid var(--r154-red);
+}
+
+.r154-central-audience-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    background: var(--r154-yellow);
+    border-radius: 4px;
+}
+
+.r154-central-audience-header h3 {
+    margin-bottom: 0;
+
+    color: var(--r154-white);
+    font-size: 1.28rem;
+    line-height: 1.2;
+}
+
+.r154-central-audience-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 23px 22px;
+}
+
+.r154-central-audience-body p {
+    color: var(--r154-gray-600);
+    font-size: 0.92rem;
+}
+
+.r154-central-audience-body .r154-central-button {
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* ==========================================================================
+   11. RESOURCE CARDS
+   ========================================================================== */
+
+.r154-central-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.r154-central-resource-link,
+.r154-central-resource-link:link,
+.r154-central-resource-link:visited {
+    display: flex;
+    min-height: 215px;
+    flex-direction: column;
+
+    padding: 23px 21px;
+
+    color: var(--r154-text) !important;
+    text-decoration: none !important;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-central-resource-link:hover,
+.r154-central-resource-link:active,
+.r154-central-resource-link:focus {
+    color: var(--r154-text) !important;
+    text-decoration: none !important;
+
+    border-top-color: var(--r154-red);
+    box-shadow: var(--r154-shadow-medium);
+
+    transform: translateY(-2px);
+}
+
+.r154-central-resource-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-central-resource-title {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.18rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.r154-central-resource-description {
+    display: block;
+    margin-bottom: 16px;
+
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+    line-height: 1.5;
+}
+
+.r154-central-resource-action {
+    display: block;
+    margin-top: auto;
+    padding-top: 13px;
+
+    color: var(--r154-navy);
+    font-size: 0.82rem;
+    font-weight: 900;
+
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+
+/* ==========================================================================
+   12. OPERATING MODEL
+   ========================================================================== */
+
+.r154-central-model-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-central-model-card {
+    padding: 23px 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-central-model-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-central-model-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.2rem;
+    line-height: 1.24;
+}
+
+.r154-central-model-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+.r154-central-model-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: var(--r154-navy-dark);
+
+    background: var(--r154-blue-light);
+    border: 1px solid #b8cee8;
+    border-left: 6px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   13. REFEREE JOURNEY
+   ========================================================================== */
+
+.r154-central-journey {
+    display: grid;
+    gap: 15px;
+}
+
+.r154-central-journey-step {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+
+    overflow: hidden;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-central-journey-number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 10px;
+
+    background: var(--r154-navy-dark);
+    border-right: 4px solid var(--r154-red);
+}
+
+.r154-central-journey-number {
+    color: var(--r154-yellow);
+    font-family:
+        "Arial Narrow",
+        "Franklin Gothic Condensed",
+        Impact,
+        Arial,
+        sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.r154-central-journey-content {
+    padding: 22px 24px;
+}
+
+.r154-central-journey-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--r154-red);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-central-journey-content h3 {
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.2rem;
+    line-height: 1.23;
+}
+
+.r154-central-journey-content p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.91rem;
+}
+
+
+/* ==========================================================================
+   14. SEASON READINESS
+   ========================================================================== */
+
+.r154-central-readiness-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-central-readiness-card {
+    padding: 21px 17px;
+
+    text-align: center;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-bottom: 4px solid var(--r154-red);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-readiness-number {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-central-readiness-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.r154-central-readiness-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.86rem;
+}
+
+.r154-central-readiness-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+
+    color: #604b00;
+
+    background: var(--r154-yellow-light);
+    border: 1px solid #dfbd50;
+    border-left: 6px solid var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+
+/* ==========================================================================
+   15. QUICK TOOLS
+   ========================================================================== */
+
+.r154-central-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.r154-central-tool-link,
+.r154-central-tool-link:link,
+.r154-central-tool-link:visited {
+    display: flex;
+    min-height: 155px;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 21px;
+
+    color: var(--r154-text) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-central-tool-link:hover,
+.r154-central-tool-link:active,
+.r154-central-tool-link:focus {
+    color: var(--r154-text) !important;
+    text-decoration: none !important;
+
+    border-top-color: var(--r154-red);
+    box-shadow: var(--r154-shadow-medium);
+
+    transform: translateY(-2px);
+}
+
+.r154-central-tool-title {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.04rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.r154-central-tool-description {
+    display: block;
+
+    color: var(--r154-gray-600);
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+
+/* ==========================================================================
+   16. REFEREE PROTECTION
+   ========================================================================== */
+
+.r154-central-protection-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px;
+
+    color: var(--r154-white);
+
+    background: var(--r154-navy-dark);
+    border-left: 7px solid var(--r154-red);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-medium);
+}
+
+.r154-central-protection-panel .r154-central-eyebrow {
+    color: #ff5360;
+}
+
+.r154-central-protection-panel h2 {
+    margin-bottom: 15px;
+
+    color: var(--r154-yellow);
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.r154-central-protection-panel p {
+    color: var(--r154-white);
+}
+
+.r154-central-protection-highlight {
+    margin-top: 22px;
+    padding: 17px 19px;
+
+    color: var(--r154-navy-dark);
+    font-weight: 700;
+
+    background: var(--r154-yellow);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-protection-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+
+/* ==========================================================================
+   17. SUPPORT CARDS
+   ========================================================================== */
+
+.r154-central-support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.r154-central-support-card {
+    padding: 22px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-top: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-medium);
+    box-shadow: var(--r154-shadow-small);
+}
+
+.r154-central-support-label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--r154-red);
+    font-size: 0.71rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.r154-central-support-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.13rem;
+    line-height: 1.25;
+}
+
+.r154-central-support-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.89rem;
+}
+
+
+/* ==========================================================================
+   18. FAQ
+   ========================================================================== */
+
+.r154-central-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.r154-central-faq-card {
+    padding: 21px;
+
+    background: var(--r154-white);
+    border: 1px solid var(--r154-gray-200);
+    border-left: 5px solid var(--r154-navy);
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-faq-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--r154-navy-dark);
+    font-size: 1.04rem;
+    line-height: 1.3;
+}
+
+.r154-central-faq-card p {
+    margin-bottom: 0;
+
+    color: var(--r154-gray-600);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   19. SEQUENCE NAVIGATION
+   ========================================================================== */
+
+.r154-central-sequence {
+    padding: 30px 28px;
+
+    background: var(--r154-gray-100);
+    border-top: 1px solid var(--r154-gray-200);
+}
+
+.r154-central-sequence-heading {
+    margin-bottom: 16px;
+
+    color: var(--r154-navy-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.r154-central-sequence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.r154-central-sequence-item,
+.r154-central-sequence-item:link,
+.r154-central-sequence-item:visited {
+    display: flex;
+    min-height: 62px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 14px;
+
+    color: var(--r154-navy-dark) !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-white) !important;
+    border: 2px solid var(--r154-navy) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-sequence-item:hover,
+.r154-central-sequence-item:active,
+.r154-central-sequence-item:focus {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-navy) !important;
+    border-color: var(--r154-navy) !important;
+}
+
+.r154-central-sequence-direction {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.r154-central-sequence-page {
+    display: block;
+
+    font-size: 0.92rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.r154-central-sequence-current {
+    color: var(--r154-white) !important;
+
+    background: var(--r154-red) !important;
+    border-color: var(--r154-red) !important;
+}
+
+.r154-central-sequence-disabled {
+    color: var(--r154-gray-600) !important;
+
+    background: var(--r154-gray-100) !important;
+    border-color: var(--r154-gray-300) !important;
+}
+
+
+/* ==========================================================================
+   20. FOOTER
+   ========================================================================== */
+
+.r154-central-footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: var(--r154-navy-dark);
+    border-top: 4px solid var(--r154-yellow);
+}
+
+.r154-central-footer-brand {
+    margin-bottom: 5px;
+
+    color: var(--r154-yellow);
+    font-weight: 900;
+}
+
+.r154-central-footer p {
+    margin-bottom: 17px;
+
+    color: var(--r154-white);
+    font-size: 0.89rem;
+}
+
+.r154-central-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r154-central-footer a,
+.r154-central-footer a:link,
+.r154-central-footer a:visited {
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    color: var(--r154-navy-dark) !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none !important;
+
+    background: var(--r154-yellow) !important;
+    border: 2px solid var(--r154-yellow) !important;
+    border-radius: var(--r154-radius-small);
+}
+
+.r154-central-footer a:hover,
+.r154-central-footer a:active,
+.r154-central-footer a:focus {
+    color: var(--r154-white) !important;
+
+    background: transparent !important;
+    border-color: var(--r154-yellow) !important;
+}
+
+
+/* ==========================================================================
+   21. TABLET STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 900px) {
+    .r154-central-refnav-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-central-page-nav-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-central-audience-grid,
+    .r154-central-resource-grid,
+    .r154-central-model-grid,
+    .r154-central-tools-grid,
+    .r154-central-support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .r154-central-readiness-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================================================
+   22. MOBILE STYLES
+   ========================================================================== */
+
+@media screen and (max-width: 640px) {
+    .r154-central {
+        margin-top: 12px;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        font-size: 15px;
+    }
+
+    .r154-central-shell {
+        border-radius: 9px;
+    }
+
+    .r154-central-hero {
+        padding: 39px 20px 36px 20px;
+    }
+
+    .r154-central-hero-actions {
+        flex-direction: column;
+    }
+
+    .r154-central-status-wrap {
+        padding: 15px;
+    }
+
+    .r154-central-status {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-central-status .r154-central-button {
+        width: 100%;
+    }
+
+    .r154-central-refnav {
+        padding: 25px 15px;
+    }
+
+    .r154-central-refnav-grid,
+    .r154-central-page-nav-links,
+    .r154-central-audience-grid,
+    .r154-central-resource-grid,
+    .r154-central-model-grid,
+    .r154-central-readiness-grid,
+    .r154-central-tools-grid,
+    .r154-central-support-grid,
+    .r154-central-faq-grid,
+    .r154-central-sequence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-central-refnav-link,
+    .r154-central-refnav-link:link,
+    .r154-central-refnav-link:visited,
+    .r154-central-page-nav-links a,
+    .r154-central-page-nav-links a:link,
+    .r154-central-page-nav-links a:visited {
+        width: 100%;
+    }
+
+    .r154-central-page-nav {
+        padding: 20px 15px 22px 15px;
+    }
+
+    .r154-central-section {
+        padding: 35px 20px;
+    }
+
+    .r154-central-audience-card {
+        min-height: 0;
+    }
+
+    .r154-central-journey-step {
+        grid-template-columns: 1fr;
+    }
+
+    .r154-central-journey-number-wrap {
+        min-height: 60px;
+        padding: 12px;
+
+        border-right: 0;
+        border-bottom: 4px solid var(--r154-red);
+    }
+
+    .r154-central-button-row,
+    .r154-central-protection-actions {
+        flex-direction: column;
+    }
+
+    .r154-central-button,
+    .r154-central-button:link,
+    .r154-central-button:visited {
+        width: 100%;
+    }
+
+    .r154-central-protection-panel {
+        padding: 28px 22px;
+    }
+
+    .r154-central-sequence {
+        padding: 27px 16px;
+    }
+
+    .r154-central-footer-links {
+        flex-direction: column;
+    }
+
+    .r154-central-footer a,
+    .r154-central-footer a:link,
+    .r154-central-footer a:visited {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================================
+   23. REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .r154-central a {
+        transition: none;
+    }
+
+    .r154-central-button:hover,
+    .r154-central-resource-link:hover,
+    .r154-central-tool-link:hover,
+    .r154-central-refnav-link:hover {
+        transform: none;
+    }
+}
+</style>
+
+
+<!-- ========================================================================
+     BEGIN PUBLIC-FACING REFEREE CENTRAL PAGE
+     ======================================================================== -->
+
+<div class="r154-central">
+
+    <main class="r154-central-shell" id="region-154-referee-central">
+
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
+
+        <header class="r154-central-hero">
+
+            <div class="r154-central-hero-content">
+
+                <div class="r154-central-brand-name">
+                    Cypress AYSO Region 154
+                </div>
+
+                <h1>
+                    Referee Central
+                </h1>
+
+                <p class="r154-central-hero-description">
+                    Start your referee journey, find current training, prepare
+                    for game day, review the Laws, support a youth referee or
+                    explore advancement opportunities.
+                </p>
+
+                <div class="r154-central-hero-actions">
+
+                    <a class="r154-central-button r154-central-button-red" href="#start-here">
+                        Find Your Starting Point
+                    </a>
+
+                    <a class="r154-central-button r154-central-button-secondary" href="/Default.aspx?tabid=976489">
+                        Training &amp; Events
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================================
+             SEASON STATUS
+             ================================================================ -->
+
+        <div class="r154-central-status-wrap">
+
+            <div class="r154-central-status">
+
+                <div>
+
+                    <span class="r154-central-status-title">
+                        Fall MatchTrak schedules will be published closer to
+                        the season.
+                    </span>
+
+                    <p>
+                        Referees can review the reservation, check-in, uniform,
+                        game-card and reporting procedures now. Current
+                        competition links will be added to Game Day Tools when
+                        the schedules are available.
+                    </p>
+
+                </div>
+
+                <a class="r154-central-button" href="/Default.aspx?tabid=976490">
+                    Game Day Tools
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================================
+             SHARED REFEREE RESOURCES NAVIGATION
+             SAME ORDER SHOULD BE USED ON ALL SEVEN PUBLIC PAGES
+             ================================================================ -->
+
+        <nav class="r154-central-refnav" aria-label="Region 154 referee resources">
+
+            <div class="r154-central-refnav-heading">
+
+                <span class="r154-central-refnav-label">
+                    Region 154 Referee Resources
+                </span>
+
+                <h2 class="r154-central-refnav-title">
+                    Navigate the Referee Program
+                </h2>
+
+                <p class="r154-central-refnav-description">
+                    Use these links from any referee page to move directly to
+                    the information you need.
+                </p>
+
+            </div>
+
+
+            <div class="r154-central-refnav-grid">
+
+                <a class="r154-central-refnav-link r154-central-refnav-current" href="/Default.aspx?tabid=976485" aria-current="page">
+                    Referee Central — Current Page
+                </a>
+
+                <a class="r154-central-refnav-link" href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a class="r154-central-refnav-link" href="/Default.aspx?tabid=976488">
+                    Youth Referees
+                </a>
+
+                <a class="r154-central-refnav-link" href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a class="r154-central-refnav-link" href="/Default.aspx?tabid=976490">
+                    Game Day Tools
+                </a>
+
+                <a class="r154-central-refnav-link" href="/Default.aspx?tabid=976492">
+                    Rules &amp; Learning
+                </a>
+
+                <a class="r154-central-refnav-link" href="/Default.aspx?tabid=976493">
+                    Advancement &amp; Paid Refereeing
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             LOCAL PAGE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-central-page-nav" id="page-menu" aria-label="Explore Referee Central">
+
+            <div class="r154-central-page-nav-label">
+                Explore Referee Central
+            </div>
+
+            <div class="r154-central-page-nav-links">
+
+                <a href="#start-here">
+                    Start Here
+                </a>
+
+                <a href="#referee-resources">
+                    Referee Resources
+                </a>
+
+                <a href="#region-model">
+                    How Coverage Works
+                </a>
+
+                <a href="#referee-journey">
+                    Referee Journey
+                </a>
+
+                <a href="#quick-tools">
+                    Quick Tools
+                </a>
+
+                <a href="#referee-support">
+                    Protection &amp; Support
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             START HERE
+             ================================================================ -->
+
+        <section class="r154-central-section" id="start-here" aria-labelledby="start-here-title">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    Choose the Path That Describes You
+                </span>
+
+                <h2 class="r154-central-section-title" id="start-here-title">
+                    Where Should I Start?
+                </h2>
+
+                <p class="r154-central-section-intro">
+                    Region 154 provides separate guidance for new adult
+                    volunteers, youth referees and current officials.
+                </p>
+
+            </div>
+
+
+            <div class="r154-central-audience-grid">
+
+                <article class="r154-central-audience-card">
+
+                    <div class="r154-central-audience-header">
+
+                        <span class="r154-central-audience-label">
+                            New Adult Volunteer
+                        </span>
+
+                        <h3>
+                            I Want to Become a Referee
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-central-audience-body">
+
+                        <p>
+                            Learn how to submit an adult volunteer application,
+                            complete the required compliance items, register
+                            for Regional Referee training and prepare for your
+                            first assignment.
+                        </p>
+
+                        <a class="r154-central-button" href="/Default.aspx?tabid=976487">
+                            Become a Referee
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-audience-card">
+
+                    <div class="r154-central-audience-header">
+
+                        <span class="r154-central-audience-label">
+                            Youth Ages 12–17
+                        </span>
+
+                        <h3>
+                            I Want to Become a Youth Referee
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-central-audience-body">
+
+                        <p>
+                            Review parent-led registration, youth-specific
+                            requirements, training, mentoring, supported
+                            assignments and referee-protection expectations.
+                        </p>
+
+                        <a class="r154-central-button" href="/Default.aspx?tabid=976488">
+                            Youth Referees
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-audience-card">
+
+                    <div class="r154-central-audience-header">
+
+                        <span class="r154-central-audience-label">
+                            Current Referee
+                        </span>
+
+                        <h3>
+                            I Need Training or Game-Day Information
+                        </h3>
+
+                    </div>
+
+                    <div class="r154-central-audience-body">
+
+                        <p>
+                            Find current courses, annual updates, game-day
+                            procedures, referee resources, mentoring,
+                            advancement and paid-referee information.
+                        </p>
+
+                        <a class="r154-central-button" href="#referee-resources">
+                            View Referee Resources
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             SPECIALIZED REFEREE PAGES
+             ================================================================ -->
+
+        <section class="r154-central-section r154-central-section-alt" id="referee-resources" aria-labelledby="referee-resources-title">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    One Clear Home for Each Referee Task
+                </span>
+
+                <h2 class="r154-central-section-title" id="referee-resources-title">
+                    Region 154 Referee Resources
+                </h2>
+
+                <p class="r154-central-section-intro">
+                    Use the page that owns the information you need. This keeps
+                    course dates, game-day procedures and rule references
+                    easier to find and maintain.
+                </p>
+
+            </div>
+
+
+            <div class="r154-central-resource-grid">
+
+                <a class="r154-central-resource-link" href="/Default.aspx?tabid=976487">
+
+                    <span class="r154-central-resource-label">
+                        New Adult Volunteers
+                    </span>
+
+                    <span class="r154-central-resource-title">
+                        Become a Referee
+                    </span>
+
+                    <span class="r154-central-resource-description">
+                        Adult volunteer registration, compliance, entry-level
+                        training and first-assignment preparation.
+                    </span>
+
+                    <span class="r154-central-resource-action">
+                        Open Become a Referee
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-resource-link" href="/Default.aspx?tabid=976488">
+
+                    <span class="r154-central-resource-label">
+                        Youth and Parents
+                    </span>
+
+                    <span class="r154-central-resource-title">
+                        Youth Referees
+                    </span>
+
+                    <span class="r154-central-resource-description">
+                        Youth registration, parent responsibilities, training,
+                        mentoring and referee protection.
+                    </span>
+
+                    <span class="r154-central-resource-action">
+                        Open Youth Referees
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-resource-link" href="/Default.aspx?tabid=976489">
+
+                    <span class="r154-central-resource-label">
+                        Courses and Meetings
+                    </span>
+
+                    <span class="r154-central-resource-title">
+                        Training &amp; Events
+                    </span>
+
+                    <span class="r154-central-resource-description">
+                        Current Region 154 courses, AYSOU registration,
+                        seasonal meetings and nearby Area 11E options.
+                    </span>
+
+                    <span class="r154-central-resource-action">
+                        Open Training &amp; Events
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-resource-link" href="/Default.aspx?tabid=976490">
+
+                    <span class="r154-central-resource-label">
+                        Assignment Preparation
+                    </span>
+
+                    <span class="r154-central-resource-title">
+                        Game Day Tools
+                    </span>
+
+                    <span class="r154-central-resource-description">
+                        MatchTrak, referee credit, field check-in, uniforms,
+                        game cards, reports, safety and support.
+                    </span>
+
+                    <span class="r154-central-resource-action">
+                        Open Game Day Tools
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-resource-link" href="/Default.aspx?tabid=976492">
+
+                    <span class="r154-central-resource-label">
+                        Reference Library
+                    </span>
+
+                    <span class="r154-central-resource-title">
+                        Rules &amp; Learning
+                    </span>
+
+                    <span class="r154-central-resource-description">
+                        Current Laws, AYSO updates, Region 154 rules,
+                        Build-Out Line guidance and continuing education.
+                    </span>
+
+                    <span class="r154-central-resource-action">
+                        Open Rules &amp; Learning
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-resource-link" href="/Default.aspx?tabid=976493">
+
+                    <span class="r154-central-resource-label">
+                        Referee Development
+                    </span>
+
+                    <span class="r154-central-resource-title">
+                        Advancement &amp; Paid Refereeing
+                    </span>
+
+                    <span class="r154-central-resource-description">
+                        Higher AYSO badges, mentoring, leadership and the
+                        separate Cal South, U.S. Soccer and NOCRA pathway.
+                    </span>
+
+                    <span class="r154-central-resource-action">
+                        Open Advancement
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             REGION 154 OPERATING MODEL
+             ================================================================ -->
+
+        <section class="r154-central-section" id="region-model" aria-labelledby="region-model-title">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    AYSO Volunteers and NOCRA Officials Working Together
+                </span>
+
+                <h2 class="r154-central-section-title" id="region-model-title">
+                    How Region 154 Referee Coverage Works
+                </h2>
+
+                <p class="r154-central-section-intro">
+                    Region 154 uses a blended model designed to improve game
+                    coverage while preserving meaningful opportunities for
+                    volunteer referees.
+                </p>
+
+            </div>
+
+
+            <div class="r154-central-model-grid">
+
+                <article class="r154-central-model-card">
+
+                    <span class="r154-central-model-label">
+                        Center Referee Coverage
+                    </span>
+
+                    <h3>
+                        Region 154 Partners With NOCRA
+                    </h3>
+
+                    <p>
+                        NOCRA provides U.S. Soccer-credentialed Center Referees
+                        for many competitive games when an appropriate AYSO
+                        volunteer has not reserved the eligible Center
+                        position.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-model-card">
+
+                    <span class="r154-central-model-label">
+                        Volunteer Opportunities
+                    </span>
+
+                    <h3>
+                        AYSO Referees Remain Essential
+                    </h3>
+
+                    <p>
+                        Properly certified AYSO volunteers may serve as Center
+                        Referees and Assistant Referees based on the division,
+                        competition, assignment and referee’s current
+                        experience.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-model-card">
+
+                    <span class="r154-central-model-label">
+                        Team Support
+                    </span>
+
+                    <h3>
+                        Teams Help Provide Assistant Referees
+                    </h3>
+
+                    <p>
+                        Teams and Region volunteers continue to provide
+                        certified Assistant Referee coverage where required.
+                        Exact responsibilities vary by season and competition.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-central-model-note">
+
+                <strong>
+                    Confirm the current requirement for each match.
+                </strong>
+
+                Referee-crew requirements may differ by division, program,
+                opponent and competition. Review Game Day Tools and the live
+                MatchTrak listing when seasonal schedules are published.
+
+            </div>
+
+
+            <div class="r154-central-button-row">
+
+                <a class="r154-central-button" href="/Default.aspx?tabid=976490">
+                    Review Game Day Tools
+                </a>
+
+                <a class="r154-central-button r154-central-button-secondary" href="/Default.aspx?tabid=976493">
+                    Explore Paid Refereeing
+                </a>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             REFEREE JOURNEY
+             ================================================================ -->
+
+        <section class="r154-central-section r154-central-section-alt" id="referee-journey" aria-labelledby="referee-journey-title">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    From First Interest to Continued Development
+                </span>
+
+                <h2 class="r154-central-section-title" id="referee-journey-title">
+                    The Region 154 Referee Journey
+                </h2>
+
+            </div>
+
+
+            <div class="r154-central-journey">
+
+                <article class="r154-central-journey-step">
+
+                    <div class="r154-central-journey-number-wrap">
+                        <span class="r154-central-journey-number">1</span>
+                    </div>
+
+                    <div class="r154-central-journey-content">
+
+                        <span class="r154-central-journey-label">
+                            Register
+                        </span>
+
+                        <h3>
+                            Complete the Correct Volunteer Process
+                        </h3>
+
+                        <p>
+                            Adults complete the current adult application and
+                            compliance process. A parent or guardian completes
+                            the separate youth-volunteer process for referees
+                            under 18.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-journey-step">
+
+                    <div class="r154-central-journey-number-wrap">
+                        <span class="r154-central-journey-number">2</span>
+                    </div>
+
+                    <div class="r154-central-journey-content">
+
+                        <span class="r154-central-journey-label">
+                            Train
+                        </span>
+
+                        <h3>
+                            Earn the Regional Referee Certification
+                        </h3>
+
+                        <p>
+                            Complete one of the approved entry-level training
+                            pathways and verify that the certification appears
+                            in the official record.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-journey-step">
+
+                    <div class="r154-central-journey-number-wrap">
+                        <span class="r154-central-journey-number">3</span>
+                    </div>
+
+                    <div class="r154-central-journey-content">
+
+                        <span class="r154-central-journey-label">
+                            Prepare
+                        </span>
+
+                        <h3>
+                            Receive Equipment, Access and Support
+                        </h3>
+
+                        <p>
+                            Confirm uniform and equipment needs, scheduling
+                            access, current rules, field procedures and an
+                            assignment appropriate for your experience.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-journey-step">
+
+                    <div class="r154-central-journey-number-wrap">
+                        <span class="r154-central-journey-number">4</span>
+                    </div>
+
+                    <div class="r154-central-journey-content">
+
+                        <span class="r154-central-journey-label">
+                            Officiate
+                        </span>
+
+                        <h3>
+                            Work With the Referee Crew
+                        </h3>
+
+                        <p>
+                            Arrive prepared, complete field check-in, support
+                            the referee team, protect the players and finish
+                            the required cards and reports.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-journey-step">
+
+                    <div class="r154-central-journey-number-wrap">
+                        <span class="r154-central-journey-number">5</span>
+                    </div>
+
+                    <div class="r154-central-journey-content">
+
+                        <span class="r154-central-journey-label">
+                            Develop
+                        </span>
+
+                        <h3>
+                            Request Mentoring and Continue Learning
+                        </h3>
+
+                        <p>
+                            Build confidence through appropriate assignments,
+                            postgame feedback, annual education and formal or
+                            informal mentoring.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="r154-central-journey-step">
+
+                    <div class="r154-central-journey-number-wrap">
+                        <span class="r154-central-journey-number">6</span>
+                    </div>
+
+                    <div class="r154-central-journey-content">
+
+                        <span class="r154-central-journey-label">
+                            Advance
+                        </span>
+
+                        <h3>
+                            Choose Your Next Referee Goal
+                        </h3>
+
+                        <p>
+                            Continue serving at your current badge, pursue an
+                            AYSO upgrade, mentor other referees or explore the
+                            separate U.S. Soccer and NOCRA pathway.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             SEASON READINESS
+             ================================================================ -->
+
+        <section class="r154-central-section">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    Prepare Before Assignments Are Published
+                </span>
+
+                <h2 class="r154-central-section-title">
+                    Referee Season Readiness
+                </h2>
+
+                <p class="r154-central-section-intro">
+                    Referees can complete most preparation before MatchTrak
+                    competition schedules become available.
+                </p>
+
+            </div>
+
+
+            <div class="r154-central-readiness-grid">
+
+                <article class="r154-central-readiness-card">
+
+                    <span class="r154-central-readiness-number">
+                        Check 01
+                    </span>
+
+                    <h3>
+                        Volunteer Eligibility
+                    </h3>
+
+                    <p>
+                        Confirm that the current application, screening and
+                        applicable safety requirements are complete.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-readiness-card">
+
+                    <span class="r154-central-readiness-number">
+                        Check 02
+                    </span>
+
+                    <h3>
+                        Certification
+                    </h3>
+
+                    <p>
+                        Confirm that referee courses and the correct badge
+                        appear in the official AYSOU record.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-readiness-card">
+
+                    <span class="r154-central-readiness-number">
+                        Check 03
+                    </span>
+
+                    <h3>
+                        Annual Rules
+                    </h3>
+
+                    <p>
+                        Review current AYSO Law changes, Region 154 procedures
+                        and applicable Build-Out Line guidance.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-readiness-card">
+
+                    <span class="r154-central-readiness-number">
+                        Check 04
+                    </span>
+
+                    <h3>
+                        Game-Day Preparation
+                    </h3>
+
+                    <p>
+                        Review uniforms, equipment, check-in, referee credit,
+                        game cards, reporting and safety procedures.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-central-readiness-note">
+
+                <strong>
+                    MatchTrak schedules are a later step.
+                </strong>
+
+                Competition names and reservation links are added after the
+                seasonal schedules are finalized. Do not use an old MatchTrak
+                competition name for the new season.
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             QUICK TOOLS
+             ================================================================ -->
+
+        <section class="r154-central-section r154-central-section-alt" id="quick-tools" aria-labelledby="quick-tools-title">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    Frequently Used Referee Links
+                </span>
+
+                <h2 class="r154-central-section-title" id="quick-tools-title">
+                    Quick Tools
+                </h2>
+
+            </div>
+
+
+            <div class="r154-central-tools-grid">
+
+                <a class="r154-central-tool-link" href="/Default.aspx?tabid=974613">
+
+                    <span class="r154-central-tool-title">
+                        Volunteer Compliance
+                    </span>
+
+                    <span class="r154-central-tool-description">
+                        Review adult application, screening, training and
+                        California Live Scan requirements.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-tool-link" href="/Default.aspx?tabid=976489">
+
+                    <span class="r154-central-tool-title">
+                        Current Referee Training
+                    </span>
+
+                    <span class="r154-central-tool-description">
+                        Find Region 154 courses, meetings and AYSOU enrollment
+                        instructions.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-tool-link" href="/Default.aspx?tabid=976490">
+
+                    <span class="r154-central-tool-title">
+                        Game Day Tools
+                    </span>
+
+                    <span class="r154-central-tool-description">
+                        Review MatchTrak, check-in, credit, uniforms, cards,
+                        reports and field procedures.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-tool-link" href="/Default.aspx?tabid=949782">
+
+                    <span class="r154-central-tool-title">
+                        Annual Laws Update
+                    </span>
+
+                    <span class="r154-central-tool-description">
+                        Review the current AYSO and Region 154 Law changes.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-tool-link" href="/Default.aspx?tabid=976492">
+
+                    <span class="r154-central-tool-title">
+                        Rules &amp; Learning
+                    </span>
+
+                    <span class="r154-central-tool-description">
+                        Access the Laws library, Build-Out Line guidance and
+                        continuing-learning resources.
+                    </span>
+
+                </a>
+
+
+                <a class="r154-central-tool-link" href="mailto:Cypress154RRA@gmail.com">
+
+                    <span class="r154-central-tool-title">
+                        Contact the RRA
+                    </span>
+
+                    <span class="r154-central-tool-description">
+                        Request help with training, certification, assignments,
+                        mentoring or referee-program questions.
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             REFEREE PROTECTION
+             ================================================================ -->
+
+        <section class="r154-central-section" id="referee-support" aria-labelledby="referee-support-title">
+
+            <div class="r154-central-protection-panel">
+
+                <span class="r154-central-eyebrow">
+                    Respect the Call
+                </span>
+
+                <h2 id="referee-support-title">
+                    Region 154 Does Not Tolerate Referee Abuse
+                </h2>
+
+                <p>
+                    Referees must be treated with respect before, during and
+                    after every match. Coaches, players and spectators may not
+                    intimidate, threaten, insult or aggressively confront any
+                    member of the referee crew.
+                </p>
+
+                <p>
+                    Concerns about decisions must be handled through the
+                    approved Region process—not through an argument with the
+                    referee crew. Youth referees require additional patience,
+                    protection and adult support.
+                </p>
+
+                <div class="r154-central-protection-highlight">
+
+                    When an interaction becomes unsafe, stop the confrontation,
+                    seek a Field Marshal or Region representative and report the
+                    event to referee leadership.
+
+                </div>
+
+
+                <div class="r154-central-protection-actions">
+
+                    <a class="r154-central-button r154-central-button-red" href="/Default.aspx?tabid=974653">
+                        Referee Abuse Prevention
+                    </a>
+
+                    <a class="r154-central-button" href="/Default.aspx?tabid=976488">
+                        Youth Referee Protection
+                    </a>
+
+                    <a class="r154-central-button r154-central-button-secondary" href="mailto:Cypress154RRA@gmail.com">
+                        Contact the RRA
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             HELP ROUTING
+             ================================================================ -->
+
+        <section class="r154-central-section r154-central-section-alt">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    Send the Question to the Correct Resource
+                </span>
+
+                <h2 class="r154-central-section-title">
+                    Where Can I Get Help?
+                </h2>
+
+            </div>
+
+
+            <div class="r154-central-support-grid">
+
+                <article class="r154-central-support-card">
+
+                    <span class="r154-central-support-label">
+                        Registration or Compliance
+                    </span>
+
+                    <h3>
+                        Volunteer Record Help
+                    </h3>
+
+                    <p>
+                        Use Volunteer Compliance for application, background
+                        check, AYSOU safety training and California Live Scan
+                        questions.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-support-card">
+
+                    <span class="r154-central-support-label">
+                        Courses or Certification
+                    </span>
+
+                    <h3>
+                        Training Help
+                    </h3>
+
+                    <p>
+                        Use Training &amp; Events for course selection,
+                        enrollment, prerequisites, dates, locations and missing
+                        certification questions.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-support-card">
+
+                    <span class="r154-central-support-label">
+                        Assignments or Mentoring
+                    </span>
+
+                    <h3>
+                        Referee Administrator Help
+                    </h3>
+
+                    <p>
+                        Contact the RRA for MatchTrak access, assignment
+                        readiness, mentoring, equipment, upgrade planning and
+                        referee-program concerns.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-central-button-row">
+
+                <a class="r154-central-button r154-central-button-red" href="mailto:Cypress154RRA@gmail.com">
+                    Email the Regional Referee Administrator
+                </a>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             FAQ
+             ================================================================ -->
+
+        <section class="r154-central-section">
+
+            <div class="r154-central-section-heading">
+
+                <span class="r154-central-eyebrow">
+                    Common Referee-Program Questions
+                </span>
+
+                <h2 class="r154-central-section-title">
+                    Referee Central FAQ
+                </h2>
+
+            </div>
+
+
+            <div class="r154-central-faq-grid">
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Where should a completely new adult volunteer begin?
+                    </h3>
+
+                    <p>
+                        Begin on Become a Referee. It explains the adult
+                        application, compliance, training and first-assignment
+                        process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Where should a referee under 18 begin?
+                    </h3>
+
+                    <p>
+                        Begin on Youth Referees. A parent or guardian must
+                        complete the separate youth-volunteer registration
+                        process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Where are current referee courses listed?
+                    </h3>
+
+                    <p>
+                        Current courses, meetings, locations and AYSOU
+                        instructions are maintained on Training &amp; Events.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Where are MatchTrak schedules listed?
+                    </h3>
+
+                    <p>
+                        Current competition links will be maintained on Game
+                        Day Tools after the seasonal MatchTrak schedules are
+                        published.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Does NOCRA replace Region 154 volunteer referees?
+                    </h3>
+
+                    <p>
+                        No. Region 154 continues to rely on certified AYSO
+                        volunteers for Assistant Referee and eligible Center
+                        Referee assignments.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        May an AYSO volunteer serve as the Center Referee?
+                    </h3>
+
+                    <p>
+                        Appropriately certified referees may reserve eligible
+                        Center positions according to the current competition
+                        and assignment procedures.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Where are current referee-point totals listed?
+                    </h3>
+
+                    <p>
+                        Seasonal totals and team requirements belong on the
+                        current Referee &amp; Volunteer Point Program page, not
+                        on Referee Central.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Where can I review the current Laws?
+                    </h3>
+
+                    <p>
+                        Rules &amp; Learning contains the current annual update,
+                        official Laws links, Build-Out Line guidance and
+                        learning resources.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        How do I request a mentor?
+                    </h3>
+
+                    <p>
+                        Contact the RRA and explain your current badge,
+                        experience, upcoming assignment and development goal.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        How do I pursue paid referee assignments?
+                    </h3>
+
+                    <p>
+                        Review Advancement &amp; Paid Refereeing. The U.S.
+                        Soccer, Cal South and NOCRA pathway is separate from
+                        AYSO volunteer certification.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        What should I do about referee abuse?
+                    </h3>
+
+                    <p>
+                        Seek immediate support from the referee crew, Field
+                        Marshal or Region representative and report the event
+                        through the approved referee-protection process.
+                    </p>
+
+                </article>
+
+
+                <article class="r154-central-faq-card">
+
+                    <h3>
+                        Who should I contact when I am unsure?
+                    </h3>
+
+                    <p>
+                        Email the Regional Referee Administrator for help
+                        identifying the correct process or resource.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="r154-central-backlink-wrap">
+
+                <a class="r154-central-backlink" href="#page-menu">
+                    Back to Referee Central Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================================
+             PAGE SEQUENCE NAVIGATION
+             ================================================================ -->
+
+        <nav class="r154-central-sequence" aria-label="Referee guide page sequence">
+
+            <div class="r154-central-sequence-heading">
+                Continue Through the Referee Guide
+            </div>
+
+            <div class="r154-central-sequence-grid">
+
+                <div class="r154-central-sequence-item r154-central-sequence-disabled" aria-disabled="true">
+
+                    <span class="r154-central-sequence-direction">
+                        Previous Page
+                    </span>
+
+                    <span class="r154-central-sequence-page">
+                        Start of Referee Guide
+                    </span>
+
+                </div>
+
+
+                <div class="r154-central-sequence-item r154-central-sequence-current" aria-current="page">
+
+                    <span class="r154-central-sequence-direction">
+                        Current Page
+                    </span>
+
+                    <span class="r154-central-sequence-page">
+                        Referee Central
+                    </span>
+
+                </div>
+
+
+                <a class="r154-central-sequence-item" href="/Default.aspx?tabid=976487">
+
+                    <span class="r154-central-sequence-direction">
+                        Next Page
+                    </span>
+
+                    <span class="r154-central-sequence-page">
+                        Become a Referee
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ================================================================
+             FOOTER
+             ================================================================ -->
+
+        <footer class="r154-central-footer">
+
+            <div class="r154-central-footer-brand">
+                Cypress AYSO Region 154
+            </div>
+
+            <p>
+                Supporting safe, fair and positive soccer through trained,
+                prepared and respected referees.
+            </p>
+
+            <div class="r154-central-footer-links">
+
+                <a href="/Default.aspx?tabid=976487">
+                    Become a Referee
+                </a>
+
+                <a href="/Default.aspx?tabid=976489">
+                    Training &amp; Events
+                </a>
+
+                <a href="/Default.aspx?tabid=976490">
+                    Game Day Tools
+                </a>
+
+                <a href="mailto:Cypress154RRA@gmail.com">
+                    Contact the RRA
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ========================================================================
+     END PUBLIC-FACING REFEREE CENTRAL PAGE
+     ======================================================================== -->
