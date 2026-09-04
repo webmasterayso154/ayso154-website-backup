@@ -1,0 +1,929 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   EXTRA Program
+CMS Status:  Live
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:event] [type:registration] [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:btn-download] [ui:callout] [ui:table]
+Assets:      AYSO 154 Logo - 3D.png, ayso-age-determination-chart-my26-my27.png
+Notes:       Live EXTRA Program page for Cypress Region 154 featuring MatchTrak schedules, tryout information, age matrix, fees, and coach applications.
+================================================================================
+-->
+
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXTRA Program | AYSO Region 154</title>
+
+<style>
+:root {
+    --region-navy: #102a5c;
+    --region-navy-dark: #081c40;
+    --region-red: #e3222a;
+    --region-red-dark: #b9151c;
+    --region-gold: #ffd34d;
+    --region-white: #ffffff;
+    --region-light: #f4f6f8;
+    --region-blue-light: #eaf1fa;
+    --region-red-light: #fff0f1;
+    --region-gold-light: #fff9dd;
+    --region-border: #d8dee8;
+    --region-text: #303846;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--region-light);
+}
+
+.parent-page-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 12px;
+    box-sizing: border-box;
+    color: var(--region-text);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.parent-page-container *,
+.parent-page-container *::before,
+.parent-page-container *::after {
+    box-sizing: border-box;
+}
+
+.parent-page-container a:focus-visible {
+    outline: 4px solid var(--region-gold);
+    outline-offset: 3px;
+}
+
+.parent-section {
+    scroll-margin-top: 16px;
+}
+
+.info-card {
+    margin-bottom: 28px;
+    overflow: hidden;
+    background-color: var(--region-white);
+    border: 1px solid var(--region-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(8, 28, 64, 0.09);
+}
+
+.section-title {
+    position: relative;
+    margin: 0;
+    padding: 18px 20px 18px 52px;
+    overflow: hidden;
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+    font-size: 1.4em;
+    line-height: 1.25;
+}
+
+.section-title::before {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    content: "⚽";
+    font-size: 1.15em;
+    transform: translateY(-50%);
+}
+
+.section-title::after {
+    position: absolute;
+    right: -18px;
+    bottom: -35px;
+    width: 100px;
+    height: 100px;
+    content: "";
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+}
+
+.info-card-content {
+    padding: 20px;
+}
+
+.info-card h3 {
+    margin-top: 28px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    color: var(--region-navy);
+    border-bottom: 3px solid var(--region-red);
+    font-size: 1.22em;
+}
+
+.info-card h4 {
+    margin-top: 22px;
+    margin-bottom: 9px;
+    color: var(--region-navy);
+    font-size: 1.08em;
+}
+
+.info-card-content h3:first-child,
+.info-card p:first-child {
+    margin-top: 0;
+}
+
+.info-card ul,
+.info-card ol {
+    padding-left: 24px;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+}
+
+.soccer-list {
+    padding-left: 0 !important;
+    list-style: none;
+}
+
+.soccer-list li {
+    position: relative;
+    padding-left: 32px;
+}
+
+.soccer-list li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "⚽";
+    font-size: 1.05em;
+}
+
+.parent-brand-card {
+    position: relative;
+    padding: 26px 18px 32px;
+    overflow: hidden;
+    color: var(--region-white);
+    background-color: var(--region-navy-dark);
+    background-image:
+        linear-gradient(
+            rgba(8, 28, 64, 0.94),
+            rgba(16, 42, 92, 0.94)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 48px,
+            rgba(255, 255, 255, 0.07) 49px,
+            rgba(255, 255, 255, 0.07) 51px
+        );
+    border-bottom: 7px solid var(--region-red);
+    text-align: center;
+}
+
+.parent-brand-card::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 520px;
+    height: 260px;
+    content: "";
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent-brand-card::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-wrap {
+    width: 180px;
+    max-width: 58%;
+    margin: 0 auto 18px;
+    padding: 10px;
+    background-color: var(--region-white);
+    border: 4px solid var(--region-white);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.parent-logo {
+    width: 100%;
+    display: block;
+}
+
+.parent-brand-card h1 {
+    margin: 0;
+    color: var(--region-white);
+    font-size: 2em;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.parent-brand-card h1 span {
+    display: block;
+    margin-top: 7px;
+    color: var(--region-gold);
+}
+
+.parent-brand-card p {
+    max-width: 650px;
+    margin: 18px auto 0;
+    color: var(--region-white);
+    font-size: 1.04em;
+}
+
+.mandatory-label {
+    margin: 20px auto 0;
+    padding: 10px 15px;
+    display: inline-block;
+    color: var(--region-navy-dark);
+    background-color: var(--region-gold);
+    border: 3px solid var(--region-white);
+    border-radius: 8px;
+    font-size: 0.92em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.soccer-divider {
+    margin: 3px 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.soccer-divider::before,
+.soccer-divider::after {
+    height: 3px;
+    flex: 1;
+    content: "";
+    background-color: var(--region-red);
+}
+
+.soccer-divider span {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    color: var(--region-navy);
+    background-color: var(--region-white);
+    border: 3px solid var(--region-navy);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25em;
+}
+
+#parent-navigation-hub {
+    padding: 22px 18px;
+    background-color: var(--region-white);
+    text-align: center;
+}
+
+#parent-navigation-hub h2 {
+    margin: 0 0 10px;
+    color: var(--region-navy);
+    font-size: 1.35em;
+    line-height: 1.35;
+}
+
+#parent-navigation-hub p {
+    max-width: 680px;
+    margin: 0 auto 22px;
+}
+
+.navigation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.nav-button {
+    position: relative;
+    min-height: 58px;
+    padding: 15px 15px 15px 46px;
+    display: flex;
+    overflow: hidden;
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+    border: 2px solid var(--region-navy);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.98em;
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.nav-button::before {
+    position: absolute;
+    left: 14px;
+    content: "⚽";
+    font-size: 1.15em;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    background-color: var(--region-navy-dark);
+    border-color: var(--region-navy-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(8, 28, 64, 0.24);
+}
+
+.nav-button-important {
+    background-color: var(--region-red);
+    border-color: var(--region-red);
+}
+
+.nav-button-important:hover,
+.nav-button-important:focus {
+    background-color: var(--region-red-dark);
+    border-color: var(--region-red-dark);
+}
+
+.callout {
+    margin: 22px 0;
+    padding: 18px;
+    border-left: 6px solid var(--region-navy);
+    border-radius: 6px;
+}
+
+.callout-header {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.callout.info {
+    color: var(--region-navy-dark);
+    background-color: var(--region-blue-light);
+    border-color: var(--region-navy);
+}
+
+.callout.warning {
+    color: #604b00;
+    background-color: var(--region-gold-light);
+    border-color: var(--region-gold);
+}
+
+.callout.danger {
+    color: #66161b;
+    background-color: var(--region-red-light);
+    border-color: var(--region-red);
+}
+
+.callout.highlight {
+    color: var(--region-navy-dark);
+    background-color: var(--region-gold-light);
+    border-color: var(--region-gold);
+    font-size: 1.07em;
+    text-align: center;
+}
+
+/* Base Link Grid */
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.link-grid.single-action {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NEW: Split Column UI for Schedules */
+.schedules-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.schedule-column {
+    background: var(--region-white);
+    border: 2px solid var(--region-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(8, 28, 64, 0.04);
+}
+
+.schedule-column h3 {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    text-align: center;
+    border-bottom: 2px solid var(--region-red) !important;
+    padding-bottom: 10px !important;
+    font-size: 1.3em !important;
+}
+
+.schedule-column .link-grid {
+    grid-template-columns: 1fr; /* Stack buttons vertically inside the column */
+    margin: 0; 
+}
+
+.grid-button {
+    min-height: 52px;
+    padding: 14px;
+    display: flex;
+    color: var(--region-navy) !important;
+    background-color: var(--region-white);
+    border: 2px solid var(--region-navy);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.grid-button:hover,
+.grid-button:focus {
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+    transform: translateY(-2px);
+}
+
+.grid-button-primary {
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+}
+
+.grid-button-primary:hover,
+.grid-button-primary:focus {
+    background-color: var(--region-navy-dark);
+}
+
+.section-navigation {
+    margin-top: 28px;
+    padding-top: 18px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--region-border);
+}
+
+.section-navigation a {
+    min-height: 46px;
+    padding: 11px 24px;
+    display: flex;
+    color: var(--region-navy) !important;
+    background-color: var(--region-white);
+    border: 2px solid var(--region-navy);
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.section-navigation a:hover,
+.section-navigation a:focus {
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+}
+
+.parent-footer {
+    position: relative;
+    padding: 28px 18px;
+    overflow: hidden;
+    color: var(--region-white);
+    background-color: var(--region-navy-dark);
+    border-top: 6px solid var(--region-red);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.parent-footer::before {
+    position: absolute;
+    right: -25px;
+    bottom: -38px;
+    content: "⚽";
+    opacity: 0.09;
+    font-size: 8em;
+}
+
+.parent-footer strong,
+.parent-footer p {
+    position: relative;
+    z-index: 2;
+}
+
+.parent-footer strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--region-gold);
+    font-size: 1.05em;
+    text-transform: uppercase;
+}
+
+.parent-footer p {
+    margin: 0;
+    color: var(--region-white);
+    font-size: 0.92em;
+}
+
+/* Supplemental Elements for EXTRA content */
+.table-container { overflow-x: auto; margin: 25px 0; }
+.styled-table { width: 100%; border-collapse: collapse; font-size: 1em; min-width: 300px; }
+.styled-table thead tr { background-color: var(--region-navy); color: var(--region-white); text-align: left; }
+.styled-table th, .styled-table td { padding: 12px 15px; border-bottom: 1px solid var(--region-border); }
+.styled-table tbody tr:nth-of-type(even) { background-color: var(--region-light); }
+.responsive-img { max-width: 100%; height: auto; display: block; margin: 20px auto; border: 1px solid var(--region-border); border-radius: 8px; }
+
+@media (min-width: 540px) {
+    .parent-page-container {
+        padding: 15px;
+    }
+    .navigation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 650px) {
+    /* Trigger the dual-column layout for schedules */
+    .schedules-split {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 760px) {
+    .parent-brand-card {
+        padding: 36px 30px;
+    }
+    .logo-wrap {
+        width: 205px;
+    }
+    .parent-brand-card h1 {
+        font-size: 2.65em;
+    }
+    .info-card-content {
+        padding: 25px;
+    }
+    .section-title {
+        padding: 20px 25px 20px 58px;
+        font-size: 1.55em;
+    }
+    .navigation-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .nav-button,
+    .grid-button,
+    .section-navigation a {
+        transition: none;
+    }
+    .nav-button:hover,
+    .nav-button:focus,
+    .grid-button:hover,
+    .grid-button:focus {
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="parent-page-container">
+
+    <!-- Hero Banner -->
+    <div class="info-card">
+        <div class="parent-brand-card">
+            <div class="brand-content">
+                <div class="logo-wrap">
+                    <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/AYSO%20154%20Logo%20-%203D.png" alt="Cypress AYSO Region 154 Logo" class="parent-logo">
+                </div>
+
+                <h1>
+                    EXTRA PROGRAM
+                    <span>CYPRESS REGION 154</span>
+                </h1>
+
+                <p>
+                    Welcome to the Cypress 154 EXTRA Program. Find all details regarding tryouts, player commitment, fees, and coaching opportunities below.
+                </p>
+
+                <div class="mandatory-label">★ Full-Year Program (Fall &amp; Spring)</div></div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="soccer-divider" aria-hidden="true">
+        <span>⚽</span>
+    </div>
+
+    <!-- Navigation Block -->
+    <div id="parent-navigation-hub" class="info-card">
+        <h2>Your EXTRA Resources</h2>
+        <p>
+            Review the program overview, check age matrix eligibility, find fee documentation, and view coaching requirements.
+        </p>
+
+        <div class="navigation-grid">
+            <a href="#schedules" class="nav-button nav-button-important">Game Schedules</a>
+            <a href="#tryouts" class="nav-button">Tryout Information</a>
+            <a href="#about" class="nav-button">Program Overview</a>
+            <a href="#fees" class="nav-button">Player Fees &amp; Docs</a>
+            <a href="#coach-app" class="nav-button">Coach Application</a>
+        </div>
+    </div>
+
+    <!-- MatchTrak Schedules Section -->
+    <div id="schedules" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">MatchTrak Schedules</h2>
+            
+            <div class="info-card-content">
+                <p>Access the complete season schedule for all Cypress 154 Extra teams, or locate your specific team page to export calendar dates directly to your mobile device.</p>
+                
+                <!-- Master Schedule CTA -->
+                <div class="link-grid single-action" style="max-width: 100%; margin-top: 25px;">
+                    <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-home/s11-26-fall-extra?opendocument" target="_blank" class="grid-button grid-button-primary" style="font-size: 1.15em; padding: 20px;">
+                        🏆 Master Region 154 Schedule (All Games)
+                    </a>
+                </div>
+    
+                <!-- Callout for Staff & Parents -->
+                <div class="callout info">
+                    <strong class="callout-header">Team Managers &amp; Parents</strong>
+                    Select your specific team below to view your dedicated 10-game schedule and access the one-click mobile calendar export link.
+                </div>
+    
+                <!-- Grouped Teams UI -->
+                <div class="schedules-split">
+                    
+                    <!-- Boys Column -->
+                    <div class="schedule-column">
+                        <h3>👦 Boys Teams</h3>
+                        <div class="link-grid">
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/3CBC9AC998BF8C9A88258E3300797836?opendocument" target="_blank" class="grid-button">U09B (Franco)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/BBF01894CF9E536D88258E3300797994?opendocument" target="_blank" class="grid-button">U10B (Cuthbert)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/CB61C9A843CFF39C88258E3300797844?opendocument" target="_blank" class="grid-button">U12B (Brache)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/15EBDD72B174D68488258E3300797BB2?opendocument" target="_blank" class="grid-button">U13B (Husami)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/3F8DB7F788FF478088258E3300797B50?opendocument" target="_blank" class="grid-button">U14B (Villalobos)</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Girls Column -->
+                    <div class="schedule-column">
+                        <h3>👧 Girls Teams</h3>
+                        <div class="link-grid">
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/E04EDD815174325288258E33007977E5?opendocument" target="_blank" class="grid-button">U09G (Yonemoto)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/090070488B2158AA88258E3300797B6C?opendocument" target="_blank" class="grid-button">U10G (Humphery)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/9189BB82B4E485F388258E330079787D?opendocument" target="_blank" class="grid-button">U11G (Tarian)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/1F4AD34CB43E4FC488258E3300797B1B?opendocument" target="_blank" class="grid-button">U12G (Ortega)</a>
+                            <a href="https://s11-26-fall-extra.matchtrak.com/11/main.nsf/open-team-open/54F7116FDE0BC46A88258E33007978C4?opendocument" target="_blank" class="grid-button">U14G (Wysocki)</a>
+                        </div>
+                    </div>
+
+                </div>
+    
+                <div class="section-navigation">
+                    <a href="#parent-navigation-hub">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Program Overview</h2>
+
+            <div class="info-card-content">
+                <h3>Purpose</h3>
+                <p>AYSO EXTRA is an internal gaming-circuit program that offers players a higher-level opportunity to refine their skills in a more competitive playing environment. It is designed to provide a more challenging level of play for those players who possess the appropriate interest, skills, and abilities to enhance their individual growth through the game of soccer.</p>
+                
+                <h3>Why AYSO EXTRA?</h3>
+                <ul class="soccer-list">
+                    <li><strong>Backed by a National Soccer Organization</strong></li>
+                    <li><strong>Extremely reduced player fees</strong> (when compared to standard club soccer)</li>
+                    <li><strong>Playing time per game is guaranteed</strong></li>
+                </ul>
+
+                <h3>About the Program</h3>
+                <p>EXTRA is committed to developing a world-class competitive soccer program focused on providing a challenging environment and enhancing training for our dedicated soccer enthusiasts.</p>
+                <ul class="soccer-list">
+                    <li><strong>Competition:</strong> In the Fall, EXTRA teams will play against other EXTRA teams within Section 11 in the Southern California Extra Development Soccer League (SCEDSL).</li>
+                    <li><strong>Tryouts:</strong> All interested players attend a tryout in the Fall and/or Spring. Players are evaluated by an independent assessment team.</li>
+                    <li><strong>Selection:</strong> Players chosen to participate will be notified shortly after tryouts. Players who are not chosen will be placed on a core team in the Fall season.</li>
+                </ul>
+                
+                <div class="callout info">
+                    <strong class="callout-header">Learn More About the League</strong>
+                    Visit the SCEDSL website for details on Sections, Areas, and Regions involved.
+                </div>
+                
+                <div class="link-grid single-action">
+                    <a href="https://www.aysoscedsl.org/" target="_blank" class="grid-button grid-button-primary">Visit AYSO SCEDSL Website</a>
+                </div>
+
+                <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--region-border);">
+
+                <h3>Player &amp; Parent Commitment</h3>
+                <p>Participation in the EXTRA program requires a higher level of commitment. The season requires a full-year commitment running from <strong>Summer through the following Spring</strong>. Attendance at all team functions (practices, games, tournaments) is expected and critical to a successful season.</p>
+                
+                <div class="callout danger">
+                    <strong class="callout-header">Strict Commitment Policy</strong>
+                    The EXTRA program demands more time and needs to be the player's <strong>primary sport commitment</strong>. Players in the EXTRA program <strong>cannot play</strong> in another competitive soccer program (i.e. Club) or Core.
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#parent-navigation-hub">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tryouts" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Tryouts &amp; Age Matrix</h2>
+            <div class="info-card-content">
+                
+                <div class="callout warning" style="text-align: center;">
+                    <strong class="callout-header" style="font-size: 1.3em;">🚫 2026/2027 Tryouts (Completed)</strong>
+                    <p>Registration for the 2026/2027 season is now closed.</p>
+                    <strong class="callout-header" style="font-size: 1.3em; margin-top: 15px;">📅 2027/2028 Tryouts (TBD)</strong>
+                    <p>Dates for the upcoming season will be announced soon.<br>If you have any questions, please contact our Extra Director.</p>
+                </div>
+                
+                <div class="link-grid single-action">
+                    <a href="mailto:extradivisionayso154@gmail.com" class="grid-button grid-button-primary">Email Extra Director</a>
+                </div>
+
+                <div class="callout info">
+                    <strong class="callout-header" style="text-align: center;">Tryout Information</strong>
+                    <p style="text-align: center; font-size: 1.1em; margin-bottom: 10px;">
+                        <strong>Location:</strong> Lexington Jr. High School (4351 Orange Ave. Cypress, CA 90630)
+                    </p>
+                    <p style="text-align: center; font-size: 0.95em; margin-bottom: 0;">
+                        <em>Tryout workouts last approximately an hour and a half. Attending one tryout is required, but it is highly recommended to attend both sessions. Tryouts are run and players are evaluated by <a href="https://firsttouchcoaching.com/" target="_blank" style="color: var(--region-navy);">First Touch Soccer</a>.</em>
+                    </p>
+                </div>
+
+                <h3>Age Determination</h3>
+                <p>AYSO has transitioned to school age for divisions. Please review the chart below to determine which age group you will be applying for.</p>
+                <img src="https://dt5602vnjxv0c.cloudfront.net/portals/14837/docs/2026/ayso-age-determination-chart-my26-my27.png" alt="AYSO Age Determination Chart" class="responsive-img">
+
+                <h3>Age Matrix &amp; Roster Size</h3>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Extra Division</th>
+                                <th>Roster Size</th>
+                                <th>Match Format</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>U09</td><td>10</td><td>7v7</td></tr>
+                            <tr><td>U10</td><td>10</td><td>7v7</td></tr>
+                            <tr><td>U11</td><td>12</td><td>9v9</td></tr>
+                            <tr><td>U12</td><td>12</td><td>9v9</td></tr>
+                            <tr><td>U13</td><td>15</td><td>11v11</td></tr>
+                            <tr><td>U14</td><td>15</td><td>11v11</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="callout warning">
+                    <strong class="callout-header">"Playing Up" Rule</strong>
+                    A player will not be allowed to play up a division unless there is no Extra team for their birth year.
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#parent-navigation-hub">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fees" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Player Fees &amp; Costs</h2>
+            <div class="info-card-content">
+                <p>EXTRA player fees are paid twice a year and coincide with Fall and Spring Registration.</p>
+
+                <h3>🍂 Fall Season Fees</h3>
+                <div class="callout info">
+                    <strong class="callout-header">Fall Registration Fee: [Insert Amount from Minutes]</strong>
+                </div>
+                <p><strong>The Fall EXTRA fee covers:</strong></p>
+                <ul class="soccer-list">
+                    <li>Home and away uniforms, socks, and two practice jerseys.</li>
+                    <li>Practice field costs.</li>
+                    <li>Fall NOCRA Referee fees.</li>
+                    <li>City of Cypress player fee (for both residents and non-residents).</li>
+                    <li>Team trainer provided by First Touch Coaching.</li>
+                    <li>AYSO Section EXTRA fee &amp; Playoff fee.</li>
+                </ul>
+
+                <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--region-border);">
+
+                <h3>🌻 Spring Season Fees</h3>
+                <div class="callout info">
+                    <strong class="callout-header">Spring Registration Fee: [Insert Amount from Minutes]</strong>
+                </div>
+                <p><strong>The Spring EXTRA fee covers:</strong></p>
+                <ul class="soccer-list">
+                    <li>Practice field costs.</li>
+                    <li>Spring NOCRA Referee fees.</li>
+                    <li>City of Cypress player fee (for both residents and non-residents).</li>
+                </ul>
+                
+                <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--region-border);">
+                
+                <h3>Governing Documents</h3>
+                <p>Please review the official Section 11 fee structure and governing documents.</p>
+                
+                <div class="link-grid single-action">
+                    <a href="https://dt5602vnjxv0c.cloudfront.net/portals/14084/docs/section%2011%20fees.pdf" target="_blank" class="grid-button grid-button-primary">Download Governing Documents (PDF)</a>
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#parent-navigation-hub">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="coach-app" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Coach Application</h2>
+            <div class="info-card-content">
+                
+                <div class="callout warning" style="text-align: center;">
+                    <strong class="callout-header" style="font-size: 1.3em;">🚫 2026/2027 Coach Applications (Completed)</strong>
+                    <p>The application window for the 2026/2027 Season has closed.</p>
+                    <strong class="callout-header" style="font-size: 1.3em; margin-top: 15px;">📅 2027/2028 Coach Applications (TBD)</strong>
+                    <p>Applications for the upcoming season will open at a later date.</p>
+                </div>
+
+                <h3>Extra Coach Requirements</h3>
+                <ul class="soccer-list">
+                    <li><strong>Experience:</strong> Recommendation of at least 3 seasons coaching experience (Fall and Spring Select count as separate seasons). Preferably in Region 154.</li>
+                    <li><strong>Certification:</strong> Must have completed the AYSO coaching certification equal to the age group you are applying for.</li>
+                    <li><strong>Referee:</strong> Must have at least a Regional referee certification.</li>
+                    <li><strong>Commitment:</strong> Provide at least a 1-year commitment to the Program.</li>
+                    <li><strong>Exclusivity:</strong> If you are selected as an EXTRA head coach, you are ineligible to be a head coach of any other team(s).</li>
+                    <li><strong>Representation:</strong> Represent Region 154 with dignity at all Regional events and at away games.</li>
+                    <li><strong>EPIC Buddy Program:</strong> Divisions U11 and older must participate in the EPIC Buddy program at least once during the fall season.</li>
+                </ul>
+
+                <h3>Required Meetings</h3>
+                <p>Attendance at the following meetings is mandatory:</p>
+                <ol>
+                    <li><strong>Welcome Meeting:</strong> Summer (Uniform orders &amp; upcoming season).</li>
+                    <li><strong>Section EXTRA Meeting:</strong> Late Summer.</li>
+                    <li><strong>Fall Season Wrap-Up:</strong> Winter (Dependent on SCEDSL schedule).</li>
+                    <li><strong>Tryouts:</strong> Spring.</li>
+                </ol>
+
+                <div class="callout info" style="text-align: center;">
+                    <strong class="callout-header">Questions?</strong>
+                    Please contact the Extra Director at <a href="mailto:extradivisionayso154@gmail.com">extradivisionayso154@gmail.com</a>
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#parent-navigation-hub">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Block -->
+    <div class="parent-footer">
+        <strong>AYSO Region 154 · Cypress, California</strong>
+        <p>For every child. For every volunteer. For every family.</p>
+    </div>
+
+</div>
+
+</body></html>
