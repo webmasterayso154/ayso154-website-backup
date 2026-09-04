@@ -1,0 +1,403 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_Sponsors_08.21.25
+CMS Status:  Hidden / Inactive
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:policy]
+Components:  [ui:card] [ui:btn-cta] [ui:table] [ui:callout]
+Assets:      2025 Sponsorship Packet.pdf
+Notes:       Fall 2025/2026 Sponsorship hub including business sponsor benefits, submission guidelines, parent information, in-person drop-off dates, and the comprehensive 2025 sponsor showcase grid sorted by division.
+================================================================================
+-->
+
+<style>
+    /* Makes the jump-links scroll smoothly */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* ----- Main Container ----- */
+    .sponsorship-page-container {
+        padding: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    /* ----- Reusable "Info Card" Style ----- */
+    .info-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    /* ----- Navigation Hub at the top ----- */
+    #navigation-hub { /* An ID to allow "Back to Top" links to target it */
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .navigation-buttons {
+        display: grid; /* Changed to grid for better responsiveness */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+        gap: 15px; /* Space between buttons */
+        margin-top: 15px;
+    }
+
+    /* Styles for the navigation buttons */
+    .nav-button {
+        display: block;
+        background-color: #f0f0f0;
+        color: #003366 !important;
+        border: 1px solid #ccc;
+        padding: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+    .nav-button:hover {
+        background-color: #e0e0e0;
+        border-color: #999;
+    }
+
+    /* ----- Main "Download Form" Button ----- */
+    .primary-download-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        background-color: #007bff; /* Primary Blue */
+        color: #ffffff !important;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .primary-download-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* ----- Section-Specific Styles ----- */
+    .section-title {
+        text-align: center;
+        color: #003366;
+        margin-top: 40px; /* Space above each section title */
+        padding-top: 20px; /* Extra padding for when jumping to it */
+        margin-bottom: 20px;
+        border-top: 2px solid #eee;
+    }
+    .info-card h3 {
+        margin-top: 0;
+        color: #003366;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    .info-card ul li {
+        margin-bottom: 10px;
+    }
+    .date-list li { list-style-type: none; padding-left: 0; } /* Removes bullets for dates */
+
+    /* ----- Helper Styles ----- */
+    code {
+        background-color: #e9e9e9; padding: 3px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace;
+    }
+    .back-to-top-link {
+        display: block; text-align: right; margin-top: 15px; font-size: 0.9em; color: #007bff;
+    }
+
+    /* ============================================================================== */
+    /*             ** REVISED STYLES for the Sponsor Showcase Section **              */
+    /* ============================================================================== */
+    .sponsor-showcase .info-card {
+        margin-bottom: 20px; /* Tighter spacing between division cards */
+    }
+    .division-header {
+        font-size: 1.3em;
+        color: #003366;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .sponsor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+        gap: 20px; /* Space between cards */
+    }
+    .sponsor-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 120px;
+    }
+    .sponsor-name {
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #003366; /* AYSO Blue */
+        margin-bottom: 8px;
+    }
+    .sponsor-team {
+        font-size: 0.9em;
+        color: #555;
+    }
+    
+    /* -- Special style for teams with multiple sponsors -- */
+    .sponsor-card--multiple {
+        background-color: #e8fff4; /* Light green background */
+        border: 1px solid #28a745; /* AYSO Green border */
+        position: relative;
+        padding-top: 40px; /* Make space for the pizza note */
+    }
+    .pizza-party-note {
+        background-color: #28a745; /* AYSO Green */
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        position: absolute;
+        top: -15px; /* Position it slightly outside the card */
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+</style>
+
+<!-- ----- HTML CONTENT ----- -->
+<div class="sponsorship-page-container">
+
+    <!-- NAVIGATION HUB & PRIMARY DOWNLOAD -->
+    <div id="navigation-hub" class="info-card">
+        <h3>Fall 2025 Sponsorship Form</h3>
+        <p>Thank you for your interest in supporting AYSO Cypress! The first step for everyone is to download the official form.</p>
+        <a href="/Portals/14837/docs/2026/2025 Sponsorship Packet.pdf" class="primary-download-button" target="_blank">Download Sponsorship Form (PDF)</a>
+        
+        <p style="margin-top:25px; margin-bottom: 10px;">Then, find your role below or see our amazing sponsors:</p>
+        <div class="navigation-buttons">
+            <a href="#sponsors" class="nav-button">For Business Sponsors</a>
+            <a href="#parents" class="nav-button">For Parents &amp; Teams</a>
+            <a href="#sponsors-showcase" class="nav-button">View Our Sponsors</a>
+        </div>
+    </div>
+
+
+    <!-- SECTION 1: BUSINESS SPONSORS -->
+    <div id="sponsors" class="section-container">
+        <h2 class="section-title">For our Business &amp; Community Sponsors</h2>
+        <div class="info-card">
+            <h3>Sponsor Benefits</h3>
+            <p>Your contribution of <strong>$150.00</strong> makes a huge difference! As a thank you, sponsors receive:</p>
+            <ul>
+                <li>A commemorative plaque with the team's picture.</li>
+                <li>Your business name featured on our website for the 2025 season.</li>
+                <li><strong>Bonus:</strong> Teams with a 2nd or 3rd sponsor get a pizza party!&nbsp; 🍕🎉</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h3>Submission Guidelines</h3>
+            <p>To ensure your sponsorship is processed correctly, please follow these guidelines when emailing your form to <a href="mailto:sponsorshipayso154@gmail.com">sponsorshipayso154@gmail.com</a>.</p>
+            <ul>
+                <li><strong>Email Subject Line:</strong> <code>Sponsorship for (Division) (Team's Last Name)</code></li>
+                <li><strong>File Naming:</strong> <code>(Division)_(Team's Last Name)_(Payment Type)</code></li>
+            </ul>
+            <a href="#navigation-hub" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+    
+
+    <!-- SECTION 2: PARENTS & TEAMS -->
+    <div id="parents" class="section-container">
+        <h2 class="section-title">Sponsorship Info for Parents &amp; Teams</h2>
+        <div class="info-card">
+            <h3>Form Update &amp; Instructions</h3>
+            <p>A friendly update regarding team sponsorships. We have updated our 2025 form for more clarity. If you are still working on securing your sponsorship, please use the new version available at the top of this page.</p>
+            <p><strong>If your team has already submitted a form, no other action is needed.</strong> Thank you for your speediness!</p>
+        </div>
+        <div class="info-card">
+            <h3>In-Person Form Drop-Off</h3>
+            <p>If you prefer to drop off your form and payment in person, we have several dates available:</p>
+            <ul class="date-list">
+                <li><strong>Tuesday, August 5:</strong> 5:30pm - 7:30pm @ Lexington Jr High School</li>
+                <li><strong>Wednesday, August 13:</strong> 5:00pm - 6:00pm @ Cypress Community Center</li>
+                <li><strong>Saturday, August 16:</strong> 9:00am - 11:00am @ Lexington Jr High School</li>
+            </ul>
+            <a href="#navigation-hub" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!--            ** REVISED SPONSOR SHOWCASE SECTION (ALL SPONSORS) **               -->
+    <!-- ============================================================================== -->
+    <div id="sponsors-showcase" class="sponsor-showcase">
+        <h2 class="section-title">A Huge Thank You to Our 2025 Sponsors!</h2>
+
+        <!-- Playground Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">Playground Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card">
+                    <div class="sponsor-name">Made in the Shade</div>
+                    <div class="sponsor-team">Sponsoring Team Harpham</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 05/06 Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">05/06 Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card"><div class="sponsor-name">Classic Refrigeration</div><div class="sponsor-team">Sponsoring Team Babcock</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Mayea Wealth Management</div><div class="sponsor-team">Sponsoring Team Berry</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Krystle Lynn Hair</div><div class="sponsor-team">Sponsoring Team Fox</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Pups Palace Mobile Grooming</div><div class="sponsor-team">Sponsoring Team Harpham</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">S&amp;W Maintenance Co.</div><div class="sponsor-team">Sponsoring Team Kamada</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">American Executive Town Car LLC</div><div class="sponsor-team">Sponsoring Team Kimura</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">The Eye Doctor Optometry</div><div class="sponsor-team">Sponsoring Team Koeler</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Gaucho Sheep and Leather</div><div class="sponsor-team">Sponsoring Team Medina</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">CLCA Insurance Solutions</div><div class="sponsor-team">Sponsoring Team Oviedo</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Marvelous Plumbing</div><div class="sponsor-team">Sponsoring Team Cortes</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Crown Cleaners</div><div class="sponsor-team">Sponsoring Team Price</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Villa Park Landscaping Services</div><div class="sponsor-team">Sponsoring Team Ruiz</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Dr. Lauren Vreeland</div><div class="sponsor-team">Sponsoring Team Vreeland</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Newport Landing Sportfishing</div><div class="sponsor-team">Sponsoring Team Barone</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Chavio Gavia</div><div class="sponsor-team">Sponsoring Team Gomez</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Black Rhino Wheels</div><div class="sponsor-team">Sponsoring Team Hernandez</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Happy Planner</div><div class="sponsor-team">Sponsoring Team Pena</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Tectonic Transport</div><div class="sponsor-team">Sponsoring Team Van Maanen</div></div>
+            </div>
+        </div>
+
+        <!-- U08 Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">U08 Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card"><div class="sponsor-name">A Budget Mover</div><div class="sponsor-team">Sponsoring Team Barone</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Label Me Lindsay</div><div class="sponsor-team">Sponsoring Team Burnett</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Radiant Fashion</div><div class="sponsor-team">Sponsoring Team Faust</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Insinq Medical Services LLC</div><div class="sponsor-team">Sponsoring Team Garcia</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Beach Plumbing and Jetting</div><div class="sponsor-team">Sponsoring Team Junghanel</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Los Robles Healthcares</div><div class="sponsor-team">Sponsoring Team Lewis</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Garcia Lopez Family</div><div class="sponsor-team">Sponsoring Team Lopez</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Team Marquez</div><div class="sponsor-team">Sponsoring Team Marquez</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Otzoy Family</div><div class="sponsor-team">Sponsoring Team Otzoy</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">DC System Solutions, LLC</div><div class="sponsor-team">Sponsoring Team Baca</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Tectonic Transport</div><div class="sponsor-team">Sponsoring Team Boltman</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Fenagh, Inc</div><div class="sponsor-team">Sponsoring Team Burke</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Strago LLC</div><div class="sponsor-team">Sponsoring Team Hassani</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Permagro Inc</div><div class="sponsor-team">Sponsoring Team Katayama</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Happy Paws Pet Grooming</div><div class="sponsor-team">Sponsoring Team Olmos</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">HCE Electric LLC (Havican Custom Electric)</div><div class="sponsor-team">Sponsoring Team Olsen</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Strange Cafe</div><div class="sponsor-team">Sponsoring Team See</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">S6 Consulting LLC</div><div class="sponsor-team">Sponsoring Team Torres</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Law Offices of Adrian Yeung</div><div class="sponsor-team">Sponsoring Team Yeung</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">MoMo Paradise</div><div class="sponsor-team">Sponsoring Team Yonemoto</div></div>
+            </div>
+        </div>
+
+        <!-- U10 Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">U10 Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card sponsor-card--multiple"><div class="pizza-party-note">🍕 Pizza Party Earned!</div><div class="sponsor-name">Roys Boys Automotive</div><div class="sponsor-name">Cypress College Veterans Organizations</div><div class="sponsor-team">Sponsoring Team Acosta Torres</div></div>
+                <div class="sponsor-card sponsor-card--multiple"><div class="pizza-party-note">🍕 Pizza Party Earned!</div><div class="sponsor-name">Touro University Worldwide</div><div class="sponsor-name">Grace Dermatology</div><div class="sponsor-team">Sponsoring Team Brieger</div></div>
+                <div class="sponsor-card sponsor-card--multiple"><div class="pizza-party-note">🍕 Pizza Party Earned!</div><div class="sponsor-name">RM Law Group, APC</div><div class="sponsor-name">Lyon Ventures LLC</div><div class="sponsor-team">Sponsoring Team Gearhart</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Senor Big Ed</div><div class="sponsor-team">Sponsoring Team Babcock</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">A Team Services Inc</div><div class="sponsor-team">Sponsoring Team Blanchard</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">FEI-Zyfer Inc</div><div class="sponsor-team">Sponsoring Team Camacho</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Cooper Family</div><div class="sponsor-team">Sponsoring Team Cooper</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Martin &amp; Associates Insurance Services</div><div class="sponsor-team">Sponsoring Team Evango</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Transwest Investigations</div><div class="sponsor-team">Sponsoring Team Flores</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Golden Rule Dental Center</div><div class="sponsor-team">Sponsoring Team Huang</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Eom Family</div><div class="sponsor-team">Sponsoring Team Jackson, Kristian</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Aerodyn Precision Machining Inc.</div><div class="sponsor-team">Sponsoring Team Klaus</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Dune Frogs United</div><div class="sponsor-team">Sponsoring Team Regnier</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">On-site Health and Safety</div><div class="sponsor-team">Sponsoring Team Richardson</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">KLK Law Group</div><div class="sponsor-team">Sponsoring Team Vielman</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">The Chabots</div><div class="sponsor-team">Sponsoring Team Villalobos</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Jessica Boltman Photography</div><div class="sponsor-team">Sponsoring Team Boltman</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Thomas Electric Company</div><div class="sponsor-team">Sponsoring Team Gamboa Arrieta</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">General Builders</div><div class="sponsor-team">Sponsoring Team Hartman</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Sunbelt Rentals</div><div class="sponsor-team">Sponsoring Team Jackson</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Happy Planner</div><div class="sponsor-team">Sponsoring Team Koeler</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Pyramid Security Systems Inc.</div><div class="sponsor-team">Sponsoring Team Lewis</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">5th Ave Bagelry</div><div class="sponsor-team">Sponsoring Team Tan</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Skufius.Art</div><div class="sponsor-team">Sponsoring Team Waldie</div></div>
+            </div>
+        </div>
+
+        <!-- U12 Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">U12 Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card sponsor-card--multiple"><div class="pizza-party-note">🍕 Pizza Party Earned!</div><div class="sponsor-name">S&amp;W Maintenance Co.</div><div class="sponsor-name">POS Technical Services, Inc.</div><div class="sponsor-team">Sponsoring Team Hartgrave</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Brache Bread</div><div class="sponsor-team">Sponsoring Team Brache</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Singh Family</div><div class="sponsor-team">Sponsoring Team Duenas</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Hicks Photography</div><div class="sponsor-team">Sponsoring Team Hicks</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Kumon of Los Alamitos</div><div class="sponsor-team">Sponsoring Team Kim</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Twilight Technology Inc</div><div class="sponsor-team">Sponsoring Team Marquez</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Vargas Family</div><div class="sponsor-team">Sponsoring Team Vargas</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Cooper Family</div><div class="sponsor-team">Sponsoring Team Cooper</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">DC System Solutions, LLC</div><div class="sponsor-team">Sponsoring Team McAulay</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Stephen Trinkle</div><div class="sponsor-team">Sponsoring Team Ortega</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Skufius.Art</div><div class="sponsor-team">Sponsoring Team Sharpe</div></div>
+            </div>
+        </div>
+        
+        <!-- Uppers Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">Uppers Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card"><div class="sponsor-name">Haddad Family</div><div class="sponsor-team">Sponsoring Team Inouye</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">DAV General Services LLC</div><div class="sponsor-team">Sponsoring Team Peregrina</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">True Places Travels</div><div class="sponsor-team">Sponsoring Team Solano</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">RM Law Group, APC</div><div class="sponsor-team">Sponsoring Team Tejeda</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">CBC Manufacturing</div><div class="sponsor-team">Sponsoring Team Ali</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Adventure City</div><div class="sponsor-team">Sponsoring Team Conze</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">RM Law Group, APC</div><div class="sponsor-team">Sponsoring Team Zidan</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">IM 22 Elite</div><div class="sponsor-team">Sponsoring Team Hernandez</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">The Original Rainbow Cone</div><div class="sponsor-team">Sponsoring Team Neeper</div></div>
+            </div>
+        </div>
+
+        <!-- Extra Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">Extra Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card"><div class="sponsor-name">Line of Hope</div><div class="sponsor-team">Sponsoring Team Corvera</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Seastar Pediatric Dentistry</div><div class="sponsor-team">Sponsoring Team Dominguez Humphrey</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">WCPS</div><div class="sponsor-team">Sponsoring Team Gerrits</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Sweet Home Pediatric Dentistry &amp; Orthodontics</div><div class="sponsor-team">Sponsoring Team Hunt</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">Nicksells LA</div><div class="sponsor-team">Sponsoring Team Simonian</div></div>
+                <div class="sponsor-card"><div class="sponsor-name">JM Development</div><div class="sponsor-team">Sponsoring Team Uriarte</div></div>
+            </div>
+        </div>
+
+        <!-- EPIC Division Card -->
+        <div class="info-card">
+            <h3 class="division-header">EPIC Division</h3>
+            <div class="sponsor-grid">
+                <div class="sponsor-card">
+                    <div class="sponsor-name">Sunny on South</div>
+                    <div class="sponsor-team">Sponsoring Team Perry</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#navigation-hub" class="back-to-top-link">Back to top ↑</a>
+    </div>
+
+</div>
