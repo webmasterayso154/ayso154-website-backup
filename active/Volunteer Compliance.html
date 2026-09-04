@@ -1,0 +1,881 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   Join the Cypress AYSO Dream Team! (Region 154) [Duplicate/Updated]
+CMS Status:  Live
+Audience:    [aud:volunteers] [aud:parents] [aud:coaches] [aud:referees]
+Content:     [type:registration] [type:policy] [type:event]
+Components:  [ui:card] [ui:btn-cta] [ui:callout]
+Assets:      how to become a volunteer.pdf
+Notes:       Live volunteer onboarding and welcome page for Cypress AYSO Region 154 featuring an instructional video, annual awards nomination link, quick navigation steps (Volunteer Application, Background Check with Sterling, AYSO-U Online Training, Live Scan fingerprinting event at Coach's Corner, and Role-Training), comprehensive FAQs, and CVPA contact email.
+================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Cypress AYSO Dream Team! (Region 154)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Bitter:wght@400;700&amp;family=Comic+Sans+MS&amp;display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables (Custom Properties) */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f4f4f4;
+            --success-color: #4CAF50;
+            --pending-color: #f0ad4e;
+            --text-color: #333;
+            --border-color: #ddd;
+            --sportsconnect-color: #4A148C;
+            --ayso-u-color: #004D40;
+            --in-person-color: #795548;
+            --warning-bg-color: #fffde7;
+            --warning-border-color: #ffca28;
+            --light-blue-bg: #f0f8ff;
+            --light-grey-bg: #f9f9f9;
+            --white-color: #ffffff;
+            --header-font: 'Arial', sans-serif;
+            --button-font: 'Bangers', cursive;
+            --body-font: 'Arial', sans-serif;
+            --alt-body-font: 'Bitter', Georgia, serif;
+            --overview-bg: #e8f5e9;
+            --overview-border: #00a0df;
+            --overview-header-font: 'Bangers', cursive;
+            --overview-header-color: #ff6600;
+            --overview-intro-text: #333;
+            --overview-icon-color: #333;
+            --overview-highlight: limegreen;
+            --overview-link: #007acc;
+            --overview-font: 'Arial', 'Segoe UI', sans-serif;
+        }
+
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--body-font);
+            background-color: var(--light-blue-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+
+        /* Typography Styles */
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0.5em;
+            color: var(--primary-color);
+            font-family: var(--body-font);
+        }
+        h1 {
+            font-size: 2.5em;
+            font-family: var(--header-font);
+            text-align: center;
+            margin-bottom: 0.1em;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3em;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-top: 1em;
+            margin-bottom: 0.4em;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+        h4 {
+            font-size: 1.1em;
+            margin-top: 1em;
+            margin-bottom: 0.3em;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-bottom: 1em;
+            padding-left: 40px;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        strong {
+            font-weight: bold;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 30px 0;
+        }
+
+        /* Layout & Containers */
+        .page-header {
+            width: 85%;
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--white-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            width: 100%;
+        }
+        .section {
+            background-color: var(--white-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .section h2:first-child {
+             margin-top: 0;
+        }
+        .section-spacer {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Components */
+        .page-header h1 {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .page-header .subtitle {
+            font-size: 1.2em;
+            font-family: var(--header-font);
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 1em;
+            font-weight: bold;
+        }
+        .page-header .subtitle span {
+             font-size: 20px;
+        }
+        .page-header .subtitle span strong {
+            color: rgb(51, 51, 51);
+        }
+        .video-container {
+            width: 100%;
+            margin: 20px 0 50px 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe, .video-container .youtubevideo-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            border: 3px solid var(--primary-color);
+            border-radius: 8px;
+        }
+        .button-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .volunteer-button {
+            display: inline-block;
+            padding: 18px 36px;
+            background-color: #ffcc00;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: var(--button-font);
+            font-size: 1.6em;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .volunteer-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+        .volunteer-button:active {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .register-button {
+            display: block;
+            background-color: var(--primary-color);
+            color: var(--white-color) !important;
+            text-align: center;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 250px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .register-button:hover {
+            background-color: #004080;
+            text-decoration: none;
+        }
+        .nav-box {
+            background-color: #e6f2ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border: 1px solid #cce0ff;
+        }
+        .nav-box h2 {
+            text-align: center;
+            margin-top: 0;
+            font-size: 1.8em;
+            color: var(--primary-color);
+            border-bottom: none;
+        }
+        .nav-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+            column-count: 2;
+            column-gap: 20px;
+        }
+        .nav-list li {
+            margin-bottom: 12px;
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+            break-inside: avoid-column;
+        }
+        .nav-list li::before {
+            content: "➔";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+        .nav-list a {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .step {
+            background-color: var(--light-grey-bg);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 0 5px 5px 0;
+        }
+        .step h3 {
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .step h4 {
+             font-size: 1.15em;
+             color: #444;
+             margin-top: 1.2em;
+             margin-bottom: 0.5em;
+        }
+        .step ul, .step ol {
+            margin-left: 20px;
+        }
+        .step ul li {
+            list-style-type: disc;
+        }
+        .step ol li {
+            list-style-type: decimal;
+        }
+        #faq h2 {
+            text-align: center;
+            border-bottom: none;
+        }
+        #faq h3 {
+            font-size: 1.3em;
+            color: var(--primary-color);
+            margin-top: 1.5em;
+            border-bottom: 1px dotted var(--border-color);
+            padding-bottom: 0.2em;
+        }
+        #faq ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+        #faq li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        #faq li::before {
+            content: "Q:";
+            font-weight: bold;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #faq li p {
+            margin-left: 0;
+            margin-bottom: 0;
+            padding-top: 2px;
+        }
+        #faq li p::before {
+             content: "A: ";
+             font-weight: bold;
+             display: inline-block;
+             margin-right: 5px;
+        }
+        .page-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #666;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .important-text {
+            font-size: 1.1em;
+            font-style: italic;
+            color: var(--primary-color);
+        }
+        .font-size-small {
+            font-size: 12px;
+        }
+        .font-weight-normal {
+            font-weight: normal;
+        }
+        .back-to-top {
+            display: block;
+            text-align: right;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background-color: var(--warning-bg-color);
+            border-left: 4px solid var(--warning-border-color);
+            padding: 12px 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95em;
+        }
+        
+        /* Overview Section Styles */
+        #overview {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: var(--overview-bg);
+            border: 4px solid var(--overview-border);
+            border-radius: 12px;
+            font-family: var(--overview-font);
+            color: var(--text-color);
+        }
+        #overview h2 {
+            font-family: var(--overview-header-font);
+            color: var(--overview-header-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        #overview .overview-intro {
+            font-size: 1.1rem;
+            color: var(--overview-intro-text);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        #overview .overview-intro strong {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        #overview .benefits-list {
+            font-size: 1rem;
+            line-height: 1.6;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        #overview .benefits-list li {
+            padding-left: 2.5em;
+            position: relative;
+            margin-bottom: 0.8em;
+        }
+        #overview .benefits-list li .soccer-icon {
+            position: absolute;
+            left: 0;
+            top: 0.05em;
+            font-size: 1.5em;
+            color: var(--overview-icon-color);
+            line-height: 1;
+        }
+        #overview .overview-highlight {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        #overview .overview-highlight .highlight-text {
+            color: var(--overview-highlight);
+            font-weight: bold;
+        }
+        #overview .overview-closing {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            font-family: var(--overview-font);
+        }
+        #overview .overview-back-to-top {
+             text-align: center;
+             margin-top: 2rem;
+             margin-bottom: 0;
+        }
+        #overview .overview-back-to-top a {
+            text-decoration: none;
+            color: var(--overview-link);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Special Event Callout (Live Scan) */
+        .event-callout {
+            background-color: #fff8e1;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .event-callout h4 {
+            font-family: var(--header-font);
+            font-size: 1.5em;
+            color: #d84315;
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 2px dashed #ffc107;
+            padding-bottom: 10px;
+        }
+        .event-callout .event-details {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .event-callout .event-details li {
+            margin-bottom: 8px;
+        }
+        .rsvp-button-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .rsvp-button {
+            display: inline-block;
+            background-color: #d84315;
+            color: var(--white-color) !important;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-family: var(--button-font);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .rsvp-button:hover {
+            background-color: #bf360c;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body { padding: 0 10px; }
+            .page-header { width: 95%; padding: 15px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+            h3 { font-size: 1.3em; }
+            h4 { font-size: 1.1em; }
+            .page-header .subtitle { font-size: 1.1em; }
+            .volunteer-button { font-size: 1.2em; padding: 12px 24px; }
+            .register-button { max-width: 90%; }
+            .nav-list { column-count: 1; }
+            .step h3 { font-size: 1.2em; }
+            .step h4 { font-size: 1.1em; }
+            #faq h3 { font-size: 1.2em; }
+            #overview { padding: 1rem; margin: 1.5rem auto; border-width: 3px; }
+            #overview h2 { font-size: 2rem; }
+            #overview .overview-intro { font-size: 1rem; }
+            #overview .benefits-list { font-size: 0.95rem; }
+            #overview .benefits-list li { padding-left: 2.2em; }
+            #overview .benefits-list li .soccer-icon { font-size: 1.3em; }
+            #overview .overview-highlight { font-size: 1rem; }
+            #overview .overview-closing { font-size: 1.1rem; }
+        }
+        @media (max-width: 550px) {
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            h3 { font-size: 1.2em; }
+            h4 { font-size: 1.0em; }
+            .page-header .subtitle { font-size: 1em; }
+            .video-container { margin-bottom: 30px; }
+            .button-container { margin-bottom: 30px; }
+            .volunteer-button { font-size: 1.1em; padding: 10px 20px; }
+            .section { padding: 15px; }
+            .step { padding: 15px; }
+            #overview h2 { font-size: 1.8rem; }
+            #overview .overview-closing { font-size: 1rem; }
+            #overview .benefits-list li { padding-left: 2em; }
+            #overview .benefits-list li .soccer-icon { font-size: 1.2em; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Page Header Section -->
+    <header class="page-header" id="top">
+        <h1>Be the Reason They Play. And Grow!</h1>
+        <p class="subtitle">
+            <span>
+                <strong>
+                    <span class="font-size-small"><br>Volunteering with AYSO is not just about soccer. It is showing up for kids, for your community, and for yourself.&nbsp;Step onto the field. Make a lasting difference.<br><br><a href="https://forms.gle/7vHpuypxzQLVy7X18">Submit your AYSO Annual Awards Nominations today!</a></span></strong></span></p>
+        <h2>Ready to Learn More?</h2>
+        <p>Watch this quick video to get the ball rolling on becoming a general volunteer. <span class="important-text">After you'vecompleted the general volunteer steps, check out the links below for details on specific roles. Got questions? We're here to help!</span></p>
+        <div class="video-container">
+            [youtubevideo src="https://www.youtube.com/embed/XoDQCHDcpgY" title="YouTube video player: How to Become an AYSO Volunteer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""]
+            [/youtubevideo]
+        </div>
+        <div class="button-container">
+            <a href="https://dt5602vnjxv0c.cloudfront.net/portals/14837/docs/how%20to%20become%20a%20volunteer.pdf" class="volunteer-button" target="_blank">Volunteer Guide</a>
+        </div>
+        <div class="section-spacer"></div>
+    </header>
+
+    <!-- Main content area of the page -->
+    <main>
+        <nav class="nav-box" id="quick-nav">
+            <h2>Quick Navigation</h2>
+            <ul class="nav-list">
+                <li><a href="#step1">Step 1: Volunteer Application</a></li>
+                <li><a href="#step2">Step 2: Background Check</a></li>
+                <li><a href="#step3">Step 3: AYSO-U Online Training</a></li>
+                <li><a href="#step4">Step 4: Fingerprinting</a></li>
+                <li><a href="#step5">Step 5: Role-Training</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+            </ul>
+        </nav>
+
+        <section class="section" id="overview">
+            <h2>Why Volunteer?</h2>
+            <p class="overview-intro">
+                Cypress AYSO needs <strong>Head Coaches</strong>, <strong>Assistant Coaches</strong>, <strong>Referees</strong>, <strong>Team Parents</strong>, and <strong>Board Members</strong> to keep our soccer community strong, affordable, and fun.
+            </p>
+            <ul class="benefits-list">
+                <li><span class="soccer-icon">⚽</span> Volunteers help us keep registration fees low so every child has the chance to play.</li>
+                <li><span class="soccer-icon">⚽</span> Without enough Head Coaches, some kids including your own may not be placed on a team.</li>
+                <li><span class="soccer-icon">⚽</span> You do not need to be a soccer expert to help out and have fun.</li>
+                <li><span class="soccer-icon">⚽</span> Our awesome Board Members and experienced volunteers will guide you through training and support every step of the way.</li>
+            </ul>
+            <p class="overview-highlight">
+                When you volunteer, you give kids more than a game.
+                <span class="highlight-text">You give them confidence, connection, and joy.</span>
+            </p>
+            <p class="overview-closing">
+                It all starts with you.
+            </p>
+            <p class="overview-back-to-top">
+                <a href="#quick-nav">↑ Back to Quick Nav</a>
+            </p>
+        </section>
+
+        <section class="section" id="process">
+            <h2 class="text-center"><strong>Volunteer Registration Process</strong></h2>
+            
+            <div class="step" id="step1">
+                <h3>Step 1: Register as a New Adult Volunteer in your AYSO Account</h3>
+                <p>Click the button below for step-by-step instructions:</p>
+                <div class="text-center">
+                    <a href="#register" class="register-button">Complete Application</a>
+                </div>
+                <a href="#quick-nav" class="back-to-top">↑ Back to Quick Nav</a>
+            </div>
+            <hr>
+            
+            <div class="step" id="step2">
+                <h3>Step 2: Complete Background Check (Sterling Volunteers)</h3>
+                <p>Background checks are essential for all AYSO volunteers...</p>
+                <h4>What Happens After You Submit Your Application?</h4>
+                <p><strong>2a. Look for an Email from Sterling Volunteers</strong><br>
+                After submitting your application...</p>
+                <p class="note"><strong>Tip:</strong> If you don’t see the email within a few days, please check your spam or junk folder.</p>
+                <p><strong>2b. Access the Background Check Portal</strong><br>
+                Click the link in the email...</p>
+                <p><strong>2c. Complete the Background Check Form</strong><br>
+                Follow the on-screen instructions...</p>
+                <p><strong>2d. Submit and Await Processing</strong><br>
+                Submit the form...</p>
+                <p><strong>2e. Receive Confirmation and Next Steps</strong><br>
+                You'll be notified by email...</p>
+                <h4>Need Help or More Information?</h4>
+                <p>If you have questions, please fill out this Google Form.</p>
+                <p>See Background Check related links:</p>
+                <ul>
+                    <li><a href="https://wiki.ayso.org/wiki/Accept_Sterling_Volunteer_Invite" title="Accept Sterling Volunteer Invite" target="_blank" rel="noopener">Accept Sterling Volunteer Invite</a></li>
+                    <li><a href="https://wiki.ayso.org/wiki/Access_a_PA_Child_Abuse_History_Clearance" title="Access a PA Child Abuse History Clearance" target="_blank" rel="noopener">Access a PA Child Abuse History Clearance</a></li>
+                    <li><a href="https://wiki.ayso.org/wiki/Checking_your_Sterling_Background_Check_Status" title="Checking your Sterling Background Check Status" target="_blank" rel="noopener">Checking your Sterling Background Check Status</a></li>
+                    <li><a href="https://wiki.ayso.org/wiki/Missing_Live_Scan_Certification" title="Missing Live Scan Certification" target="_blank" rel="noopener">Missing Live Scan Certification</a></li>
+                    <li><a href="https://wiki.ayso.org/wiki/Appeal_Background_Check_Results" title="Appeal Background Check Results" target="_blank" rel="noopener">Appeal Background Check Results</a></li>
+                    <li><a href="https://wiki.ayso.org/wiki/Renew_and_Update_your_Background_Check" title="Renew and Update your Background Check" target="_blank" rel="noopener">Renew and Update your Background Check</a></li>
+                </ul>
+                <a href="#quick-nav" class="back-to-top">↑ Back to Quick Nav</a>
+            </div>
+            <hr>
+            
+            <div class="step" id="step3">
+                <h3>Step 3: Complete Required Online Training (AYSO-U)</h3>
+                <p>To ensure a safe and positive environment...</p>
+                <ul>
+                    <li>SafeSport Training (annually) - <a href="https://wiki.ayso.org/wiki/Register_for_Safesport">Registering for SafeSport Instructions</a></li>
+                    <li>CDC Concussion Awareness (once)</li>
+                    <li>Safe Haven (once)</li>
+                    <li>Sudden Cardiac Arrest (SCA) Awareness (once)</li>
+                </ul>
+                <h4>How to Access and Complete Your Required Courses</h4>
+                <ol>
+                    <li>Log into your region’s Sports Connect website...</li>
+                    <li>Click the 'Volunteer' tab, then select the 'AYSOU' button.</li>
+                    <li>You'll be redirected to your AYSO-U dashboard.</li>
+                    <li>Locate and complete each required course listed above.</li>
+                    <li>Your progress is tracked automatically.</li>
+                </ol>
+                <h4>Keep Your Certifications Current</h4>
+                <p>Log into AYSO-U at least once every 18 months...</p>
+                <h4>Need Help?</h4>
+                <p>If you have issues accessing courses or your account, please fill out this Google Form.</p>
+                <p>Thank you for your commitment!</p>
+                <div class="text-center">
+                    <a href="#training" class="register-button">Access Training Modules</a>
+                </div>
+                <a href="#quick-nav" class="back-to-top">↑ Back to Quick Nav</a>
+            </div>
+            <hr>
+            
+            <div class="step" id="step4">
+                <h3>Step 4: Live Scan Fingerprinting (California Requirement)</h3>
+                
+                <p><strong>🚨 Mandatory Compliance &amp; First Practice Contingency</strong><br>
+                California state law (AB 506) and AYSO policy require all regular volunteers to complete a one-time Live Scan background check. <strong>Every team MUST have their required team volunteers complete their Live Scan fingerprinting before the team can begin practicing.</strong></p>
+
+                <p>The best part? AYSO Region 154 is covering 100% of the cost. Once completed, you are set for the lifetime of your AYSO volunteer account (unless you take a 5+ year break)!</p>
+
+                <div class="event-callout">
+                    <h4>⚽ Free Live Scan Fingerprinting Event 🍕</h4>
+                    <p class="text-center"><em>Get fingerprinted, grab a slice, and clear your team for practice!</em></p>
+                    
+                    <ul class="event-details">
+                        <li><strong>📅 Date:</strong> Saturday, August 1, 2026</li>
+                        <li><strong>⏰ Time:</strong> 5:00 PM – 7:00 PM (Drop in during your RSVP window)</li>
+                        <li><strong>📍 Location:</strong> Coach’s Corner | Pizza and Brews (4756 Lincoln Ave, Cypress, CA 90630)</li>
+                        <li><strong>💵 Cost:</strong> FREE!</li>
+                    </ul>
+
+                    <h5>👥 Who Needs to Attend?</h5>
+                    <p>If you hold any of the following roles and haven't completed an AYSO-specific Live Scan within the last 5 years:</p>
+                    <ul>
+                        <li>Head Coaches &amp; Assistant Coaches</li>
+                        <li>Team Parents / Team Managers</li>
+                        <li>Board Members</li>
+                        <li>Active Referees (32+ games per season)</li>
+                    </ul>
+
+                    <h5>🎒 What to Bring</h5>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>✅ <strong>Valid Government-Issued Photo ID</strong> (Driver's License, Passport, State ID, Military ID) — <em>Required by technician.</em></li>
+                        <li>✅ <strong>Your RSVP Confirmation</strong></li>
+                    </ul>
+
+                    <div class="rsvp-button-container">
+                        <a href="https://forms.gle/9kEmKoZopqHT5XVK8" class="rsvp-button" target="_blank">RSVP / Edit Spot Here</a>
+                    </div>
+                </div>
+
+                <h4>⚠️ Important Legal &amp; Off-Site Instructions</h4>
+                <p><strong>Why can't I use my school or Little League Live Scan?</strong><br>
+                California law treats each volunteer organization separately. Scans done for other organizations cannot be transferred to AYSO.</p>
+
+                <hr style="margin: 25px 0; border-top: 1px dashed var(--border-color);">
+
+                <h4>📍 Unable to attend this event?</h4>
+                <p>Please notify your Division Director right away. You will need to complete your walk-in fingerprinting at our primary vendor location before practices begin:</p>
+                <p>
+                    <strong>AMERICAN HEALTH BIOMETRICS</strong><br>
+                    3816 Stineman Ct. Ste 104<br>
+                    Long Beach, CA 90808
+                </p>
+
+                <ul>
+                    <li><strong>Hours:</strong> Mon - Fri, 9am - 6pm (Closed Sat &amp; Sun)</li>
+                    <li><strong>Phone:</strong> 562-420-4692</li>
+                </ul>
+
+                <div class="note">
+                    <p style="margin-bottom: 0;"><strong>Instructions:</strong> No appointment or payment is necessary. Just walk in with a government-issued ID and let them know you’re there for <strong>AYSO 154</strong>.</p>
+                </div>
+                
+                <a href="#quick-nav" class="back-to-top">↑ Back to Quick Nav</a>
+            </div>
+            <hr>
+            
+            <div class="step" id="step5">
+                <h3>Step 5: Role-Specific Training (Coaches &amp; Referees)</h3>
+                <p>After completing Steps 1-4, specific roles require additional certification:</p>
+                <h4>5a. Head &amp; Assistant Coaches</h4>
+                <p><strong>Final Steps to Become a Certified AYSO Coach:</strong></p>
+                <ol>
+                    <li><strong>Complete Age-Specific Coach Certification:</strong> Enroll in the course...</li>
+                    <li><strong>Attend In-Person Field Session:</strong> Register for and attend...</li>
+                    <li><strong>Confirm Certification &amp; Receive Roster:</strong> Ensure all requirements show complete...</li>
+                </ol>
+                <p>Thank you for coaching!</p>
+                <hr style="margin: 25px 0;">
+                <h4>5b. Referees</h4>
+                 <p><strong>Final Steps to Become a Certified AYSO Referee:</strong></p>
+                 <ol>
+                     <li><strong>Complete Referee Certification:</strong> Enroll in the appropriate course...</li>
+                     <li><strong>Attend In-Person Training/Field Session:</strong> Register for and attend...</li>
+                     <li><strong>Confirm Certification &amp; Begin Refereeing:</strong> Once verified...</li>
+                 </ol>
+                 <p>Thank you for ensuring fair play!</p>
+                 <a href="#quick-nav" class="back-to-top">↑ Back to Quick Nav</a>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <h3>1. General Volunteer Questions</h3>
+            <ul>
+                <li>Who can be an AYSO volunteer?
+                    <p>Almost anyone—parents, grandparents, siblings, friends—can volunteer. No prior experience is required.</p>
+                </li>
+                <li>Why does AYSO need volunteers?
+                    <p>AYSO relies on volunteers to run programs, support teams, and ensure a positive experience for kids.</p>
+                </li>
+                <li>What roles can I volunteer for?
+                    <p>Coaches, referees, team parents, field coordinators, and more.</p>
+                </li>
+                <li>How do I submit a volunteer application?
+                    <p>Each season, volunteers must complete an application via their regional website or AYSO portal.</p>
+                </li>
+            </ul>
+            <h3>2. Certification and Training</h3>
+            <ul>
+                <li>What training is required to coach or referee?
+                    <p>Coaches need age-specific certification (online + field). Referees need referee certification (online + field).</p>
+                </li>
+                <li>Are there online safety courses I need to complete?
+                    <p>Yes, all volunteers need Safe Haven, SafeSport, Concussion Awareness, and SCA courses via AYSO-U before interacting with players.</p>
+                </li>
+                <li>How long does certification take?
+                    <p>Varies by role/level, from hours online to days for in-person sessions.</p>
+                </li>
+            </ul>
+            <h3>3. Player and Team Questions</h3>
+            <ul>
+                <li>What are the age divisions?
+                    <p>Ranges from U-5 (under 5) to U-19 (under 19).</p>
+                </li>
+                <li>Can my child play with friends or request a specific coach?
+                    <p>Requests are generally not guaranteed, except sometimes for the youngest groups (e.g., 5U/6U).</p>
+                </li>
+                <li>What if my child is outside the age range?
+                    <p>AYSO strictly follows age guidelines based on birth year; exceptions are not typically made.</p>
+                </li>
+            </ul>
+            <h3>4. Game and Practice Questions</h3>
+            <ul>
+                <li>How long are the games?
+                    <p>Younger divisions: ~1 hour. Older divisions: ~1.5 hours.</p>
+                </li>
+                <li>What should my child bring to practices and games?
+                    <p>Shin guards (mandatory), soccer shoes (recommended), appropriate size ball, water bottle, and uniform (for games).</p>
+                </li>
+                <li>Are soccer shoes mandatory?
+                    <p>Not mandatory but highly recommended. Athletic shoes are okay (no toe cleats).</p>
+                </li>
+            </ul>
+            <h3>5. Registration and Fees</h3>
+            <ul>
+                <li>What are the costs involved?
+                    <p>Registration fees cover core costs. Additional personal expenses include shin guards, shoes, ball, and optional team items/parties.</p>
+                </li>
+                <li>When does fall soccer start?
+                    <p>Typically August/September, varying by region.</p>
+                </li>
+                <li>Can I sign up my child if they are slightly outside the age range?
+                    <p>No, AYSO enforces strict age guidelines for safety and fairness.</p>
+                </li>
+            </ul>
+            <h3>6. Additional Questions</h3>
+            <ul>
+                <li>Can I coach or referee with no experience?
+                    <p>Yes! AYSO provides all necessary training.</p>
+                </li>
+                <li>Are team requests considered?
+                    <p>Generally not guaranteed, but check with your region. Volunteer coaches usually have their child on their team.</p>
+                </li>
+            </ul>
+            <a href="#quick-nav" class="back-to-top">↑ Back to Quick Nav</a>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact Information</h2>
+            <p>If you have questions about volunteering with Cypress AYSO Region 154, please reach out:</p>
+            <div class="text-center">
+                 <a href="mailto:Cvpaayso154@gmail.com" class="register-button">Email Volunteer Coordinator</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>© 2026 Cypress AYSO Region 154. All rights reserved.</p>
+        <p><a href="#quick-nav">Back to Quick Nav</a></p>
+    </footer>
+
+
+</body></html>
