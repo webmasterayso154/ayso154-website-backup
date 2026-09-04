@@ -1,0 +1,762 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_Game Day Hub_07.20.26
+CMS Status:  Hidden / Inactive
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:event] [type:policy] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:btn-download] [ui:callout] [ui:table]
+Assets:      AYSO 154 Logo - 3D.png, Sideline SetUp.png, 2026 Referee and Volunteer Point System flyer.pdf
+Notes:       Comprehensive Fall 2026 Parent & Game Day Hub containing schedules, field maps, game day rules, practice readiness, field setup, referee/volunteer points, and code of conduct.
+================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fall 2026 Parent Hub | AYSO Region 154</title>
+
+<style>
+/* ==========================================================================
+   GLOBAL CSS VARIABLES (REGION 154 BRANDING)
+========================================================================== */
+:root {
+    --region-navy: #102a5c;
+    --region-navy-dark: #081c40;
+    --region-red: #e3222a;
+    --region-red-dark: #b9151c;
+    --region-gold: #ffd34d;
+    --region-white: #ffffff;
+    --region-light: #f4f6f8;
+    --region-blue-light: #eaf1fa;
+    --region-red-light: #fff0f1;
+    --region-gold-light: #fff9dd;
+    --region-green-light: #eaf8ef;
+    --region-green-dark: #17693a;
+    --region-border: #d8dee8;
+    --region-text: #303846;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background-color: var(--region-light); font-family: "Helvetica Neue", Arial, sans-serif; }
+
+/* ==========================================================================
+   MAIN CONTAINER
+========================================================================== */
+.parent-page-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 12px;
+    box-sizing: border-box;
+    color: var(--region-text);
+    line-height: 1.6;
+}
+.parent-page-container *, .parent-page-container *::before, .parent-page-container *::after { box-sizing: border-box; }
+.parent-page-container img { max-width: 100%; height: auto; }
+.parent-page-container a:focus-visible { outline: 4px solid var(--region-gold); outline-offset: 3px; }
+.parent-section { scroll-margin-top: 85px; } 
+
+/* ==========================================================================
+   DEVELOPER BANNERS
+========================================================================== */
+.dev-banner {
+    background-color: var(--region-gold-light);
+    border: 2px dashed #d89a00;
+    border-radius: 8px;
+    color: #604b00;
+    font-weight: bold;
+    font-size: 0.85em;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   INFO CARDS & TYPOGRAPHY
+========================================================================== */
+.info-card {
+    margin-bottom: 28px;
+    overflow: hidden;
+    background-color: var(--region-white);
+    border: 1px solid var(--region-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(8, 28, 64, 0.09);
+}
+.section-title {
+    position: relative;
+    margin: 0;
+    padding: 18px 20px 18px 52px;
+    overflow: hidden;
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+    font-size: 1.4em;
+    line-height: 1.25;
+}
+.section-title::before {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    content: "⚽";
+    font-size: 1.15em;
+    transform: translateY(-50%);
+}
+.section-title::after {
+    position: absolute;
+    right: -18px;
+    bottom: -35px;
+    width: 100px;
+    height: 100px;
+    content: "";
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+}
+.info-card-content { padding: 20px; }
+.info-card h3 {
+    margin-top: 28px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    color: var(--region-navy);
+    border-bottom: 3px solid var(--region-red);
+    font-size: 1.22em;
+}
+.info-card h4 { margin-top: 22px; margin-bottom: 9px; color: var(--region-navy); font-size: 1.08em; }
+.info-card-content h3:first-child, .info-card p:first-child { margin-top: 0; }
+.info-card ul, .info-card ol { padding-left: 24px; }
+.info-card li { margin-bottom: 10px; }
+
+.soccer-list { padding-left: 0 !important; list-style: none; }
+.soccer-list li { position: relative; padding-left: 32px; }
+.soccer-list li::before { position: absolute; top: 0; left: 0; content: "⚽"; font-size: 1.05em; }
+
+/* ==========================================================================
+   HERO BRAND CARD
+========================================================================== */
+.parent-brand-card {
+    position: relative;
+    padding: 26px 18px 32px;
+    overflow: hidden;
+    color: var(--region-white);
+    background-color: var(--region-navy-dark);
+    background-image:
+        linear-gradient(rgba(8, 28, 64, 0.94), rgba(16, 42, 92, 0.94)),
+        repeating-linear-gradient(90deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.07) 49px, rgba(255, 255, 255, 0.07) 51px);
+    border-bottom: 7px solid var(--region-red);
+    text-align: center;
+}
+.parent-brand-card::before {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 520px; height: 260px;
+    content: "";
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.brand-content { position: relative; z-index: 2; }
+.logo-wrap {
+    width: 180px; max-width: 58%; margin: 0 auto 18px; padding: 10px;
+    background-color: var(--region-white); border: 4px solid var(--region-white);
+    border-radius: 18px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+.parent-logo { width: 100%; display: block; }
+.parent-brand-card h1 { margin: 0; color: var(--region-white); font-size: 2em; line-height: 1.05; text-transform: uppercase; }
+.parent-brand-card h1 span { display: block; margin-top: 7px; color: var(--region-gold); }
+.parent-brand-card p { max-width: 650px; margin: 18px auto 0; color: var(--region-white); font-size: 1.04em; }
+
+.mandatory-label {
+    margin: 20px auto 0;
+    padding: 10px 15px;
+    display: inline-block;
+    color: var(--region-navy-dark);
+    background-color: var(--region-gold);
+    border: 3px solid var(--region-white);
+    border-radius: 8px;
+    font-size: 0.92em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.soccer-divider {
+    margin: 3px 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.soccer-divider::before, .soccer-divider::after { height: 3px; flex: 1; content: ""; background-color: var(--region-red); }
+.soccer-divider span {
+    width: 42px; height: 42px; display: flex; color: var(--region-navy);
+    background-color: var(--region-white); border: 3px solid var(--region-navy);
+    border-radius: 50%; align-items: center; justify-content: center; font-size: 1.25em;
+}
+
+/* ==========================================================================
+   STICKY NAVIGATION HUB
+========================================================================== */
+#parent-navigation-hub {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    padding: 18px;
+    background-color: var(--region-white);
+    text-align: center;
+}
+#parent-navigation-hub h2 { margin: 0 0 10px; color: var(--region-navy); font-size: 1.35em; line-height: 1.35; }
+.navigation-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.nav-button {
+    position: relative;
+    min-height: 48px;
+    padding: 10px 12px 10px 38px;
+    display: flex;
+    overflow: hidden;
+    color: var(--region-white) !important;
+    background-color: var(--region-navy);
+    border: 2px solid var(--region-navy);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.nav-button::before { position: absolute; left: 10px; content: "⚽"; font-size: 1.05em; }
+.nav-button:hover, .nav-button:focus {
+    background-color: var(--region-navy-dark);
+    border-color: var(--region-navy-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(8, 28, 64, 0.24);
+}
+.nav-button-important { background-color: var(--region-red); border-color: var(--region-red); }
+.nav-button-important:hover { background-color: var(--region-red-dark); border-color: var(--region-red-dark); }
+
+/* ==========================================================================
+   CALLOUTS & TEXT CARDS
+========================================================================== */
+.callout { margin: 22px 0; padding: 18px; border-left: 6px solid var(--region-navy); border-radius: 6px; }
+.callout-header { display: block; margin-bottom: 5px; font-weight: bold; }
+.callout.info { color: var(--region-navy-dark); background-color: var(--region-blue-light); border-color: var(--region-navy); }
+.callout.warning { color: #604b00; background-color: var(--region-gold-light); border-color: var(--region-gold); }
+.callout.danger { color: #66161b; background-color: var(--region-red-light); border-color: var(--region-red); }
+.callout.success { color: var(--region-green-dark); background-color: var(--region-green-light); border-color: var(--region-green-dark); }
+
+.text-card-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 18px 0; }
+.text-card { background-color: var(--region-light); border: 1px solid var(--region-border); border-radius: 8px; padding: 18px; }
+.text-card h4 { margin-top: 0; color: var(--region-navy); font-size: 1.05em; margin-bottom: 12px; }
+
+/* ==========================================================================
+   COLLAPSIBLE ACCORDIONS (For Game Day Rules)
+========================================================================== */
+.collapsible-details {
+    background-color: var(--region-white);
+    border: 1px solid var(--region-border);
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+.collapsible-details summary {
+    padding: 16px 20px;
+    font-weight: bold;
+    color: var(--region-navy);
+    background-color: var(--region-blue-light);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.collapsible-details summary:hover { background-color: #dce7f5; }
+.collapsible-details summary::-webkit-details-marker { display: none; }
+.collapsible-details summary::after { content: "+"; font-size: 1.6em; line-height: 1; font-weight: normal; }
+.collapsible-details[open] summary::after { content: "−"; }
+.collapsible-body { padding: 18px 20px; border-top: 1px solid var(--region-border); }
+
+/* ==========================================================================
+   ACTION GRIDS & BUTTONS
+========================================================================== */
+.badge-pill { align-self: flex-start; display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.78em; font-weight: bold; text-transform: uppercase; }
+.badge-navy { background-color: var(--region-blue-light); color: var(--region-navy); }
+.badge-red { background-color: var(--region-red-light); color: var(--region-red-dark); }
+.badge-green { background-color: var(--region-green-light); color: var(--region-green-dark); }
+.badge-gold { background-color: var(--region-gold-light); color: #604b00; }
+
+.link-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+.link-grid.single-action { max-width: 400px; margin-left: auto; margin-right: auto; }
+.grid-button {
+    min-height: 52px; padding: 14px; display: flex; color: var(--region-white) !important;
+    background-color: var(--region-navy); border: 2px solid var(--region-navy);
+    border-radius: 8px; align-items: center; justify-content: center; font-weight: bold;
+    text-align: center; text-decoration: none; transition: all 0.2s ease;
+}
+.grid-button:hover { background-color: var(--region-navy-dark); transform: translateY(-2px); }
+.grid-button-alert { background-color: var(--region-red); border-color: var(--region-red); }
+.grid-button-alert:hover { background-color: var(--region-red-dark); }
+
+.action-card-link {
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 18px; background-color: var(--region-light); border: 2px solid var(--region-border);
+    border-radius: 10px; text-decoration: none !important; color: var(--region-text);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.action-card-link:hover { border-color: var(--region-navy); transform: translateY(-3px); box-shadow: 0 6px 16px rgba(16, 42, 92, 0.12); }
+.action-card-link strong { color: var(--region-navy); font-size: 1.1em; margin-top: 6px; display: block; }
+.action-card-link span.desc { font-size: 0.92em; color: var(--region-text); margin-top: 4px; display: block; }
+
+.link-disabled {
+    opacity: 0.6; pointer-events: none; cursor: not-allowed;
+    background-color: var(--region-border) !important; border-color: var(--region-border) !important;
+    color: var(--region-text) !important; box-shadow: none !important; transform: none !important;
+}
+
+/* ==========================================================================
+   REFEREE & VOLUNTEER POINTS 
+========================================================================== */
+.points-category-title {
+    font-size: 1.15em; color: var(--region-navy-dark); margin: 24px 0 12px;
+    font-weight: bold; display: flex; align-items: center; gap: 8px;
+}
+.points-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 22px; }
+.point-card {
+    display: grid; grid-template-columns: 70px 1fr; padding: 16px;
+    background-color: var(--region-light); border: 1px solid var(--region-border);
+    border-radius: 9px; align-items: center; gap: 16px;
+}
+.point-badge {
+    width: 60px; height: 60px; display: flex; color: var(--region-white) !important;
+    border: 3px solid var(--region-white); border-radius: 50%;
+    align-items: center; justify-content: center; font-weight: 900; 
+    font-size: 1.4em; letter-spacing: -1px;
+}
+.point-badge.ref { background-color: var(--region-navy) !important; box-shadow: 0 0 0 2px var(--region-navy); }
+.point-badge.vol { background-color: var(--region-green-dark) !important; box-shadow: 0 0 0 2px var(--region-green-dark); }
+.point-card strong { display: block; color: var(--region-navy-dark); font-size: 1.05em; }
+.point-card span { color: var(--region-text); font-size: 0.93em; line-height: 1.4; display: block; margin-top: 4px;}
+
+/* ==========================================================================
+   FOOTER & NAVIGATION UTILS
+========================================================================== */
+.section-navigation { margin-top: 28px; padding-top: 18px; display: flex; justify-content: center; border-top: 1px solid var(--region-border); }
+.section-navigation a { min-height: 46px; padding: 11px 24px; display: flex; color: var(--region-navy) !important; background-color: var(--region-white); border: 2px solid var(--region-navy); border-radius: 7px; align-items: center; justify-content: center; font-weight: bold; text-decoration: none; transition: all 0.2s ease; }
+.section-navigation a:hover { color: var(--region-white) !important; background-color: var(--region-navy); }
+
+.parent-footer {
+    position: relative; padding: 28px 18px; overflow: hidden; color: var(--region-white);
+    background-color: var(--region-navy-dark); border-top: 6px solid var(--region-red);
+    border-radius: 12px; text-align: center;
+}
+.parent-footer::before { position: absolute; right: -25px; bottom: -38px; content: "⚽"; opacity: 0.09; font-size: 8em; }
+.parent-footer strong { display: block; margin-bottom: 6px; color: var(--region-gold); font-size: 1.05em; text-transform: uppercase; position: relative; z-index: 2;}
+.parent-footer p { margin: 0; color: var(--region-white); font-size: 0.92em; position: relative; z-index: 2;}
+
+/* ==========================================================================
+   MEDIA QUERIES
+========================================================================== */
+@media (min-width: 540px) {
+    .parent-page-container { padding: 15px; }
+    .navigation-grid, .link-grid { grid-template-columns: repeat(2, 1fr); }
+    .points-grid, .text-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 760px) {
+    .parent-brand-card { padding: 36px 30px; }
+    .logo-wrap { width: 205px; }
+    .parent-brand-card h1 { font-size: 2.65em; }
+    .info-card-content { padding: 25px; }
+    .section-title { padding: 20px 25px 20px 58px; font-size: 1.55em; }
+    .navigation-grid { grid-template-columns: repeat(5, 1fr); }
+    .link-grid.quad-action { grid-template-columns: repeat(4, 1fr); }
+    .link-grid.triple-action { grid-template-columns: repeat(3, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .nav-button, .grid-button, .action-card-link, .section-navigation a { transition: none; transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="parent-page-container" id="top">
+
+    <!-- =======================================================================
+         DEVELOPER VERSION CONTROL BANNER 
+    ======================================================================== -->
+    <div class="dev-banner">
+        ⚠️ BOARD REVIEW DRAFT v0.6 • Updated Aug 1, 2026 • Added Code of Conduct &amp; collapsible rules.
+    </div>
+
+    <!-- =======================================================================
+         HERO SECTION
+    ======================================================================== -->
+    <div class="info-card">
+        <div class="parent-brand-card">
+            <div class="brand-content">
+                <div class="logo-wrap">
+                    <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/AYSO%20154%20Logo%20-%203D.png" alt="Cypress AYSO Region 154 Logo" class="parent-logo">
+                </div>
+                <h1>Fall 2026 <span>Parent &amp; Game Day Hub</span></h1>
+                <p>Your central command for game schedules, field maps, practice readiness, and everything you need for a successful season.</p>
+                <div class="mandatory-label">⚑ Region 154 Official Season Guide</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="soccer-divider" aria-hidden="true">
+        <span>⚽</span>
+    </div>
+
+    <!-- =======================================================================
+         STICKY NAVIGATION HUB (The Air Traffic Control Panel)
+    ======================================================================== -->
+    <div id="parent-navigation-hub" class="info-card">
+        <h2>Quick Navigation Menu</h2>
+        <div class="navigation-grid">
+            <a href="#schedules" class="nav-button nav-button-important">Schedules &amp; Maps</a>
+            <a href="#gameday-rules" class="nav-button">Game Day Rules</a>
+            <a href="#practice" class="nav-button">Practice Info</a>
+            <a href="#setup" class="nav-button">Field Setup</a>
+            <a href="#playoffs" class="nav-button">Playoff Points</a>
+            <a href="#conduct" class="nav-button">Code of Conduct</a>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         DEDICATED ANNOUNCEMENTS BANNER
+    ======================================================================== -->
+    <div id="announcements" class="parent-section">
+        <div class="info-card" style="border: 2px solid var(--region-gold); margin-bottom: 28px;">
+            <div class="info-card-content" style="background-color: var(--region-gold-light); padding: 18px 25px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <h3 style="margin-top:0; border-bottom: none; padding-bottom: 0; color: var(--region-navy-dark);">📸 Fall Picture Day is Sept 20!</h3>
+                        <p style="margin-bottom:0; color: var(--region-text);">Schedules, order forms, and silent auction basket guidelines are now available. <em>Note: Event is at the Cypress Community Center.</em></p>
+                    </div>
+                    <a href="/Default.aspx?tabid=974800" class="grid-button" style="min-height: auto; padding: 10px 20px; background-color: var(--region-navy); color: var(--region-white) !important; border-color: var(--region-navy);">Go to Picture Day Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         TIER 1: THE ESSENTIALS (Schedules & Maps combined)
+    ======================================================================== -->
+    <div id="schedules" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Game Day: Schedules &amp; Maps</h2>
+            <div class="info-card-content">
+                
+                <h3>1. Find Your Schedule</h3>
+                <p>Select the correct Matchtrak schedule link for your player's division:</p>
+                
+                <div class="link-grid quad-action">
+                    <a class="action-card-link" href="https://s11e154-26-fall.matchtrak.com/11/main.nsf/standings-region?openview&amp;count=500&amp;ExpandView&amp;&amp;RestrictToCategory=R154" target="_blank" rel="noopener">
+                        <span class="badge-pill badge-navy">5U–12U</span>
+                        <strong>Cypress League</strong>
+                        <span class="desc">Boys &amp; Girls 5U–12U schedules &amp; standings</span>
+                    </a>
+                    
+                    <a class="action-card-link" href="https://s11e-26-fall.matchtrak.com/11/main.nsf/schedule-games-by-div-coach?openview&amp;count=500&amp;RestrictToCategory=s11e-26-fall" target="_blank" rel="noopener">
+                        <span class="badge-pill badge-navy">14U</span>
+                        <strong>Area 11E Interleague</strong>
+                        <span class="desc">14U division interleague game schedules</span>
+                    </a>
+                    
+                    <a class="action-card-link" href="https://s11-26-fall-upper.matchtrak.com/11/main.nsf/schedule-games-by-region?OpenView&amp;Start=1&amp;Count=500&amp;Expand=2&amp;RestrictToCategory=s11-26-fall-upper" target="_blank" rel="noopener">
+                        <span class="badge-pill badge-navy">16U/19U</span>
+                        <strong>Upper Division</strong>
+                        <span class="desc">Upper division game schedules</span>
+                    </a>
+                    
+                    <a class="action-card-link" href="https://scedsl-26-fall.matchtrak.com/" target="_blank" rel="noopener">
+                        <span class="badge-pill badge-green">EXTRA</span>
+                        <strong>EXTRA Program</strong>
+                        <span class="desc">Competitive EXTRA division schedules</span>
+                    </a>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--region-border); margin: 25px 0;">
+
+                <h3>2. Download Your Field Map</h3>
+                <p>The Master Map covers Lexington Jr. High School (including adjacent Arnold Elementary fields) and Park Lexington Turf.</p>
+                
+                <div class="link-grid single-action">
+                    <a href="#" class="grid-button link-disabled">
+                        📄 Master Game Field Map (Coming Soon)
+                    </a>
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#top">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         TIER 2: GAME DAY RULES & SIDELINE CULTURE
+    ======================================================================== -->
+    <div id="gameday-rules" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Game Day Rules &amp; Sideline Culture</h2>
+            <div class="info-card-content">
+                
+                <div class="callout danger">
+                    <strong class="callout-header">The "LEFT" Rule for Sideline Seating</strong>
+                    For the safety and organization of the game, spectators must sit on the <strong>LEFT side</strong> of their team's Coach.<br><br>
+                    • <strong>Home Team:</strong> North or West side of the field.<br>
+                    • <strong>Visiting Team:</strong> South or East side of the field.
+                </div>
+                
+                <img src="https://www.ayso154cypress.org/Portals/14837/docs/2026/Sideline%20SetUp.png" alt="Sideline Setup Diagram" style="width: 100%; max-width: 700px; display: block; margin: 18px auto; border-radius: 8px; border: 2px solid var(--region-border); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+
+                <!-- COLLAPSIBLE ACCORDIONS FOR GAME RULES -->
+                <details class="collapsible-details">
+                    <summary>Zero Tolerance Policy</summary>
+                    <div class="collapsible-body">
+                        <div style="background-color: var(--region-red-light); padding: 15px; border-left: 4px solid var(--region-red); border-radius: 6px; color: #66161b;">
+                            No yelling at, arguing with, or showing dissent or abuse toward referees, especially youth referees. They are children dedicating themselves to the game. Be nice.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="collapsible-details">
+                    <summary>Park Lexington Turf Field Rules</summary>
+                    <div class="collapsible-body">
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li style="margin-bottom: 8px;"><strong>Water only</strong> on the turf. No Gatorade, sports drinks, soda, snacks, or food.</li>
+                            <li style="margin-bottom: 8px;"><strong>No equipment</strong> on turf: no wagons, EZ-Ups, tents, or chairs.</li>
+                            <li>All spectators, players, and coaches must set up on the <strong>stadium side</strong> of the field.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="collapsible-details">
+                    <summary>The Why Behind Our 6-Goal Rule</summary>
+                    <div class="collapsible-body">
+                        <div style="background-color: var(--region-green-light); padding: 15px; border-left: 4px solid var(--region-green-dark); border-radius: 6px; color: var(--region-green-dark);">
+                            We uphold the AYSO principle of Good Sportsmanship by asking coaches to manage the game to prevent blowouts past a 6-goal differential. Thank you for cheering on the good sportsmanship this rule promotes.
+                        </div>
+                    </div>
+                </details>
+
+                <div class="section-navigation">
+                    <a href="#top">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         TIER 2: PRACTICE READINESS & MAPS
+    ======================================================================== -->
+    <div id="practice" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Practice Readiness &amp; Maps</h2>
+            <div class="info-card-content">
+                
+                <div class="text-card-grid">
+                    <div class="text-card">
+                        <h4>Player Drop-off &amp; Pick-up</h4>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+                            <li style="margin-bottom: 8px;">Players must not be left at the field without supervision by an AYSO Safe Haven certified adult.</li>
+                            <li style="margin-bottom: 8px;">Make direct contact with your coach or team parent during drop-off and pick-up.</li>
+                            <li>Do not rely on your child to relay pick-up messages.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-card">
+                        <h4>School District Facility Rules</h4>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+                            <li style="margin-bottom: 8px;"><strong>No dogs</strong> on school fields, service animals excepted.</li>
+                            <li style="margin-bottom: 8px;"><strong>No smoking or alcohol</strong> on school property.</li>
+                            <li style="margin-bottom: 8px;">Do not use Day Care or school restrooms.</li>
+                            <li>Pick up and properly dispose of all trash after practice.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="callout warning">
+                    <strong class="callout-header">Important Safety Protocol</strong>
+                    A coach or team parent must wait with any player until a responsible adult arrives for pick-up. The waiting adult must be the same gender as the player. If a parent/guardian cannot be contacted after approximately one hour, the volunteer must notify the local police department for assistance.
+                </div>
+
+                <div class="callout danger" style="border-color: var(--region-red); background-color: var(--region-red-light);">
+                    <strong class="callout-header" style="color: var(--region-red-dark);">Parking Alert</strong>
+                    <span style="color: var(--region-red-dark);">Only park in designated parking zones. Cypress PD will ticket vehicles parked in non-permitted parking areas. It is the responsibility of the driver to follow local laws and ordinances regarding proper parking requirements. Do not enter fields through the Lexington JHS gymnasium.</span>
+                </div>
+
+                <h3>2026 Practice Field Maps</h3>
+                <div class="link-grid triple-action">
+                    <a href="#" class="grid-button link-disabled">Oak Knoll (Coming Soon)</a>
+                    <a href="#" class="grid-button link-disabled">Lexington Jr. HS (Coming Soon)</a>
+                    <a href="#" class="grid-button link-disabled">Park Lex Turf (Coming Soon)</a>
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#top">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         NEW SECTION: FIELD SETUP & TAKEDOWN
+    ======================================================================== -->
+    <div id="setup" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Field Setup &amp; Takedown Procedures</h2>
+            <div class="info-card-content">
+                <ul class="soccer-list" style="margin-bottom: 0;">
+                    <li style="margin-bottom: 12px;">Teams scheduled for the <strong>first game of the day</strong> are responsible for setting up goals, sandbags, and corner flags.</li>
+                    <li>Teams scheduled for the <strong>last game of the day</strong> must return all equipment to the lockup and ensure the field is spotless.</li>
+                </ul>
+
+                <div class="section-navigation">
+                    <a href="#top">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         REFEREE & VOLUNTEER POINTS REDESIGN
+    ======================================================================== -->
+    <div id="playoffs" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">2026 Referee &amp; Volunteer Points System</h2>
+            <div class="info-card-content">
+                <p>Earning a spot in the Cypress Cup and/or Playoffs is a team effort that extends to volunteering! For divisions <strong>U8 through U19 &amp; EXTRA</strong>, teams must earn a minimum of 17 points to qualify for post-season play.</p>
+
+                <div class="callout highlight">
+                    <strong class="callout-header">🏁 Goal: 17 Points Minimum Required</strong>
+                    Out of 26 total possible points, teams must secure at least 17 to advance. Playground, U5, and U6 are not scored but are still expected to participate as an all-volunteer organization.
+                </div>
+
+                <div class="points-category-title">
+                    <span style="font-size:1.3em;">⬛</span> Referee Points (17 Max Possible)
+                </div>
+                <div class="points-grid">
+                    <div class="point-card">
+                        <span class="point-badge ref">+5</span>
+                        <div>
+                            <strong>Certified Referees</strong>
+                            <span>Earn 1 pt (up to 5 max) per certified referee assigned to your team and activated in Matchtrak.</span>
+                        </div>
+                    </div>
+                    <div class="point-card">
+                        <span class="point-badge ref">+2</span>
+                        <div>
+                            <strong>Early Sign-Up Bonus</strong>
+                            <span>Earn 2 pts if all scheduled team games are filled with referees in Matchtrak before Sept 26.</span>
+                        </div>
+                    </div>
+                    <div class="point-card">
+                        <span class="point-badge ref">+10</span>
+                        <div>
+                            <strong>Complete Match Assignments</strong>
+                            <span>Earn 1 pt (up to 10 max) per assignment completed on the field in full uniform with QR code scan.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="points-category-title">
+                    <span style="font-size:1.3em;">🟩</span> Volunteer Points (9 Max Possible)
+                </div>
+                <div class="points-grid">
+                    <div class="point-card">
+                        <span class="point-badge vol">+2</span>
+                        <div>
+                            <strong>Field Marshal Duty</strong>
+                            <span>Earn 2 pts by having 2 trained volunteers complete 1 shift each (or 1 volunteer complete 2 shifts).</span>
+                        </div>
+                    </div>
+                    <div class="point-card">
+                        <span class="point-badge vol">+5</span>
+                        <div>
+                            <strong>Friday Night Field Set-Up</strong>
+                            <span>Earn 5 pts for having volunteers present for ALL Friday night field set-ups during the season.</span>
+                        </div>
+                    </div>
+                    <div class="point-card">
+                        <span class="point-badge vol">+2</span>
+                        <div>
+                            <strong>Picture Picnic Day</strong>
+                            <span>Earn 1 pt per volunteer (up to 2 max) for checking in and completing a 1-hour shift on Picture Day.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="link-grid single-action">
+                    <a href="/Portals/14837/docs/2026/2026%20Referee%20and%20Volunteer%20Point%20System%20flyer.pdf" target="_blank" rel="noopener" class="grid-button grid-button-primary">
+                        Download Full 2026 Points System (PDF)
+                    </a>
+                </div>
+
+                <div class="section-navigation">
+                    <a href="#top">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         PARENT CODE OF CONDUCT
+    ======================================================================== -->
+    <div id="conduct" class="parent-section">
+        <div class="info-card">
+            <h2 class="section-title">Parent Code of Conduct</h2>
+            <div class="info-card-content">
+                <p>AYSO is built around Everyone Plays, Balanced Teams, Open Registration, Positive Coaching, Good Sportsmanship, and Player Development.</p>
+
+                <div class="text-card-grid">
+                    <div class="text-card">
+                        <h4>AYSO Six Philosophies</h4>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+                            <li style="margin-bottom: 8px;"><strong>Everyone Plays®</strong></li>
+                            <li style="margin-bottom: 8px;"><strong>Balanced Teams</strong></li>
+                            <li style="margin-bottom: 8px;"><strong>Open Registration</strong></li>
+                            <li style="margin-bottom: 8px;"><strong>Positive Coaching</strong></li>
+                            <li style="margin-bottom: 8px;"><strong>Good Sportsmanship</strong></li>
+                            <li><strong>Player Development</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-card">
+                        <h4>Strictly Prohibited</h4>
+                        <div style="background-color: var(--region-red-light); padding: 15px; border-left: 4px solid var(--region-red); border-radius: 6px; color: #66161b;">
+                            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+                                <li style="margin-bottom: 8px;">No dogs, service animals excepted.</li>
+                                <li>No drugs, tobacco, or alcohol at any AYSO event.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="font-weight: bold; color: var(--region-navy-dark); text-align: center; margin-top: 20px;">
+                    I understand and accept that if I violate this Code of Conduct, I may be asked to leave the game.
+                </p>
+
+                <div class="section-navigation">
+                    <a href="#top">↑ Back to Top Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         REGIONAL FOOTER
+    ======================================================================== -->
+    <div class="parent-footer">
+        <strong>AYSO Region 154 · Cypress, California</strong>
+        <p>
+            For every child. For every volunteer. For every family.<br>
+            Parent Hub updated August 2026.
+        </p>
+    </div>
+
+</div>
+
+</body></html>
