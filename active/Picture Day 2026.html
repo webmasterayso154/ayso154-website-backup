@@ -1,0 +1,311 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   AYSO Picture Day 2026
+CMS Status:  Live
+Audience:    [aud:parents] [aud:volunteers] [aud:coaches]
+Content:     [type:event] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:btn-download] [ui:callout]
+Assets:      PriceSheet.pdf, Picture Day Flyer 26.pdf, Form A Team PPD 2026.pdf, basket ideas.pdf
+Notes:       Live AYSO Picture Day 2026 scheduling and information hub for Cypress Region 154 containing key dates, make-up details, silent auction basket guidelines, arrival guidelines, mandatory player photo forms, and coordinator contact info.
+================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AYSO Picture Day 2026</title>
+<style>
+    /* ============================================================================== */
+    /* ** General & Reusable Styles ** */
+    /* ============================================================================== */
+    html {
+        scroll-behavior: smooth;
+    }
+    .picture-day-container {
+        padding: 15px;
+        max-width: 850px;
+        margin: 0 auto;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+    .info-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+    .section-title {
+        color: #ffffff !important;
+        margin: 0;
+        padding: 20px 25px;
+        font-size: 1.6em;
+        background-color: #003366; /* AYSO Blue */
+    }
+    .info-card-content {
+        padding: 25px;
+    }
+    .info-card h3 {
+        margin-top: 30px;
+        color: #003366;
+        border-bottom: 2px solid #003366;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.3em;
+    }
+    .info-card h3:first-of-type {
+        margin-top: 0;
+    }
+    .info-card ul, .info-card ol {
+        padding-left: 25px;
+    }
+    .info-card li {
+        margin-bottom: 12px;
+    }
+
+    /* ============================================================================== */
+    /* ** Page Header & Navigation Hub ** */
+    /* ============================================================================== */
+    .page-header {
+        text-align: center;
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+    .page-header h1 {
+        margin: 0 0 10px 0;
+        font-size: 2.5em;
+        color: #003366;
+    }
+    .page-header p {
+        font-size: 1.2em;
+        color: #495057;
+        margin: 0;
+    }
+    .navigation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin: 30px 0;
+    }
+    .nav-button {
+        display: block;
+        background-color: #003366; /* Default Blue */
+        color: #ffffff !important;
+        padding: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 8px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .nav-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+    }
+    
+    .nav-button.green {
+        background-color: #28a745; /* AYSO Green */
+    }
+    .nav-button.green:hover {
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    }
+
+    /* ============================================================================== */
+    /* ** Utility & Component Styles ** */
+    /* ============================================================================== */
+    .callout {
+        padding: 20px;
+        margin: 25px 0;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-radius: 5px;
+    }
+    .callout.info {
+        background-color: #e7f3fe;
+        border-color: #007bff;
+        color: #052c65;
+    }
+    .callout.warning {
+        background-color: #fffbe6;
+        border-color: #ffc107;
+        color: #664d03;
+    }
+    .callout.highlight {
+        background-color: #e6ffed;
+        border-color: #28a745;
+        color: #155724;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    .download-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    .grid-button {
+        display: block;
+        padding: 15px;
+        background-color: #f8f9fa;
+        color: #003366 !important;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+    .grid-button:hover {
+        background-color: #e9ecef;
+        border-color: #003366;
+        transform: translateY(-2px);
+    }
+    
+    .grid-button.highlight {
+        background-color: #28a745;
+        color: #ffffff !important;
+        border-color: #218838;
+    }
+    .grid-button.highlight:hover {
+        background-color: #218838;
+    }
+
+    /* Disabled Button Style */
+    .grid-button.disabled {
+        background-color: #6c757d;
+        color: #ffffff !important;
+        border-color: #5c636a;
+        cursor: not-allowed;
+        opacity: 0.65;
+        pointer-events: none;
+    }
+    
+    .back-to-top-link {
+        display: block;
+        text-align: right;
+        margin-top: 25px;
+        font-weight: bold;
+        color: #007bff;
+        text-decoration: none;
+    }
+    .back-to-top-link:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="picture-day-container">
+
+    <div class="page-header">
+        <h1>Picture Day 2026</h1>
+        <p>
+            <strong>Sunday, September 20, 2026 | 8:00am - 4:00pm</strong><br>
+            Cypress Community Center - 5700 Orange Ave, Cypress
+        </p>
+    </div>
+
+    <div class="navigation-grid">
+        <a href="#schedules" class="nav-button green">Schedules &amp; Make-ups</a>
+        <a href="#auction" class="nav-button">Silent Auction Details</a>
+        <a href="#guidelines" class="nav-button">Arrival Guidelines</a>
+        <a href="#forms" class="nav-button">Downloadable Forms</a>
+    </div>
+
+    <div id="schedules" class="info-card">
+        <h2 class="section-title">Key Dates &amp; Schedules</h2>
+        <div class="info-card-content">
+            <h3>Team Photo &amp; Volunteer Schedule</h3>
+
+            <p><strong>Note: The Download Schedule PDF is currently in progress and will be posted once completed.</strong></p>
+
+            <div class="download-grid">
+                <!-- Button is now disabled and no longer links to last year's schedule -->
+                <span class="grid-button disabled">
+                    Download Schedule (PDF) - Coming Soon
+                </span>
+            </div>
+
+            <div class="callout info">
+                <strong>Individual Make-up Pictures</strong><br>
+                Can't make it? Make-up pictures will be held on <strong>Saturday, October 3rd at 3:00pm</strong> at Oxford Academy (5172 Orange Ave, Cypress).
+            </div>
+            <a href="#" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+
+    <div id="auction" class="info-card">
+        <h2 class="section-title">Silent Auction Details</h2>
+        <div class="info-card-content">
+            <h3>Team Baskets</h3>
+            <p>Each team is encouraged to put together a themed basket for our Silent Auction! This is a great way to support the region and win some amazing prizes.</p>
+            
+            <ul>
+                <li><strong>Drop-off Location:</strong> Main check-in tent at Cypress Community Center.</li>
+                <li><strong>Submission Deadline:</strong> Please drop off your completed basket at 8:00am on Picture Day.</li>
+                <li><strong>Required Form:</strong> Make sure your Team Basket Form (available in the downloads section below) is securely attached to your basket.</li>
+            </ul>
+            
+            <div class="callout highlight">
+                Need ideas? Check out the <strong>Basket Theme Ideas</strong> PDF in the downloads section below!
+            </div>
+            <a href="#" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+
+    <div id="guidelines" class="info-card">
+        <h2 class="section-title">Guidelines for a Smooth Day</h2>
+        <div class="info-card-content">
+            <h3>Player &amp; Team Instructions</h3>
+            <p><em>*Refer to the official Picture Day Flyer for complete rules. Key guidelines include:</em></p>
+            <ol>
+                <li><strong>Arrive 30 minutes early.</strong> Plan to be at the grassy area outside the Community Center well before your scheduled time.</li>
+                <li><strong>Line up outside.</strong> Teams will not be allowed to line up inside the building. Players will be escorted in once the previous team has exited through a separate door.</li>
+                <li><strong>Wear sneakers or slides.</strong> For the safety of the facility, <strong>NO CLEATS or SHIN GUARDS</strong> are allowed inside the building.</li>
+                <li><strong>Team personnel only.</strong> Only the Coach, Assistant Coach, and Team Parent will be allowed inside with the players. All other parents must wait outside.</li>
+                <li><strong>Team photos are for the team.</strong> Only registered players and certified team personnel are permitted in the official team photo.</li>
+                <li><strong>Complete one form per player.</strong> A picture form for each player is mandatory, even if you are not ordering extra photos. We will provide these when your team lines up.</li>
+            </ol>
+
+            <div class="callout info">
+                <strong>Your Basic Package is Included!</strong><br>
+                Your registration fees already include a basic photo package for each player: an 8x10 memory mate (with individual and team photos), wallet-sized photos, and a player button. Additional items can be ordered on the picture form.
+            </div>
+
+            <div class="callout highlight">
+                <h3>Enjoy the Fun!</h3>
+                <p>We'll have Kona Ice Truck, face painters, and inflatable games. Make a day of it!</p>
+            </div>
+            <a href="#" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+
+    <div id="forms" class="info-card">
+        <h2 class="section-title">Downloads &amp; Contact Info</h2>
+        <div class="info-card-content">
+            <h3>Handouts &amp; Forms</h3>
+            <p><strong>This first form is MANDATORY.</strong> Each player must have this form completed and in-hand to give to the photographer, even if you are not purchasing additional photos.</p>
+            
+            <div class="download-grid">
+                <!-- Pricing Sheet link applied to Required Player Photo Form, Pricing Sheet button removed -->
+                <a href="/Portals/14837/docs/2026/PriceSheet.pdf" target="_blank" class="grid-button highlight">Required Player Photo Form (PDF)</a>
+                <a href="/Portals/14837/docs/2026/Picture Day Flyer 26.pdf" target="_blank" class="grid-button">Picture Day Flyer (PDF)</a>
+                <a href="/Portals/14837/docs/2026/Form A Team PPD 2026.pdf" target="_blank" class="grid-button">Team Basket Form (PDF)</a>
+                <a href="/Portals/14837/docs/2026/basket ideas.pdf" target="_blank" class="grid-button">Basket Theme Ideas (PDF)</a>
+            </div>
+
+            <h3>Questions?</h3>
+            <p>For any questions regarding Picture Day, please contact Mary Kamhi at: <strong>purchaserayso154@gmail.com</strong></p>
+            <a href="#" class="back-to-top-link">Back to top ↑</a>
+        </div>
+    </div>
+
+</div>
+
+
+</body></html>
