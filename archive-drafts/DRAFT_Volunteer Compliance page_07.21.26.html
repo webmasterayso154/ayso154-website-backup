@@ -1,0 +1,1342 @@
+<!-- 
+================================================================================
+PAGE METADATA & COMPONENT INDEX
+CMS Title:   DRAFT_Volunteer Compliance page_07.21.26
+CMS Status:  Hidden / Inactive
+Audience:    [aud:volunteers] [aud:parents] [aud:coaches] [aud:referees]
+Content:     [type:policy] [type:registration]
+Components:  [ui:card] [ui:btn-cta] [ui:callout] [ui:table]
+Assets:      logo638920783440881854.png
+Notes:       Fall 2026 volunteer compliance steps, checkpoints, fast path, FAQs, and division director contact directory.
+================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fall 2026 volunteer compliance steps and team-release requirements for AYSO Region 154 in Cypress, California.">
+    <title>Volunteer Compliance | AYSO Region 154</title>
+
+    <!--
+    ========================================================================
+    AYSO REGION 154 - VOLUNTEER COMPLIANCE PAGE
+    Version: 2026.07.21f
+
+    CONTROLLING FALL 2026 PROCEDURE
+    This page follows the Fall 2026 Parent Meeting agenda supplied by Region
+    154. Update the webpage, PDF cheat sheet, and meeting materials together
+    whenever the Board changes a requirement.
+
+    CONTENT DESIGN
+    - The visible page is a short, top-to-bottom action path.
+    - Definitions appear once, in plain language.
+    - Troubleshooting is optional and collapsed until needed.
+    - SafeSport and AYSOU are identified as separate platforms.
+
+    CHEAT SHEET
+    Add the updated PDF link near the help section before publication.
+    No outdated or placeholder PDF link is included in this version.
+
+    VERIFIED LINKS (reviewed July 21, 2026)
+    - Region 154 website / account login entry point
+    - AYSO Wiki: Sterling invite and status
+    - AYSO Wiki: SafeSport registration
+    - AYSO Wiki: AYSOU access
+    - AYSO Wiki: Live Scan tips
+    - Region 154 Contact Us page
+
+    CURRENT REGION CONTACTS
+    The Division Director directory and acting Coach Administrator information
+    in this file were supplied directly by Region 154 on July 21, 2026. They
+    supersede older assignments that may still appear on other webpages.
+    ========================================================================
+    -->
+
+    <style>
+        :root {
+            --region-navy: #102a5c;
+            --region-navy-dark: #081c40;
+            --region-red: #e3222a;
+            --region-gold: #ffd34d;
+            --region-white: #ffffff;
+            --region-border: #d8dee8;
+            --region-text: #303846;
+            --page: #eef5fa;
+            --muted: #566575;
+            --soft-blue: #f3f8fd;
+            --soft-gold: #fff8dc;
+            --soft-green: #edf8f1;
+            --green: #17663a;
+            --shadow: 0 8px 24px rgba(8, 28, 64, 0.09);
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --max-width: 1040px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--region-text);
+            background: var(--page);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.55;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-top: 0;
+            line-height: 1.2;
+        }
+
+        h2 {
+            margin-bottom: 0.55rem;
+            color: var(--region-navy-dark);
+            font-size: clamp(1.45rem, 3vw, 2rem);
+        }
+
+        h3 {
+            margin-bottom: 0.45rem;
+            color: var(--region-navy-dark);
+            font-size: 1.2rem;
+        }
+
+        h4 {
+            margin-bottom: 0.35rem;
+            color: var(--region-navy-dark);
+            font-size: 1rem;
+        }
+
+        p,
+        ul,
+        ol {
+            margin-top: 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.3rem;
+        }
+
+        li + li {
+            margin-top: 0.35rem;
+        }
+
+        a {
+            color: var(--region-navy);
+            font-weight: 700;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--region-navy-dark);
+        }
+
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 4px solid var(--region-gold);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 1000;
+            padding: 0.75rem 1rem;
+            color: #ffffff !important;
+            background: var(--region-navy-dark);
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        .page-shell,
+        .hero-shell {
+            width: min(calc(100% - 28px), var(--max-width));
+            margin-inline: auto;
+        }
+
+        .hero-shell {
+            padding-top: 20px;
+        }
+
+        /* Shared Region 154 hero component */
+        .info-card {
+            margin-bottom: 24px;
+            overflow: hidden;
+            background: var(--region-white);
+            border: 1px solid var(--region-border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .parent-brand-card {
+            position: relative;
+            padding: 24px 18px 28px;
+            overflow: hidden;
+            color: var(--region-white);
+            background-color: var(--region-navy-dark);
+            background-image:
+                linear-gradient(
+                    rgba(8, 28, 64, 0.94),
+                    rgba(16, 42, 92, 0.94)
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0,
+                    transparent 48px,
+                    rgba(255, 255, 255, 0.07) 49px,
+                    rgba(255, 255, 255, 0.07) 51px
+                );
+            border-bottom: 7px solid var(--region-red);
+            text-align: center;
+        }
+
+        .parent-brand-card::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 520px;
+            height: 260px;
+            content: "";
+            border: 3px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .parent-brand-card::after {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            content: "";
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .brand-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-wrap {
+            width: 138px;
+            height: 138px;
+            margin: 0 auto 16px;
+            padding: 10px;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background: var(--region-white);
+            border: 4px solid var(--region-white);
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+        }
+
+        .parent-logo {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .parent-brand-card h1 {
+            margin: 0;
+            color: var(--region-white);
+            font-size: clamp(1.9rem, 5vw, 2.65rem);
+            line-height: 1.06;
+            text-transform: uppercase;
+        }
+
+        .parent-brand-card h1 span {
+            margin-top: 6px;
+            display: block;
+            color: var(--region-gold);
+        }
+
+        .parent-brand-card p {
+            max-width: 650px;
+            margin: 14px auto 0;
+            color: var(--region-white);
+            font-size: 1.03rem;
+        }
+
+        .mandatory-label {
+            margin: 18px auto 0;
+            padding: 8px 13px;
+            display: inline-block;
+            color: var(--region-navy-dark);
+            background: var(--region-gold);
+            border: 3px solid var(--region-white);
+            border-radius: 8px;
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+        }
+
+        .section {
+            margin-bottom: 24px;
+            padding: clamp(20px, 4vw, 34px);
+            background: var(--region-white);
+            border: 1px solid var(--region-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .section-intro {
+            max-width: 720px;
+            margin-bottom: 1.2rem;
+            color: var(--muted);
+        }
+
+        /* The two definitions are intentionally compact and appear only once. */
+        .checkpoint-note {
+            margin: 0 0 1rem;
+            padding: 10px 13px;
+            color: var(--region-navy-dark);
+            background: var(--soft-gold);
+            border-left: 5px solid var(--region-gold);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .checkpoint-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .checkpoint-card {
+            padding: 16px;
+            background: var(--soft-blue);
+            border: 1px solid #c8d9e8;
+            border-top: 5px solid var(--region-navy);
+            border-radius: var(--radius-md);
+        }
+
+        .checkpoint-card--practice {
+            border-top-color: var(--region-red);
+        }
+
+        .checkpoint-kicker {
+            margin-bottom: 0.3rem;
+            display: block;
+            color: var(--region-navy);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .checkpoint-card p {
+            margin-bottom: 0;
+        }
+
+        .team-rule {
+            margin-top: 14px;
+            padding: 14px 16px;
+            background: var(--soft-gold);
+            border: 1px solid #ead575;
+            border-radius: var(--radius-md);
+        }
+
+        .team-rule p {
+            margin-bottom: 0;
+        }
+
+        .team-rule ul.role-counts {
+            margin: 11px 0 0;
+            padding: 0 !important;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            list-style: none !important;
+        }
+
+        .team-rule ul.role-counts > li {
+            margin: 0;
+            padding: 9px 11px;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--region-navy-dark);
+            background: #ffffff;
+            border: 1px solid #dfcf87;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: left;
+            list-style: none !important;
+        }
+
+        .team-rule ul.role-counts > li::marker {
+            content: "";
+        }
+
+        .team-rule ul.role-counts > li::before {
+            display: none !important;
+            content: none !important;
+        }
+
+        .role-count {
+            width: 29px;
+            height: 29px;
+            flex: 0 0 29px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            background: var(--region-navy);
+            border-radius: 50%;
+            font-size: 0.95rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .role-name {
+            min-width: 0;
+            line-height: 1.2;
+        }
+
+        /* A single numbered path reduces scanning and decision effort. */
+        .steps {
+            position: relative;
+            display: grid;
+            gap: 14px;
+        }
+
+        .step-card {
+            padding: 18px;
+            background: #ffffff;
+            border: 1px solid var(--region-border);
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 12px rgba(8, 28, 64, 0.05);
+        }
+
+        .step-heading {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .step-number {
+            width: 34px;
+            height: 34px;
+            flex: 0 0 34px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            background: var(--region-navy);
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .step-label {
+            padding: 4px 8px;
+            min-width: 0;
+            display: inline-block;
+            color: #8f1d26;
+            background: #fff0f1;
+            border: 1px solid #f0c6ca;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .step-card h3 {
+            margin-bottom: 0.65rem;
+            font-size: 1.22rem;
+        }
+
+        .step-card p:last-child,
+        .step-card ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .compact-list {
+            margin-bottom: 0.85rem;
+        }
+
+        .platform-grid {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 0.9rem;
+        }
+
+        .platform-card {
+            padding: 13px 14px;
+            background: var(--soft-blue);
+            border-left: 5px solid var(--region-navy);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .platform-card--safesport {
+            background: var(--soft-gold);
+            border-left-color: var(--region-gold);
+        }
+
+        .platform-card p {
+            margin-bottom: 0;
+        }
+
+        .mini-note {
+            margin-bottom: 0.85rem;
+            padding: 9px 11px;
+            color: var(--region-navy-dark);
+            background: var(--soft-green);
+            border-left: 4px solid var(--green);
+            border-radius: 0 7px 7px 0;
+            font-size: 0.94rem;
+        }
+
+        .button-row {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        /* !important prevents the website theme's global link color from
+           overriding button text and reducing contrast. */
+        a.button,
+        a.button:link,
+        a.button:visited {
+            padding: 10px 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff !important;
+            background: var(--region-navy);
+            border: 2px solid var(--region-navy);
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            line-height: 1.25;
+            text-align: center;
+            text-decoration: none !important;
+            box-shadow: 0 3px 8px rgba(8, 28, 64, 0.15);
+        }
+
+        a.button:hover {
+            color: #ffffff !important;
+            background: var(--region-navy-dark);
+            border-color: var(--region-navy-dark);
+        }
+
+        a.button--primary,
+        a.button--primary:link,
+        a.button--primary:visited {
+            color: var(--region-navy-dark) !important;
+            background: var(--region-gold);
+            border-color: #e1b92e;
+        }
+
+        a.button--primary:hover {
+            color: var(--region-navy-dark) !important;
+            background: #ffe175;
+            border-color: var(--region-gold);
+        }
+
+        .help-link {
+            font-size: 0.92rem;
+        }
+
+        .help-link::after {
+            content: " ↗";
+            font-weight: 400;
+        }
+
+        .release-box {
+            margin-top: 16px;
+            padding: 16px;
+            color: #ffffff;
+            background: var(--region-navy-dark);
+            border-left: 7px solid var(--region-red);
+            border-radius: var(--radius-md);
+        }
+
+        .release-box h3 {
+            color: var(--region-gold);
+        }
+
+        .release-box p {
+            margin-bottom: 0;
+        }
+
+        .event-card {
+            margin: 0 0 13px;
+            padding: 15px;
+            background: var(--soft-gold);
+            border: 1px solid #e7cf68;
+            border-left: 6px solid var(--region-gold);
+            border-radius: 8px;
+        }
+
+        .event-card h4 {
+            margin-bottom: 0.55rem;
+            font-size: 1.08rem;
+        }
+
+        .event-badge {
+            margin-bottom: 7px;
+            padding: 3px 8px;
+            display: inline-block;
+            color: #ffffff;
+            background: var(--region-red);
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .event-details {
+            margin: 0 0 0.6rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3px 9px;
+        }
+
+        .event-details dt {
+            font-weight: 800;
+        }
+
+        .event-details dd {
+            margin: 0;
+        }
+
+        .event-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .help details {
+            margin-top: 10px;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid var(--region-border);
+            border-radius: 9px;
+        }
+
+        .help summary {
+            padding: 13px 44px 13px 14px;
+            position: relative;
+            color: var(--region-navy-dark);
+            cursor: pointer;
+            font-weight: 800;
+            list-style: none;
+        }
+
+        .help summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .help summary::after {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            content: "+";
+            color: var(--region-red);
+            font-size: 1.35rem;
+            transform: translateY(-50%);
+        }
+
+        .help details[open] summary::after {
+            content: "−";
+        }
+
+        .help details[open] summary {
+            border-bottom: 1px solid var(--region-border);
+        }
+
+        .details-body {
+            padding: 13px 14px;
+        }
+
+        .details-body p:last-child,
+        .details-body ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            margin-top: 18px;
+            padding: 16px;
+            background: var(--soft-blue);
+            border: 1px solid #c8d9e8;
+            border-radius: var(--radius-md);
+        }
+
+        .contact-box p {
+            margin-bottom: 0.65rem;
+        }
+
+        .contact-box p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .contact-path {
+            margin: 13px 0;
+            padding: 0 !important;
+            display: grid;
+            gap: 8px;
+            list-style: none !important;
+        }
+
+        .contact-path li {
+            margin: 0;
+            padding: 11px 12px;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 10px;
+            align-items: start;
+            background: #ffffff;
+            border: 1px solid #c8d9e8;
+            border-radius: 8px;
+            list-style: none !important;
+        }
+
+        .contact-path li::marker {
+            content: "";
+        }
+
+        .contact-path li::before {
+            display: none !important;
+            content: none !important;
+        }
+
+        .contact-path__number {
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            background: var(--region-navy);
+            border-radius: 50%;
+            font-weight: 800;
+        }
+
+        .contact-path strong,
+        .contact-path span {
+            display: block;
+        }
+
+        .contact-path .contact-path__number {
+            display: grid;
+        }
+
+        .contact-path strong {
+            color: var(--region-navy-dark);
+        }
+
+        .contact-path__description {
+            margin-top: 2px;
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.4;
+        }
+
+        .chain-note {
+            padding: 9px 11px;
+            color: var(--region-navy-dark);
+            background: var(--soft-gold);
+            border-left: 4px solid var(--region-gold);
+            border-radius: 0 7px 7px 0;
+            font-size: 0.94rem;
+        }
+
+        .directory-intro {
+            margin-bottom: 18px;
+            padding: 12px 14px;
+            color: var(--region-navy-dark);
+            background: var(--soft-gold);
+            border-left: 5px solid var(--region-gold);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .directory-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .director-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .director-card {
+            padding: 16px;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: #ffffff;
+            border: 1px solid var(--region-border);
+            border-top: 5px solid var(--region-navy);
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 12px rgba(8, 28, 64, 0.05);
+        }
+
+        .director-card--program {
+            border-top-color: var(--region-red);
+        }
+
+        .division-name {
+            margin-bottom: 9px;
+            padding: 4px 8px;
+            display: inline-block;
+            color: var(--region-navy-dark);
+            background: var(--soft-blue);
+            border: 1px solid #c8d9e8;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .director-card h3 {
+            margin-bottom: 3px;
+            font-size: 1.1rem;
+        }
+
+        .director-role {
+            margin-bottom: 12px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .director-email {
+            margin-top: auto;
+            padding: 8px 10px;
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            color: var(--region-navy);
+            background: var(--soft-blue);
+            border: 1px solid #c8d9e8;
+            border-radius: 7px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .director-email::before {
+            margin-right: 4px;
+            color: var(--region-red);
+            content: "✉";
+        }
+
+        .director-email:hover {
+            background: #e6f2fc;
+            border-color: #9fbfd9;
+            text-decoration: underline;
+        }
+
+        .acting-admin-card {
+            margin-top: 18px;
+            padding: 18px;
+            color: #ffffff;
+            background: var(--region-navy-dark);
+            border-left: 7px solid var(--region-red);
+            border-radius: var(--radius-md);
+        }
+
+        .acting-admin-card h3 {
+            margin-bottom: 0.35rem;
+            color: var(--region-gold);
+        }
+
+        .acting-admin-card p {
+            max-width: 760px;
+        }
+
+        .acting-admin-card a,
+        .acting-admin-card a:visited {
+            color: var(--region-gold);
+        }
+
+        .acting-badge {
+            margin-bottom: 8px;
+            padding: 4px 8px;
+            display: inline-block;
+            color: var(--region-navy-dark);
+            background: var(--region-gold);
+            border-radius: 999px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .vacancy-note {
+            margin: 12px 0 0;
+            padding-top: 11px;
+            border-top: 1px solid rgba(255, 255, 255, 0.22);
+            font-size: 0.92rem;
+        }
+
+        .site-footer {
+            margin-top: 30px;
+            padding: 26px 16px;
+            color: #ffffff;
+            background: var(--region-navy-dark);
+            text-align: center;
+        }
+
+        .site-footer p {
+            margin-bottom: 0.3rem;
+        }
+
+        .site-footer a,
+        .site-footer a:visited {
+            color: var(--region-gold);
+        }
+
+        @media (min-width: 700px) {
+            .parent-brand-card {
+                padding: 32px 28px 34px;
+            }
+
+            .logo-wrap {
+                width: 150px;
+                height: 150px;
+            }
+
+            .checkpoint-grid,
+            .platform-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .director-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .team-rule ul.role-counts {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .step-card {
+                padding: 20px 22px;
+            }
+
+            .step-number {
+                width: 38px;
+                height: 38px;
+                flex-basis: 38px;
+            }
+        }
+
+        @media (min-width: 960px) {
+            .director-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            .page-shell,
+            .hero-shell {
+                width: min(calc(100% - 18px), var(--max-width));
+            }
+
+            .hero-shell {
+                padding-top: 9px;
+            }
+
+            .logo-wrap {
+                width: 126px;
+                height: 126px;
+            }
+
+            .section {
+                padding: 18px 15px;
+            }
+
+            .step-card {
+                padding: 16px 14px;
+            }
+
+            .team-rule ul.role-counts {
+                grid-template-columns: 1fr;
+            }
+
+            .button-row,
+            a.button {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+            }
+
+            .hero-shell,
+            .page-shell {
+                width: 100%;
+            }
+
+            .info-card,
+            .section {
+                box-shadow: none;
+            }
+
+            .button-row {
+                display: none;
+            }
+
+            .help details {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="hero-shell" aria-labelledby="page-title">
+        <div class="info-card">
+            <div class="parent-brand-card">
+                <div class="brand-content">
+                    <div class="logo-wrap">
+                        <img src="/portals/14837/logo/logo638920783440881854.png" alt="AYSO Region 154 Cypress logo" width="138" height="138" decoding="async" class="parent-logo">
+                    </div>
+
+                    <h1 id="page-title">
+                        Fall 2026
+                        <span>Volunteer Compliance</span>
+                    </h1>
+
+                    <p>Follow these steps in order. Region 154 will confirm when your team is cleared to practice.</p>
+
+                    <div class="mandatory-label">⚑ Complete Before Team Practice</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell" id="main-content">
+        <section class="section" aria-labelledby="checkpoints-title">
+            <h2 id="checkpoints-title">Two Checkpoints to Know</h2>
+            <p class="checkpoint-note">
+                <strong>Contingency</strong> means a required readiness checkpoint—not an estimated date or an automatic waiver.
+            </p>
+
+            <div class="checkpoint-grid">
+                <article class="checkpoint-card checkpoint-card--practice">
+                    <span class="checkpoint-kicker">Before Any Team Practice</span>
+                    <h3>First Practice Contingency</h3>
+                    <p>All required team volunteers must be in place, cleared for their roles, and released by Region 154 before the team practices.</p>
+                </article>
+
+                <article class="checkpoint-card">
+                    <span class="checkpoint-kicker">Before the First Scheduled Game</span>
+                    <h3>First Game Contingency</h3>
+                    <p>The team must finish any remaining roster, referee, scheduling, or game-day requirements communicated by Region 154 before playing.</p>
+                </article>
+            </div>
+
+            <div class="team-rule">
+                <p><strong>Fall 2026 practice-release team:</strong></p>
+                <ul class="role-counts" aria-label="Required volunteer positions for team practice release">
+                    <li><span class="role-count">1</span><span class="role-name">Head Coach</span></li>
+                    <li><span class="role-count">1</span><span class="role-name">Assistant Coach</span></li>
+                    <li><span class="role-count">1</span><span class="role-name">Team Parent</span></li>
+                    <li><span class="role-count">3</span><span class="role-name">Referees</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="steps-title">
+            <h2 id="steps-title">Fastest Path to Clearance</h2>
+            <p class="section-intro">Complete the steps that apply to your role. “Started,” “pending,” or “enrolled” does not mean complete.</p>
+
+            <div class="steps">
+                <article class="step-card" id="application">
+                    <div class="step-heading">
+                        <span class="step-number" aria-hidden="true">1</span>
+                        <span class="step-label">My Account</span>
+                    </div>
+                    <h3>Submit Your Volunteer Application</h3>
+                    <ul class="compact-list">
+                        <li>Sign in with your own Region 154 account and select your Fall 2026 role.</li>
+                        <li>Use your legal name and verify your email address and date of birth.</li>
+                    </ul>
+                    <div class="button-row">
+                        <a class="button button--primary" href="/" target="_blank" rel="noopener">Log In to My Account</a>
+                    </div>
+                </article>
+
+                <article class="step-card" id="background-check">
+                    <div class="step-heading">
+                        <span class="step-number" aria-hidden="true">2</span>
+                        <span class="step-label">Adults · Sterling Volunteers</span>
+                    </div>
+                    <h3>Authorize the Background Check</h3>
+                    <p class="mini-note"><strong>Important:</strong> Submitting the application does not start or finish the background check.</p>
+                    <ul class="compact-list">
+                        <li>In <strong>Volunteer</strong>, select <strong>Risk Status</strong> and choose <strong>Renew &amp; Update</strong>.</li>
+                        <li>Open the Sterling email, sign in or create an account, and authorize the check.</li>
+                    </ul>
+                    <p><a class="help-link" href="https://wiki.ayso.org/wiki/Accept_Sterling_Volunteer_Invite" target="_blank" rel="noopener">Official AYSO Sterling instructions</a></p>
+                </article>
+
+                <article class="step-card" id="training">
+                    <div class="step-heading">
+                        <span class="step-number" aria-hidden="true">3</span>
+                        <span class="step-label">Two Separate Training Sites</span>
+                    </div>
+                    <h3>Complete Online Safety Training</h3>
+
+                    <div class="platform-grid">
+                        <div class="platform-card">
+                            <h4>AYSOU / eTrainU</h4>
+                            <p>Complete AYSO’s Safe Haven, CDC Concussion Awareness, and Sudden Cardiac Arrest Awareness.</p>
+                        </div>
+                        <div class="platform-card platform-card--safesport">
+                            <h4>U.S. Center for SafeSport</h4>
+                            <p>Applicable adults complete the assigned annual Core or Refresher course from their SafeSport dashboard.</p>
+                        </div>
+                    </div>
+
+                    <p class="mini-note"><strong>Do not search AYSOU for SafeSport.</strong> In your Region 154 volunteer account, select <strong>SafeSport</strong>, choose <strong>Renew &amp; Update</strong>, and use the provided link.</p>
+                    <p>
+                        <a class="help-link" href="https://wiki.ayso.org/wiki/Access_to_AYSOU" target="_blank" rel="noopener">Official AYSOU access help</a>
+                        &nbsp;·&nbsp;
+                        <a class="help-link" href="https://wiki.ayso.org/wiki/Register_for_Safesport" target="_blank" rel="noopener">Official SafeSport registration help</a>
+                    </p>
+                </article>
+
+                <article class="step-card" id="live-scan">
+                    <div class="step-heading">
+                        <span class="step-number" aria-hidden="true">4</span>
+                        <span class="step-label">Adults · One-Time Requirement</span>
+                    </div>
+                    <h3>Complete AYSO Fingerprinting</h3>
+
+                    <div class="event-card">
+                        <span class="event-badge">Recommended</span>
+                        <h4>Region 154 In-Person Fingerprinting Event</h4>
+                        <dl class="event-details">
+                            <dt>Location:</dt>
+                            <dd>Coaches Corner</dd>
+                            <dt>Date &amp; time:</dt>
+                            <dd>To be announced</dd>
+                        </dl>
+                        <p>Prospective adult volunteers are encouraged to attend. This will be the easiest way to complete the fingerprinting step with Region support available.</p>
+                    </div>
+
+                    <ul class="compact-list">
+                        <li>AYSO fingerprinting is normally a one-time requirement; it is not repeated every season.</li>
+                        <li>A fingerprint check completed for another organization does not transfer to AYSO.</li>
+                    </ul>
+                    <p><a class="help-link" href="https://wiki.ayso.org/wiki/Live_Scan_Tips" target="_blank" rel="noopener">Official AYSO fingerprinting guidance</a></p>
+                </article>
+
+                <article class="step-card" id="role-training">
+                    <div class="step-heading">
+                        <span class="step-number" aria-hidden="true">5</span>
+                        <span class="step-label">Role Training + Region Review</span>
+                    </div>
+                    <h3>Finish Your Role Certification</h3>
+                    <ul class="compact-list">
+                        <li><strong>Coaches:</strong> Complete the age-appropriate coach certification and any required in-person session.</li>
+                        <li><strong>Referees:</strong> Complete the assigned referee course and any required field or in-person session.</li>
+                        <li><strong>Team Parents:</strong> Complete the screening and safety requirements assigned to the role.</li>
+                    </ul>
+                    <p>Save completion certificates until every item appears in the official record.</p>
+                </article>
+            </div>
+
+            <div class="release-box">
+                <h3>Wait for the Release Message</h3>
+                <p>Finishing your personal checklist does not release the team. Practice may begin only after Region 154 confirms that the entire team has met the First Practice Contingency.</p>
+            </div>
+        </section>
+
+        <section class="section help" id="help" aria-labelledby="help-title">
+            <h2 id="help-title">Stuck? Check This First</h2>
+            <p class="section-intro">Open only the item that matches your problem.</p>
+
+            <details>
+                <summary>I did not receive the Sterling email.</summary>
+                <div class="details-body">
+                    <p>Check spam or junk, confirm the email on your volunteer application, and make sure you selected <strong>Risk Status → Renew &amp; Update</strong>. AYSO says the invitation normally arrives within about an hour.</p>
+                    <p><a href="https://wiki.ayso.org/wiki/Checking_your_Sterling_Background_Check_Status" target="_blank" rel="noopener">Check the official Sterling status instructions</a>.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>My SafeSport course is missing or not syncing.</summary>
+                <div class="details-body">
+                    <p>Use the SafeSport link provided in your Region 154 volunteer account, then complete the assigned course on your dashboard. Your name, date of birth, and email must match your AYSO record. Allow about 45 minutes after completion for the status to sync.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>I completed training, but it still shows as missing.</summary>
+                <div class="details-body">
+                    <p>Confirm the course is fully completed—not just enrolled or started. Save the certificate, then verify that the name and email on the training account match your volunteer application.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>I am registering a youth referee.</summary>
+                <div class="details-body">
+                    <p>Youth referees use a youth volunteer record and complete the youth safety and referee training assigned by AYSO. Adult Sterling, adult SafeSport, and adult Live Scan requirements do not apply to volunteers under 18.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Why can another team practice before ours?</summary>
+                <div class="details-body">
+                    <p>Teams are released individually. Every required position on your team must be filled and cleared before Region 154 can release the team.</p>
+                </div>
+            </details>
+
+            <div class="contact-box">
+                <h3>Questions? Follow the Communication Path</h3>
+                <p>To receive the fastest answer and avoid delays, please ask questions in this order:</p>
+
+                <ol class="contact-path">
+                    <li>
+                        <span class="contact-path__number">1</span>
+                        <span>
+                            <strong>Your Team’s Head Coach</strong>
+                            <span class="contact-path__description">The first contact for prospective team volunteers.</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contact-path__number">2</span>
+                        <span>
+                            <strong>Your Assigned Division Director</strong>
+                            <span class="contact-path__description">Ask the Division Director if the Head Coach cannot answer the question.</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contact-path__number">3</span>
+                        <span>
+                            <strong>Acting Coach Administrator · Troy Baron</strong>
+                            <span class="contact-path__description">Escalate here only when the Division Director cannot resolve the question.</span>
+                        </span>
+                    </li>
+                </ol>
+
+                <p>If you are the Head Coach, begin with your assigned Division Director.</p>
+                <p class="chain-note"><strong>Please follow this order.</strong> It routes questions to the person with the most relevant team information and helps prevent duplicate requests or avoidable delays.</p>
+                <div class="button-row">
+                    <a class="button" href="#division-contacts">Find My Division Director</a>
+                </div>
+            </div>
+
+            <!-- Add the updated volunteer compliance PDF link here. -->
+        </section>
+
+        <section class="section" id="division-contacts" aria-labelledby="division-contacts-title">
+            <h2 id="division-contacts-title">Division Director Contacts</h2>
+            <p class="section-intro">Find your player’s division below. Prospective team volunteers should contact their Head Coach first and email the Division Director only when the coach cannot answer the question.</p>
+
+            <div class="directory-intro">
+                <p><strong>Help us answer quickly:</strong> Include the volunteer’s full name, team or coach name, division, volunteer role, and the exact compliance item in question.</p>
+            </div>
+
+            <div class="director-grid">
+                <article class="director-card">
+                    <span class="division-name">Playground 4U</span>
+                    <h3>Chris Franco</h3>
+                    <p class="director-role">Division Director</p>
+                    <a class="director-email" href="mailto:playgroundayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%20Playground%204U">playgroundayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card">
+                    <span class="division-name">5U–6U / Schoolyard</span>
+                    <h3>Jared Moye</h3>
+                    <p class="director-role">Division Director</p>
+                    <a class="director-email" href="mailto:divisionu5u6ayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%205U-6U%20Schoolyard">divisionu5u6ayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card">
+                    <span class="division-name">8U</span>
+                    <h3>Amira Medina</h3>
+                    <p class="director-role">Division Director</p>
+                    <a class="director-email" href="mailto:divisionu8ayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%208U">divisionu8ayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card">
+                    <span class="division-name">10U</span>
+                    <h3>Chris Franco</h3>
+                    <p class="director-role">Division Director</p>
+                    <a class="director-email" href="mailto:divisionu10ayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%2010U">divisionu10ayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card">
+                    <span class="division-name">12U</span>
+                    <h3>Shane Hartgrave</h3>
+                    <p class="director-role">Division Director</p>
+                    <a class="director-email" href="mailto:divisionu12ayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%2012U">divisionu12ayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card">
+                    <span class="division-name">14U · 16U · 19U</span>
+                    <h3>Christen Jackson</h3>
+                    <p class="director-role">Upper Division Director</p>
+                    <a class="director-email" href="mailto:upperdivisionayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%20Upper%20Division">upperdivisionayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card director-card--program">
+                    <span class="division-name">Extra</span>
+                    <h3>Coordinator Position Open</h3>
+                    <p class="director-role">Extra Program</p>
+                    <a class="director-email" href="mailto:extradivisionayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%20Extra">extradivisionayso154@gmail.com</a>
+                </article>
+
+                <article class="director-card director-card--program">
+                    <span class="division-name">EPIC · Special Needs</span>
+                    <h3>Rick Tkach</h3>
+                    <p class="director-role">EPIC Division Director</p>
+                    <a class="director-email" href="mailto:vipdivisionayso154@gmail.com?subject=Volunteer%20Compliance%20Question%20-%20EPIC">vipdivisionayso154@gmail.com</a>
+                </article>
+            </div>
+
+            <aside class="acting-admin-card" aria-labelledby="acting-admin-title">
+                <span class="acting-badge">Escalation Contact</span>
+                <h3 id="acting-admin-title">Troy Baron · Acting Coach Administrator</h3>
+                <p>If your assigned Division Director cannot resolve the question, contact Troy at <a href="mailto:coachadmin154@gmail.com?subject=Escalated%20Volunteer%20Compliance%20Question">coachadmin154@gmail.com</a>.</p>
+                <p class="vacancy-note"><strong>Position update:</strong> Troy is serving in an acting capacity while Region 154 looks for a permanent Coach Administrator.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>AYSO Region 154 · Cypress, California</strong></p>
+        <p>Thank you for helping every player have a safe, positive season.</p>
+    </footer>
+
+</body></html>
