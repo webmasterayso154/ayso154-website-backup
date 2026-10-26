@@ -1,0 +1,18 @@
+﻿.ayso-r154-scope {
+  --r154-navy: #002D62;
+  --r154-navy-dark: #001A3D;
+  --r154-red: #C8102E;
+  --r154-gold: #FFD34D;
+  --r154-bg-light: #F4F6F9;
+  --r154-white: #FFFFFF;
+  --r154-border: #E2E8F0;
+  --r154-text: #0F172A;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  color: var(--r154-text) !important;
+  line-height: 1.6 !important;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.ayso-r154-scope *, .ayso-r154-scope *::before, .ayso-r154-scope *::after { box-sizing: border-box; }
