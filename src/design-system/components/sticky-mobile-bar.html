@@ -1,0 +1,22 @@
+﻿<!-- Sticky Mobile Action Bar (Mobbin Thumb-Zone Pattern - Mode B / Standalone) -->
+<style>
+  .r154-sticky-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 999;
+    background: rgba(0, 26, 61, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 211, 77, 0.3);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media(min-width: 769px) { .r154-sticky-bar { display: none; } }
+</style>
+<div class="r154-sticky-bar">
+  <a class="r154-btn r154-btn-primary" style="flex:1; min-height:44px; font-size:0.88rem !important;" href="{{PRIMARY_CTA_URL}}">{{PRIMARY_CTA_LABEL}}</a>
+  <a class="r154-btn" style="flex:1; min-height:44px; background:#FFFFFF; color:#002D62 !important; font-size:0.88rem !important;" href="https://www.ayso154cypress.org/Default.aspx?tabid=808118">🏟️ Field Status</a>
+</div>
